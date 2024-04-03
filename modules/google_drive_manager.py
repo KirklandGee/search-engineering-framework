@@ -11,28 +11,36 @@ class GoogleSheetsManager(object):
     def __init__(self, sheet_name: str):
         self.credentials_file_path = "credentials/credentials.json"
         self.gc = gspread.service_account(filename=self.credentials_file_path)
-        self.sheet = sheet_name
-        self.worksheet = self.gc.get_worksheet[0]
+        self.sheet = self.gc.open(sheet_name)
+        self.worksheet = self.sheet.get_worksheet(0)
         self.values = self.worksheet.get_all_values()
 
-    def get_worksheet(self) -> str:
+    def get_worksheet(self): 
         return self.worksheet
-    
+
     def set_worksheet(self, worksheet_name: str):
-        self.worksheet = self.gc.worksheet(worksheet_name)
+        self.worksheet = self.sheet.worksheet(worksheet_name) 
 
     def get_all_values(self):
         values = self.worksheet.get_all_values()
         self.values = values
     
-    def create_dataframe_from_worksheet(self, worksheet_name: str ) -> object:
-        worksheet: str = self.get_worksheet(worksheet_name)   
-        dataframe = pd.DataFrame(worksheet.get_all_records())
+    def create_dataframe(self, worksheet_name=None) -> object:
+
+        if worksheet_name:
+            self.set_worksheet(worksheet_name)
+            
+        dataframe = pd.DataFrame(self.worksheet.get_all_records())
+
         return dataframe
     
-    def write_dataframe_to_sheets(self, worksheet_name: str, dataframe) -> None:
-        worksheet: str = self.get_worksheet(worksheet_name)
-        worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
+    def write_dataframe_to_sheets(self, dataframe, worksheet_name=None) -> None:
+
+        if worksheet_name:
+            self.set_worksheet(worksheet_name)
+            self.worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
+        else:
+            self.worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
 
     def fetch_and_write_h1_tags(self, url_column_name: str, read_worksheet: str, write_worksheet: str) -> None:
         df = self.create_dataframe_from_google_sheet(read_worksheet)

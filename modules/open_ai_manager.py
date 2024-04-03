@@ -93,7 +93,7 @@ class GPT:
     
     def get_response(self, prompt):
 
-        print("Getting response from OpenAI with system prompt: \n\n" + self.instructions)
+        print("Getting response...")
 
         try:
             response = self.client.chat.completions.create(
