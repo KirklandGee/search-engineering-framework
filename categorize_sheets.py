@@ -63,13 +63,15 @@ def main():
       print(f"\u001b[32mSuccess!  \u001b[37m{row['Name']} placed into: {category}")
     except Exception as e:
       print(f"\u001b[31mFailed to categorize  \u001b[37m{row['Name']}...")
+      info_df.at[index, "Category"] = "Failed to categorize..."
+
       
     # Writes to our sheet every 10 iterations in case we run into an issue.
     i +=1
     if i == 10:
-      gs.write_dataframe_to_sheets(dataframe=info_df,worksheet_name='Output',)
+      gs.write_dataframe_to_sheets(dataframe=info_df,worksheet_name='categorizer',)
 
-  gs.write_dataframe_to_sheets(dataframe=info_df,worksheet_name='Output',)
+  gs.write_dataframe_to_sheets(dataframe=info_df,worksheet_name='categorizer',)
 
 if __name__ == '__main__':
   main()
