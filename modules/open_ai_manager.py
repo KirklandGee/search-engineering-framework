@@ -16,19 +16,13 @@ class GPT:
 
     def get_model(self):
         return self.model
-
-    def set_system_prompt(self, prompt):
-        self.system_prompt = prompt
-
-    def get_system_prompt(self):
-        return self.system_prompt
-
+    
+    def set_instructions(self, instructions):
+        self.instructions = instructions
+    
     def set_assistant_id(self, assistant_id):
         self.assistant_id = assistant_id
         
-    def set_instructions(self, instructions):
-        self.instructions = instructions
-
     def create_new_thread(self):
         self.thread = self.client.beta.threads.create()
 

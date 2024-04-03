@@ -47,11 +47,8 @@ def main():
   # This is designed to work with one name column and one description column in your sheet.
 
   categories_df = gs.create_dataframe_from_google_sheet('categorizer')  
-  
-
-  for keyword in keywords_dataframe['Keyword']:
-    entities_list = get_entities_from_keyword(keyword)
-    content = write_content(keyword, entities_list)
+    
+     = write_content(keyword, entities_list)
     print(content)
     output_dictionary['Keyword'].append(keyword)
     output_dictionary['Content'].append(content)
