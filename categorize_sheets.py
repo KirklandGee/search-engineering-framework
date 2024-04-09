@@ -46,14 +46,12 @@ def main():
 
   # This will use our module to create a dataframe and set it to this variablee.
   info_df = gs.create_dataframe(worksheet_name='categorizer')  
-  info_df["Category"] = None
-
 
   # This counter will be used to periodically write the DF back to our sheet
   i=0
   
   for index, row in info_df.iterrows():
-
+    
     # You can give the AI as much information in your sheet as you want, but you may need to adjust the code if so. 
     # This is designed to work with one name column and one description column in your sheet. 
     # If you want to categorize with more info, adjust your category prompt to include it here and add it into your system prompt examples. 

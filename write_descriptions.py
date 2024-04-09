@@ -36,14 +36,13 @@ def main():
 
   # Setup our AI assistant with our system prompt and the model we want
   gpt.set_instructions(system_prompt)
-  
+
   # I'd recommend using GPT-4 for this use case, but that depends on your specific needs.
   gpt.set_model('gpt-3.5-turbo')
 
   # This will use our module to create a dataframe and set it to this variablee.
   info_df = gs.create_dataframe(worksheet_name='writer')
-  info_df["Category"] = None
-
+  
   # This counter will be used to periodically write the DF back to our sheet
   i=0
   
