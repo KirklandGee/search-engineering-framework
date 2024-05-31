@@ -110,3 +110,33 @@ class GPT:
 
         except Exception as e:
             print("Error: " + str(e))
+
+    def get_response_with_image(self, prompt, image_url):
+
+        print("Getting response...")
+
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": self.instructions},
+                    {"role": "user", "content": [
+                    {
+                        "type": "text", "text": prompt},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": image_url,
+                                        },
+                                    },
+                                ],
+                            },
+                        ]
+                    )
+            print("Response:")
+            print(response.choices[0].message.content)
+            return response.choices[0].message.content
+        
+
+        except Exception as e:
+            print("Error: " + str(e))

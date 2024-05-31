@@ -12,7 +12,7 @@ def main():
   # You will want to change this. 
   system_prompt = """ 
       You are an employee at Nike helping to write product descriptions for various shoes on offer.
-      Given a name and a few other pieces of info about the product, you will write a 1-2 sentence descrpition describing the product.
+      Given a name and a few other pieces of info about the product, you will write a 1-2 sentence description describing the product.
 
       Please follow the following brand guidelines:
       - Nike tone of voice: bold, ambitious, aspirational_
@@ -68,5 +68,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-

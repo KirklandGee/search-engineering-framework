@@ -4,7 +4,11 @@
 
 ## What Is This?
 
-- 
+I'm a search marketer who's taken a unique interest in machine learning, automation, and software engineering over the last couple of years. I've spent a lot of time trying to learn how to code, and I believe it's made a bigger difference than anything else I've done in my career.
+
+Because of that, I wanted to share what I've learned and encourage other marketers to do the same. Whether you're an engineer yourself trying to apply those skills to search, or you're a marketer who's been terrified of Python, but wants to get started—this is a place for you. 
+
+My hope is we can build and learn together on the path to this new era of [Search Engineering](https://kirklandgee.substack.com/p/new-search-engineering).
 
 ## Setup Instructions
 

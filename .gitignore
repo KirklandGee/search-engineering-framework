@@ -1,4 +1,6 @@
 credentials/*
+write_descriptions_good.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
