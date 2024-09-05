@@ -4,6 +4,8 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from oauthlib.oauth2.rfc6749.errors import InvalidGrantError
 import json
+import os
+import pickle
 
 class AuthManager:
     def __init__(self):
@@ -55,12 +57,37 @@ class AuthManager:
 
     def search_analytics_query(self, service, site_url, request_body):
         try:
-            print(site_url)
+            new_request = request_body.copy()
             result = service.searchanalytics().query(
                 siteUrl=site_url,
-                body=request_body
+                body=new_request
             ).execute()
             return result
         except Exception as e:
             st.error(f"Error querying Search Console API: {str(e)}")
             return None
+        
+    def search_analytics_query_daily(self, service, site_url, request_body):
+        try:
+            new_request = request_body.copy()
+            new_request['dimensions'] = ['page','query','date']
+
+            result = service.searchanalytics().query(
+                siteUrl=site_url,
+                body=new_request
+            ).execute()
+            return result
+        except Exception as e:
+            st.error(f"Error querying Search Console API: {str(e)}")
+
+    def load_cached_credentials(self):
+        cache_file = '.token_cache'
+        if os.path.exists(cache_file):
+            with open(cache_file, 'rb') as f:
+                return pickle.load(f)
+        return None
+
+    def save_cached_credentials(self, credentials):
+        cache_file = '.token_cache'
+        with open(cache_file, 'wb') as f:
+            pickle.dump(credentials, f)
