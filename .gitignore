@@ -1,5 +1,11 @@
 credentials/*
 write_descriptions_good.py
+gsc_app/.streamlit/
+gsc_app/.streamlit/secrets.toml
+.token_cache
+gsc_app/.token_cache
+gsc_app/credentials.json
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -154,10 +160,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/

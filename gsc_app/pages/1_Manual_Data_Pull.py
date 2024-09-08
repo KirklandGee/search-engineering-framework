@@ -161,25 +161,30 @@ if 'service' in st.session_state and st.session_state.service:
             # Here you would call the API with this request body
             result = auth_manager.search_analytics_query(st.session_state.service, st.session_state.selected_site, st.session_state.request)
             result_daily = auth_manager.search_analytics_query_daily(st.session_state.service, st.session_state.selected_site, st.session_state.request)
-            print(result_daily)
             if result:
                 df_display = process_gsc_data(result, st.session_state.request)
                 df_grouped = group_gsc_data(df_display)
-                if df_grouped is not None:
-                    st.markdown("## Grouped by Page:")
-                    st.dataframe(df_grouped, hide_index=True)
-                if df_display is not None:
-                    st.markdown("## All Data:")
-                    st.dataframe(df_display, hide_index=True)
-
-                else:
-                    st.info("No data returned for the given query.")
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    if df_grouped is not None:
+                        st.markdown("## Grouped by Page:")
+                        st.dataframe(df_grouped, hide_index=True)
+                    else:
+                        st.info("No grouped data available.")
+                
+                with col2:
+                    if df_display is not None:
+                        st.markdown("## All Data:")
+                        st.dataframe(df_display, hide_index=True)
+                    else:
+                        st.info("No data returned for the given query.")
             else:
                 st.error("Failed to fetch data from Search Console.")
 
             if result_daily:
                 df_display_daily = process_gsc_data(result_daily, st.session_state.request)
-                print(df_display_daily)
                 st.markdown("## Daily Data:")
                 st.dataframe(df_display_daily, hide_index=True)
 
