@@ -50,8 +50,6 @@ if 'request' not in st.session_state:
 if 'selected_site' not in st.session_state:
     st.session_state.selected_site = sites_list[0] if sites_list else None
 
-st.write(st.session_state.request)
-
 st.title("The Search Engineering Framework: GSC API Tool")
 
 st.write("You can use this tool to get access your own data from the Google Search Console API.")
