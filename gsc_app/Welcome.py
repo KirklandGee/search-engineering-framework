@@ -71,6 +71,6 @@ with col1:
 
 
 with col2:
-    image = Image.open("images/kirkland.jpeg")
-    st.image("images/kirkland.jpeg", caption="Kirkland Gee: The Search Engineering Framework")
+    image = Image.open("gsc_app/images/kirkland.jpeg")
+    st.image(image, caption="Kirkland Gee: The Search Engineering Framework")
 
