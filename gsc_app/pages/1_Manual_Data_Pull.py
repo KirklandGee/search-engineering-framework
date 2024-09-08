@@ -1,5 +1,4 @@
 import streamlit as st
-from modules.auth_manager import AuthManager
 from datetime import datetime, timedelta
 import pandas as pd
 from modules.data_processing import process_gsc_data, group_gsc_data
@@ -12,21 +11,8 @@ st.set_page_config(
 )
 
 
-# Initialize AuthManager
-auth_manager = AuthManager()
 
-# Load cached credentials
-credentials = auth_manager.load_cached_credentials()
-
-
-# Use cached credentials if available
-if credentials:
-    st.session_state.credentials = credentials
-    service = auth_manager.get_service(credentials)
-    if service:
-        st.session_state.service = service
-
-sites_list = auth_manager.get_site_list(st.session_state.service) if 'service' in st.session_state else []
+sites_list = st.session_state.auth_manager.get_site_list(st.session_state.service) if 'service' in st.session_state else []
 # Sort the sites list alphabetically
 sites_list.sort()
 
@@ -54,13 +40,7 @@ st.title("The Search Engineering Framework: GSC API Tool")
 
 st.write("You can use this tool to get access your own data from the Google Search Console API.")
 
-# Check if we're handling a redirect (i.e., if there's a 'code' in the URL)
-if 'code' in st.query_params:
-    if auth_manager.handle_redirect(st.query_params.get('code')):
-        st.success("Successfully signed in!")
-    # Clear the URL parameters to prevent reusing the same code
-    st.query_params.clear()
-    st.rerun()
+
 
 # Display sign-in/sign-out options
 if st.session_state.credentials:
@@ -68,19 +48,19 @@ if st.session_state.credentials:
     if st.button("Sign out"):
         st.session_state.credentials = None
         st.session_state.service = None
-        auth_manager.save_cached_credentials(None)  # Clear the cached credentials
+        st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
         st.experimental_rerun()
 else:
     st.write("You are not signed in. Please click the button below to authenticate.")
-    authorization_url = auth_manager.get_authorization_url()
+    authorization_url = st.session_state.auth_manager.get_authorization_url()
     st.link_button("Sign in with Google", authorization_url, use_container_width=True)
 
 # If we have credentials, initialize the service
 if st.session_state.credentials:
-    service = auth_manager.get_service(st.session_state.credentials)
+    service = st.session_state.auth_manager.get_service(st.session_state.credentials)
     if service:
         st.session_state.service = service
-        auth_manager.save_cached_credentials(st.session_state.credentials)  # Cache the credentials
+        st.session_state.auth_manager.save_cached_credentials(st.session_state.credentials)  # Cache the credentials
         st.success("You're signed in! You can now use the Google Search Console API.")
 
 # Here you can add more functionality that uses the authenticated service
@@ -157,27 +137,20 @@ if 'service' in st.session_state and st.session_state.service:
             })
             
             # Here you would call the API with this request body
-            result = auth_manager.search_analytics_query(st.session_state.service, st.session_state.selected_site, st.session_state.request)
-            result_daily = auth_manager.search_analytics_query_daily(st.session_state.service, st.session_state.selected_site, st.session_state.request)
+            result = st.session_state.auth_manager.search_analytics_query(st.session_state.service, st.session_state.selected_site, st.session_state.request)
+            result_daily = st.session_state.auth_manager.search_analytics_query_daily(st.session_state.service, st.session_state.selected_site, st.session_state.request)
             if result:
                 df_display = process_gsc_data(result, st.session_state.request)
                 df_grouped = group_gsc_data(df_display)
-                
-                col1, col2 = st.columns(2)
-                
-                with col1:
-                    if df_grouped is not None:
-                        st.markdown("## Grouped by Page:")
-                        st.dataframe(df_grouped, hide_index=True)
-                    else:
-                        st.info("No grouped data available.")
-                
-                with col2:
-                    if df_display is not None:
-                        st.markdown("## All Data:")
-                        st.dataframe(df_display, hide_index=True)
-                    else:
-                        st.info("No data returned for the given query.")
+                if df_grouped is not None:
+                    st.markdown("## Grouped by Page:")
+                    st.dataframe(df_grouped, hide_index=True)
+                if df_display is not None:
+                    st.markdown("## All Data:")
+                    st.dataframe(df_display, hide_index=True)
+
+                else:
+                    st.info("No data returned for the given query.")
             else:
                 st.error("Failed to fetch data from Search Console.")
 

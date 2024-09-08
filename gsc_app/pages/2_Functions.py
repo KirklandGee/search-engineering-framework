@@ -1,6 +1,4 @@
 import streamlit as st
-from modules.gsc_stuff import GSCStuff
-from modules.auth_manager import AuthManager
 
 # Set page configuration
 st.set_page_config(
@@ -15,16 +13,15 @@ st.title("Methods")
 # Introduction
 st.markdown("This page allows you to run various functions from [Antione Epert's gscwrapper package](https://github.com/antoineeripret/gsc_wrapper/tree/master) .")
 # Initialize AuthManager
-auth_manager = AuthManager()
 
 # Load cached credentials
-credentials = auth_manager.load_cached_credentials()
+credentials = st.session_state.auth_manager.load_cached_credentials()
 
 
 # Use cached credentials if available
 if credentials:
     st.session_state.credentials = credentials
-    service = auth_manager.get_service(credentials)
+    service = st.session_state.auth_manager.get_service(credentials)
     if service:
         st.session_state.service = service
 
@@ -34,19 +31,17 @@ if st.session_state.credentials:
     if st.button("Sign out"):
         st.session_state.credentials = None
         st.session_state.service = None
-        auth_manager.save_cached_credentials(None)  # Clear the cached credentials
+        st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
         st.experimental_rerun()
-        gsc = GSCStuff()
-        account = gsc.load_account()
 
 else:
     st.write("You are not signed in. Please click the button below to authenticate.")
-    authorization_url = auth_manager.get_authorization_url()
+    authorization_url = st.session_state.auth_manager.get_authorization_url()
     st.link_button("Sign in with Google", authorization_url, use_container_width=True)
 
 
-def load_data(web_property, start_date, end_date):
-    webproperty = gsc.account[web_property]
+def load_data(account, web_property, start_date, end_date):
+    webproperty = account[web_property]
 
     # Convert date objects to string format
     start_date_str = start_date.strftime('%Y-%m-%d')
@@ -67,9 +62,11 @@ def load_data(web_property, start_date, end_date):
 
 
 if st.session_state.credentials:
+    st.session_state.account = st.session_state.auth_manager.load_wrapper_account()
+
     # Initialize session state for web property and web properties list
     if 'web_properties' not in st.session_state:
-        web_properties_df = gsc.account.list_webproperties()
+        web_properties_df = st.session_state.account.list_webproperties()
         st.session_state.web_properties = web_properties_df['siteUrl'].tolist()
 
     if 'web_property' not in st.session_state:
@@ -86,7 +83,7 @@ if st.session_state.credentials:
     if get_data:
         # Update session state
         st.session_state.web_property = web_property
-        report = load_data(web_property, start_date, end_date)
+        report = load_data(st.session_state.account,web_property, start_date, end_date)
         st.dataframe(report, 
                     hide_index=True)
 
@@ -106,19 +103,20 @@ if st.session_state.credentials:
     if cannibalization_submit:
         brand_variants = [variant.strip() for variant in keyword.split(',')]
         cannibalization_data = (
-            account[st.session_state.web_property]
+            st.session_state.account[st.session_state.web_property]
             .query
             .dimensions(["query","page"])
             .range(start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'))
             .get()
             .cannibalization(brand_variants=brand_variants)
         )
+        print(cannibalization_data)
         st.subheader(f"Cannibalization Report")
         st.dataframe(cannibalization_data, hide_index=True, use_container_width=True)
 
     if ctr_yield_submit:
         ctr_yield_data = (
-            account[st.session_state.web_property]
+            st.session_state.account[st.session_state.web_property]
             .query
             .dimensions(["query","date"])
             .range(start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'))

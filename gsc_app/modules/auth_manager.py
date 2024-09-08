@@ -4,11 +4,10 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from oauthlib.oauth2.rfc6749.errors import InvalidGrantError
 import json
-import os
-import pickle
+import gscwrapper
 
 class AuthManager:
-    def __init__(self):
+    def __init__(self, redirect_uri):
         self.client_config = {
             "web": {
                 "client_id": st.secrets["google_oauth"]["client_id"],
@@ -19,9 +18,9 @@ class AuthManager:
         }
         self.flow = Flow.from_client_config(
             self.client_config,
-            scopes=['https://www.googleapis.com/auth/webmasters.readonly']
+            scopes=['https://www.googleapis.com/auth/webmasters.readonly'],
+            redirect_uri=redirect_uri
         )
-        self.flow.redirect_uri = "http://localhost:8501"  # Adjust this to your Streamlit app's URL
 
     def get_authorization_url(self):
         return self.flow.authorization_url(prompt='consent')[0]
@@ -29,65 +28,65 @@ class AuthManager:
     def handle_redirect(self, code):
         try:
             self.flow.fetch_token(code=code)
-            credentials = self.flow.credentials
-            st.session_state.credentials = credentials.to_json()
-            return True
+            return self.flow.credentials.to_json()
         except InvalidGrantError:
-            st.error("The authorization code has expired. Please sign in again.")
-            st.session_state.credentials = None
-            return False
+            raise ValueError("The authorization code has expired. Please sign in again.")
+        except Exception as e:
+            raise ValueError(f"An error occurred during authentication: {str(e)}")
 
-    def get_service(self, credentials):
-        if st.session_state.credentials:
-            try:
-                credentials = Credentials.from_authorized_user_info(json.loads(st.session_state.credentials))
-                return build('searchconsole', 'v1', credentials=credentials)
-            except Exception as e:
-                st.error(f"Error initializing service: {str(e)}")
-                st.session_state.credentials = None
-        return None
-      
+    def get_service(self, credentials_json):
+        try:
+            credentials = Credentials.from_authorized_user_info(json.loads(credentials_json))
+            return build('searchconsole', 'v1', credentials=credentials)
+        except Exception as e:
+            raise ValueError(f"Error initializing service: {str(e)}")
+
     def get_site_list(self, service):
         try:
             sites = service.sites().list().execute()
             return [site['siteUrl'] for site in sites.get('siteEntry', [])]
         except Exception as e:
-            print(f"An error occurred: {e}")
-            return None
-
-    def search_analytics_query(self, service, site_url, request_body):
-        try:
-            new_request = request_body.copy()
-            result = service.searchanalytics().query(
-                siteUrl=site_url,
-                body=new_request
-            ).execute()
-            return result
-        except Exception as e:
-            st.error(f"Error querying Search Console API: {str(e)}")
-            return None
-        
-    def search_analytics_query_daily(self, service, site_url, request_body):
-        try:
-            new_request = request_body.copy()
-            new_request['dimensions'] = ['page','query','date']
-
-            result = service.searchanalytics().query(
-                siteUrl=site_url,
-                body=new_request
-            ).execute()
-            return result
-        except Exception as e:
-            st.error(f"Error querying Search Console API: {str(e)}")
+            raise ValueError(f"An error occurred while fetching site list: {e}")
 
     def load_cached_credentials(self):
-        cache_file = '.token_cache'
-        if os.path.exists(cache_file):
-            with open(cache_file, 'rb') as f:
-                return pickle.load(f)
-        return None
+        return st.session_state.get('credentials')
 
-    def save_cached_credentials(self, credentials):
-        cache_file = '.token_cache'
-        with open(cache_file, 'wb') as f:
-            pickle.dump(credentials, f)
+    def save_cached_credentials(self, credentials_json):
+        st.session_state['credentials'] = credentials_json
+
+    def load_wrapper_account(self):
+        # Assuming token_data is a JSON string, parse it into a dictionary
+        token_data = self.load_cached_credentials()
+        token_data = json.loads(token_data)
+        # Create Credentials object from token data
+        credentials = Credentials(
+            token=token_data['token'],
+            refresh_token=token_data['refresh_token'],
+            token_uri=token_data['token_uri'],
+            client_id=token_data['client_id'],
+            client_secret=token_data['client_secret'],
+            scopes=['https://www.googleapis.com/auth/webmasters.readonly']
+        )
+
+        # Build the service
+        service = build('searchconsole', 'v1', credentials=credentials, cache_discovery=False)
+
+        # Create an Account object (assuming gscwrapper.Account is similar to the one in the original code)
+        account = gscwrapper.account.Account(service, credentials)
+
+        print(account)
+        return account
+    
+    def search_analytics_query(self, service, site, request):
+        try:
+            result = service.searchanalytics().query(siteUrl=site, body=request).execute()
+            return result
+        except Exception as e:
+            raise ValueError(f"An error occurred while fetching search analytics data: {e}")
+        
+    def search_analytics_query_daily(self, service, site, request):
+        try:
+            result = service.searchanalytics().query(siteUrl=site, body=request).execute()
+            return result
+        except Exception as e:
+            raise ValueError(f"An error occurred while fetching search analytics data: {e}")
