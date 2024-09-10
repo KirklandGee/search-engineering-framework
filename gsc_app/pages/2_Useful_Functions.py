@@ -2,13 +2,13 @@ import streamlit as st
 
 # Set page configuration
 st.set_page_config(
-    page_title="Functions - GSC API Tool",
+    page_title="Useful Functions - GSC API Tool",
     page_icon="🛠️",
     layout="wide"
 )
 
 # Title
-st.title("Methods")
+st.title("Useful Functions")
 
 # Introduction
 st.markdown("This page allows you to run various functions from [Antione Epert's gscwrapper package](https://github.com/antoineeripret/gsc_wrapper/tree/master) .")
@@ -101,6 +101,7 @@ if st.session_state.credentials:
         ctr_yield_submit = st.form_submit_button("Generate Report")
 
     if cannibalization_submit:
+        report = load_data(st.session_state.account,web_property, start_date, end_date)
         brand_variants = [variant.strip() for variant in keyword.split(',')]
         cannibalization_data = (
             st.session_state.account[st.session_state.web_property]
@@ -115,6 +116,7 @@ if st.session_state.credentials:
         st.dataframe(cannibalization_data, hide_index=True, use_container_width=True)
 
     if ctr_yield_submit:
+        report = load_data(st.session_state.account,web_property, start_date, end_date)
         ctr_yield_data = (
             st.session_state.account[st.session_state.web_property]
             .query

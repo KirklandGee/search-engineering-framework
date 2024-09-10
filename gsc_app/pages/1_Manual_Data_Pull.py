@@ -61,9 +61,7 @@ if st.session_state.credentials:
     if service:
         st.session_state.service = service
         st.session_state.auth_manager.save_cached_credentials(st.session_state.credentials)  # Cache the credentials
-        st.success("You're signed in! You can now use the Google Search Console API.")
 
-# Here you can add more functionality that uses the authenticated service
 if 'service' in st.session_state and st.session_state.service:
     
     if sites_list:
@@ -136,7 +134,6 @@ if 'service' in st.session_state and st.session_state.service:
                 "type": data_type,
             })
             
-            # Here you would call the API with this request body
             result = st.session_state.auth_manager.search_analytics_query(st.session_state.service, st.session_state.selected_site, st.session_state.request)
             result_daily = st.session_state.auth_manager.search_analytics_query_daily(st.session_state.service, st.session_state.selected_site, st.session_state.request)
             if result:

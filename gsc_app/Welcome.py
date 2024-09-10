@@ -3,36 +3,27 @@ from PIL import Image
 from modules.auth_manager import AuthManager
 # Set page configuration
 st.set_page_config(
-    page_title="GSC API Tool",
+    page_title="The Search Engineering Framework's GSC API Tool",
     page_icon="🔍",
     layout="wide"
 )
 
 # Initialize AuthManager
-st.session_state.auth_manager = AuthManager(redirect_uri="https://gsc-tools.streamlit.app/")
+st.session_state.auth_manager = AuthManager(redirect_uri="https://gsc-api-tool.streamlit.app/")
 
 # Handle OAuth redirect
 if 'code' in st.query_params:
-    try:
-        credentials_json = st.session_state.auth_manager.handle_redirect(st.query_params['code'])
-        st.session_state.auth_manager.save_cached_credentials(credentials_json)
-        st.success("Successfully signed in!")
-        st.rerun()
-    except Exception as e:
-        print('error')
-        st.error(str(e))
+    credentials_json = st.session_state.auth_manager.handle_redirect(st.query_params['code'])
+    st.session_state.auth_manager.save_cached_credentials(credentials_json)
+    st.success("Successfully signed in!")
 
 # Load cached credentials
 credentials_json = st.session_state.auth_manager.load_cached_credentials()
 
 # Initialize service if credentials are available
 if credentials_json:
-    try:
-        service = st.session_state.auth_manager.get_service(credentials_json)
-        st.session_state.service = service
-    except Exception as e:
-        st.error(str(e))
-        st.session_state.auth_manager.save_cached_credentials(None)
+    service = st.session_state.auth_manager.get_service(credentials_json)
+    st.session_state.service = service
 
 col1, col2 = st.columns([4, 2])
 # Title and introduction
@@ -73,4 +64,3 @@ with col1:
 with col2:
     image = Image.open("gsc_app/images/kirkland.jpeg")
     st.image(image, caption="Kirkland Gee: The Search Engineering Framework")
-
