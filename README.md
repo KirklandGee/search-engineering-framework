@@ -10,6 +10,12 @@ Because of that, I wanted to share what I've learned and encourage other markete
 
 My hope is we can build and learn together on the path to this new era of [Search Engineering](https://kirklandgee.substack.com/p/new-search-engineering).
 
+## Streamlit App
+
+- If you want to run the Streamlit app locally (and add any new features), you can do so by cloning the repo and running `streamlit run Welcome.py`.
+
+- If you want to use of the app in your browser, you can access it [here](https://gsc-tool.streamlit.app/).
+
 ## Setup Instructions
 
 - To make use of the google_drive_manager, you will need to setup a Google Service account. You can read more about [how to do that here:](https://kirklandgee.substack.com/p/3-ways-i-use-ai-in-google-sheets?r=3lkrz3)
