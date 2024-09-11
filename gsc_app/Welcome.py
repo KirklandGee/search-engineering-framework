@@ -53,10 +53,9 @@ with col1:
     - Apply advanced filters to refine your queries
     - View data grouped by page or in detailed format
     - Generate specialized reports:
-    - Cannibalization Report
-    - CTR Yield Curve
-    - (More to come!)
-    - Utilize functions from the gscwrapper package
+        - Cannibalization Report
+        - CTR Yield Curve
+        - Pages to Kill
     - Visualize daily search performance data
     """)
 
