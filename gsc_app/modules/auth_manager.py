@@ -74,7 +74,6 @@ class AuthManager:
         # Create an Account object (assuming gscwrapper.Account is similar to the one in the original code)
         account = gscwrapper.account.Account(service, credentials)
 
-        print(account)
         return account
     
     def search_analytics_query(self, service, site, request):

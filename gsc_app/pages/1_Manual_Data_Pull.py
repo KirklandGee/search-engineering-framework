@@ -5,11 +5,10 @@ from modules.data_processing import process_gsc_data, group_gsc_data
 
 # Set page configuration
 st.set_page_config(
-    page_title="Manual Data Pull - GSC API Tool",
+    page_title="Manual Data Pull - SE Framework GSC API Tool",
     page_icon="📊",
     layout="wide"
 )
-
 
 
 sites_list = st.session_state.auth_manager.get_site_list(st.session_state.service) if 'service' in st.session_state else []
@@ -36,24 +35,31 @@ if 'request' not in st.session_state:
 if 'selected_site' not in st.session_state:
     st.session_state.selected_site = sites_list[0] if sites_list else None
 
-st.title("The Search Engineering Framework: GSC API Tool")
+col1, col2 = st.columns([3, 2])
 
-st.write("You can use this tool to get access your own data from the Google Search Console API.")
+with col1:
+    st.title("Manual Data Pull")
+    st.write("You can use this tool to manually access your own data from the Google Search Console API.\n\nYou can use the filters to refine your query and the dimensions to group your data.")
+
+
+with col2:
+    # Display sign-in/sign-out options
+    if st.session_state.credentials:
+        st.write("You are currently signed in.")
+        if st.button("Sign out"):
+            st.session_state.credentials = None
+            st.session_state.service = None
+            st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
+            st.experimental_rerun()
+    else:
+        st.write("You are not signed in. Please click the button below to authenticate.")
+        authorization_url = st.session_state.auth_manager.get_authorization_url()
+        st.link_button("Sign in with Google", authorization_url, use_container_width=True)
 
 
 
-# Display sign-in/sign-out options
-if st.session_state.credentials:
-    st.write("You are currently signed in.")
-    if st.button("Sign out"):
-        st.session_state.credentials = None
-        st.session_state.service = None
-        st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
-        st.experimental_rerun()
-else:
-    st.write("You are not signed in. Please click the button below to authenticate.")
-    authorization_url = st.session_state.auth_manager.get_authorization_url()
-    st.link_button("Sign in with Google", authorization_url, use_container_width=True)
+
+
 
 # If we have credentials, initialize the service
 if st.session_state.credentials:
