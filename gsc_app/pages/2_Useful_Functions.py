@@ -76,6 +76,8 @@ if st.session_state.credentials:
         st.session_state.form_start_date = None
     if 'form_end_date' not in st.session_state:
         st.session_state.form_end_date = None
+    if 'main_report' not in st.session_state:
+        st.session_state.main_report = None
 
     # Function to update session state
     def update_session_state():
@@ -99,7 +101,7 @@ if st.session_state.credentials:
                                                  st.session_state.form_start_date, 
                                                  st.session_state.form_end_date)
 
-    # Display the main report outside of the form submission block
+    # Check if main_report exists and is not None before using it
     if st.session_state.main_report is not None:
         st.subheader("Main Data Report")
         st.dataframe(st.session_state.main_report.show_data(), hide_index=True)
