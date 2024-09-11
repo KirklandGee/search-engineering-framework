@@ -50,6 +50,11 @@ else:
 
 st.markdown("""
 This tool allows you to access and analyze your data from the Google Search Console API.
+            
+### Privacy
+- We do not store any data from your Google Search Console.
+- Your data is only used to provide you with the services offered by this tool, and then it is deleted from your browser session.
+- Your data is not shared with anyone.
 
 ### Key Features:
 - Authenticate securely with your Google account
