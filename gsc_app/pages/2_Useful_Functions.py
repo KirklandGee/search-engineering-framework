@@ -103,6 +103,9 @@ if st.session_state.credentials:
     if st.session_state.main_report is not None:
         st.subheader("Main Data Report")
         st.dataframe(st.session_state.main_report.show_data(), hide_index=True)
+    
+    else:
+        st.info("No data has been loaded yet. Please select a web property and date range above to fetch data.")
 
 
     # New 4-column grid for cannibalization report
@@ -133,6 +136,7 @@ if st.session_state.credentials:
 
     with col3.form("pages_to_kill"):
         st.write("## Find Pages to Kill")
+        st.write("Identify pages that are below your chosen threshold for clicks and impressions. This can help you decide which pages to cut or improve.")
         sitemap = st.text_input("Enter the sitemap URL")
         clicks_threshold = st.number_input("Enter the clicks threshold", value=0)
         impressions_threshold = st.number_input("Enter the impressions threshold", value=0)
@@ -189,7 +193,6 @@ if st.session_state.credentials:
     
     if st.session_state.pages_to_kill_data is not None:
         st.subheader("Pages to Kill")
-        st.write("Identify pages that are below your chosen threshold for clicks and impressions. This can help you decide which pages to cut or improve.")
         st.dataframe(st.session_state.pages_to_kill_data, hide_index=True, use_container_width=True)
 
     # Sidebar

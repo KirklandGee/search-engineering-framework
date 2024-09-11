@@ -101,10 +101,7 @@ if 'service' in st.session_state and st.session_state.service:
                 else:
                     st.session_state.request["dimensionFilterGroups"] = []
                     st.info("Filter cleared.")
-                
-                st.write("Current filter:")
-                st.json(st.session_state.request["dimensionFilterGroups"])
-        
+                        
         # Main form for GSC request
         with st.form("gsc_request_form"):
             if sites_list:
