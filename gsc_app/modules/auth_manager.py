@@ -84,6 +84,9 @@ class AuthManager:
             raise ValueError(f"An error occurred while fetching search analytics data: {e}")
         
     def search_analytics_query_daily(self, service, site, request):
+
+        if "date" not in request["dimensions"]:
+            request["dimensions"].append("date")
         try:
             result = service.searchanalytics().query(siteUrl=site, body=request).execute()
             return result
