@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 from modules.auth_manager import AuthManager
+import streamlit.components.v1 as components
+
 # Set page configuration
 st.set_page_config(
     page_title="The Search Engineering Framework's GSC API Tool",
@@ -25,41 +27,42 @@ if credentials_json:
     service = st.session_state.auth_manager.get_service(credentials_json)
     st.session_state.service = service
 
-col1, col2 = st.columns([4, 2])
-# Title and introduction
+components.html(
+        "<iframe src='https://kirklandgee.substack.com/embed' width='480' height='320' style='border:1px solid #EEE; background:white;' frameborder='0' scrolling='no'></iframe>",
+        height=320,
+    )
 
-with col1:
-    st.title("The Search Engineering Framework's GSC API Tool")
-    # Display sign-in/sign-out options
-    if credentials_json:
-        st.write("You are currently signed in.")
-        if st.button("Sign out"):
-            st.session_state.auth_manager.save_cached_credentials(None)
-            st.session_state.pop('service', None)
-            st.rerun()
 
-    else:
-        st.write("You are not signed in. Please click the button below to authenticate.")
-        authorization_url = st.session_state.auth_manager.get_authorization_url()
-        st.link_button("Sign in with Google", authorization_url, use_container_width=True)
+
+st.title("The Search Engineering Framework's GSC API Tool")
+# Display sign-in/sign-out options
+if credentials_json:
+    st.write("You are currently signed in.")
+    if st.button("Sign out"):
+        st.session_state.auth_manager.save_cached_credentials(None)
+        st.session_state.pop('service', None)
+        st.rerun()
+
+else:
+    st.write("You are not signed in. Please click the button below to authenticate.")
+    authorization_url = st.session_state.auth_manager.get_authorization_url()
+    st.link_button("Sign in with Google", authorization_url, use_container_width=True)
+
+st.markdown("""
+This tool allows you to access and analyze your data from the Google Search Console API.
+
+### Key Features:
+- Authenticate securely with your Google account
+- Select from your available sites in Google Search Console
+- Perform manual data pulls with customizable parameters
+- Apply advanced filters to refine your queries
+- View data grouped by page or in detailed format
+- Generate specialized reports:
+    - Cannibalization Report
+    - CTR Yield Curve
+    - Pages to Kill
+- Visualize daily search performance data
+""")
+
+
     
-    st.markdown("""
-    This tool allows you to access and analyze your data from the Google Search Console API.
-
-    ### Key Features:
-    - Authenticate securely with your Google account
-    - Select from your available sites in Google Search Console
-    - Perform manual data pulls with customizable parameters
-    - Apply advanced filters to refine your queries
-    - View data grouped by page or in detailed format
-    - Generate specialized reports:
-        - Cannibalization Report
-        - CTR Yield Curve
-        - Pages to Kill
-    - Visualize daily search performance data
-    """)
-
-
-with col2:
-    image = Image.open("gsc_app/images/kirkland.jpeg")
-    st.image(image, caption="Kirkland Gee: The Search Engineering Framework")
