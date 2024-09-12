@@ -1,4 +1,5 @@
 import pandas as pd
+import streamlit as st
 
 def process_gsc_data(result, request):
     rows = result.get('rows', [])
@@ -46,6 +47,10 @@ def process_gsc_data(result, request):
     return df_display
 
 def group_gsc_data(df_display):
+    if df_display is None:
+        print("Error: no data to display")
+        return None
+
     if 'page' in df_display.columns and 'query' in df_display.columns and 'clicks' in df_display.columns:
         df_display = df_display.sort_values('clicks', ascending=False)
         
@@ -61,5 +66,7 @@ def group_gsc_data(df_display):
         df_grouped = df_grouped.sort_values('clicks', ascending=False)
 
         df_grouped = df_grouped.rename(columns={'query': 'top 10 queries'})
+
         return df_grouped
-    return None
+    else:
+        return None

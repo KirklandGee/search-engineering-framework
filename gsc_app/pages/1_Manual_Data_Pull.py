@@ -2,6 +2,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 import pandas as pd
 from modules.data_processing import process_gsc_data, group_gsc_data
+from modules.auth_manager import AuthManager
 
 # Set page configuration
 st.set_page_config(
@@ -10,6 +11,8 @@ st.set_page_config(
     layout="wide"
 )
 
+if 'auth_manager' not in st.session_state:
+    st.session_state.auth_manager = AuthManager()
 
 sites_list = st.session_state.auth_manager.get_site_list(st.session_state.service) if 'service' in st.session_state else []
 # Sort the sites list alphabetically
@@ -125,6 +128,12 @@ if 'service' in st.session_state and st.session_state.service:
             
             def on_submit():
                 st.session_state.selected_site = st.session_state.site_selector
+                st.session_state.request.update({
+                    "startDate": start_date.strftime("%Y-%m-%d"),
+                    "endDate": end_date.strftime("%Y-%m-%d"),
+                    "dimensions": dimensions,
+                    "type": data_type,
+                })
 
             submitted = st.form_submit_button("Fetch Data", on_click=on_submit)
             

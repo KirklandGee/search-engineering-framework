@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # Initialize AuthManager
-st.session_state.auth_manager = AuthManager(redirect_uri="https://gsc-tools.streamlit.app/")
+st.session_state.auth_manager = AuthManager()
 
 # Handle OAuth redirect
 if 'code' in st.query_params:

@@ -7,7 +7,7 @@ import json
 import gscwrapper
 
 class AuthManager:
-    def __init__(self, redirect_uri):
+    def __init__(self):
         self.client_config = {
             "web": {
                 "client_id": st.secrets["google_oauth"]["client_id"],
@@ -19,7 +19,7 @@ class AuthManager:
         self.flow = Flow.from_client_config(
             self.client_config,
             scopes=['https://www.googleapis.com/auth/webmasters.readonly'],
-            redirect_uri=redirect_uri
+            redirect_uri='https://gsc-tools.streamlit.app/'
         )
 
     def get_authorization_url(self):

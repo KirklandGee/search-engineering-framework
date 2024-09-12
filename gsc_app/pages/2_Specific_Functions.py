@@ -1,4 +1,5 @@
 import streamlit as st
+from modules.auth_manager import AuthManager
 
 # Set page configuration
 st.set_page_config(
@@ -6,6 +7,9 @@ st.set_page_config(
     page_icon="🛠️",
     layout="wide"
 )
+
+if 'auth_manager' not in st.session_state:
+    st.session_state.auth_manager = AuthManager()
 
 col1, col2 = st.columns([3, 2])
 
@@ -21,7 +25,6 @@ with col2:
             st.session_state.credentials = None
             st.session_state.service = None
             st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
-            st.experimental_rerun()
 
     else:
         st.write("You are not signed in. Please click the button below to authenticate.")
@@ -196,8 +199,3 @@ if st.session_state.credentials:
     if st.session_state.pages_to_kill_data is not None:
         st.subheader("Pages to Kill")
         st.dataframe(st.session_state.pages_to_kill_data, hide_index=True, use_container_width=True)
-
-    # Sidebar
-    st.sidebar.header("Function Navigation")
-    st.sidebar.info("Use this sidebar to navigate between different functions once they are implemented.")
-
