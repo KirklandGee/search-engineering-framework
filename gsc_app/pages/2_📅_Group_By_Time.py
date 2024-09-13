@@ -23,7 +23,7 @@ if credentials_json:
     service = st.session_state.auth_manager.get_service(credentials_json)
     st.session_state.service = service
 
-def load_data(account, web_property, start_date, end_date, period):
+def load_grouped_data(account, web_property, start_date, end_date, period):
     webproperty = account[web_property]
 
     # Convert date objects to string format
@@ -42,7 +42,7 @@ def load_data(account, web_property, start_date, end_date, period):
         webproperty
         .query
         .range(start_date_str, end_date_str)
-        .dimensions(["page","query","date"])
+        .dimensions(["date"])
         .get()
     )
 
@@ -125,7 +125,7 @@ if st.session_state.credentials:
         st.date_input("End date", key='end_date_input', on_change=update_session_state)
 
     if st.button("Get Data"):
-        st.session_state.grouped_report = load_data(st.session_state.account, 
+        st.session_state.grouped_report = load_grouped_data(st.session_state.account, 
                                                  st.session_state.form_web_property, 
                                                  st.session_state.form_start_date, 
                                                  st.session_state.form_end_date,
