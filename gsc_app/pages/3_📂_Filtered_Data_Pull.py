@@ -6,17 +6,23 @@ from modules.auth_manager import AuthManager
 
 # Set page configuration
 st.set_page_config(
-    page_title="Manual Data Pull - SE Framework GSC API Tool",
-    page_icon="📊",
+    page_title="Filtered Data Pull - SE Framework GSC API Tool",
+    page_icon="📂",
     layout="wide"
 )
 
 if 'auth_manager' not in st.session_state:
     st.session_state.auth_manager = AuthManager()
 
-sites_list = st.session_state.auth_manager.get_site_list(st.session_state.service) if 'service' in st.session_state else []
-# Sort the sites list alphabetically
-sites_list.sort()
+if 'service' in st.session_state:
+    try:
+        sites_list = st.session_state.auth_manager.get_site_list(st.session_state.service)
+        sites_list.sort()
+    except ValueError as e:
+        sites_list = []
+else:
+    sites_list = []
+    st.warning("Service not initialized. Please authenticate first.")
 
 
 if 'credentials' not in st.session_state:
@@ -55,7 +61,7 @@ with col2:
             st.session_state.auth_manager.save_cached_credentials(None)  # Clear the cached credentials
             st.experimental_rerun()
     else:
-        st.write("You are not signed in. Please click the button below to authenticate.")
+        st.warning("You are not signed in. Please click the button below to authenticate.")
         authorization_url = st.session_state.auth_manager.get_authorization_url()
         st.link_button("Sign in with Google", authorization_url, use_container_width=True)
 

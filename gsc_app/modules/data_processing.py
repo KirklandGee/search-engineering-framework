@@ -55,11 +55,11 @@ def group_gsc_data(df_display):
         df_display = df_display.sort_values('clicks', ascending=False)
         
         df_grouped = df_display.groupby('page').agg({
-            'query': lambda x: ', '.join(x.head(10)),
+            'query': lambda x: ', '.join(x.drop_duplicates().head(10)),
             'clicks': 'sum',
             'impressions': 'sum',
-            'CTR': lambda x: f"{x.astype(float).mean():.2f}%",
-            'Average Position': 'mean'
+            'CTR': lambda x: round(x.astype(float).mean(), 2),
+            'Average Position': lambda x: round(x.mean(), 2)
         }).reset_index()
         
         # Sort df_grouped by clicks in descending order
