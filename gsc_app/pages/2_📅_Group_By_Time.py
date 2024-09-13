@@ -23,6 +23,33 @@ if credentials_json:
     service = st.session_state.auth_manager.get_service(credentials_json)
     st.session_state.service = service
 
+def load_data(account, web_property, start_date, end_date, period):
+    webproperty = account[web_property]
+
+    # Convert date objects to string format
+    start_date_str = start_date.strftime('%Y-%m-%d')
+    end_date_str = end_date.strftime('%Y-%m-%d')
+    period_map = {
+        "Day": "D",
+        "Week": "W",
+        "Month": "M",
+        "Quarter": "Q",
+        "Year": "Y"
+    }
+
+    period_letter = period_map.get(period, "D")  # Default to "D" if not found
+    report = (
+        webproperty
+        .query
+        .range(start_date_str, end_date_str)
+        .dimensions(["page","query","date"])
+        .get()
+    )
+
+    report_grouped = report.group_data_by_period(period=period_letter)
+    report_grouped.rename(columns={"date": period}, inplace=True)
+
+    return report_grouped
  
 col1, col2 = st.columns([3, 2])
 
@@ -52,36 +79,6 @@ if credentials:
     if service:
         st.session_state.service = service
 
-
-def load_data(account, web_property, start_date, end_date, period):
-    webproperty = account[web_property]
-
-    # Convert date objects to string format
-    start_date_str = start_date.strftime('%Y-%m-%d')
-    end_date_str = end_date.strftime('%Y-%m-%d')
-    period_map = {
-        "Day": "DE",
-        "Week": "WE",
-        "Month": "ME",
-        "Quarter": "QE",
-        "Year": "YE"
-    }
-
-    period_letter = period_map.get(period, "D")  # Default to "D" if not found
-
-    report = (
-        webproperty
-        .query
-        .range(start_date_str, end_date_str)
-        .dimensions(["page","query","date"])
-        .get()
-    )
-    report_grouped = report.group_data_by_period(period=period_letter)
-    report_grouped.rename(columns={"date": period}, inplace=True)
-
-    return report_grouped
-    
-
 if st.session_state.credentials:
     st.session_state.account = st.session_state.auth_manager.load_wrapper_account()
 
@@ -101,7 +98,7 @@ if st.session_state.credentials:
     if 'form_end_date' not in st.session_state:
         st.session_state.form_end_date = None
     if 'period' not in st.session_state:
-        st.session_state.period = "D"
+        st.session_state.period = "DE"
     if 'grouped_report' not in st.session_state:
         st.session_state.grouped_report = None
 
@@ -135,6 +132,7 @@ if st.session_state.credentials:
                                                  st.session_state.period)
         
     if st.session_state.grouped_report is not None:
+        print(st.session_state.grouped_report)
         period_display = {"D": "Day", "W": "Week", "M": "Month", "Q": "Quarter", "Y": "Year"}
         period_column = st.session_state.grouped_report.columns[0]
         st.subheader(f"Data Grouped by {period_column}")

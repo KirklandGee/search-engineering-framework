@@ -225,5 +225,5 @@ if st.session_state.credentials:
         st.subheader("Main Data Report")
         st.dataframe(st.session_state.main_report.show_data(), hide_index=True, use_container_width=True)
     
-    else:
+    elif st.session_state.main_report is None and st.session_state.pages_to_kill_data is None and st.session_state.ctr_yield_data is None and st.session_state.cannibalization_data is None:
         st.info("No data has been loaded yet. Please select a web property and date range above to fetch data.")
