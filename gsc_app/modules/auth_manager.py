@@ -19,7 +19,7 @@ class AuthManager:
         self.flow = Flow.from_client_config(
             self.client_config,
             scopes=['https://www.googleapis.com/auth/webmasters.readonly'],
-            redirect_uri='http://gsc-tools.streamlit.app'
+            redirect_uri='https://gsc-tools.streamlit.app/'
         )
 
     def get_authorization_url(self):
