@@ -59,14 +59,15 @@ This tool allows you to access and analyze your data from the Google Search Cons
 ### Key Features:
 - Authenticate securely with your Google account
 - Select from your available sites in Google Search Console
+    - Note: There is currently a known bug for certain properties that will give you an error message as though the API can't access any data. If this happens, please try again with a different property, and share the error message with me so I can track down the issue.
 - Perform manual data pulls with customizable parameters
 - Apply advanced filters to refine your queries
-- View data grouped by page or in detailed format
-- Generate specialized reports:
+- Analyze your data with the following functions:
     - Cannibalization Report
     - CTR Yield Curve
-    - Pages to Kill
-- Visualize daily search performance data
+    - Pages to Audit
+- Visualize search performance data over time, including:
+    - Daily, weekly, monthly, quarterly, or yearly
 """)
 
 

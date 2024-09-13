@@ -60,11 +60,11 @@ def load_data(account, web_property, start_date, end_date, period):
     start_date_str = start_date.strftime('%Y-%m-%d')
     end_date_str = end_date.strftime('%Y-%m-%d')
     period_map = {
-        "Day": "D",
-        "Week": "W",
-        "Month": "M",
-        "Quarter": "Q",
-        "Year": "Y"
+        "Day": "DE",
+        "Week": "WE",
+        "Month": "ME",
+        "Quarter": "QE",
+        "Year": "YE"
     }
 
     period_letter = period_map.get(period, "D")  # Default to "D" if not found
