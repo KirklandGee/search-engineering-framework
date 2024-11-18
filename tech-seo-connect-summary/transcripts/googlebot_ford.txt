@@ -1,0 +1,699 @@
+# tactiq.io free youtube transcript
+# Chasing the Googlebot Trail - Jori Ford
+# https://www.youtube.com/watch/5N3-H5wcjV8
+
+00:00:12.400 all right guys Jr told me to do this so
+00:00:16.279 that you would all wake up and pay
+00:00:17.880 attention to me who wants a t-shirt
+00:00:32.520 okay so that's not embarrassing at
+00:00:36.800 all I know right I'm Oprah up in here
+00:00:39.920 Oprah SEO yeah
+00:00:43.280 so I am I'm going to talk about chasing
+00:00:46.239 the googlebot trail and I'm pretty sure
+00:00:48.120 everybody's like what does that mean uh
+00:00:51.000 I speak mostly about
+00:00:53.719 crawling the reason I speak about
+00:00:55.840 crawling the most is because it's the
+00:00:58.120 most important part of SEO
+00:01:01.000 I said that because many of you are like
+00:01:03.519 our jobs don't rely on crawling jewelry
+00:01:05.600 and I'm like yes it does it's where your
+00:01:07.960 strategies should start for everything
+00:01:10.479 so that's what I'm going to talk
+00:01:12.759 about first we're going to talk about
+00:01:15.960 Google search console and the tools you
+00:01:18.920 can use in there we are going to talk
+00:01:21.400 about entry points and we've talked
+00:01:24.400 about log files things like that so
+00:01:25.759 everybody here knows what an entry point
+00:01:27.159 is it's where Google's coming into the
+00:01:29.079 site we're fixing technical difficulties
+00:01:31.720 while I'm doing this uh I don't know if
+00:01:34.680 you've ever built a crawl map but part
+00:01:36.960 of the Google bot trail that I'm talking
+00:01:39.119 about is understanding how Google enters
+00:01:41.799 navigates and understands your website
+00:01:44.000 but as seos you guys have heard a lot of
+00:01:47.479 stuff today about proving our points
+00:01:50.119 measurement and being able to explain
+00:01:52.159 ourselves technical seos suffer from
+00:01:54.640 this the most right we're trying to get
+00:01:56.759 budget we're trying to work with
+00:01:57.840 engineering we're trying to work within
+00:01:59.320 marketing sometimes we have to deal with
+00:02:01.039 product then we have analytics and the
+00:02:03.479 list goes on and
+00:02:04.799 on but we talk about it from like an
+00:02:07.159 Enterprise perspective and sometimes a
+00:02:09.679 midium a mid-grade perspective and
+00:02:12.160 sometimes for small
+00:02:13.480 sites I want to talk about it from the
+00:02:16.239 perspective that you should be able to
+00:02:18.319 do things manually you should be able to
+00:02:20.360 do things with tools or without tools
+00:02:22.760 and use whatever you do have because
+00:02:25.560 let's be honest not everybody has access
+00:02:27.319 to server logs so I'm going to be able
+00:02:29.519 to tell you guys about you know taking
+00:02:31.800 some of that data turning it into
+00:02:33.640 strategy after you map everything out
+00:02:35.519 and how to use these maps that you get
+00:02:37.120 from all these tools because having
+00:02:39.519 tools for the sake of using them doesn't
+00:02:42.000 help
+00:02:43.640 anybody Mike already talked about
+00:02:46.680 me
+00:02:48.440 uh
+00:02:50.080 so first like crawl stats right you guys
+00:02:53.319 are like Jory that was out in 2020 we
+00:02:56.040 all know about them it's not a big deal
+00:02:58.680 but for a lot of people it is because
+00:03:00.480 you're working with clients who maybe
+00:03:02.760 they don't have access to their server
+00:03:04.280 logs or if you want to expedite your
+00:03:06.920 point and get them to do what you need
+00:03:09.159 them to do they need to see immediate
+00:03:11.560 response and they need you to take
+00:03:13.319 action on it something we can all get
+00:03:15.239 access to is crawl stats so it's an easy
+00:03:18.519 way to not necessarily get all the logs
+00:03:20.840 but actually make your point about why
+00:03:22.519 you need
+00:03:25.760 them so yeah I made it a little bit
+00:03:28.319 dramatic but the reason it's so dramatic
+00:03:32.360 is I said this before crawling is the
+00:03:35.879 most important you want to know why I
+00:03:37.799 think crawling is the most important
+00:03:39.239 other than you know Google can't access
+00:03:41.280 anything without it if you if you went
+00:03:45.280 to the Google Docs and you're using the
+00:03:47.640 developer tools right and you're reading
+00:03:51.879 everything what percentage do you think
+00:03:54.840 crawling takes up of the Google
+00:03:56.760 documentation that they give to
+00:03:58.480 developers and technologist like
+00:04:00.959 us if you take away structured data it
+00:04:04.519 makes up 70% of the content provided so
+00:04:09.319 70% right I think that's pretty
+00:04:12.360 important then that we focus on
+00:04:16.040 crawling so the stats report I'm going
+00:04:19.680 to go briefly into it give you some
+00:04:22.079 highlights about ways to use it little
+00:04:24.440 tidbits you can pull out from it not too
+00:04:27.400 detailed but if you've seen it you go to
+00:04:30.120 the settings most of you have seen
+00:04:33.880 it okay good good good like 20% of the
+00:04:36.919 room I don't know what the rest of you
+00:04:38.800 back there are using but it's okay all
+00:04:41.160 right so crawl stats are going to give
+00:04:43.520 us things like the crawl requests how
+00:04:45.360 many times Google's trying to visit and
+00:04:47.400 download things the download size how
+00:04:49.560 big are the page is you know not a big
+00:04:51.680 deal things that I really think are
+00:04:53.560 going to be important your average
+00:04:57.160 uh oh your average response time sorry
+00:05:01.800 and then the other thing that I think
+00:05:04.000 isn't that important but is is going to
+00:05:05.880 be your host
+00:05:07.520 status so total crawl requests how many
+00:05:11.199 people think that more requests is
+00:05:17.039 better okay so four people five five
+00:05:21.199 people in the room think more requests
+00:05:22.639 is better so you think being crawled
+00:05:24.960 less is good the rest of the room
+00:05:29.960 exactly it depends so a lot of times
+00:05:33.199 what you'll find is you come up against
+00:05:35.759 questions like well what do we want to
+00:05:37.720 do with our crawl budget and why do we
+00:05:39.199 need all these requests and why are you
+00:05:40.680 asking us for logs and why does this
+00:05:42.319 matter and the thing is is there's no
+00:05:45.440 specific answer you can't say well more
+00:05:48.000 requests is better or you know less
+00:05:50.280 requests is good but what you can do is
+00:05:52.560 help people understand how do we model
+00:05:54.759 around the requests that we want and
+00:05:56.919 that's one of the things I'm going to
+00:05:58.000 talk about is how do we get to a place
+00:06:00.720 where we can explain what it is we want
+00:06:03.479 how many requests we should expect and
+00:06:05.560 then what do we do if we don't get them
+00:06:07.280 and what do we do when we
+00:06:10.240 are more
+00:06:13.759 adjustments okay so part of what I tend
+00:06:17.319 to do and like I said I'm going to go
+00:06:19.440 through manually being able to do things
+00:06:22.360 using tools and some of you who are
+00:06:25.319 pretty you know apt to scripting there's
+00:06:27.800 going to be somebody talking tomorrow
+00:06:29.199 about building out your own app scripts
+00:06:31.120 I've done quite a few tools here that I
+00:06:33.080 use if you see a tool that you like or I
+00:06:35.319 tell you hey I built an appscript for
+00:06:36.800 that it's absolutely okay to find me
+00:06:39.120 later and say hey can I get access to
+00:06:41.000 that absolutely you can but one of the
+00:06:43.639 things that we want to make sure when
+00:06:45.440 we're looking at these craw requests
+00:06:47.479 download your data regularly okay
+00:06:51.120 there's no easy way to export this data
+00:06:53.560 there's no API that's going to give it
+00:06:55.199 to you so you're going to have to do it
+00:06:56.759 manually unless you want to break Google
+00:06:59.240 rules and find a way to automat
+00:07:01.599 automatically do it with a macro I would
+00:07:03.840 never do anything like
+00:07:05.639 that okay but if you do and you need to
+00:07:10.160 like get that data out of there you you
+00:07:12.639 do what you got to do um one of the
+00:07:15.919 other things that you're going to want
+00:07:16.800 to look at your XML sitemaps those are
+00:07:20.000 your money Pages I've seen XML sit maps
+00:07:22.360 that are filled with trash but we as
+00:07:24.360 seos know we cultivate those to Target
+00:07:26.720 the things that are specific so you you
+00:07:29.599 should have an XML sitemap count that's
+00:07:31.599 matching the requests that you have your
+00:07:33.919 indexation count okay if your XML
+00:07:37.000 sitemap is supposed to be your goal
+00:07:39.479 right that's the gold and then you have
+00:07:42.120 indexation that's less than that you are
+00:07:43.800 not me meeting your goal if your call
+00:07:46.319 requests do not match that freak see
+00:07:49.720 what I did there okay not everybody some
+00:07:53.520 of you're not there yet but that's okay
+00:07:56.039 um but if it's not matching one of the
+00:07:59.039 things you want to know is where do I
+00:08:00.720 dig into these kinds of reports are
+00:08:03.120 going to let us know that right the
+00:08:04.960 counts aren't
+00:08:06.759 right so how do we know how long that's
+00:08:10.319 supposed to take I'm going to show you
+00:08:12.039 one of my my actual clients I filtered
+00:08:14.560 out a bunch of stuff but they came to me
+00:08:16.680 with an indexation problem that they
+00:08:18.280 didn't know was an indexation problem
+00:08:20.440 because what they told me was we have a
+00:08:23.199 really big site and I was like what's
+00:08:24.840 really big and they're like you know
+00:08:26.080 like hundreds of thousands of euros and
+00:08:27.879 I was like it's not that big it's it's
+00:08:29.639 fine they're like but
+00:08:33.279 Jory we have like
+00:08:35.799 150,000 URLs that are supposed to be in
+00:08:38.440 the index and I said who told you
+00:08:40.440 they're supposed to be and they're like
+00:08:41.519 our other SEO and I was like get rid of
+00:08:43.080 that guy got me right
+00:08:47.360 but I'm silly if you can't tell um one
+00:08:51.480 of the things that I told him is you
+00:08:53.720 know I'm going to give myself a deadline
+00:08:55.519 to help you guys out so I looked at
+00:08:57.560 their XML sitemap I asked them are these
+00:08:59.160 your money money Pages they're like yeah
+00:09:00.440 these are the money pages I look at the
+00:09:02.440 indexation you guys see there's 65,000
+00:09:04.720 there so there's there's probably a gap
+00:09:06.600 right around 880,000 URLs are missing
+00:09:10.360 you guys see this number
+00:09:11.800 49 when you guys do your quick Mental
+00:09:14.079 Math how many of you guys were like it's
+00:09:15.640 going to take 11 days to get the rest in
+00:09:17.640 there because at the crawl rate that we
+00:09:19.600 have we got 10,000 being in there the
+00:09:21.800 distribution is 7 to3 so yeah 11 days
+00:09:25.000 should get us at you know 7,000
+00:09:27.399 discovered urls
+00:09:29.920 if you thought 11 days your math is
+00:09:31.640 wrong uh it's not your fault you do know
+00:09:34.120 how to do math but this is recursive
+00:09:36.560 right we're going to have to take the
+00:09:38.079 amount that we newly discover and move
+00:09:39.880 them over into the ones that are getting
+00:09:42.000 reindexed and so I built a tool for that
+00:09:44.360 because I'm too lazy to do it manually
+00:09:46.399 on my own and the estimated time I gave
+00:09:49.519 them was I was like in around 50 days I
+00:09:51.360 can get you fully indexed
+00:09:54.120 okay that's very powerful as a technical
+00:09:57.200 SEO to be able to give someone a
+00:09:59.000 deadline
+00:10:00.200 tell them why and how you're going to do
+00:10:01.800 it and tell them where the problem area
+00:10:03.600 is before you even ask them can I get
+00:10:06.440 access to your crawl logs can I get your
+00:10:08.600 engineers to do something for me you're
+00:10:10.800 already proving your value and your
+00:10:13.920 worth so total download size I actually
+00:10:17.040 don't care about this metric at all um I
+00:10:20.519 think it's valuable if you see that the
+00:10:22.640 bot is getting bogged down uh but if
+00:10:25.519 you're getting crawled at the rate that
+00:10:26.839 you really expect and you're seeing the
+00:10:29.320 indexation there ignore it now if it's
+00:10:33.240 too high if you're not getting the crawl
+00:10:35.279 budget that you expect that's when I
+00:10:37.240 expect you to dig a little deeper into
+00:10:38.920 this metric but I'm not actually going
+00:10:40.720 to go into that metric very much because
+00:10:43.360 it's it's mostly
+00:10:46.519 inconsequential average response
+00:10:48.920 time most people are going to look at
+00:10:51.120 this and think time to First Bite
+00:10:53.320 because what do we think right we send
+00:10:56.399 the message the bite hits the server
+00:10:58.399 responds bam they get the bite back and
+00:11:00.560 most of us consider that time to first
+00:11:02.800 bite if you actually look at the
+00:11:04.800 definition that Google gives you in
+00:11:06.560 search console it's not time to First
+00:11:09.279 Bite they actually expect the last bite
+00:11:11.360 to be included and they're ignoring a
+00:11:12.959 bunch of other things so it's mostly the
+00:11:15.600 HTML that they're looking at
+00:11:18.680 referencing now we talked about
+00:11:21.279 Automation and tools and everything like
+00:11:24.279 that one of the things that I found is
+00:11:27.079 that no matter which way you slice this
+00:11:29.360 data and explain it to your customer or
+00:11:32.880 client Google search console will never
+00:11:35.560 give you the actual data to be able to
+00:11:38.120 figure out how they do their average
+00:11:39.760 response time if you use any external
+00:11:42.839 tools you're probably going to have a
+00:11:44.959 problem there too you want to know why
+00:11:46.720 because Google bot is crawling from
+00:11:48.200 where it's choosing to crawl and hitting
+00:11:49.959 your servers wherever they're at so the
+00:11:52.320 times don't match now I'm going to give
+00:11:55.240 you one of those tidbits that I told you
+00:11:56.760 I'll I'll drop little nuggets that you
+00:11:58.120 guys might like
+00:12:00.760 this is what I
+00:12:02.519 use and the reason I use this uh Dom
+00:12:06.839 content load and yes I know for
+00:12:09.279 everybody that's a technologist who's
+00:12:11.240 thinking right now Jory that doesn't
+00:12:13.760 come from the server you are correct
+00:12:15.959 it's the browser side but it's an
+00:12:18.519 identical metric served from the browser
+00:12:20.839 and that event fires right
+00:12:24.000 after your time to First buite in your
+00:12:26.320 page load so after your server response
+00:12:29.480 Dom content load happens the event
+00:12:31.519 triggers so you're going to be within
+00:12:33.199 like micro milliseconds of your actual
+00:12:37.639 time is that accurate I haven't been up
+00:12:40.360 here for 48
+00:12:42.440 minutes you didn't reset my
+00:12:45.560 time uh so one of the things I'll tell
+00:12:48.600 you is it's okay to use this I actually
+00:12:51.279 got chewed out in the Google forums for
+00:12:52.839 saying this but it's true I've tested it
+00:12:55.440 multiple times against the average
+00:12:57.680 response rate that's actually delivered
+00:12:59.560 in search console and this is the thing
+00:13:01.480 that's going to most accurately match it
+00:13:03.959 so if you're going to take anything away
+00:13:05.600 Empower yourselves you can do this from
+00:13:07.160 the browser side and show your customers
+00:13:09.320 right in their face these are the load
+00:13:11.680 responses and issues that we're having
+00:13:13.519 this is why your average response time
+00:13:15.440 is important why it's down and let's you
+00:13:17.760 know get some things going people like
+00:13:19.720 real data real
+00:13:22.240 time host status I told you I really
+00:13:24.440 don't care about this one um but I do so
+00:13:28.199 here's the thing host status doesn't
+00:13:30.160 matter unless you have a problem
+00:13:32.440 Google's not really going to tell you if
+00:13:33.880 you have a problem that's the problem I
+00:13:35.639 have with with this particular report is
+00:13:38.399 when you have a problem it's a 90-day
+00:13:40.440 problem and it's if it's greater than 5%
+00:13:43.040 of your problem how many people have 90
+00:13:45.680 days to wait for a 5% problem to tell
+00:13:48.000 them that they need to fix their
+00:13:50.320 hosting I don't I don't think so we
+00:13:52.399 can't go back in time so don't really
+00:13:55.399 use this to level set any playing Ground
+00:13:57.959 don't use this to to try and convince
+00:13:59.920 them that they need to change their host
+00:14:02.079 um usually it's not as problematic as it
+00:14:04.480 seems but do use this if you see the red
+00:14:07.759 flags because it tells you where to
+00:14:09.680 start digging a little deeper so your
+00:14:11.639 average response time is tanking you see
+00:14:15.120 that there's a host status issue you see
+00:14:17.440 that it lasted longer than 10 days it's
+00:14:19.480 over the 5% threshold now you actually
+00:14:21.480 know where you should go dig and and
+00:14:23.160 dive you know to go look at the eror
+00:14:25.120 report and you can look at the little
+00:14:27.920 blip that tells you what day it happened
+00:14:30.600 that's when you're going to go into your
+00:14:31.839 server logs if you have them if you
+00:14:33.680 don't have server
+00:14:35.240 logs we all have this we can go into the
+00:14:38.680 indexation report and do a URL
+00:14:41.079 inspection around that time for the
+00:14:43.680 errors that were happening now you can
+00:14:45.480 dig into the problem at the URL level
+00:14:48.360 help determine it again without asking
+00:14:51.399 for too much access because the more
+00:14:54.480 access we ask for the harder the job
+00:14:57.360 becomes for the client for us
+00:15:00.160 right uh so part two this is a really
+00:15:04.759 really short part so don't expect like
+00:15:07.120 massive slides there's like two um but I
+00:15:10.680 think mapping Google pot and its entry
+00:15:12.920 points is very important for everybody
+00:15:14.519 to understand how are they getting in we
+00:15:17.680 got tools like screaming frog and other
+00:15:19.600 tools that help you map how you might
+00:15:21.279 crawl it but you really want to
+00:15:22.600 understand how Google's crawling and
+00:15:23.759 getting in and the referral URLs so
+00:15:26.320 things that you're going to need to be
+00:15:27.600 able to do this
+00:15:30.480 again I wrote an appscript to do this
+00:15:32.000 because I'm too lazy and I use chat GPT
+00:15:34.959 um but your Discovery and refresh
+00:15:39.000 reports these are those reports that I
+00:15:41.240 told you you do not want to use a macro
+00:15:43.600 to automatically download out of Google
+00:15:46.040 Search console because it's against
+00:15:48.040 Google's rules um your access logs again
+00:15:52.360 optional use Google search console if
+00:15:54.720 you need to your XML sitemap report this
+00:15:57.519 is that thing that I told you is where
+00:15:58.720 all your money pages are your un URL
+00:16:01.720 inspection report I access this through
+00:16:03.800 Google search consoles API how many
+00:16:06.079 people use the API to regularly access
+00:16:09.079 the
+00:16:10.360 data awesome those of you who are not
+00:16:13.440 the people who raise their hands are
+00:16:15.199 being very very smart here's why they're
+00:16:17.680 being very very smart when you use the
+00:16:19.839 API you get more access to the same
+00:16:21.920 views that you're getting in search
+00:16:23.279 console but you don't have the ability
+00:16:24.920 to capture or go backwards in time
+00:16:27.360 you'll get those data points at any any
+00:16:29.120 point in time because you can actually
+00:16:30.920 reference the dates send that back and
+00:16:33.120 get it delivered to you so I think it's
+00:16:35.600 very important for you to use search
+00:16:37.240 console if you don't know how to use the
+00:16:39.519 API ask me for the script go to Cloud
+00:16:42.600 console activate it and then you can use
+00:16:45.040 this very easily then the backlinks
+00:16:48.160 report go atrs um I think that if you
+00:16:52.639 don't understand what backlinks you have
+00:16:54.240 you're going to have a really hard time
+00:16:56.079 understanding some of the referral URLs
+00:16:58.480 that you're getting the traffic from
+00:17:00.399 these are actually more important than
+00:17:02.120 most people think because we talk a lot
+00:17:03.639 about our internal linking but the
+00:17:05.640 Assumption with internal linking is
+00:17:07.119 Google's already gotten there one of the
+00:17:09.480 things that I've noticed in search
+00:17:11.199 console that's you know great especially
+00:17:13.480 out of URL inspection but very difficult
+00:17:15.439 to do at scale if you're not using the
+00:17:17.319 API is how do you identify which
+00:17:20.039 backlinks are valuable to you versus not
+00:17:23.160 when you use this tool you'll
+00:17:26.400 get a table that spews out like this
+00:17:30.039 beautifully presented to keep it really
+00:17:31.720 simple and this is for your client as
+00:17:33.240 well as you but it's going to tell you
+00:17:36.039 which URLs are getting that activity so
+00:17:38.440 your entry paths and it already parses
+00:17:41.400 out which backlinks are sending them
+00:17:43.480 things like that in your referral URLs
+00:17:45.240 the table was too big to span the whole
+00:17:47.080 screen so there's a lot that we could
+00:17:48.480 scroll left to but I can't today um so
+00:17:52.520 you'll get your discovered URL
+00:17:54.039 distribution you're going to get uh your
+00:17:56.640 ref your refresh the XML and and all of
+00:17:59.200 this good stuff now why do I think that
+00:18:02.039 this kind of a table is important to you
+00:18:05.880 this is easy to share with your customer
+00:18:07.520 but it's also easy for you to utilize to
+00:18:10.039 figure out where to dig deep one of the
+00:18:12.360 problems here that you'll look at that
+00:18:14.159 first year that's money right like that
+00:18:16.960 looks great I got eight back links
+00:18:19.120 everything good is happening if you're
+00:18:20.440 wondering why it says yourdomain.com
+00:18:22.080 that's what I replace my client's domain
+00:18:24.440 with but I can see the crawl data I can
+00:18:27.320 see that the page is okay I can see that
+00:18:29.320 it's being refreshed I can see that it's
+00:18:31.080 in my index so I know that that's
+00:18:33.159 right now what you're going to look for
+00:18:35.240 is the flags where things aren't the way
+00:18:37.280 that you plann this is why I said it's
+00:18:39.360 all part of your strategy if your
+00:18:41.440 strategy is to get somebody deeper into
+00:18:43.159 the website into a category page you pop
+00:18:45.799 everything in here and your category
+00:18:47.559 Pages have a couple of these NOS you
+00:18:50.039 already know there's something wrong
+00:18:51.200 with the category Pages now I need to
+00:18:52.760 investigate the entry mapping to those
+00:18:55.240 go in to the Ural index report again and
+00:18:58.360 find out does it have backlinks yes or
+00:19:00.640 no if it doesn't have backlinks you
+00:19:02.640 might need a new entry point does it
+00:19:04.480 have internal links yes or no now you
+00:19:07.559 know the easy solutions to figuring out
+00:19:10.240 how to navigate and one once again
+00:19:14.320 easily presenting the information
+00:19:16.320 getting somebody to use it quickly and
+00:19:18.080 not having a
+00:19:19.440 problem you can also do this manually I
+00:19:23.320 don't suggest it that's why I wrote the
+00:19:24.960 appscript but all of these can be
+00:19:27.080 exported manually and you can do the
+00:19:28.440 exact EXA same thing especially if you
+00:19:29.919 have a smaller
+00:19:31.520 site so I don't know if you guys have
+00:19:34.880 picked up on this yet but I'm a little
+00:19:37.679 lazy so I'm going to talk about multiple
+00:19:41.720 ways to do
+00:19:42.960 this but I'm probably going to tell you
+00:19:45.600 the laziest
+00:19:47.720 way tools tasks and tactics you got to
+00:19:51.960 use the right tools or bad things happen
+00:19:55.120 I saw you laugh it's funny I know uh
+00:19:59.840 so we've got a lot of tools in fact
+00:20:01.520 there's a lot of tools here and I'm
+00:20:03.000 actually going to talk about a couple of
+00:20:04.320 them that are here today because they're
+00:20:06.120 great tools for helping you map out this
+00:20:08.280 crawl map the thing that the crawl map
+00:20:10.919 is supposed to help you understand entry
+00:20:13.400 points yes blockage points opportunity
+00:20:16.720 points as well it's hard to see when
+00:20:19.440 you're doing Enterprise search if you
+00:20:21.840 got a million eurs can you really find
+00:20:24.000 the one little spot where everything's
+00:20:25.960 getting bogged down absolutely not but
+00:20:28.159 what these m can help you with is
+00:20:29.480 figuring out which templates which
+00:20:31.320 themes which areas and access points
+00:20:33.880 aren't
+00:20:35.679 available so screaming
+00:20:38.960 frog I put it first not because it's the
+00:20:43.039 best tool I love screaming frog and it's
+00:20:45.760 a great tool I put it first because it's
+00:20:48.240 the most accessible tool that's going to
+00:20:50.000 give you the tools that you need and
+00:20:51.720 their log analyzer is lovely you get
+00:20:54.520 some okay Graphics it's free so if
+00:20:58.280 you're not familiar with logs and you
+00:21:00.880 don't want to understand whether or not
+00:21:02.840 you're going to have to filter parse and
+00:21:04.919 fix them this is a great opportunity for
+00:21:07.360 you to use a free tool see how you feel
+00:21:09.600 about the log files and decide whether
+00:21:11.120 or not you're going to use logs or ask
+00:21:13.320 for them at all because a lot of times
+00:21:15.480 nobody wants to give you access anyway
+00:21:19.000 secondly things that I love about the
+00:21:22.039 tool you can pretty much filter data any
+00:21:25.400 way you imagine okay and the reason
+00:21:28.880 that's powerful is we're not working at
+00:21:31.440 one URL at a time we're working on URL
+00:21:34.080 patterns when you filter you can get to
+00:21:36.080 a pattern faster other things that I
+00:21:38.919 really like is that it's really simple
+00:21:43.240 right this looks like what I build in my
+00:21:45.799 Excel spreadsheets all by myself so I
+00:21:48.799 feel comfortable with that a lot of
+00:21:51.440 executives are comfortable with that too
+00:21:53.240 so it's not that big of a deal now
+00:21:55.279 things that aren't great if you need to
+00:21:58.159 rasle Dazzle your client this is not the
+00:22:00.559 tool that you're going to pull the
+00:22:01.520 pictures from and be like look what I
+00:22:03.080 did boss it's not that great if your
+00:22:07.400 logs are
+00:22:08.559 malformed and what that means is if the
+00:22:11.279 log lines are not coming in and they're
+00:22:12.679 getting bundled if you have regular
+00:22:15.440 Expressions that are getting fed in by
+00:22:17.320 you know black Bots um it's not going to
+00:22:21.200 clean that up for you and there's not
+00:22:23.520 really an easy way to do that you have
+00:22:25.679 to figure that out on your own and then
+00:22:29.240 it can be a little much right if it's
+00:22:31.279 your first time using the tool and
+00:22:32.799 you're not trying to overanalyze it's
+00:22:34.919 going to give you a lot more than you
+00:22:38.799 expect so if you are that kind of person
+00:22:42.039 where you want it a little simpler you
+00:22:43.360 want the visuals and everything else I I
+00:22:46.039 love jet octopus for this um it's got
+00:22:49.679 some great benefits they do have a free
+00:22:51.720 trial I actually talked to Serge and he
+00:22:54.159 told me to tell you that it's seven days
+00:22:56.760 but if you came to this conference for
+00:22:59.039 limited time only it's 14 days for you
+00:23:01.440 too um he did say that for real I I
+00:23:04.679 swear um but things that are phenomenal
+00:23:09.360 very easy to see things are grouped very
+00:23:12.840 well you going and give me the
+00:23:15.360 time all right I got to go faster guys
+00:23:17.840 you let me talk too slow uh it supports
+00:23:20.559 multiple data sources so if you're
+00:23:22.080 working Enterprise earlier you might
+00:23:24.320 have heard Philly say you got to pay
+00:23:26.240 attention to where the logs are coming
+00:23:27.679 from yep CDN it'll let you pull in AWS
+00:23:32.200 it'll let you pull in all your local
+00:23:34.480 logs if you have them in data dog you
+00:23:36.279 can pull in so it's great you can also
+00:23:38.919 set up custom monitoring which I think
+00:23:40.640 is phenomenal things that aren't so
+00:23:42.840 great you know it's it costs money um if
+00:23:47.640 you don't have deep engineering
+00:23:49.000 experience or access you need a devops
+00:23:52.320 person to be able to implement this
+00:23:54.559 correctly when it's implemented
+00:23:56.520 correctly Flawless but if if it's not
+00:23:59.039 it's going to be some work that team is
+00:24:01.279 really willing to do that work with you
+00:24:02.799 though the other thing is it takes a
+00:24:05.440 learning curve so if you are not about
+00:24:07.279 adoption and you are not trying to
+00:24:09.039 Advocate it's it's going to be a tool
+00:24:11.559 that's more robust than everybody can
+00:24:13.240 use and you won't be able to train them
+00:24:14.840 on
+00:24:16.679 it that's the manual downloads that I
+00:24:19.320 don't do with macros you can do this
+00:24:22.480 too uh manual charting which I I won't
+00:24:26.640 do but you can draw these and you can
+00:24:28.840 draw these conclusions and show people
+00:24:30.559 these the thing that's not going to be
+00:24:32.760 so great you're not going to be able to
+00:24:34.200 hit those nodes really quickly am I
+00:24:36.799 going fast enough now um all right so I
+00:24:41.880 told you manual I told you tools this is
+00:24:43.640 the middle of the road I bet you guys
+00:24:46.000 know what I'm going to
+00:24:47.600 say I built a tool that did this for me
+00:24:50.919 in ABS scripts and I used chat GPT I
+00:24:53.440 actually did um and the thing is is it's
+00:24:56.320 not beautiful but like not every tool is
+00:24:59.279 beautiful it's not perfect but the thing
+00:25:01.720 is is you can customize things the way
+00:25:03.520 that you want so one of the things I did
+00:25:05.520 is I customized heat mapping into the
+00:25:07.840 nodes so that I can pull them out really
+00:25:09.399 easily so I don't actually pay attention
+00:25:11.200 to any of the noise except for the
+00:25:12.440 little dark blobs um hey it's true
+00:25:18.600 so
+00:25:20.120 anybody a fan
+00:25:22.520 here I made this one myself so I'm very
+00:25:25.320 very proud of my third eye uh so now
+00:25:28.799 that we've gazed into the Multiverse and
+00:25:30.760 everybody knows what's going on how can
+00:25:33.000 you use some of the stuff that I gave
+00:25:34.360 you and this is the stuff I'll go
+00:25:35.399 through really fast but it's the most
+00:25:36.960 important stuff for you so I'm glad I'm
+00:25:39.279 going fast for you um you can identify a
+00:25:42.200 lot of missed opportunities you're going
+00:25:44.200 to be able to expose some of those
+00:25:46.120 templates you'll be able to understand
+00:25:48.279 the influence your crawling traffic has
+00:25:50.440 on your site and I'm actually going to
+00:25:52.279 skip this because I'm going to go to the
+00:25:53.559 stuff that actually matters so why does
+00:25:56.159 it matter because you can build views
+00:25:58.679 like this this one view okay has six
+00:26:03.720 opportunities for you to be able to
+00:26:05.399 explain from your strategic standpoint
+00:26:08.320 one you get an easy comparison of your
+00:26:11.279 discovered versus you're refreshed now
+00:26:13.240 you know whether or not you need to be
+00:26:14.720 spending more time on getting more
+00:26:16.840 access and availability to the bot two
+00:26:20.360 if you're not able to do that you can
+00:26:22.600 figure out that you have a crawl budget
+00:26:24.039 issue really simplistically the reason
+00:26:26.919 you can say that is look
+00:26:29.760 when we have refreshed and discovered
+00:26:32.399 down there's less traffic when they're
+00:26:34.520 up there's more traffic easy to populate
+00:26:37.320 very simple with the data that you've
+00:26:39.039 already pulled here indexing patterns
+00:26:41.679 over time the full stack is your index
+00:26:45.240 right so if you're only indexing at
+00:26:47.520 65,000 and you want to be at 145,000 add
+00:26:50.559 one more stack to this make it empty put
+00:26:52.520 the dotted lines in and now you can show
+00:26:54.120 missed opportunity related to the
+00:26:56.679 traffic then you can project another
+00:26:58.960 line and say look at all the traffic we
+00:27:00.799 could get if you just let me index the
+00:27:02.640 whole site um there's quite a few other
+00:27:06.720 things you can do with this but
+00:27:09.000 realistically what I'm trying to do is
+00:27:10.919 give you guys tools so that you can make
+00:27:12.799 an impact by doing less with what you've
+00:27:17.039 got and I know that that sounds crazy
+00:27:19.159 right do less so these are some example
+00:27:22.200 insights that you can Garner from what I
+00:27:24.000 just showed you um I already talked
+00:27:26.320 about it but I know a lot of people like
+00:27:28.559 things on the slides so that they can
+00:27:29.919 take the pictures and take it home so
+00:27:31.720 these are the tidbits
+00:27:33.279 there now here's another
+00:27:36.919 opportunity content hubs if it's red
+00:27:40.799 it's not good it's a dud if it's dark
+00:27:42.960 green it's a hub it's an opportunity you
+00:27:45.679 always wonder if people are going to sit
+00:27:47.919 here and do all this internal linking
+00:27:49.559 how do I increase my flow you build a
+00:27:51.760 map and you can see the little spots
+00:27:53.519 where you can actually create better
+00:27:55.120 connectivity really quickly th this is
+00:27:57.600 from screaming
+00:27:59.919 frog any any anime fans no all right
+00:28:03.399 mashall we got to get strong with it did
+00:28:06.320 I make my
+00:28:07.559 time I did it I did it thank you thank
+00:28:10.880 you
+00:28:12.680 [Applause]

@@ -1,0 +1,532 @@
+# tactiq.io free youtube transcript
+# Gaining Velocity: Building SEO into a Continuous Development Process - Rachel Anderson
+# https://www.youtube.com/watch/fEmmUDbkL9I
+
+00:00:06.799 all right thanks for letting us sort
+00:00:08.160 through AV issues and I guess uh give a
+00:00:10.759 round of applause for these guys uh
+00:00:12.360 figuring this all
+00:00:13.639 out I've been behind that and it's not
+00:00:16.199 fun it's very stressful all right so
+00:00:19.000 yeah I'm the senior SEO manager at weed
+00:00:20.720 maps I've been there for a couple of
+00:00:21.880 years and previously worked at a bunch
+00:00:23.840 of agencies um including in-house at
+00:00:26.880 Deep crawl where I worked on the
+00:00:28.119 Professional Service profession Services
+00:00:30.720 team working with all kinds of large
+00:00:32.360 clients like car gurus artsy Etc um I'm
+00:00:36.280 excited this is my first inperson
+00:00:38.520 conference because I started speaking
+00:00:40.120 during the pandemic and they were all
+00:00:42.120 cancelled and made virtual so it's
+00:00:43.800 really nice to feel the energy of this
+00:00:46.879 space all right so what does this mean
+00:00:51.840 basically I uh listen to a lot of great
+00:00:55.160 presentations about how to build a
+00:00:57.039 business case for engineering product
+00:00:59.120 and designed resources for SEO projects
+00:01:01.800 again I came from agencies I was like
+00:01:03.800 okay I'm tucked into marketing at this
+00:01:06.439 org I can't get anything done how do I
+00:01:09.280 build this business case and I watched a
+00:01:11.560 lot of great presentations and I had a
+00:01:13.479 lot of assumptions going in I was like
+00:01:15.479 okay we were going to get these
+00:01:16.600 resources and we're going to immediately
+00:01:18.880 start getting progress on all these new
+00:01:21.400 initiatives yes we have years of tech
+00:01:23.799 Deb to work through we'll do that all
+00:01:25.720 first and then we'll be able to start
+00:01:27.880 running through with new things uh but
+00:01:30.400 the reality is is I quickly realized
+00:01:32.720 that all my resources were being eaten
+00:01:34.759 up by Tech debt in fact the engineering
+00:01:36.799 team I worked with they said we're the
+00:01:38.840 janitors of the engineering department
+00:01:41.079 here at weed maps we're just cleaning up
+00:01:42.880 other people's code all the time and I
+00:01:45.159 was like yeah we are this is a huge
+00:01:48.520 problem so I asked myself some questions
+00:01:51.880 about tech debt versus new features and
+00:01:54.799 where our time was going I asked myself
+00:01:57.560 how many tickets for Tech SEO um like
+00:02:00.880 Tech debt tickets were filed in the past
+00:02:03.280 quarter how many Sprint points went to
+00:02:06.200 Tech debt versus new features in the
+00:02:07.759 last quarter and how many new features
+00:02:10.080 for SEO were released on schedule and
+00:02:12.879 the answers were
+00:02:15.480 appalling we had 30 plus tickets uh that
+00:02:19.120 were like net new new
+00:02:21.640 problems a third of total Sprint points
+00:02:24.319 were being just dedicated towards Tech
+00:02:26.440 debt and we could not keep up with it at
+00:02:28.599 that level
+00:02:30.440 um and none of our projects were
+00:02:33.400 released on
+00:02:34.760 time uh yeah if you work in house this
+00:02:37.239 is probably a common story so I was like
+00:02:40.239 okay there's clearly a problem with how
+00:02:41.840 we're finding Tech debt um and really
+00:02:45.239 our problem was that it was all really
+00:02:47.400 reactive so what I'm not saying here is
+00:02:50.080 that you don't need to audit uh you
+00:02:53.159 absolutely need to audit uh that's why I
+00:02:55.560 have site bulb Cloud crawler side note
+00:02:57.920 um Gareth and Patrick are great site
+00:03:00.000 bulb Cloud crawler is amazing um they
+00:03:02.560 did not pay me to say that I paid them
+00:03:04.519 for me to say that um so yeah everything
+00:03:08.599 we were doing was very reactive uh we
+00:03:10.519 were looking at site buold monthly GSC
+00:03:12.760 weekly and we were doing manual checks
+00:03:14.959 when Engineers thought to pull us in but
+00:03:17.200 the problem was all of this code was
+00:03:19.040 already visible to search engin so it
+00:03:20.640 was already harming us before we would
+00:03:22.760 even see it and that's how we ended up
+00:03:25.720 with situations like this anyone want to
+00:03:28.760 guess y our traffic did
+00:03:34.000 that no so we rolled out new product
+00:03:37.319 category
+00:03:38.599 pages and it didn't go great um the team
+00:03:42.360 did not ask for good SEO input uh and
+00:03:45.920 the input they gave or we gave they
+00:03:49.040 ignored that was when Google started
+00:03:50.959 crawling the page from
+00:03:53.200 Houston this is what the page looked
+00:03:55.400 like and so what would happen cannabis
+00:03:58.239 is heavily regionalized
+00:04:00.360 and so Google went from crawling in
+00:04:02.400 Michigan to crawling in Houston and so
+00:04:04.280 they went from a page that had products
+00:04:05.920 in it to a page with no products in it
+00:04:07.640 and they said oh this is a soft 404 and
+00:04:09.879 they took it out of the index and so
+00:04:11.799 this cycle just kept happening again and
+00:04:14.200 again and again um the thing about
+00:04:16.279 cannabis is it is heavily regionalized
+00:04:19.358 so because it's federally illegal that
+00:04:21.440 means you cannot cross state borders
+00:04:23.479 with it and so if I own a cannabis
+00:04:25.360 business in California I sell gummies
+00:04:27.680 and hey New York has gone wrecked legal
+00:04:30.639 I want to start selling the gummies
+00:04:32.080 there I can't just you know do a a
+00:04:34.919 distribution agreement like we do with
+00:04:36.759 beer um I'm from Richmond so we have the
+00:04:39.280 veil and now you can get the veil beer
+00:04:41.160 other places yay you can't do that with
+00:04:43.919 weed no I've got to go I've got to set
+00:04:46.000 up my own growroom operation in New York
+00:04:49.039 that's probably going to take a year to
+00:04:50.479 get any sort of quality product I then
+00:04:52.720 have to have all my industrial equipment
+00:04:54.560 to create the gummies there in New York
+00:04:57.160 and then I have to change all my
+00:04:58.479 packaging and maybe quantities to comply
+00:05:01.080 with local laws and so it's really
+00:05:03.639 really
+00:05:04.720 regionalized and Engineers really didn't
+00:05:07.680 think about that neither did product
+00:05:09.720 when they were putting together the
+00:05:10.759 website weed map started out as a
+00:05:12.919 directory based website and has moved
+00:05:14.759 over towards Ecommerce and so the
+00:05:16.880 marketplace being regionalized and
+00:05:18.759 having to comply with different laws
+00:05:20.600 causes a lot of issues but there were
+00:05:23.080 really no QA checks in place for things
+00:05:25.759 like this so that's why the traffic is
+00:05:27.800 all over the place why we have a roller
+00:05:29.360 coaster on this page um and this is
+00:05:32.000 being fixed but this is a great uh an
+00:05:35.039 issue to highlight the fact that like
+00:05:38.039 all projects at the org were having
+00:05:39.680 these kinds of
+00:05:40.960 problems so we had these dedicated
+00:05:43.840 resources they were all being eaten up
+00:05:46.039 by SEO
+00:05:47.600 regressions so Tech Deb's always going
+00:05:49.560 to be a problem so I said hey how can we
+00:05:51.759 reduce this negative impact and actually
+00:05:53.319 start working on new features to gain
+00:05:56.680 traffic and the solution is moving to a
+00:05:59.400 more
+00:06:00.240 proactive method so we rolled out this
+00:06:03.520 four-prong solution to reduce Tech debt
+00:06:07.199 so adding um automated test to our cicd
+00:06:10.199 pipeline adding SEO sign off in business
+00:06:13.120 processes adding SEO QA for high-risk
+00:06:16.199 tickets and then finally engineering
+00:06:17.720 education I'm going to walk you through
+00:06:19.120 these things so part one or part A cicd
+00:06:23.720 automated test what is cicd uh it stands
+00:06:27.199 for continuous integration and
+00:06:28.840 continuous deliver Y and essentially it
+00:06:31.599 allows Engineers to constantly be
+00:06:33.840 deploying code you're not waiting until
+00:06:35.680 3:00 p.m. on Thursday to release all
+00:06:37.440 your tickets if you work for a large org
+00:06:40.280 they're working on thousands of tickets
+00:06:42.000 each week so you want to make sure that
+00:06:44.160 all that code is being released to the
+00:06:45.599 website of course the critical component
+00:06:47.919 here is that they're checking for bugs
+00:06:50.560 before it goes to your production
+00:06:52.680 environment so some questions you might
+00:06:54.880 want to ask
+00:06:56.000 yourself does your organization have
+00:06:58.440 this if you work a large tech company
+00:07:00.879 inhouse the answer is likely yes um and
+00:07:04.840 does your company have automated
+00:07:07.319 test not for SEO unless you configured
+00:07:10.199 them yourself and are working on
+00:07:11.599 maintaining them uh when we started
+00:07:13.440 working with our QE team they were like
+00:07:16.400 oh we should check canonical tag
+00:07:18.879 shouldn't we yeah yeah you should uh so
+00:07:22.080 how do you configure it like I just
+00:07:23.599 mentioned we had to work with our QA and
+00:07:25.440 QE team on this and there are some
+00:07:28.240 vendors like deep crawl who have special
+00:07:31.000 tools for this but I would recommend
+00:07:32.680 checking with your own teams first
+00:07:34.360 because these tools are limited to the
+00:07:36.360 tests that they'll like that they can
+00:07:38.280 run they cost money it takes time to get
+00:07:41.639 them integrated in your systems and if
+00:07:43.879 you work for a large company you know
+00:07:45.840 how long procurement
+00:07:47.560 takes so I worked with the QE team and
+00:07:51.000 what we did is we outlined all kinds of
+00:07:53.639 test that we wanted to set up we listed
+00:07:55.599 out all our web surfaces and example
+00:07:57.440 URLs that was pretty easy because we
+00:07:59.120 just took our keyword mapping
+00:08:00.879 information we checked uh we made a list
+00:08:03.440 of all the critical HTML elements that
+00:08:05.599 we wanted to check for errors and then
+00:08:08.199 we talked about um other special things
+00:08:11.479 by Page type and then finally Regional
+00:08:15.199 tests are very very important and that
+00:08:17.360 really was not something that QE had set
+00:08:19.599 up initially so we added a lot of
+00:08:21.360 regionalized tests in there too so we're
+00:08:23.159 checking from Houston Michigan from uh
+00:08:27.400 LA from New York City all the markets
+00:08:29.840 that really matter for uh
+00:08:32.320 cannabis and we use playright for our QE
+00:08:36.120 test at weed maps and so this is where
+00:08:38.479 we set this up we met weekly with our QE
+00:08:41.640 Engineers on configuring these and uh I
+00:08:45.160 actually staffed for this so I have a
+00:08:46.800 full-time Tech SEO on my team he was
+00:08:49.360 responsible for creating these initial
+00:08:51.360 tests um fantastic and then maintaining
+00:08:54.800 them so um these are living documents
+00:08:57.720 they're checking code on the site and so
+00:08:59.440 so if you go and update your title tag
+00:09:01.480 across a template you need to make sure
+00:09:03.360 your test remembers that or else
+00:09:05.560 obviously it's going to flag an
+00:09:07.760 error so that that's one thing it's
+00:09:10.720 stopping bad code from making it to the
+00:09:12.560 website very good what this doesn't do
+00:09:15.800 is keep Engineers from spending time
+00:09:18.240 building bad code that won't work for
+00:09:20.320 googlebot so we started working with our
+00:09:23.079 product development process to get more
+00:09:26.079 buyin so uh typically the business
+00:09:29.000 process is kind of look something like
+00:09:30.560 this there's a business requirements
+00:09:32.240 development phase where you have to get
+00:09:34.600 approvals to make sure that the project
+00:09:36.720 you're proposing meets business goals if
+00:09:39.279 that works you move into the product
+00:09:40.920 requirement development phase where you
+00:09:42.480 actually outline everything that you
+00:09:44.000 need for that project once that happens
+00:09:47.160 design and Engineering happens and then
+00:09:48.920 finally you go to market so what areas
+00:09:52.519 does SEO need to be involved in I would
+00:09:55.120 say at least these three and in other
+00:09:57.680 cases you may be providing data for the
+00:09:59.839 business requirements development
+00:10:02.040 section so our PRD phase was a hot mess
+00:10:06.279 it was super vague every PM was making
+00:10:09.040 different templates for it uh they
+00:10:12.079 weren't even outlining like which URLs
+00:10:14.040 were being affected and so we would get
+00:10:16.680 to the go to market phase and I'd be
+00:10:18.640 like whoa whoa whoa you just introduced
+00:10:20.480 50,000 new parameters we can't do that
+00:10:23.600 uh and so it would cause thrash at the
+00:10:25.480 end of projects uh and it was also a
+00:10:27.800 problem for other teams too Le goal uh
+00:10:30.120 Revenue they'd be like hey you didn't
+00:10:31.880 ask us about this feature this is not
+00:10:33.760 going to work for how we make
+00:10:35.560 money so we totally overdid the uh PRD
+00:10:40.000 requirements phas so there's a template
+00:10:43.279 it has all relevant information for
+00:10:45.240 stakeholders including things like this
+00:10:48.079 Google bot user story and acceptance
+00:10:49.920 criteria so this is a part of every
+00:10:52.320 single one of our web based projects it
+00:10:54.720 just says Hey unless the project
+00:10:57.279 specifically tells you to change these
+00:10:59.519 things do not touch them uh and you
+00:11:02.360 notice facets and filters is there
+00:11:04.680 because that's a that's a big one for my
+00:11:06.680 company uh so I would highly encourage
+00:11:09.040 you to create some sort of item like
+00:11:11.240 this so we have a Google doc that we
+00:11:13.600 iframe in into Confluence where our prds
+00:11:16.839 live and then finally Project Specific
+00:11:19.000 requirements so if you need a Content
+00:11:21.320 block if you need headers specific to
+00:11:24.600 the new page we also add that in here so
+00:11:27.320 we get very very specific up front so so
+00:11:29.399 that engineers and designers know what
+00:11:30.880 they're
+00:11:31.720 building then we work with them
+00:11:33.639 throughout that phase or through all the
+00:11:35.560 phases to make sure that the
+00:11:37.040 requirements are being met so we're not
+00:11:39.040 wasting
+00:11:40.600 time and then finally at go to market um
+00:11:43.600 we're asking does the solution meet
+00:11:45.399 those product requirements and also did
+00:11:47.839 you go outside the product requirements
+00:11:49.760 so uh recently California changed laws
+00:11:53.120 uh disposable Vape vape pens now have to
+00:11:56.720 be called allinone or something
+00:11:58.519 different because people people were
+00:11:59.600 throwing these batteries in the garbage
+00:12:02.279 and you're not supposed to do that so
+00:12:04.320 they had to they had a whole lawsuit
+00:12:06.279 about it so we had to change our
+00:12:07.720 language on the website on certain pages
+00:12:10.839 but they overstepped a little bit by
+00:12:12.760 accident and did it on all our pages and
+00:12:14.920 then what do you know we aren't ranking
+00:12:17.040 for disposable Vape pins anymore so
+00:12:19.680 that's also a critical step make sure it
+00:12:21.160 doesn't overstep the bounds of the
+00:12:23.560 project
+00:12:24.480 requirements all right so we've done two
+00:12:26.839 critical things stop bad code from going
+00:12:28.839 to the website and um freed up
+00:12:31.639 engineering time on like these projects
+00:12:34.399 for our whole org and now I need some
+00:12:39.959 water all right sweet but there's a
+00:12:42.600 whole another class of tickets that also
+00:12:44.680 cost Tech de for our org and these are
+00:12:47.600 things that are not part of these larger
+00:12:49.600 business initiatives things like
+00:12:51.000 software updates legal compliance small
+00:12:54.120 projects and all kinds of bug
+00:12:56.800 fixes so how do we ensure that those
+00:12:59.240 those don't also cause Tech debt um
+00:13:02.000 these were a huge problem for us because
+00:13:03.800 again a lot of these go back to Regions
+00:13:06.000 and how regions interact with
+00:13:08.680 sales all kinds of complex things and so
+00:13:12.079 they're like oh this is just a little
+00:13:13.680 Tech change and it's like well actually
+00:13:15.600 now no one in Manhattan can order weed
+00:13:17.560 so that's a
+00:13:19.360 problem so we introduced jro Fields so
+00:13:22.639 all tickets that might impact organic
+00:13:25.480 traffic are marked yes for SEO review
+00:13:28.519 and then once we review it we can change
+00:13:30.160 that value to yes on SEO reviewed we
+00:13:33.360 have a dashboard that tells us
+00:13:35.320 everything that's coming up for um new
+00:13:37.720 Sprints so that we can manage capacity
+00:13:39.880 and turnaround
+00:13:41.480 time and then um the real information
+00:13:44.760 here that you is critical you got to
+00:13:46.800 have someone accountable for adding QA
+00:13:50.120 to these tickets uh we talked with
+00:13:52.720 engineering managers and I'll talk in a
+00:13:54.279 minute about our education there but
+00:13:56.920 it's critical that someone is
+00:13:58.040 accountable for this and probably isn't
+00:14:00.000 going to be an SEO we have I think about
+00:14:02.720 2,000 tickets each week that we're going
+00:14:05.759 through and it would I've I've audited
+00:14:08.839 all of them and it is like 4 hours for
+00:14:12.440 each Sprint it's it's a lot of time and
+00:14:14.920 it's a lot of like Ruby this and ruby
+00:14:18.560 gems and I'm like I don't know what any
+00:14:20.759 of this means and this is a waste of my
+00:14:22.240 time and everyone's time so you probably
+00:14:24.240 don't need to be looking at every ticket
+00:14:26.320 um but somebody does need to be
+00:14:28.040 accountable and then critically SEO uh
+00:14:31.240 we have the final say if these tickets
+00:14:33.519 actually get to go to production if SEO
+00:14:35.680 reviewed equals no it blocks it from
+00:14:38.360 being deployed until they have a
+00:14:40.160 conversation with
+00:14:41.519 us so then we communicated that with all
+00:14:44.040 the teams that needed to know
+00:14:45.519 engineering product design bizops
+00:14:48.519 Etc but the critical question is do
+00:14:51.600 engineering managers actually know what
+00:14:53.639 matters for Uso to tag these tickets
+00:14:56.240 because this is obviously going to be a
+00:14:57.800 complete failure if nobody tags Us in so
+00:15:02.240 we went through a whole engineering
+00:15:04.320 education
+00:15:05.839 Series in three parts um Wiki
+00:15:08.959 documentation uh actually communicating
+00:15:11.079 with them directly and then as I eluded
+00:15:13.440 auditing Sprints and then some continued
+00:15:16.199 education so engineering Wiki
+00:15:18.639 documentation so I worked with
+00:15:20.240 engineering managers to put this
+00:15:21.959 documentation about what matters for SEO
+00:15:24.800 and then the whole QA process in their
+00:15:27.600 Wiki so critically I did not put that in
+00:15:30.079 like our section for us I made it very
+00:15:33.120 accessible for engineers and in fact
+00:15:35.800 this is a link to the documentation
+00:15:38.199 about what matters for SEO so I made it
+00:15:40.720 really really easy when engineering
+00:15:42.639 managers are like clicking through their
+00:15:44.079 tickets looking planning out that next
+00:15:45.880 Sprint they're like oh does this one
+00:15:47.720 have an SEO impact okay let me check and
+00:15:50.839 they can go back to that
+00:15:53.120 documentation I then went around to all
+00:15:56.319 of the engineering groups to talk to
+00:15:58.480 them about our issues with tech debt
+00:16:00.399 they were aware but they appreciated
+00:16:02.800 hearing about it and then educating them
+00:16:04.959 on Crawl render index just critical
+00:16:07.279 things that they needed to understand
+00:16:09.079 and then a conversation of regions and
+00:16:11.079 URLs versus surfaces because we also
+00:16:13.360 have an app and so a lot of these
+00:16:15.199 Engineers who are used to the apps
+00:16:16.800 didn't realize things like filter
+00:16:19.240 parameters if you have a lot of them can
+00:16:21.519 cause lots of problems um and yeah we've
+00:16:25.319 been able to clean up a lot of things
+00:16:26.920 because of that okay so so I then
+00:16:29.880 audited our Sprints as I said each one
+00:16:32.959 of them I think it was about 4 hours for
+00:16:36.199 each Sprints and that was even with me
+00:16:37.720 doing some heavy skimming um and then we
+00:16:40.519 realized some of those tickets did fall
+00:16:42.279 through the cracks uh as I mentioned
+00:16:44.600 like region stuff there were some things
+00:16:46.560 with our business operations team that I
+00:16:48.480 needed to address some process flow
+00:16:50.560 issues within jira and now what I'm
+00:16:53.360 doing is I'm going around later this
+00:16:55.000 month to complete a secondary round of
+00:16:56.920 education for engineers about the kinds
+00:16:59.360 of things that were missed things like
+00:17:01.600 regions so I do have a couple of tips
+00:17:03.800 for getting Buy in from
+00:17:05.359 Engineers first of all meet with
+00:17:07.400 leadership first um and then I met with
+00:17:09.760 the engineering managers um to really
+00:17:11.720 get there by and go over the kinds of
+00:17:13.880 problems we were having and the
+00:17:16.119 solutions um I made it very clear that I
+00:17:19.160 was here to try to solve the problem we
+00:17:20.959 all knew there was a problem and I
+00:17:22.319 wanted to solve it and I framed it as a
+00:17:25.319 Time Savings Initiative for them uh that
+00:17:28.039 kept them from having to do code
+00:17:30.360 reversions and that it was a thrash
+00:17:32.880 avoidance technique they were all very
+00:17:34.559 aware that none of these projects were
+00:17:36.640 launching on time they hated that they
+00:17:38.760 hated having to come back and work on
+00:17:40.640 things later they also want their
+00:17:42.400 projects to be
+00:17:43.919 successful and then I explained the
+00:17:45.919 other things we were doing the playright
+00:17:47.480 test the the the cicd test and the uh
+00:17:51.400 work with our uh product development
+00:17:53.600 process to reduce Tech debt oh and then
+00:17:57.360 I asked for their help so so they were
+00:17:59.720 extremely receptive to this I I expected
+00:18:02.400 them to be like H we don't want to be
+00:18:03.919 responsible for that but no they were
+00:18:05.440 all in they were very excited about
+00:18:07.000 fixing these
+00:18:09.240 things step five velocity to the Moon um
+00:18:13.600 so we're always going to have Tech debt
+00:18:15.880 tickets that's just how it is there's
+00:18:18.120 always going to be problems uh but now
+00:18:20.400 we have processes in place to catch
+00:18:22.320 those before they go to production and
+00:18:25.440 also to catch things much more rapidly
+00:18:27.840 once they do go to production if there's
+00:18:29.440 a
+00:18:30.240 bug so we've seen some major
+00:18:33.039 improvements in the first quarter since
+00:18:34.520 roll out and again we're still adapting
+00:18:36.600 these processes things like that Google
+00:18:38.280 bot user Story Each time there's a
+00:18:40.880 problem I go back and say hey do we need
+00:18:43.080 to add something new to this I added
+00:18:44.840 breadcrumbs to that list a couple of
+00:18:46.520 weeks ago because I saw a design that
+00:18:49.480 didn't have breadcrumbs and I was like
+00:18:51.000 yep that's on me I didn't say not to not
+00:18:53.080 to not remove them and then so what
+00:18:56.840 we've seen is our high impact SEO
+00:18:59.679 regression bugs have been cut in half um
+00:19:02.080 our staff Engineers are very happy about
+00:19:04.039 that because they aren't being pulled
+00:19:05.159 off of their other important projects to
+00:19:07.039 fix things that are critical Engineers
+00:19:09.320 are proactively pulling us into ticket
+00:19:11.679 QA and our Google bot user story is an
+00:19:14.200 all current web
+00:19:15.880 initiatives there were some unexpected
+00:19:18.120 improvements too which was better cross
+00:19:20.559 team collaboration across the org um
+00:19:23.799 engineering product design and legal we
+00:19:25.840 had conversations with all of them when
+00:19:27.640 we were talking about business processes
+00:19:29.720 and issues and all of those teams also
+00:19:32.720 had expressed issues with the current
+00:19:35.080 process flows so just coming there and
+00:19:37.559 presenting a solution to the problems
+00:19:39.640 that everyone saw caused there to be a
+00:19:42.159 lot more um buyin at an org level and
+00:19:46.120 also we ran this education series uh org
+00:19:48.720 wide so yeah I talked with the engineers
+00:19:50.559 first but I also talked to product
+00:19:52.039 managers business operations and told
+00:19:54.320 them hey these are the problems we're
+00:19:55.760 having with crawl render index and why
+00:19:57.640 it actually matters um because there
+00:19:59.520 were a lot of misconceptions everybody's
+00:20:01.559 like oh yeah we SEO that I'm like what
+00:20:04.559 cuz you added it H1 like what so yeah
+00:20:09.640 this this was good so yeah if you are
+00:20:13.240 having problems with all your
+00:20:15.280 engineering resources being eaten up by
+00:20:17.240 Tech debt and you don't have these four
+00:20:19.480 components in place I would highly
+00:20:21.320 recommend that you add automated test to
+00:20:23.760 your cicd pipeline get SEO sign off in
+00:20:26.919 business processes have some sort of
+00:20:29.679 method for all those other tickets that
+00:20:31.480 slip through the cracks and finally
+00:20:33.960 educate your engineers they probably
+00:20:36.080 really will be on board with you if you
+00:20:38.240 try to frame it as problem
+00:20:40.280 solving thanks
+00:20:43.110 [Applause]

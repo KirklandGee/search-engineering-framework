@@ -1,0 +1,604 @@
+# tactiq.io free youtube transcript
+# Developing Automated SEO Tools - Dan Hinckley
+# https://www.youtube.com/watch/8CIJHiYRfRg
+
+00:00:15.200 thanks Mike we uh we as speakers all
+00:00:18.199 Drew straws to see who got to uh follow
+00:00:21.080 Mike King and uh unfortunately I didn't
+00:00:23.519 win um but I'm excited to to speak to
+00:00:26.439 speak with you guys today about
+00:00:27.599 developing automated SEO tools and share
+00:00:30.240 some of the things that we've learned
+00:00:31.640 recently about search in the age of
+00:00:34.040 large language
+00:00:35.480 models um so as you've probably heard
+00:00:38.280 from a number of speakers today search
+00:00:39.920 kind of really changed with the launch
+00:00:41.280 of chat GPT uh everything's a little bit
+00:00:44.120 different for us now um when we think
+00:00:46.600 about that what what has changed for
+00:00:49.960 seos what's different for us today than
+00:00:52.640 it was previously well it's becoming
+00:00:55.399 more and more clear that search engines
+00:00:57.120 are going through the process of
+00:00:58.640 changing from search to becoming answer
+00:01:00.840 engines that's really what their goal is
+00:01:03.879 uh they want to provide the answers for
+00:01:05.880 people so that they don't have to go
+00:01:07.080 look for them um we're seeing this not
+00:01:10.080 just with Google we're seeing it with
+00:01:11.560 co-pilot chat gbt others that are
+00:01:14.200 entering this space uh they are very
+00:01:18.000 particularly interested in being able to
+00:01:19.840 provide you with the answer you're
+00:01:21.040 looking for exactly when you need it
+00:01:23.079 instead of having you have to take the
+00:01:24.840 effort to go search for
+00:01:26.720 it um but an interesting thing that
+00:01:29.479 you've seen from Mike and others that
+00:01:30.960 are talking about it is is that with the
+00:01:33.479 release of chat GPT we suddenly had
+00:01:36.360 competition for the first time in this
+00:01:38.200 sphere uh competition to become the
+00:01:41.119 answer engine and so that also led to
+00:01:43.720 the increase of access to tools that
+00:01:45.520 power these search engines so we have
+00:01:47.960 Google vertex AI that Mike kingm
+00:01:49.880 referenced providing details and access
+00:01:51.960 to apis related to text embeddings these
+00:01:54.280 Vector databases open AI co-pilot Gemini
+00:01:58.039 open source language models um lots of
+00:02:01.159 other areas and we've also heard
+00:02:03.119 speakers today talk about Google's Cloud
+00:02:05.039 Library being increasingly accessible
+00:02:07.640 for things like natural language
+00:02:09.119 processing apis and tools and references
+00:02:11.800 to
+00:02:13.879 us so one of the other benefits that we
+00:02:16.640 have from all of this is that costs have
+00:02:18.440 decreased significantly in some examples
+00:02:21.120 they've in decreased
+00:02:23.879 99.9% um this is actually the cost for
+00:02:26.239 Google's natural language processing API
+00:02:28.640 from March 20 23 uh you can see on the
+00:02:31.560 left it was $1 for every 1,000 token uh
+00:02:35.720 1,000 characters that you processed and
+00:02:39.040 now it's
+00:02:40.319 0.001 Cent for every 1,000 characters
+00:02:43.879 you process so significantly reducing
+00:02:46.959 the cost to allow us to do things with
+00:02:49.200 these tools that we probably just
+00:02:50.560 couldn't afford to do at scale
+00:02:53.800 previously um with all of these tools
+00:02:56.680 that became have become available one of
+00:02:58.599 the things that I like to do as I'm
+00:03:00.440 learning things is is to actually build
+00:03:02.599 with them uh I am not a developer by
+00:03:05.599 trade uh I am a technical SEO by trade
+00:03:08.799 like many of you um but I like to jump
+00:03:11.480 into things uh to really understand them
+00:03:13.840 because then I think you can make better
+00:03:15.080 decisions better recommendations and get
+00:03:17.040 a search from how that does so I'm going
+00:03:19.680 to share a little bit about um what I
+00:03:22.200 built to help me understand all these
+00:03:23.840 Technologies and how they work together
+00:03:26.120 uh one of the things that we were having
+00:03:27.640 is as we have uh language models that
+00:03:30.640 are really powerful that can do lots of
+00:03:32.280 things we have voice models that can do
+00:03:34.280 things like clone voices and replicate
+00:03:36.439 things we also have um the these Vector
+00:03:39.760 embeddings that basically allow us to
+00:03:41.640 have semantic search capability that we
+00:03:44.920 never had previously which is an
+00:03:47.120 extremely uh powerful tool to get to
+00:03:50.959 information so I like to build projects
+00:03:53.959 not just related to SEO to learn things
+00:03:55.640 but other areas and I'd encourage you to
+00:03:57.239 do the same and one of the things that I
+00:03:59.319 started to do to learn these
+00:04:00.519 Technologies is I I had access to my
+00:04:03.040 grandfather's journals and I said hey
+00:04:05.319 this is a corpus of documents it's
+00:04:06.879 similar to search uh what if I could
+00:04:09.239 take this Corpus of documents and I
+00:04:11.439 could vectorize them and embed them and
+00:04:13.680 stick them into a vector embedding uh
+00:04:16.798 database and then with that Vector
+00:04:19.120 embedding database what if I could then
+00:04:22.840 tell a language model that it was my
+00:04:24.800 grandfather and what if I told my
+00:04:26.759 grandfather's language model that it had
+00:04:29.080 access to a collection of memories and
+00:04:31.440 those collection of memories were its um
+00:04:35.680 its journal entries right and then what
+00:04:38.160 if I had a recording of my
+00:04:40.280 grandfather and I was able to take and
+00:04:42.360 clone his voice my grandfather died in
+00:04:45.280 1989 he was a World War II vet and uh I
+00:04:50.199 put all of this together all these
+00:04:51.600 Technologies to see what would happen uh
+00:04:54.240 and we created chat GPT with Grandpa
+00:04:56.639 Hank and
+00:04:58.639 so joined the army in part because of a
+00:05:01.520 shady story and deal about a
+00:05:04.639 motorboat and because my cousin was
+00:05:06.880 leaving for the
+00:05:08.720 Marines getting my mother's signature
+00:05:11.120 for enlistment was the hardest part but
+00:05:14.400 I managed to convince
+00:05:16.199 her after finishing school I enlisted
+00:05:19.080 and left for the war on June 30th
+00:05:23.360 1942 so all of these Technologies are
+00:05:26.240 pretty crazy and
+00:05:28.000 incredible for me I was ble to hear my
+00:05:30.360 grandfather again and ask him questions
+00:05:32.560 and get answers that were based on his
+00:05:34.280 real life in his own words and with his
+00:05:37.759 own voice it's incredible powerful
+00:05:39.919 technology but through it all it helped
+00:05:41.919 me understand also the technologies that
+00:05:44.160 we can use in my day-to-day life with my
+00:05:46.479 with my job um these language models
+00:05:49.600 they've lowered costs the tools are more
+00:05:51.680 accessible they're easy to easier to
+00:05:53.720 access and because of that we can create
+00:05:56.360 powerful automated SEO tools so going to
+00:05:59.840 talk a little bit about what are some of
+00:06:01.319 the things that would limit us from
+00:06:02.560 being able to be successful with these
+00:06:04.080 tools so large language models they've
+00:06:07.000 got weaknesses one of the things that we
+00:06:09.199 often hear is they're bad at math they
+00:06:11.680 hallucinate they have limited memory
+00:06:13.639 although that's becoming less and less
+00:06:15.240 of a problem definitely was when we were
+00:06:17.280 first starting this process with these
+00:06:19.080 tools and so when we had G fish we were
+00:06:22.800 thinking about all these things we
+00:06:24.039 started to think well these these
+00:06:25.960 language models they're used by search
+00:06:27.919 engines uh and they must have figured
+00:06:30.520 out a way to get past these if they're
+00:06:32.039 going to deploy it into their search
+00:06:33.720 product right like there has to be a way
+00:06:35.479 for us so we started to wonder well what
+00:06:37.919 can we do as SEO to solve these same
+00:06:40.960 process these same type of problems to
+00:06:42.720 be confident enough that we could
+00:06:44.080 automate these things at scale how can
+00:06:45.840 we use these at scale with confidence
+00:06:47.960 that they're not going to give us bad
+00:06:50.120 data hallucinate make things up or run
+00:06:52.319 out of
+00:06:53.639 memory um so one of the first things we
+00:06:55.879 saw was just related to math right like
+00:06:57.720 hey don't use large language models for
+00:07:00.120 title tags or metad descriptions small
+00:07:02.199 simple things that we have to do all the
+00:07:03.680 time they can't count characters they
+00:07:05.720 make things up but we started to think
+00:07:07.400 about it too and we said you know I'm an
+00:07:09.840 SEO and if you ask me to create a 100
+00:07:12.120 title tags without using a tool to
+00:07:14.319 determine how many characters I had used
+00:07:16.160 and if I met that threshold of 60 if I
+00:07:18.919 was going to be over or under it I would
+00:07:21.879 I would probably fail I wouldn't do that
+00:07:23.560 well at it in a language model on its
+00:07:25.960 own it fails about 60% of the time but
+00:07:29.680 uh we learned that if you gave language
+00:07:31.639 models tools to check their work um they
+00:07:34.879 did a pretty good job of that so what we
+00:07:37.280 did is as chat gbt and other language
+00:07:39.280 models have the ability to call
+00:07:40.479 functions functions can be things like
+00:07:42.400 calculators they can be tools that work
+00:07:44.400 for you and so we gave language model
+00:07:47.520 through functions the ability to do
+00:07:49.400 things like check character length an
+00:07:51.599 interesting thing happened is is that
+00:07:53.319 when we first started this we just
+00:07:55.479 returned back to them the characters
+00:07:57.639 like 35 60 5 and the language models
+00:08:01.360 didn't quite know what to do with that
+00:08:03.440 and so we have a tip that is is if you
+00:08:05.560 actually return information the way that
+00:08:08.039 language models work best with
+00:08:09.560 instructions they do significantly
+00:08:11.400 better so our function returns things
+00:08:13.759 like title tag is too long with 65
+00:08:16.599 characters please write a shorter one
+00:08:18.919 and when we made that change we saw that
+00:08:21.400 language models ability to check their
+00:08:23.199 own work reduce their air rates in terms
+00:08:25.360 of character count from 60% to 1% so
+00:08:29.120 sign ific Improvement that we could
+00:08:30.639 solve and be confident that we could
+00:08:32.279 build automated tools on in
+00:08:34.919 scale moving to the next topic uh
+00:08:37.880 language models can't be trusted they
+00:08:40.080 hallucinate and make things up uh this
+00:08:42.240 one was a a fun challenge to to problem
+00:08:44.760 to solve and there's a few things that
+00:08:46.600 we found out is is that like if you
+00:08:48.320 actually give language mod models the
+00:08:50.160 ability to say I don't know they'll use
+00:08:51.920 it right like that's one of the things
+00:08:54.040 they're statistically predicting what
+00:08:55.519 the best answer is and if they don't
+00:08:57.399 know the answer often the statistical
+00:08:59.079 best prediction is I don't know if you
+00:09:01.680 give them that access and the other
+00:09:03.880 thing is is that you'll hear people with
+00:09:06.000 retrieval augmented generation rag the
+00:09:08.279 ability to grab answers and include it
+00:09:10.560 in prompts if you give the answers based
+00:09:13.720 on retrieving information from Vector
+00:09:16.440 databases or other sources that language
+00:09:19.079 models do a pretty good job of not
+00:09:20.480 hallucinating or making things up so
+00:09:23.519 wanted to just show you an example of
+00:09:24.920 how this might work so you have an
+00:09:26.519 example a user prompt to a language
+00:09:28.480 model might be something like did the
+00:09:29.920 Dallas Cowboys win the Super Bowl what
+00:09:32.680 we could do pro programmatically to make
+00:09:34.480 sure a language model didn't hallucinate
+00:09:36.920 would be to send it something like this
+00:09:39.000 did the Dallas Cowboys win the Super
+00:09:40.519 Bowl use the data below to answer the
+00:09:42.920 question if there is no answer in the
+00:09:44.800 data reply with I don't know and then
+00:09:47.480 you inject the data that you've gathered
+00:09:49.320 from some other source in this case you
+00:09:51.160 know this example the D Dallas Cowboys
+00:09:53.480 did not go to the Super Bowl sorry
+00:09:55.200 Dallas Cowboy
+00:09:56.480 fans uh and what a response would be
+00:09:59.079 something like this is the Dallas
+00:10:00.320 Cowboys did not win the Super Bowl if
+00:10:02.079 the data didn't include that information
+00:10:04.720 with this prompt that we just showed
+00:10:06.720 here it would actually reply with I
+00:10:09.720 don't know because that's the
+00:10:11.519 statistically most relevant answer based
+00:10:13.399 on the prompt that you had sent
+00:10:15.519 it um so how do we as technical seos
+00:10:18.519 include answers to all of the possible
+00:10:20.720 questions for queries in the prompt like
+00:10:23.480 there's infinite possibilities with data
+00:10:25.480 when we're working across wide ranges of
+00:10:27.320 websites and other areas and how how do
+00:10:29.480 we then solve that limited memory
+00:10:32.000 problem so one of the things that we
+00:10:33.959 talked about when I showed that demo of
+00:10:35.440 my grandfather is is that we need to
+00:10:38.200 actually act more like search engines
+00:10:40.040 now we need to gather information
+00:10:43.040 through things like API scraping content
+00:10:45.920 natural language processing tools we
+00:10:48.120 need to organize it similar to what a
+00:10:49.920 search engine does with databases and
+00:10:51.959 then we may need to retrieve it through
+00:10:54.320 code to include into language model
+00:10:56.480 prompts when it's needed most so NE
+00:10:58.920 another words we need to do exactly what
+00:11:00.760 search engines do every day they crawl
+00:11:02.519 data organize it in a database and
+00:11:04.320 retrieve the information and present it
+00:11:05.720 to a user when they need it
+00:11:07.440 most so how can we get answers for SEO
+00:11:10.920 uh one of those things we're going to
+00:11:11.880 talk about and Mike went into a lot of
+00:11:13.720 detail and I'll go through quickly is
+00:11:15.480 Google's vertex AI text embeddings um or
+00:11:18.800 other embedding models my language of
+00:11:21.160 choice is python but you can use
+00:11:22.959 JavaScript or any type of other area to
+00:11:25.160 help receive information and then one of
+00:11:27.920 the things we need is this API access we
+00:11:30.680 use Ser API a lot because it gets us
+00:11:33.240 quick clean data information structured
+00:11:35.360 for seeing what's happening in the
+00:11:37.560 search results for a specific time when
+00:11:41.000 we're running and doing automated
+00:11:42.800 information queries so just real quickly
+00:11:45.680 Mike went into a lot of detail but this
+00:11:47.519 text embedding model is a process of
+00:11:49.200 taking text moving it into a model
+00:11:51.839 getting a a numeric representation of
+00:11:53.839 the meaning of that text that lives in
+00:11:55.639 that Vector space that we've heard about
+00:11:57.240 today um just the quick summary things
+00:12:00.120 that are similar to each other are going
+00:12:01.680 to be more closely related and located
+00:12:04.560 to each other and then we can identify
+00:12:06.720 and understand the similarity of topics
+00:12:08.959 or grab answers that are most related to
+00:12:11.279 the topics we're talking about by
+00:12:13.199 measuring cosine similarity the things
+00:12:15.480 that are closest to each
+00:12:18.120 other so Vector embeddings cosine
+00:12:20.440 similarities is is is a crucial tool for
+00:12:22.959 us for building automated SEO tools
+00:12:25.160 moving forward it's something where if
+00:12:26.720 you don't learn about it if you don't
+00:12:28.040 know much about it today is that's the
+00:12:29.720 homework go home understand this concept
+00:12:32.160 it's going to change everything that you
+00:12:33.680 do moving forward uh and it's going to
+00:12:36.519 and allow us to answer to pass questions
+00:12:39.320 and with answers to large language
+00:12:40.920 models so that they can be accurate one
+00:12:43.279 of the things that we saw when we
+00:12:44.839 started working with vector embeddings
+00:12:46.399 and language models is that we see
+00:12:47.760 Google using similarity scores all of
+00:12:49.959 the time it's most likely the way that
+00:12:52.519 they rewrite metad descriptions I'm
+00:12:54.320 going to show three metad descriptions
+00:12:56.600 for the same page that change based on
+00:13:00.320 the query entered so in this example you
+00:13:01.959 can see is like how is an IP address
+00:13:03.760 assigned the The Meta description
+00:13:05.800 answers that question right it's a it's
+00:13:07.399 assigned by an ISP um that same page but
+00:13:10.480 with a slightly different query what is
+00:13:12.680 an IP address and an IP address is a
+00:13:15.079 unique numerical identifier right so the
+00:13:17.480 only thing that changed was The Meta
+00:13:18.800 description in the query the page didn't
+00:13:20.959 change and then a third version like how
+00:13:22.839 many versions of IP addresses are there
+00:13:25.079 and it's there are two versions of IP
+00:13:26.560 addresses right so Google was able to
+00:13:29.680 identify the text on your site that is
+00:13:31.680 most semantically similar to the the
+00:13:33.519 query and has identified that they get
+00:13:36.079 better click-through or engagement data
+00:13:38.320 if they include that as The Meta
+00:13:39.519 description so if you're frustrated with
+00:13:41.440 your meta descriptions not being uh
+00:13:45.079 being used it means that they're not
+00:13:46.720 relevant to the queries that they're
+00:13:48.320 being asked they're not semantically
+00:13:50.360 relevant to
+00:13:51.600 them so we thought at at go fish like
+00:13:54.680 hey what if we could do this same thing
+00:13:57.000 what if we could look at content in a
+00:13:59.279 similar way to what Google does and uh
+00:14:02.120 so we decided to build a Chrome
+00:14:04.240 extension that does a lot of this and
+00:14:06.040 it's in private beta if you guys are
+00:14:08.320 interested in it send me a message on
+00:14:10.360 LinkedIn and and we can have
+00:14:11.680 conversation but we're going to be
+00:14:13.199 releasing this soon uh essentially it's
+00:14:15.560 taking all the text on your site passing
+00:14:17.800 that to Google's vertex em uh vertex
+00:14:20.880 text embedding model receiving that
+00:14:23.399 information back measuring the distance
+00:14:26.120 between the target keyword and then
+00:14:29.480 updating the Dom with the score and a
+00:14:31.839 heat map so this similarity School
+00:14:34.440 essentially is as you enter Target
+00:14:35.759 keyword you hit go processes all the
+00:14:38.360 content in your site and then overlays
+00:14:40.800 that on the page so that you can see
+00:14:43.279 exactly what parts of the text on your
+00:14:45.160 site are semantically scoring well in
+00:14:47.600 which or not you can help you identify
+00:14:50.600 what areas of the site potentially uh
+00:14:52.839 need content updates and then we also
+00:14:55.680 generate a page similarity score our
+00:14:58.120 belief is is that this is similar to the
+00:15:00.839 content uh Warehouse database content
+00:15:03.720 Warehouse leak in the way that we were
+00:15:05.759 reading the instructions is is that
+00:15:07.720 Google is probably taking an average of
+00:15:09.560 all of the nodes on the page and
+00:15:11.320 creating an average embedding from them
+00:15:13.199 to generate a page similarity uh a page
+00:15:16.240 score and then they do the same thing at
+00:15:18.639 scale to get your site
+00:15:20.519 score um so these new tools at
+00:15:23.440 affordable prices allow us to automate
+00:15:25.120 information gathering and content
+00:15:26.399 scoring to provide better SEO recommend
+00:15:28.959 founds it's it's a ground baking initial
+00:15:31.920 process for us but what are some
+00:15:33.880 examples of ways that we can actually
+00:15:35.639 automate SEO how can we make this go
+00:15:37.480 faster for us um so some of the examples
+00:15:40.759 that we have have used and built in in
+00:15:43.079 one of these is like we can review the
+00:15:44.560 search result page pretty quickly
+00:15:46.639 identify search intend and content
+00:15:48.160 freshness we can do that through
+00:15:50.000 language models like search API I'm
+00:15:52.440 sorry open Ai and then from apis like
+00:15:54.639 Sur API uh hre's recently introduced
+00:15:58.560 this feature into the their just data
+00:16:00.399 set but doing a similar process to what
+00:16:02.519 you can do manually um other areas that
+00:16:04.880 we can do it is we can identify helpful
+00:16:06.560 content gaps from competing sites by
+00:16:08.360 leveraging larger language models so you
+00:16:10.240 can use Python scrape content from a
+00:16:12.199 number of different sites pass that
+00:16:13.959 organized content over to language
+00:16:15.639 models uh a pro tip if you're trying to
+00:16:18.199 compare data for language models um the
+00:16:20.519 best way to do that I found is Json uh
+00:16:23.440 structuring the information in Json and
+00:16:25.120 passing it to language models Works
+00:16:26.839 similar to what we would see in like a
+00:16:28.360 table language models like Json it's
+00:16:31.079 really easy for them to understand um
+00:16:33.680 you can discover Information Gain
+00:16:35.360 opportunities Mike talked a little bit
+00:16:36.759 about this one of the ways to do it is
+00:16:38.759 is if you pass the content from a
+00:16:41.560 collection of Corpus of documents and
+00:16:43.560 then you compare them all against each
+00:16:44.959 other you can identify what are the
+00:16:47.040 common facts on all of these Pages which
+00:16:49.360 ones are the unique facts and then
+00:16:50.880 what's missing from your site or your
+00:16:52.560 client site and it can do that all at
+00:16:54.720 scale and quickly through the
+00:16:56.440 combination of language models in python
+00:16:59.360 content
+00:17:01.720 scraping uh you can review content uh on
+00:17:05.319 a on a page to see if it's answering to
+00:17:07.160 people also ask question apis like Ser
+00:17:09.959 API can get you that detailed
+00:17:11.640 information pass that through a language
+00:17:13.559 model and ask is it answering these
+00:17:15.520 questions on your client's page if it's
+00:17:18.280 not let us know in this example we can
+00:17:20.959 see that we show both the search answer
+00:17:24.119 was it answered by a client and then
+00:17:25.880 what the client's answer was so you can
+00:17:27.839 compare like how is this answer
+00:17:29.919 different than the answer that Google
+00:17:31.200 has suggested as the best answer for
+00:17:33.400 that particular question and then also
+00:17:35.919 the red red items would identify that
+00:17:38.120 this content didn't answer that people
+00:17:40.039 also asked
+00:17:41.600 question uh you can create these vector
+00:17:44.440 embeddings and generate similar scores
+00:17:46.120 for clients in competing pages so
+00:17:47.960 similar to that Chrome extension you can
+00:17:49.799 build it into automated tools grab that
+00:17:51.679 content score it at the node level the
+00:17:54.600 the HTML tag level so you can see what
+00:17:57.440 parts of your content is scoring
+00:17:59.480 uh slowly one of the great benefits our
+00:18:01.679 team uses this for is we can actually
+00:18:04.679 make recommended changes and see what
+00:18:06.480 the changes would do to the similarity
+00:18:08.440 score before we publish it live so you
+00:18:10.720 can click make updates to the text re
+00:18:14.240 rescore the content and see is this
+00:18:15.919 moving in the right direction or is it
+00:18:17.360 going to hurt our content before we
+00:18:18.960 publish
+00:18:19.919 it um you can also do what Mike was
+00:18:22.799 talking about with uh if you then create
+00:18:25.559 a page embedding for every single page
+00:18:27.080 on a site you can then get your site
+00:18:30.520 Authority score the page scores and you
+00:18:32.600 can then compare it against multiple
+00:18:34.120 competitors and so you can see verse
+00:18:36.120 Target keywords it's hard to see a
+00:18:37.960 little bit but the green dots down at
+00:18:39.320 the bottom versus two sites that are
+00:18:40.960 competing for those queries we can see
+00:18:43.080 the orange site has a lot more
+00:18:44.280 information a lot more topical Authority
+00:18:47.000 even though they're not as closely
+00:18:48.320 related to the the target keywords help
+00:18:51.600 us make content decisions based on
+00:18:53.880 that uh you can do things really simple
+00:18:56.440 like hey let's just grab all the IM on a
+00:18:59.240 page in the alt text in the file names
+00:19:01.240 and see which ones are missing which
+00:19:03.039 ones are doing so we can quickly make
+00:19:04.440 recommendations at
+00:19:06.240 scale and we can use the correct tools
+00:19:09.400 for the correct purposes right so if
+00:19:11.360 we're trying to understand entities we
+00:19:13.360 can use Google's natural language
+00:19:14.559 processing entity we can grab that from
+00:19:16.960 multiple pages and compare them against
+00:19:18.799 each other so we can see which ones are
+00:19:20.960 missing from particular Pages at scale
+00:19:23.000 then make recommendations on what to do
+00:19:25.799 to the content to integrate those
+00:19:27.480 entities that we're missing
+00:19:30.720 and we can even do things like make a
+00:19:33.080 good guess at topical Authority one way
+00:19:35.360 to do that is to use search API to get
+00:19:37.400 search results for each of the sites do
+00:19:40.280 by doing a site query plus the keyword
+00:19:42.600 that's going to give you a good idea of
+00:19:44.039 the number of pages that are returning
+00:19:46.080 for our particular topic if you then
+00:19:48.400 compare the content to each of those
+00:19:50.200 pages with semantic similarity and their
+00:19:53.080 page embeddings you can then see which
+00:19:55.000 ones are most relevant to that content
+00:19:57.120 and you can identify if there's Gap in
+00:19:58.760 your content for a topical Authority
+00:20:00.799 that you're trying to rank for in this
+00:20:02.480 example for SEO for construction
+00:20:04.360 companies Gish digital needs to write
+00:20:06.280 some more articles so that we can be a
+00:20:08.120 little bit more of a subject matter
+00:20:09.520 expert on that
+00:20:10.960 area uh one of the other things is you
+00:20:13.320 can use all these tools to identify
+00:20:14.960 internal linking opportunities through
+00:20:17.159 an automated process and at scale again
+00:20:19.280 you looking at all of the number of
+00:20:20.559 pages you find the paragraphs on those
+00:20:22.280 pages that are the most semantically
+00:20:24.039 similar to a particular keyword getting
+00:20:27.159 semantic scoring and that Returns the
+00:20:29.679 document so you can see like Hey we're
+00:20:31.559 not linking on these pages but we should
+00:20:33.559 because we have paragraphs that talk
+00:20:35.360 about these topics throughout the site
+00:20:37.200 and we can grab that
+00:20:40.760 information so and there's so much more
+00:20:42.880 that you can create right we've heard
+00:20:44.159 lots of people today and yesterday talk
+00:20:46.360 about all of these new technologies the
+00:20:48.880 different ways that you would use them
+00:20:50.080 for your particular Industries the
+00:20:52.320 reality is is it's it's endless and I
+00:20:55.200 showed that example at the beginning of
+00:20:56.679 my grandfathers is that like it's
+00:20:58.159 something that you can do these tools
+00:21:00.240 are incredibly easy to use now um versus
+00:21:03.320 years ago in addition to that we have
+00:21:05.320 these large language models that can
+00:21:06.720 help us build things so that's one thing
+00:21:08.760 I just want to make sure everyone is
+00:21:09.960 confident that they can go and do that
+00:21:12.360 um so all those screenshots you saw come
+00:21:14.799 from a tool that we use internally that
+00:21:16.360 we call Barracuda um it's essentially
+00:21:18.559 the process of going out gathering
+00:21:20.679 information about a particular client's
+00:21:23.120 web page in the competing Pages
+00:21:25.159 aggregating it back together typically
+00:21:27.440 that process before we automated a lot
+00:21:30.000 of those steps um took about four hours
+00:21:32.440 it was gathering information pulling it
+00:21:34.320 together and then we'd make
+00:21:35.559 recommendations Barracuda now goes and
+00:21:37.720 gathers all of that same information to
+00:21:39.880 allow our SEO teams to use that
+00:21:41.880 information to then make recommendations
+00:21:44.200 um and it gathers all that in about four
+00:21:45.760 minutes so you know the time saved by
+00:21:48.520 just being able to go automate these
+00:21:51.720 tasks use these tools and Technologies
+00:21:54.240 can be a significant Advantage for you
+00:21:56.559 in terms of what you're doing
+00:21:58.840 so in conclusion just want to make sure
+00:22:00.960 that everyone understands this there's
+00:22:03.039 so many tools that make us make it that
+00:22:05.919 are available to us to help us do what
+00:22:07.720 we do uh and accessing these tools is
+00:22:10.480 cheaper and easier than they've ever
+00:22:12.080 been and that we can use these tools to
+00:22:14.240 automate information gathering scoring
+00:22:16.159 content and allowing us to make
+00:22:18.000 recommendations that make an
+00:22:21.279 impact thank you

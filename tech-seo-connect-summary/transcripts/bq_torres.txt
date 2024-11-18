@@ -1,0 +1,720 @@
+# tactiq.io free youtube transcript
+# BigQuery for SEOs - Sam Torres
+# https://www.youtube.com/watch/dzYtcm1yfq4
+
+00:00:16.870 [Applause]
+00:00:21.840 thank you uh also for those standing in
+00:00:24.400 the front or sitting you're not standing
+00:00:26.640 uh I talk with my hands a lot so if this
+00:00:29.560 ends up in your face I'm really sorry um
+00:00:33.239 also I love I'm so short yeah I can walk
+00:00:35.320 across and not block the the slides love
+00:00:38.040 it okay uh so yes I am Sam Torres I I
+00:00:42.480 don't know what happened there um I was
+00:00:45.320 originally a developer before this I did
+00:00:47.399 front end um came to marketing uh
+00:00:50.239 actually because I wanted to be in
+00:00:51.520 visual merchandising which really makes
+00:00:53.280 no sense how I'm here now but here I am
+00:00:56.039 uh I've been doing it for about 14 years
+00:00:58.519 and now I get to run the company with my
+00:01:00.840 partner Tori gray uh we have way too
+00:01:03.399 much fun solving really complex problems
+00:01:05.280 for our clients um and then I am a super
+00:01:09.479 uh member of women and Tech SEO which is
+00:01:11.920 amazing Shameless call out um if you are
+00:01:15.600 here today and you identify as female or
+00:01:17.759 another marginalized gender please
+00:01:19.680 please join it is free that Community
+00:01:22.759 has literally changed my life that's how
+00:01:24.479 I met Tori um and It's amazing And for
+00:01:27.720 those who do not identify as female you
+00:01:30.200 can still get involved subscribe to our
+00:01:33.040 newsletter uh it's incredible content
+00:01:35.840 and it's always promoting women uh and
+00:01:38.479 just the amazing things that they are
+00:01:40.680 creating that Community is phenomenal uh
+00:01:43.360 the most encouraging slack Community you
+00:01:45.399 will ever find in your life it's
+00:01:49.360 awesome all right but that's not really
+00:01:51.360 what we're here to talk about today um
+00:01:53.680 well I'm always ready to talk about that
+00:01:55.719 but we're going to talk about this um so
+00:01:57.680 do I I do want to see who feels Vic IED
+00:02:00.600 by Google search console's 16-month
+00:02:02.920 window yep and now we get to have it
+00:02:05.880 with G4 you only get 14 months that's
+00:02:08.160 super great right uh and then also have
+00:02:11.520 you ever run into a time where you're
+00:02:13.080 looking at a liquor Studio report and
+00:02:14.959 you're talking to a client or maybe a
+00:02:17.160 customer and you're like I promise the
+00:02:19.920 report is here it's just taking a really
+00:02:22.440 long time um that is the most awkward
+00:02:25.040 pause and one of the ones I hate the
+00:02:27.120 most um so I'm going to try to help you
+00:02:30.120 those problems and we're going to do all
+00:02:31.519 of it with bigquery so obviously we've
+00:02:33.280 been talking about it a lot Noah did a
+00:02:34.720 great talk about it surge as well um how
+00:02:37.040 do you get that data out of GSC and into
+00:02:39.840 big query uh Google actually made it
+00:02:42.000 really easy for us now so what I'm going
+00:02:44.879 to cover in here we're going to talk
+00:02:46.000 about what is Big query why would you
+00:02:47.720 want to use it uh there's obviously I'm
+00:02:50.640 biased and I have a lot of reasons why
+00:02:53.040 uh we're going to talk about how the
+00:02:54.040 pricing works too cuz maybe you've seen
+00:02:56.159 the horror stories of oh my God I got a
+00:02:58.840 $50,000 bill with Google um from Big
+00:03:02.159 query I'm going to help you avoid that
+00:03:05.319 um we're also going to talk about how do
+00:03:06.519 you even navigate the platform because
+00:03:08.239 it looks kind of terrifying especially
+00:03:09.959 if you've worked really with the
+00:03:12.120 marketing side of Google products when
+00:03:13.720 you go into Google Cloud console it is
+00:03:16.200 overwhelming and even I as a developer
+00:03:18.159 find it overwhelming um and then we're
+00:03:20.480 going to talk about something I call
+00:03:21.799 aggregate tables now for any of my data
+00:03:24.680 scientists in the room I know that there
+00:03:27.000 are aggregate functions in big query
+00:03:29.400 it's not the same uh this is what I call
+00:03:32.159 it um so again not an industry term
+00:03:34.879 don't tell your data scientists that's
+00:03:36.439 what they're called because it's not
+00:03:37.799 really but that's what I call them
+00:03:39.319 because it makes sense to me um if you
+00:03:41.920 do want the slides you can download them
+00:03:43.360 here uh they're already up there uh so
+00:03:46.319 I'll leave it here for two seconds and
+00:03:49.159 then there's another one at the end so
+00:03:50.840 all right so let's get started is bit
+00:03:52.720 query even worth it seems a little bit
+00:03:54.959 overwhelming sometimes especially when
+00:03:56.920 you first log in so let's talk about
+00:03:59.480 what is it just kidding I fixed it I'm
+00:04:01.840 never going to read that much to you
+00:04:03.120 guys I don't hate anyone that much um so
+00:04:06.640 really the important things here that
+00:04:08.319 this is saying is that it is a place to
+00:04:10.120 store your data you can store a ton of
+00:04:12.280 it you can query it really quickly and
+00:04:14.560 then it's also an infrastructure that
+00:04:16.279 you don't have to manage all of that is
+00:04:18.320 already done for you and then the other
+00:04:20.720 piece I want to call it here is that you
+00:04:22.160 use SQL to navigate it why is that
+00:04:24.800 important SQL is old as dirt which means
+00:04:28.440 there is a ton of documentation on it
+00:04:30.280 there are a ton of tools to help you
+00:04:32.039 figure out how to use it um so there's
+00:04:34.600 just there's already a community of
+00:04:36.280 support to make it that much easier to
+00:04:38.000 interact with your
+00:04:39.320 data so what are the benefits um you get
+00:04:42.199 to
+00:04:43.000 scale it's unsampled right if you uh you
+00:04:46.400 know we've been seeing about the API we
+00:04:48.639 actually start getting some of that data
+00:04:49.960 Noah was calling out how you can see if
+00:04:52.120 it's an anonymized query right we get
+00:04:54.680 all of that actually already in big
+00:04:57.080 query um if you're like me and you
+00:05:00.400 actually have to work across different
+00:05:01.680 platforms or maybe you have integrated
+00:05:03.440 campaigns with your clients you're
+00:05:05.320 logging into Google ads and meta and
+00:05:07.800 Linkedin and Tik Tok and Reddit
+00:05:09.680 advertising and everything else in order
+00:05:11.880 to see your data a lot of those tools
+00:05:14.199 have availability for you to put that
+00:05:15.759 data in big query as well so it could
+00:05:18.639 potentially become the One Source where
+00:05:20.479 your information where your data
+00:05:22.560 lives um and again you can do a lot of
+00:05:25.479 things and as far as access data back to
+00:05:27.440 day one Once you turn on the
+00:05:29.720 Integrations um we're going to talk a
+00:05:32.120 little bit more but basically any of the
+00:05:33.319 calculations you do retroactively
+00:05:35.400 applies to any of the data you already
+00:05:37.440 have um so let's
+00:05:40.720 continue again so why doesn't everybody
+00:05:42.840 use it um this is the homepage for
+00:05:45.160 Google Cloud console which is how you
+00:05:46.840 get to Big query um can you tell me
+00:05:49.720 where big query is yeah it's it's it's
+00:05:52.919 and it moves on you it's not
+00:05:55.039 great um so we also need to of course
+00:05:58.080 talk about the pricing because nobody
+00:05:59.919 wants prize bills and unfortunately when
+00:06:02.360 you read the pricing documentation for
+00:06:04.199 big query it's like what the what that
+00:06:07.880 means nothing to me um so I'm going to
+00:06:10.759 tell you there's really two things two
+00:06:12.319 factors that decide how much your bill
+00:06:14.880 is going to be the first is storage so
+00:06:17.199 this is just how much data are you
+00:06:19.120 actually holding in big query uh the
+00:06:21.680 free tier actually gets you 10 gigs
+00:06:24.639 which doesn't sound like much but y'all
+00:06:27.000 it's basically like csvs so imagine 10
+00:06:30.080 gigs of csvs that is a ton of data um I
+00:06:34.440 have Enterprise clients that they will
+00:06:37.120 have anywhere from six to 8 million URLs
+00:06:40.080 at a time depending on their
+00:06:42.319 inventory we are nowhere close the
+00:06:45.039 storage is fine storage is cheap and
+00:06:47.319 even if you were to extend past that
+00:06:49.919 storage is still cheap like to double
+00:06:51.919 that is like 15 cents a month so if
+00:06:54.800 you're paying a lot for storage uh
+00:06:57.240 you're getting screwed um
+00:07:00.400 and then after that is computation so
+00:07:02.400 this is where how much are you are you
+00:07:04.479 actually interacting with the data are
+00:07:06.400 you transforming it are you pulling it
+00:07:08.360 all that kind of good stuff uh the free
+00:07:10.520 tier gets you a terabyte which you're
+00:07:12.120 like oh that sounds like a lot
+00:07:13.720 unfortunately it's
+00:07:15.639 not um so this is where things start to
+00:07:18.240 get really expensive um if you're not
+00:07:21.680 smart about how you're querying and
+00:07:23.840 interacting with your data so if you do
+00:07:26.440 find that cost are up there's probably
+00:07:28.840 some really inefficient queries um and
+00:07:31.520 anytime I've seen the horror stories of
+00:07:33.319 those I was not expecting this $5,000
+00:07:36.199 bill that's that's been what's happened
+00:07:39.080 um also to give you context I do I I'm
+00:07:42.360 fortunate my agency has a number of
+00:07:43.840 Enterprise clients and we have set up
+00:07:45.479 these systems for
+00:07:46.800 them most of my clients are still under
+00:07:49.520 $10 a
+00:07:51.199 month and the reporting is coming from
+00:07:53.800 it we're doing basically using only big
+00:07:56.599 query as our source for data
+00:07:59.840 and it's still less than 10 bucks uh my
+00:08:02.199 agency we definitely don't even come
+00:08:04.000 close to ever having to pay anything cuz
+00:08:06.720 well we're an agency website so you know
+00:08:08.400 it happens um so let's talk about the
+00:08:11.120 compute cost how does it how does it
+00:08:12.800 build up so this is a liquor Studio
+00:08:14.680 report that we put together for
+00:08:16.840 ourselves actually and this single chart
+00:08:19.680 that's showing the Branded impression
+00:08:21.520 share seems like a really simple chart
+00:08:23.800 right it's things we do all the time
+00:08:26.400 well what's happening here is that
+00:08:29.120 single Le query to build that report is
+00:08:32.279 having to look through and find specific
+00:08:35.799 keywords query The Impressions for that
+00:08:39.279 um and then also organize it by date so
+00:08:41.479 there's already multiple functions
+00:08:42.919 happening here that seem really simple
+00:08:45.640 but start to add up really
+00:08:48.560 quickly so when you're going through
+00:08:50.839 this um you can create budget alerts so
+00:08:54.360 this is a way to make sure you don't get
+00:08:55.839 that surprise bill or at least you can't
+00:08:58.839 faint IGN ignorance anymore I guess
+00:09:00.399 would be part of a bad
+00:09:02.040 part um so when you're going into Google
+00:09:04.200 search console I'm sorry not search
+00:09:05.640 console Cloud console I'm going to do
+00:09:07.040 that so many
+00:09:08.279 times um you can create a budget um I'm
+00:09:12.200 not going to walk you through all of the
+00:09:13.320 screenshots because you're Tech seos
+00:09:15.160 which means you're probably really good
+00:09:16.399 at following
+00:09:17.399 documentation um but you can set all
+00:09:19.480 these up so I'll just talk a few through
+00:09:20.920 a few things um when you're specifying
+00:09:22.760 your budget you can actually apply it to
+00:09:25.760 just specific organizations so if you're
+00:09:28.079 agency and you have different clients in
+00:09:29.920 there you can although I would highly
+00:09:32.160 recommend uh still make sure the
+00:09:34.160 client's credit card is on it just in
+00:09:35.880 case somebody on their side gets stupid
+00:09:37.560 and plays with stuff uh not that any of
+00:09:40.640 my clients would ever do that it's
+00:09:43.640 happened um and then you can also limit
+00:09:45.839 it by project or even a service so if
+00:09:49.120 maybe your client does already have a
+00:09:51.079 Google Cloud console account or you do
+00:09:53.120 because you're doing other fun things
+00:09:54.880 with machine learning um you can just
+00:09:57.480 limit it based on whatever service
+00:09:59.079 you're running um this is really
+00:10:01.000 important if you if your organization
+00:10:03.120 does have an account and maybe your the
+00:10:05.720 app that's powering your service runs
+00:10:07.519 through here uh you don't want to limit
+00:10:09.279 what they're doing but obviously you
+00:10:10.959 want to limit the cost you're
+00:10:13.079 causing um you can create alert
+00:10:15.079 thresholds you can make these emails as
+00:10:16.880 annoying as you want to and if you want
+00:10:19.120 to add the finance person on the email
+00:10:21.600 alerts um that's how you do it so again
+00:10:25.000 you'll have the slides so you can look
+00:10:25.959 at this later um some of my favorite
+00:10:28.399 sample budgets um um Google really likes
+00:10:31.040 to push last month spend that's the one
+00:10:33.600 it's always going to default too uh my
+00:10:35.760 favorite is any I want to know if I'm
+00:10:37.320 spending anything um cuz even if there's
+00:10:41.040 one day where it's like hey suddenly
+00:10:43.399 something costs 30 cents I want to know
+00:10:45.880 about it because a lot of times that
+00:10:47.360 could be a sign that a query started um
+00:10:49.760 and I want to make sure it's not going
+00:10:50.680 to run multiple times that day or
+00:10:52.399 multiple times that
+00:10:53.680 month um and then again you can limit to
+00:10:55.800 the specific services and those are the
+00:10:57.480 services that you would limit it to
+00:11:01.440 okay so now we've talked about budgeting
+00:11:03.800 so let's actually get started and like
+00:11:05.600 do something with it how do we connect
+00:11:07.040 it so this has to be one of my favorite
+00:11:09.399 things that Google ever gave us is the
+00:11:12.440 bulk export from GSC um it's also the
+00:11:15.360 reason why my agency we actually used to
+00:11:17.920 work in Snowflake or red shift for any
+00:11:19.920 kind of data storage that single thing
+00:11:22.320 kind of forced us to learn bigquery so I
+00:11:24.720 guess it was really smart of them I
+00:11:26.240 don't know um okay so when you start you
+00:11:28.920 do have to create a bilding account and
+00:11:30.160 you've probably already set up your
+00:11:31.160 budget if you don't do this part before
+00:11:33.560 you try to connect everything you will
+00:11:35.360 run into blockers you also will have
+00:11:37.519 different limitations so all you have to
+00:11:39.320 do is add a credit card it won't get
+00:11:41.040 charged um but I can say I think if you
+00:11:44.959 don't add a credit card then you're
+00:11:46.200 limited to like 11 projects once you add
+00:11:48.720 it you have up to 100 and you can always
+00:11:51.040 pay for more of course Google will let
+00:11:52.760 you pay for
+00:11:53.800 more um so you're going to create a
+00:11:55.839 project now when thinking about projects
+00:11:57.839 think about how you want them to be
+00:11:58.839 separated we'll talk a little bit more
+00:12:00.240 about that and again I'm not going to
+00:12:01.959 walk you through all these things but
+00:12:02.880 you do have to enable the API the first
+00:12:04.880 time that's kind of an important piece
+00:12:07.120 um I talk about how to find that for GSC
+00:12:10.600 this one is kind of a pain in the butt
+00:12:12.760 uh you actually have to go through and
+00:12:13.920 add specific users that make no sense so
+00:12:17.000 it's like this search console data
+00:12:19.079 export um I don't I I would never expect
+00:12:22.199 anyone to have that memorized so
+00:12:23.560 definitely look through the
+00:12:24.480 documentation you assign the types of
+00:12:26.560 jobs you want them to do and then now
+00:12:28.920 you're going to go into GSC into your
+00:12:30.600 settings and turn on the bulk data
+00:12:33.120 export the important part here uh if you
+00:12:36.480 forgot what your project ID is when you
+00:12:38.440 need to fill it in uh this is how you
+00:12:40.639 find it back in Cloud console and when
+00:12:44.120 you are setting your
+00:12:46.120 location don't it
+00:12:48.639 up um it is really hard to fix later so
+00:12:52.519 if I because we're here I'm assuming
+00:12:54.800 probably most of us our data governance
+00:12:56.920 is based on us laws but if you are deal
+00:12:59.360 with gdpr um you need to put in
+00:13:01.639 whatever's there uh bigquery does a
+00:13:03.639 great job of making sure that your data
+00:13:05.720 stays compliant that the infrastructure
+00:13:07.440 is protected uh so that's that's why
+00:13:10.079 that's really important um and data set
+00:13:12.240 name so you'll see that when it comes
+00:13:13.720 through so if you are combining multiple
+00:13:15.760 Properties or maybe you're combining the
+00:13:18.320 different subfolders that Serge was
+00:13:19.680 talking about um that's a great way that
+00:13:22.399 you can start differentiating but search
+00:13:24.120 conso is always going to be
+00:13:26.279 there okay once you've turned it on
+00:13:28.440 you'll see this level bulk data export
+00:13:30.320 is active it takes 24 to 48 hours for
+00:13:33.320 the data to start coming through so
+00:13:35.360 unfortunately this is not one of those
+00:13:36.680 projects where you can totally forget to
+00:13:38.279 do it and then do it 15 minutes before
+00:13:40.440 you're meeting with your boss and be
+00:13:41.680 like see it's here no it's going to take
+00:13:43.360 a day sorry
+00:13:44.839 y'all um and then you'll start see it
+00:13:47.240 coming through looks like that so let's
+00:13:49.480 talk about G4 again create a project or
+00:13:52.639 you could use the same one it really
+00:13:54.279 just depends on what kind of
+00:13:56.040 organization works for you the things I
+00:13:58.519 like to consider is do I want to have
+00:14:00.040 separate budgets um and then also kind
+00:14:02.560 of the size across the different
+00:14:04.399 projects um I'm also just kind of a
+00:14:06.720 control freak so I separate everything
+00:14:08.680 but I realized not everybody wants to do
+00:14:11.320 that um they made it a whole lot easier
+00:14:14.160 in ja4 I don't have to do all that
+00:14:15.920 permissions crap I literally just go to
+00:14:17.800 big query links in the configuration
+00:14:19.680 find my project um and put it all
+00:14:23.160 together the only thing here again you
+00:14:26.240 got to select the right location is
+00:14:28.720 really really hard when you get this
+00:14:30.639 wrong again not that any clients have
+00:14:33.160 ever done
+00:14:34.639 that um so at this point you get to
+00:14:37.399 configure your stream data so what are
+00:14:39.360 you going to pull in the important part
+00:14:41.519 here you only get to pull in 1 million
+00:14:43.440 events per day so for some Enterprise
+00:14:45.880 clients that does mean you're going to
+00:14:47.800 have more than one
+00:14:49.880 stream uh but it also means even for
+00:14:53.360 smaller sites start limiting according
+00:14:55.639 to what you actually need right um View
+00:14:59.240 uh I
+00:15:00.639 think yeah that's going to be really
+00:15:02.480 hard to see but one of the things on
+00:15:03.880 here that I'm excluding an event is view
+00:15:06.279 item
+00:15:07.120 list this client is not e-commerce so we
+00:15:11.079 don't need that event it's already part
+00:15:12.720 of G4 but basically that's just
+00:15:15.000 collecting a lot of fluff and in fact
+00:15:16.639 the fact that y'all probably can't see
+00:15:18.720 but it's got like an event count or
+00:15:20.800 volume I have no idea how like ga4 I
+00:15:24.440 don't know where you're call getting
+00:15:25.519 that from but it's super cool
+00:15:29.079 again takes 24 to 48 hours
+00:15:32.639 unfortunately and then the tables in big
+00:15:34.720 query for G4 look a little bit scarier
+00:15:37.399 but I promise it's not too
+00:15:39.839 bad okay so now you've got all your dat
+00:15:42.160 pulling and you're like I should connect
+00:15:44.079 this to lior Studio no please don't
+00:15:48.199 because again that's where you would
+00:15:49.639 start adding a lot of uh query or
+00:15:52.199 compute time you could find yourself uh
+00:15:55.720 really paying for a
+00:15:57.360 lot because if you connect uh lior
+00:16:00.759 Studio to just those big query tables
+00:16:03.199 that is the raw data set there'd be a
+00:16:05.199 lot of filtering going on all of the
+00:16:07.720 time so so don't do that not not just
+00:16:11.720 yet but okay so we're not going to get
+00:16:13.920 there yet I promise we will but let's
+00:16:15.319 talk about how do we even get around
+00:16:16.839 bigquery so uh Noah was actually talking
+00:16:19.800 about this that with uh the export there
+00:16:23.440 are two tables that come through you
+00:16:24.920 have either site or URL Impressions you
+00:16:27.160 all sell that's where the Ser feature
+00:16:28.560 data lives is the individual um if I'm
+00:16:32.399 doing testing and like playing with
+00:16:33.880 queries I always try it on the site
+00:16:35.680 first and then build from there um and
+00:16:38.759 so this is what your tables end up
+00:16:39.959 looking like uh so this is actually the
+00:16:41.600 individual URLs I have what property is
+00:16:44.319 it what is the actual URL my query and
+00:16:46.759 then you can see there's actually a lot
+00:16:48.399 of them just for this single homepage
+00:16:51.279 and that's because I actually have a
+00:16:52.399 different Row for every time a different
+00:16:53.639 Ser feature actually shows
+00:16:57.040 up now ga4 this is where it gets a
+00:16:59.800 little bit more complicated
+00:17:01.720 um there is a table that's created for
+00:17:04.160 every single day so it starts to get
+00:17:06.240 pretty
+00:17:07.039 expansive um from the look but just know
+00:17:10.480 it's you're it's still very manageable
+00:17:13.079 um and they also do a lot of nesting so
+00:17:15.240 even think about when we make schema and
+00:17:17.280 we have to Nest the postal address and
+00:17:19.640 it's got all the different Geo targets
+00:17:22.559 the same things are happening in G4
+00:17:24.520 where we have a bunch of nesting going
+00:17:25.839 on um but it's all linked to an
+00:17:28.119 individual event name so do consider
+00:17:30.559 that for G4 it all starts with the
+00:17:33.760 event so that's always going to be kind
+00:17:35.919 of our our most basic item or element
+00:17:39.559 with j4
+00:17:41.120 data so yeah so in bigquery it looks
+00:17:43.400 like this where I get a time stamp and I
+00:17:45.320 get what my event name y'all probably
+00:17:47.559 can't see that but it says first visit
+00:17:49.000 and then I have everything else that
+00:17:50.160 kind of goes with
+00:17:51.640 it um anytime you want to know what kind
+00:17:54.000 of fields are actually being gathered
+00:17:55.720 you can go to the schema tab in big
+00:17:57.600 query I highly recommend looking at this
+00:18:00.840 um because it also gives you an idea of
+00:18:02.240 what kind of data can you collect how
+00:18:03.760 can you organize um sometimes there's
+00:18:07.240 more in there that well at least for me
+00:18:09.039 what has happened quite a few times is
+00:18:10.240 there's a lot more detail in there than
+00:18:11.720 I considered and it gets your wheels
+00:18:14.000 going as far as like o i could be really
+00:18:16.080 creepy and start tracking these
+00:18:20.440 things which okay so now there's just a
+00:18:22.600 ton of tables and how does that really
+00:18:23.960 help you I totally get there's there's a
+00:18:26.960 ton well now we're going to talk about
+00:18:28.840 SQL right I was talking about that
+00:18:30.400 before uh Mike mentioned it yesterday
+00:18:32.720 that I'd be talking about it um yeah
+00:18:35.559 again it's really old um but that's how
+00:18:38.720 we interact with the data we create
+00:18:40.600 queries to get back the data that we
+00:18:42.400 want um and yes this is a this is a
+00:18:45.720 sample query I'll walk you through how
+00:18:47.120 they work so first you have your select
+00:18:49.240 statement so this is where what data do
+00:18:52.039 I actually want to pull right what are
+00:18:53.840 the metrics what's the information that
+00:18:56.400 I actually want from is just where do I
+00:18:59.240 actually want this to come from so
+00:19:00.600 really important especially if you are
+00:19:01.919 combining cross tables so I've actually
+00:19:04.320 I've absolutely built reports where we
+00:19:06.400 fill in GSC data and we're able to link
+00:19:09.200 it to G4 to show a full
+00:19:12.720 funnel uh where would be any kind of
+00:19:15.240 filtering so um in the sample I just
+00:19:18.200 showed you one of those was okay I don't
+00:19:20.440 want the query to be null and I want it
+00:19:23.280 to be people in the US CU that's the
+00:19:26.000 majority of what I uh customers that I
+00:19:28.799 service and then order bu is just how do
+00:19:31.360 you want that to be ordered how do you
+00:19:32.440 want that to to be separated to you okay
+00:19:35.919 queries can be super simple like this or
+00:19:38.840 they can get really
+00:19:40.400 crazy which is why I don't write them
+00:19:42.720 myself tools do I don't know why I would
+00:19:45.400 ever write my own SQL query anymore
+00:19:47.080 except to make fake ones for
+00:19:49.039 presentations um so this is my favorite
+00:19:51.480 tool ga4 for
+00:19:52.960 SQL um it actually so it is a generator
+00:19:57.440 it is not an AI tool
+00:19:59.480 which also means it's more
+00:20:01.080 eco-friendly um I do also really like
+00:20:03.480 this one they've got it for both G4 and
+00:20:05.679 GSC uh but basically it just provides a
+00:20:08.280 really nice goey for selecting the
+00:20:10.120 things that you want and they stake up
+00:20:12.600 to date as far as how Google names
+00:20:14.840 things so like when they changed from
+00:20:16.799 conversions to key events I think it
+00:20:19.039 took the guys three days to update the
+00:20:20.640 tool so um and it's completely free and
+00:20:23.480 I love free stuff because who
+00:20:26.559 doesn't um so with a query when you run
+00:20:29.280 it you'll actually get your query
+00:20:31.799 results right in front of
+00:20:33.799 you okay so now we know how to work with
+00:20:35.919 the data so let's actually talk about
+00:20:38.320 the magic how am I going to make sure
+00:20:40.559 that you don't get charged a bunch of
+00:20:41.760 money which by the way if you screwed up
+00:20:43.320 and you get charged a bunch of money
+00:20:44.480 disclaimer I don't owe you
+00:20:47.080 anything I am a small business
+00:20:49.520 owner I have a kid he's really
+00:20:52.400 expensive um all right so the the
+00:20:54.799 process that we're going to do with this
+00:20:56.480 is first you're going to use your
+00:20:58.080 measurement plan
+00:20:59.120 which Shameless plug we have in fact
+00:21:01.400 written an entire article about how to
+00:21:03.000 create a measurement plan and we give
+00:21:04.559 away a template um and actually if you
+00:21:07.360 download the slides there's a link to
+00:21:09.240 all that the reason why I love
+00:21:11.200 measurement plans and something to know
+00:21:13.360 about me is just in general I love
+00:21:15.000 documentation because I don't want to
+00:21:16.600 have to remember things later because
+00:21:18.360 that's just too much work um so in a
+00:21:21.240 measurement plan what it should be doing
+00:21:22.840 is actually saying okay here's all the
+00:21:24.440 things I'm going to measure here are the
+00:21:25.919 things I actually care about um and one
+00:21:28.799 of my favorites is also here's how I'm
+00:21:30.520 tracking those things that becomes
+00:21:32.799 really useful when you know maybe Andy
+00:21:35.440 from design decides to change all your
+00:21:37.240 buttons and he didn't ask you about it
+00:21:39.480 he just changed everything and now you
+00:21:40.880 can't track anything um that's a way
+00:21:44.000 that you can start diagnosing makes it
+00:21:45.360 much easier so definitely use a
+00:21:47.120 measurement plan that's going to help us
+00:21:49.559 identify what data we actually care
+00:21:51.000 about then we're going to create some
+00:21:52.679 tables and then we're going to set up a
+00:21:54.120 job so that that table updates every day
+00:21:56.679 as new data comes in from the bulk
+00:21:58.200 export
+00:22:00.000 and then those new tables are the ones
+00:22:01.840 that we're going to connect to looker
+00:22:02.919 studio and we'll talk more about why
+00:22:05.679 okay so when it comes to decide what
+00:22:06.880 data you want again use your measurement
+00:22:09.720 plan um the first ones I always start
+00:22:12.400 with are these so I just want to see
+00:22:14.440 things by Page by device by country all
+00:22:16.480 that good stuff um event data as well
+00:22:18.640 how do people enter my site based on
+00:22:20.679 what channels all that good stuff and I
+00:22:23.240 would say start small just build a few
+00:22:26.320 uh one of the reasons I love front-end
+00:22:28.120 development is because of the instant
+00:22:30.960 gratification right we're able to code
+00:22:33.240 things and immediately see that it's
+00:22:34.679 working uh so again let yourself have a
+00:22:36.919 few wins don't try to tackle everything
+00:22:38.679 at once you will drive yourself crazy
+00:22:42.120 and I guess we're probably all a little
+00:22:43.440 bit crazy because we're Tech seos but
+00:22:45.159 let's try to slow the rooll as much as
+00:22:46.520 we
+00:22:47.400 can um and again also think about all of
+00:22:50.799 your data is in big query already well
+00:22:53.880 once you turn it on um so anything you
+00:22:56.159 collect after that if I the data I'm
+00:22:59.159 collecting now if I were to make a query
+00:23:02.039 next year it's still going to go through
+00:23:04.200 my entire database because all of that
+00:23:06.640 data still lives there now obviously it
+00:23:09.159 can't make up data so if you have a
+00:23:10.919 problem of custom events aren't tracking
+00:23:13.039 that's not going to fix it uh but
+00:23:14.960 anything that's already there you're
+00:23:16.200 going to be able to go back and
+00:23:17.279 retroactively C
+00:23:20.320 calculate so after that you now know
+00:23:22.720 what you're pulling you use one of the
+00:23:24.039 tools to write a SQL query for you
+00:23:26.760 Explorer not to be confused with Noah's
+00:23:29.120 Explorer from what two October's um
+00:23:33.840 that's a big query calls their their
+00:23:36.080 preview
+00:23:37.279 paints um one of the things to note here
+00:23:41.159 when you go to write a query many times
+00:23:43.799 it'll actually show you I know there's
+00:23:45.960 supposed to be a laser pointer on here I
+00:23:47.279 have no idea how to use it okay um it'll
+00:23:50.480 actually tell you how much computation
+00:23:52.679 power it'll take to run it so again
+00:23:55.000 that's where you can start getting an
+00:23:56.120 idea of this might be a really
+00:23:57.760 inefficient quer
+00:24:00.679 um which is also why when I'm testing I
+00:24:03.000 always add this limit
+00:24:04.520 thousand uh that's to give me an idea of
+00:24:07.279 is this actually the data that I want um
+00:24:09.200 so that I'm not wasting all my budget in
+00:24:11.200 playing around because I feel like Tech
+00:24:12.880 seos that's what we love to do that's
+00:24:14.840 why we do what we
+00:24:17.679 do um all right so you you press the
+00:24:20.039 button run it's really this is one of
+00:24:22.120 those times for Google's trying to trick
+00:24:24.039 us um and then you get your results you
+00:24:26.880 can actually save them into a big qu
+00:24:28.440 table so you're going to go ahead and
+00:24:29.440 name that big query table whatever you
+00:24:30.799 want it to be I recommend not being
+00:24:32.880 super fun or creative with it so that
+00:24:34.440 you know what it is later uh so for
+00:24:36.600 example this one is just my sitewide
+00:24:38.600 queries and clicks so I just wanted to
+00:24:40.159 know what are all the queries that my
+00:24:42.919 site has and how many clicks and
+00:24:44.279 Impressions is
+00:24:45.679 getting um and I have it by day actually
+00:24:48.960 all right so n it's going to be my table
+00:24:50.720 that has worked through my entire data
+00:24:53.559 set that's already existing whether it's
+00:24:55.919 been there for a week or data that's
+00:24:57.760 been there for a year we finally uh
+00:25:00.520 that's going to be kind of like what
+00:25:01.799 sets the base for that
+00:25:04.480 table so now I'm going to take that same
+00:25:06.679 exact query but I'm going to change it
+00:25:09.240 to only look for yesterday's date now if
+00:25:13.320 you're a really large site I would
+00:25:15.240 actually recommend doing two days before
+00:25:18.039 um and that's because the bulk export
+00:25:21.120 when it decides to do it can vary wildly
+00:25:25.840 um and then also if you are a site
+00:25:27.600 that's used to having to wait 48 hours
+00:25:29.159 to see your data in gsse anyways you're
+00:25:31.720 probably going to run into the same
+00:25:32.799 problem so maybe I'll uh so for small
+00:25:36.000 sites again I would just do yesterday
+00:25:37.440 but for our larger Brands we do two days
+00:25:39.720 ago um because what I'm going to do now
+00:25:42.919 is actually hit that schedule button so
+00:25:45.520 I mean I'm going to test the query to
+00:25:46.679 make sure it works but I'm going to
+00:25:48.600 schedule it and what I'm going to do is
+00:25:50.840 make sure that it appends to that table
+00:25:53.559 I created
+00:25:56.039 earlier so that's the table I'm going to
+00:25:58.840 use that sitewide queries and clicks
+00:26:00.360 that's the table I'm going to use to
+00:26:01.480 start generating my liquor Studio
+00:26:03.399 reports why that calculation is only
+00:26:06.159 happening once per day if I wasn't if
+00:26:09.840 that looker Studio report was still
+00:26:11.159 connecting to the raw data set that
+00:26:13.039 means every time someone loaded that
+00:26:15.640 liquor Studio report those queries would
+00:26:17.480 be run literally every time and I don't
+00:26:20.559 know if you all have clients like I've
+00:26:22.039 had where you think honestly they're
+00:26:23.960 they're refreshing it all day I don't
+00:26:25.399 know what else they do then look at that
+00:26:27.760 um so or like we've also had clients
+00:26:30.679 where we set up real-time monitoring
+00:26:32.279 dashboards obviously this is not a use
+00:26:35.200 case where you can do that because we're
+00:26:36.399 waiting on a delay from G4 and GSC
+00:26:39.080 there's really nothing we can do about
+00:26:40.440 that um or if there is I don't know it
+00:26:43.880 um but you know that would just be
+00:26:46.480 constantly refreshing you would
+00:26:48.200 absolutely see a big Bill or possibly in
+00:26:51.200 liquor Studio start getting your quota
+00:26:53.240 exceeded messaging which is not
+00:26:56.679 infuriating at all
+00:27:01.039 um and that's that's pretty much it I
+00:27:02.919 went really fast all right

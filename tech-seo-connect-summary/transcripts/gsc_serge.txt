@@ -1,0 +1,438 @@
+# tactiq.io free youtube transcript
+# Can GSC Be the Source of SEO Decisions? - Serge Bezborodov
+# https://www.youtube.com/watch/XMCLoeILGp4
+
+00:00:11.160 thank you thank you so the second day
+00:00:15.160 you a bit tired and now is the time for
+00:00:17.800 tortures with numbers in my presentation
+00:00:20.640 so please sit don't go out all my
+00:00:23.519 presentation have uh two words for big
+00:00:26.039 websites so everything about big
+00:00:28.039 websites I assume like 100 K pages and
+00:00:31.399 more so I'm not an SEO guy unfortunately
+00:00:35.360 I'm a developer but all my how much
+00:00:38.640 about like four many years of experience
+00:00:43.480 I was near SEO like they sitting near me
+00:00:46.559 and I believe it gives me the
+00:00:48.039 opportunity to understand both world how
+00:00:50.760 SEO thinks how developer thinks and uh
+00:00:54.800 during like during the building of jet
+00:00:57.680 octopus like te platform the two biggest
+00:01:01.359 Heche what I had it's JavaScript crawler
+00:01:05.479 and Google search console integration
+00:01:07.640 and I will tell you why so we love GSC
+00:01:12.680 right it's number one tool ala shows us
+00:01:15.000 in research and it's particularly like
+00:01:18.159 holy grow and if Indiana Jones will be
+00:01:20.759 in SEO world he for sure stole Google
+00:01:22.920 search console from us so but in the
+00:01:27.360 beginning let's zoom out a little bit
+00:01:30.159 from like particular Google search
+00:01:32.200 console and take a look what we have as
+00:01:35.240 a data for our technical SEO it's like
+00:01:38.240 three pillars of our data source it
+00:01:41.880 should be forth pillar as well with
+00:01:44.600 conversion with user traction etc etc G4
+00:01:48.439 but everybody hates it and I decided to
+00:01:50.719 not put it here so just just three
+00:01:53.439 pillars of technical Soo data okay so
+00:01:56.759 what craw is actually CW gives us site
+00:02:01.159 structure okay so the next step after
+00:02:04.399 craw we have Logs with scraw budget
+00:02:07.600 right so how Google bot perceives our
+00:02:10.119 website and the third part is is Google
+00:02:13.360 search console it's one of the main like
+00:02:16.959 things here because it goes like a
+00:02:19.879 funnel let's say so in craw we have all
+00:02:22.879 our factors with internal linking how
+00:02:25.720 like unlocks our craw budget what's
+00:02:27.840 scroll what not and of course
+00:02:30.440 impression how connects all those things
+00:02:33.560 between together it's a factors first of
+00:02:37.000 all so how your internal linking impact
+00:02:40.840 your craw budget what craws what not how
+00:02:43.800 your craw budget impacts on your
+00:02:45.599 rankings as well does it mean so when
+00:02:47.760 you your C budget increase your traffic
+00:02:49.920 increase is it true but maybe yes maybe
+00:02:53.400 no somewhere sometimes no completely and
+00:02:58.200 uh again like what we talked like
+00:03:00.959 yesterday it was in presentation uh like
+00:03:03.879 talking with your C Level is like
+00:03:06.000 crucial things and with your technical
+00:03:08.000 team with many stakeholders so three
+00:03:11.159 data sets gives us opportunity
+00:03:13.760 to like draw a simple chart from
+00:03:17.560 creation of page on a website till the
+00:03:20.799 end getting organic clicks our most
+00:03:23.159 important metric like mostly most
+00:03:25.200 important metric in the end so
+00:03:29.879 it is when we say in Google search
+00:03:33.280 console your first picture in mind like
+00:03:36.439 this so it's what search console like
+00:03:39.480 exactly we all know it it's very cool a
+00:03:42.480 lot of
+00:03:43.439 features but when we talk about big
+00:03:47.080 websites our Google search console is
+00:03:49.360 this so we have API and we have to use
+00:03:52.799 it because we know like an interface
+00:03:54.360 only thousands of lines in export Etc
+00:03:57.920 and if you compare like get VI on the
+00:04:01.599 list of methods what we have here site
+00:04:04.120 analytics sitemap sites eural inspection
+00:04:06.560 that's it it's no scroll here it's
+00:04:09.360 basically all API what we have like
+00:04:11.840 nothing
+00:04:13.480 particular we have what we have and like
+00:04:16.519 maybe if Google heard us so please like
+00:04:18.720 gives us more methods in API we will be
+00:04:20.880 very like thankful for you but
+00:04:23.360 anyway we need only one method but like
+00:04:26.560 in this case you like Ural inspection is
+00:04:29.320 uh as well very fine but for our
+00:04:31.919 analytics needs we need only one method
+00:04:35.240 query so the signature of a method com
+00:04:39.240 has uh like a few fields we will not go
+00:04:42.639 you check the
+00:04:44.360 documentation we have important
+00:04:46.320 parameters and additional parameters so
+00:04:49.120 I believe even without my description
+00:04:51.120 you realize that what it what they do
+00:04:53.720 start date end date and dimensions it's
+00:04:56.039 like the basic thing what you can do
+00:04:59.120 with them like 90% of your job one of
+00:05:02.720 the another very interesting parameters
+00:05:05.400 agregation type pay special attention to
+00:05:07.840 it it's how do you how it will return
+00:05:10.479 your impressions like a few words here
+00:05:14.039 if your website has like two t it's two
+00:05:17.639 times on a Ser if aggregation type by
+00:05:21.039 property you will have only one
+00:05:22.520 impression if aggregation type by Page
+00:05:24.639 will have two Impressions because it's
+00:05:26.759 like literally it was two times on S
+00:05:29.199 page even
+00:05:30.199 simultaneously and type it's like search
+00:05:32.919 Google News Etc so what we have in as
+00:05:37.039 the results four fields that everybody
+00:05:40.440 knows and understands and loves I
+00:05:42.919 believe okay so now is the time to make
+00:05:47.199 our first query I hope you're ready so
+00:05:51.520 we like for the previous months for
+00:05:54.560 September let's just pull the data from
+00:05:58.000 1 of September till 30 of September
+00:06:01.160 without any Dimension just you know the
+00:06:03.759 simplest thing what we can do okay and
+00:06:07.639 we get the results I like store it as
+00:06:11.319 Excel file so extremely understandable
+00:06:14.199 nothing fancy
+00:06:15.759 here one of key take if you want to have
+00:06:19.039 a key take away from my whole
+00:06:21.080 presentation here it is so by working
+00:06:24.000 with any type of data any type of data
+00:06:27.199 source don't trust it don't don't trust
+00:06:30.160 it even don't trust you know to me or
+00:06:32.319 whatever like critical thinking is one
+00:06:34.440 of important you know thinking our I
+00:06:37.680 don't know nowadays let's say let's
+00:06:40.360 verify it so how we can be sure so okay
+00:06:45.160 we have our table and we have screenshot
+00:06:47.560 from Google search conso like extremely
+00:06:50.479 correct awesome nice okay but looking on
+00:06:55.520 this data what we can do with it we
+00:06:58.800 already have it in search console just
+00:07:00.319 for reporting right since we are Tech
+00:07:02.800 doing technical SEO we need URL a URL of
+00:07:06.800 a page so we'll make our second query we
+00:07:12.000 adding into Dimension a page so as the
+00:07:16.720 results we have the same Excel but with
+00:07:18.919 one more colume URL so what does it mean
+00:07:22.800 we have URL and for each URL the
+00:07:26.560 data and we have to verify it so what's
+00:07:31.720 inside let's scroll down okay so it's
+00:07:35.280 one of the most simplest action what we
+00:07:37.360 can do we scroll down and I if you don't
+00:07:39.879 see from the from the last rows we have
+00:07:42.599 about 14 case of P of rows of pages like
+00:07:50.000 and indexed Pages almost 19 Bill
+00:07:53.800 Millions so do we have I don't know what
+00:07:57.360 type of website can produce you know
+00:07:59.560 every page how many Impressions it it
+00:08:02.319 will has so do we need do did we do some
+00:08:07.440 uh mistake in our query but no it was
+00:08:10.560 very simple so what's the conclusion
+00:08:12.639 Google lies to us isn't it okay so the
+00:08:17.440 next thing what we wanted to work
+00:08:20.440 usually it's a query from Google search
+00:08:22.479 console again we just adding just one
+00:08:26.080 parameter to our Dimension so after page
+00:08:29.159 we add in query as a result we have URL
+00:08:33.000 and now we have query you can clearly
+00:08:35.240 see here is a brand in traffic like
+00:08:37.279 branded queries in the like top of
+00:08:40.599 Impressions you can clearly see with low
+00:08:43.240 ctrs by branded query sets PPC going on
+00:08:46.680 so PPC simply taking all clicks for your
+00:08:49.160 branding queries and you simply like
+00:08:50.920 throw money uh out of the
+00:08:53.839 window oh it's a s conference I can say
+00:08:56.800 this way
+00:08:58.040 okay so
+00:09:00.000 again time to verify it we scroll down
+00:09:03.440 and we have
+00:09:06.600 444k K rows so it's not pages right now
+00:09:10.200 because every row it's a Page Plus query
+00:09:13.600 okay so how many URLs we have here
+00:09:16.880 someone has an
+00:09:18.680 idea like 50k 100K who gives
+00:09:26.399 more like
+00:09:28.360 260k URLs it's the same website by the
+00:09:32.120 way I didn't change the we so we're
+00:09:33.959 talking about the same website same
+00:09:35.519 property everything's the same so how
+00:09:38.640 many URLs has been ranked in
+00:09:42.399 September again it's Google search
+00:09:45.279 console it's not third party tool tool
+00:09:48.760 you know what's going on here
+00:09:52.640 and let's make a table like to sum up to
+00:09:56.560 have understanding so we have number of
+00:09:59.480 URLs and the next thing what we wanted
+00:10:01.440 to verify is the number of Impressions
+00:10:03.560 and clicks our most like most required
+00:10:08.120 parameters again a lot of numbers here I
+00:10:11.680 promised it will be a lot of numbers but
+00:10:13.920 let's make it in percentage view by the
+00:10:18.000 total Dimension it's like 100% and now
+00:10:21.360 we're going by URL by query and you
+00:10:24.399 already see where our data Google gives
+00:10:28.680 us a data
+00:10:30.160 so in particular for impressions in the
+00:10:33.480 dimension eural query
+00:10:35.480 26% from the whole data and the question
+00:10:40.560 what you have in mind right now why why
+00:10:43.200 it's going on and of
+00:10:45.360 course like well 10% of queries and uh
+00:10:50.079 examples of other websites it depend the
+00:10:53.680 number depending of a niche but the
+00:10:56.760 bigger the website is the L less data
+00:11:00.040 you have it's like Golden Rule how
+00:11:02.880 Google search console works
+00:11:05.959 and why does it work ah again I forget
+00:11:09.399 in like
+00:11:10.760 slides let's make things worse you for
+00:11:14.279 example want to have different like
+00:11:17.839 distinct numbers for mobile devices and
+00:11:20.519 for desktop devices and tablet so you
+00:11:24.120 make a separate queries for give me the
+00:11:26.240 data for mobiles plus tablet and give me
+00:11:28.079 the data for desktops okay
+00:11:29.839 you sum up and you have to have like the
+00:11:33.120 total amounts like the same but they're
+00:11:35.320 not you will have cases when URL has an
+00:11:39.600 impressions for mobile devices zero
+00:11:42.279 impressions for desktop and zero total
+00:11:46.200 why why and you have you will have the
+00:11:49.720 cases like for example like 15
+00:11:51.760 Impressions total 24 mobiles 10 10
+00:11:56.360 desktops again why the the same thing
+00:12:00.079 when you so we load the data by months
+00:12:03.839 but uh you wanted to have data like on a
+00:12:06.760 daily basis on weekly basis you started
+00:12:09.360 loading data on daily basis and you have
+00:12:12.680 completely different numbers in for the
+00:12:15.399 whole months so if it's some random
+00:12:19.519 function inside I don't know how does it
+00:12:22.199 work this API and why it happens of
+00:12:25.800 course is non one said before anonymized
+00:12:28.760 query
+00:12:30.120 it's very for me as a developer it's
+00:12:33.279 very interesting term so a traffic comes
+00:12:36.240 to comes to our website we have IP
+00:12:38.560 address we have like control with
+00:12:40.120 JavaScript we can have browser
+00:12:41.880 Footprints like other data source and we
+00:12:44.639 can deiz in the end user can register on
+00:12:48.560 our website and to buy you know in our
+00:12:51.040 Eco on our online shop things but Google
+00:12:54.760 doesn't want to give us the data some
+00:12:57.519 anonymization issues but okay even uh
+00:13:00.600 it's some reason which I can imagine why
+00:13:03.680 doesn't return data for Pages do we have
+00:13:06.480 anonymized Pages as well so what happens
+00:13:13.519 so if you analyze uh your top pages
+00:13:18.320 which has like thousands or Millions
+00:13:21.000 Impressions like per month per day
+00:13:22.800 whatever you're safe so it's the D data
+00:13:26.760 will be safe the data will be correct we
+00:13:28.680 verify many times different ways but the
+00:13:32.040 biggest problem is with longtail Pages
+00:13:34.600 like long low frequency queries which
+00:13:37.800 technical SEO loves particularly because
+00:13:40.360 it's very easy like field to to produce
+00:13:44.320 the results of your technical
+00:13:46.279 optimization like internal link and
+00:13:48.519 whatever it's like number one key Point
+00:13:50.839 what you can grow by action technical
+00:13:54.279 SEO and it was a bad news before okay
+00:13:59.639 and now time for bad news again it will
+00:14:02.360 be no good news here so it it doesn't
+00:14:07.279 exist unfortunately like complete
+00:14:09.600 solution it will
+00:14:12.000 be uh like hugs semi Solutions let's say
+00:14:16.519 and the number one what you can do it's
+00:14:19.399 subfolders you probably know it the idea
+00:14:22.560 is you may have like your main property
+00:14:25.399 like it could be the main property like
+00:14:27.120 wherever and you started to add in your
+00:14:29.120 subfolders what you have on your website
+00:14:30.880 I hope you have subfolders and you don't
+00:14:32.800 have completely flood structure on your
+00:14:35.079 URLs if you have them okay like maybe
+00:14:38.959 next time next
+00:14:41.880 project thousand
+00:14:44.399 properties you can add in your Google
+00:14:47.000 search account search console account do
+00:14:49.680 you think it's a lot trust me no we have
+00:14:53.000 clients with a few Google search like
+00:14:55.839 few Google accounts and
+00:14:59.360 thousand properties it's really okay
+00:15:01.639 when we're talking about size so don't
+00:15:03.120 think it's you have to add just five
+00:15:05.600 subfolders okay
+00:15:07.920 so it's the cons of this way it's very
+00:15:12.680 easy to do so like guys with laptops
+00:15:15.399 just open Google search console right
+00:15:17.120 now like click add property and you you
+00:15:20.279 know your like top sub folders your top
+00:15:22.639 categories like blog shop wherever what
+00:15:25.040 you have on your particular website
+00:15:27.120 simply copy it from your browser URL
+00:15:30.600 address and uh add it as URL prefix in
+00:15:34.480 your Google search console it will be
+00:15:36.079 already verified and uh it's just one
+00:15:39.160 click uh action by
+00:15:41.920 basically the problem is the data will
+00:15:45.000 be started to collect it right from this
+00:15:47.839 from the moment you add them so that's
+00:15:50.199 why I'm talking like do it right now do
+00:15:52.279 it tomorrow like day after tomorrow and
+00:15:55.160 forget about that like for a month for
+00:15:57.959 two so the same bulk export the data
+00:16:00.360 should accumulate here
+00:16:03.560 and the next like issue working with
+00:16:08.480 subfolders it's the working with the
+00:16:11.440 data so after a month you remember so
+00:16:14.480 you addit hundreds of sub folders and
+00:16:17.639 now time to put our hands on the data
+00:16:20.800 but if you see on our main property JC
+00:16:24.399 property one we have like a shop sub
+00:16:27.160 folder already and we add Ed shop
+00:16:29.480 subfolder so what does it mean shop
+00:16:33.000 subfolder it's presented in uh our 2 GSC
+00:16:37.160 properties and if you simply combine the
+00:16:40.519 data it will make your data duplication
+00:16:42.920 so you will have two times more
+00:16:44.319 Impressions Etc so it's not simply merge
+00:16:47.600 all the data what you
+00:16:49.319 have so the proper solution you have
+00:16:53.839 to remove subfolder data from the main
+00:16:57.519 property or simply work like within your
+00:16:59.600 sub folder it will be like easy to
+00:17:02.319 start so if you have some SEO tool
+00:17:05.919 usually they do in merging the
+00:17:08.039 subfolders DAT subfolders data if you
+00:17:11.359 wanted to merge it by
+00:17:13.720 yourself please not make it with AI
+00:17:17.119 please not make it because again I like
+00:17:20.480 my hair changing color because of
+00:17:23.480 subfolder merging as well it's really
+00:17:25.520 comp because you can add also Sub sub
+00:17:28.039 folders so you have to make threeway
+00:17:31.559 like data D duplication and it's very
+00:17:35.240 easy way to make things way
+00:17:39.280 worse after
+00:17:41.320 that let's check an example of our
+00:17:45.840 results what we did you know with
+00:17:48.320 subfolder so it's another website and
+00:17:51.080 here if I'm not mistaken about hundreds
+00:17:53.400 of subfolders added so in the main
+00:17:55.919 property we have just 80,000 pages right
+00:17:59.640 and after we added sub folders now more
+00:18:02.240 than 4 million Pages like amazing like
+00:18:06.640 growing Impressions like amount of
+00:18:08.840 clicks it's huge increase I wish we had
+00:18:11.880 50 times more in our traffic increase
+00:18:13.919 you know not in pages but anyway like
+00:18:16.760 look how cool now it become right
+00:18:21.400 so why I didn't say like good news we
+00:18:25.080 don't have good news let's make the
+00:18:27.679 table again it's again
+00:18:31.240 10%
+00:18:33.400 18% so but it's on the it's a very big
+00:18:37.280 website one of the like top in us but in
+00:18:41.120 the
+00:18:42.240 results a key takeaway like working with
+00:18:46.280 Google search console and the data with
+00:18:48.520 API we can't make it better we can't
+00:18:51.400 make it ideal we have what we have here
+00:18:54.159 and
+00:18:55.120 we think is we have to understand how to
+00:18:58.799 to deal with this this flows of
+00:19:01.159 instruments what we have with data
+00:19:03.200 source what we have the word is not
+00:19:05.720 ideal and data as well so what does it
+00:19:09.679 mean by working especially with longtail
+00:19:13.240 query so because some SEO for example
+00:19:16.280 like talking about like pruning content
+00:19:18.280 like removing old content and by using
+00:19:21.000 data from GSC it's very easy just let's
+00:19:23.760 have a Pages what had which had like
+00:19:26.480 only one impression during the whole all
+00:19:28.960 last year and remove them like very easy
+00:19:32.760 right but in the reality it they can
+00:19:36.000 have not only one impression they can
+00:19:37.720 have 100 impression thousand impression
+00:19:39.919 but you simply don't have all the data
+00:19:42.760 so keep this in mind like all time when
+00:19:45.320 you're working with API so maybe you see
+00:19:48.600 only like part of the whole picture and
+00:19:52.039 don't make fast you know conclusions
+00:19:54.880 like is it going that way on other way
+00:19:59.280 and you may ask me like why I'm talking
+00:20:01.840 about API not about GSC bul data export
+00:20:05.440 and uh BK data experts we have it about
+00:20:08.919 2 years right now and I was excited when
+00:20:11.640 it was released I like almost was ready
+00:20:14.720 you know start to develop integration in
+00:20:16.600 jet octopus with bul expert I just
+00:20:18.320 waited some big client you know come to
+00:20:20.400 us like okay we wanted to use our bul
+00:20:22.480 expert I'm still waiting two years past
+00:20:26.360 I'm still waiting who wants to integrate
+00:20:28.679 bu data expert in J octopus like
+00:20:31.159 whatever the problem is API is very
+00:20:33.799 convenient it's very easy to start is
+00:20:36.480 there are a lot of like integration with
+00:20:39.559 looker Studio a lot of tools like your
+00:20:42.679 own scripts it's very easy to start bul
+00:20:45.840 data experts very cool technology I like
+00:20:48.919 no complaints here but again it's not
+00:20:52.720 easy to integrate and when we're talking
+00:20:54.960 again with Enterprise websites all the
+00:20:57.760 security issues like configuring the
+00:21:00.919 Google buckets etc etc we had an
+00:21:03.960 experience when we waited just simple I
+00:21:06.480 am as a person I asked it for access to
+00:21:08.600 Google search console and I waited two
+00:21:11.080 months after security team will review
+00:21:14.080 my uh application and they will add to
+00:21:16.720 their Google search console me as a
+00:21:18.799 person and now we're talking about bul
+00:21:20.720 data expert so it's really cool
+00:21:24.039 technology but again API is simple we
+00:21:27.919 understand it it's a lot of materials
+00:21:30.840 it's a lot of tools what based on uh GC
+00:21:35.360 API and that's what we have and so no
+00:21:39.960 flows of API and uh I wish you the best
+00:21:43.640 thanks for them attention
+00:21:46.080 [Applause]

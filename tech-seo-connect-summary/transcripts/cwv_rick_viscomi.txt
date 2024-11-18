@@ -1,0 +1,1145 @@
+# tactiq.io free youtube transcript
+# Optimizing Core Web Vitals - Rick Viscomi
+# https://www.youtube.com/watch/yf7pItnyV4U
+
+00:00:00.500 [Applause]
+00:00:03.520 hey everybody thank
+00:00:07.040 you all right so I'm really happy to be
+00:00:10.160 here thank you for having me it's true
+00:00:12.200 there's a chrome guy at an SEO
+00:00:13.880 conference I didn't get lost on my way
+00:00:15.920 here so my team is responsible for
+00:00:18.439 maintaining all of the documentation and
+00:00:20.400 best press best practices around the
+00:00:22.439 metrics tools and apis to help make the
+00:00:25.000 web
+00:00:26.119 faster and that includes all of you in
+00:00:28.439 the SEO community because web
+00:00:30.359 performance and SEO have one very
+00:00:32.598 important thing in common and of course
+00:00:34.559 that's the core web vitals thanks
+00:00:36.640 entirely to the page experience ranking
+00:00:38.680 signal in Google
+00:00:41.160 search so I got to see that firsthand
+00:00:43.680 earlier this year when we launched
+00:00:45.120 interaction to next paint as the new
+00:00:47.320 core web vital metric replacing first
+00:00:49.600 input
+00:00:51.039 delay as I was monitoring the launch I
+00:00:53.640 couldn't help but notice all of the
+00:00:55.199 support from the SEO Community Helping
+00:00:57.239 to raise awareness about the launch and
+00:00:59.320 also all of the best practices to
+00:01:01.160 improve this new and unfamiliar
+00:01:03.879 metric and when we look at the data I
+00:01:06.200 really do think that that had a
+00:01:07.560 immensely positive effect on inp Pass
+00:01:11.080 rates so in the months leading up to and
+00:01:14.799 after that launch we we've seen inp go
+00:01:17.240 from something like 65% of sites having
+00:01:19.920 good inpp on mobile to now it's more
+00:01:22.159 like 76% so thank you all for your help
+00:01:24.799 with
+00:01:26.360 that also the fact that you're having me
+00:01:28.920 here speaking to you today I am so
+00:01:31.200 grateful for the
+00:01:32.479 opportunity and also so that we can
+00:01:34.479 explore some of the Common Ground that
+00:01:36.000 we have between the web performance and
+00:01:37.680 SEO
+00:01:39.680 communities while the core web vitals
+00:01:42.439 and Page experience signal may very well
+00:01:45.240 just be one small part of the ranking
+00:01:47.799 Factor there are so many more reasons to
+00:01:51.479 care about web performance so what I
+00:01:54.200 hope to convince you all of today is
+00:01:56.399 that your efforts to improve core web
+00:01:58.399 vitals will have an that goes well
+00:02:00.880 beyond
+00:02:04.280 SEO one of the most illustrative
+00:02:06.479 examples I could give you about the
+00:02:08.318 value of web performance is the story of
+00:02:11.080 project
+00:02:12.319 feather in December 2009 Chris Zacharias
+00:02:16.440 was working as an engineer at YouTube
+00:02:18.760 when he got fed up with how heavy the
+00:02:21.200 video watch page had
+00:02:23.360 gotten it was over 12200 kilobytes and
+00:02:27.360 his goal was to make it under 100 k
+00:02:30.000 kilobytes he named the project
+00:02:32.720 feather he managed to get most of the
+00:02:34.920 way there by cutting down on just just
+00:02:38.239 down to that core functionality of the
+00:02:40.400 page just the video player only a few
+00:02:43.640 comments and only a few of those
+00:02:45.159 recommended videos in the
+00:02:47.159 sidebar and you might also remember that
+00:02:49.400 back then videos were played using the
+00:02:51.599 Flash Player but just a few months
+00:02:54.720 earlier the HTML 5 video player had
+00:02:57.000 launched and he switched over to that
+00:02:59.400 player finally getting him down to just
+00:03:01.800 98
+00:03:03.239 kilobytes so he finally met his goal and
+00:03:06.519 feather was ready for live traffic he
+00:03:08.959 wrote up a blog post invited people to
+00:03:11.280 start using it and his hypothesis like
+00:03:14.920 any reasonable person would expect was
+00:03:17.040 that a lighter watch page would lead to
+00:03:19.319 faster
+00:03:20.959 experiences well about a week later he
+00:03:23.799 looked at the data and he was wrong
+00:03:26.040 performance had actually gotten worse
+00:03:28.599 and as he wrote in a Blog post a few
+00:03:30.319 years
+00:03:31.920 later my worldview was
+00:03:35.879 shattered nothing made
+00:03:39.720 sense so the results only started to
+00:03:42.200 make sense when a colleague thought to
+00:03:44.000 slice the data by
+00:03:46.480 geography what he found was a
+00:03:48.519 disproportionate increase from users in
+00:03:51.159 places that you would tend to think of
+00:03:52.560 as having poorer connectivity or
+00:03:54.400 lower-end
+00:03:57.200 devices for these users it took extra
+00:04:00.000 more like 2 minutes to load this feather
+00:04:02.920 watch page which doesn't make sense
+00:04:05.280 until you look at their experience on
+00:04:06.920 the default watch page which was more
+00:04:09.439 like 20 minutes so to them this new
+00:04:12.120 experience was so much better proving
+00:04:14.439 that performance is relative you can go
+00:04:17.358 from having a slow experience to a
+00:04:19.320 slightly less slow experience and it
+00:04:22.199 would still deliver an immense value to
+00:04:24.040 the
+00:04:25.199 users so Chris's experiment suffered
+00:04:27.919 from sampling bias but but the thing I
+00:04:30.360 want you to take away from this is not
+00:04:32.240 how to properly set up an AB
+00:04:40.000 test the thing about
+00:04:42.440 feather is that it lowered the barrier
+00:04:44.919 to entry for
+00:04:46.160 users in this case performance was more
+00:04:48.479 like an enabling feature the same way
+00:04:50.400 that accessibility
+00:04:52.160 is and I know that YouTube is kind of a
+00:04:54.400 special example it's the most popular
+00:04:57.560 video website on the web
+00:05:00.199 and not everybody can just throw away
+00:05:01.880 90% of your page weight as an experiment
+00:05:04.360 so let's look at another case study
+00:05:07.800 Sunday citizen they're an e-commerce
+00:05:10.320 site that specializes in bedding for the
+00:05:12.360 home Vice called them the goat of
+00:05:14.919 weighted blankets for what that's
+00:05:17.360 worth and a couple of years ago they
+00:05:19.400 collaborated with
+00:05:20.759 Shopify to improve their web performance
+00:05:23.560 and I'm just speculating here but I
+00:05:24.840 think it went something like
+00:05:26.240 this they noticed that their core web
+00:05:28.360 vitals were not as good as they had
+00:05:30.000 hoped and they reached out to the
+00:05:31.720 Shopify team to find out is it something
+00:05:33.720 on their end or is it something on the
+00:05:35.479 platform's end and so the Shopify team
+00:05:38.360 took a look and after some investigation
+00:05:40.280 they found a few opportunities for
+00:05:42.120 improvement and if I'm being honest
+00:05:44.039 there was nothing groundbreaking here
+00:05:45.520 they didn't have to rearchitecturing
+00:05:56.039 blocking CSS JavaScript and fonts
+00:06:00.440 they made the LCP image more
+00:06:02.319 discoverable by taking out of CSS from a
+00:06:04.919 background image just to a plain old
+00:06:06.840 HTML image tag and they made sure not to
+00:06:09.919 Lazy load it instead they added the
+00:06:12.160 fetch priority equals High attribute to
+00:06:14.080 prioritize
+00:06:15.319 it and they also made some improvements
+00:06:17.560 to layout stability by reserving space
+00:06:20.880 for contents that shift layout on the
+00:06:23.000 page and as straightforward as these
+00:06:25.360 changes were they saw a 25% Improvement
+00:06:29.120 to their LCP and a 61% Improvement to
+00:06:32.800 their CLS layout stability metric but
+00:06:35.599 that's not the end of the story when
+00:06:37.599 they looked at their business metrics
+00:06:39.520 they saw a 4% decrease in bounce rate a
+00:06:43.039 4% increase in ad to cart and a 6%
+00:06:46.880 increase in their conversion
+00:06:48.759 rate and if you looked at their revenue
+00:06:50.960 and reported that data I'm sure that
+00:06:52.240 went up
+00:06:53.960 too so this is another really great case
+00:06:56.319 study to show that there are effects on
+00:06:58.840 improving performance that go Way Beyond
+00:07:00.960 just SEO and getting people onto the
+00:07:03.160 site it's about keeping users on the
+00:07:05.639 site and making them happy because
+00:07:07.560 happier users will deliver more value
+00:07:09.720 for the site in terms of business
+00:07:12.560 metrics so the ways that YouTube and
+00:07:14.720 Sunday citizen improved their web
+00:07:16.440 performance followed some pretty basic
+00:07:18.759 web performance best practices and as it
+00:07:21.080 turns out the Chrome team has
+00:07:22.840 established what we've determined to be
+00:07:24.520 the most effective best practices for
+00:07:26.720 improving core web vitals so now i' like
+00:07:29.560 like to change gears a bit and look at
+00:07:31.199 each of the core of vital metrics and
+00:07:33.000 the most effective ways to improve
+00:07:35.199 them but first I need to confess
+00:07:37.759 something to you all I'm a chrome guy in
+00:07:40.000 a room full of SEO experts and I'm
+00:07:43.240 feeling very judged with my headings on
+00:07:45.479 my slides it's very basic stuff so there
+00:07:48.319 we go that's much better so I present to
+00:07:50.599 you the nine ways to boost your web
+00:07:52.520 performance speed in 2024 The Ultimate
+00:07:55.840 Guide to core web vitals near me
+00:07:59.759 let me know if I'm doing this right all
+00:08:02.360 right so let's start with LCP largest
+00:08:04.360 content full paint I think most of you
+00:08:07.479 are familiar with the metric can I see a
+00:08:08.680 show of hands who knows about LCP all
+00:08:10.639 right I'm going to skip over the basic
+00:08:12.039 stuff but I do want to go into a bit of
+00:08:14.120 detail because LCP happens to be the
+00:08:16.560 metric that the fewest websites have
+00:08:19.039 good scores
+00:08:21.319 on so I'm going to spend a little bit
+00:08:23.319 more time on this looking at a few
+00:08:24.879 special
+00:08:25.919 considerations how to measure it and
+00:08:27.840 then we'll get into the most effective
+00:08:28.879 ways to improve
+00:08:29.960 it so LCP like you all know it's the
+00:08:32.839 largest piece of content on the page
+00:08:36.039 it's important to remember though that
+00:08:37.200 there maybe multiple LCP candidates as
+00:08:39.799 you go through the page load usually
+00:08:42.519 text is the first thing to appear so
+00:08:44.240 maybe something like your H1 element is
+00:08:47.080 going to be the initial LCP candidate
+00:08:49.440 and then you have something like a hero
+00:08:50.760 image pop onto the page that's the new
+00:08:52.720 LCP
+00:08:53.760 candidate but what you also need to keep
+00:08:56.040 in mind is that the LCP met metric stops
+00:08:59.519 measuring after the first user
+00:09:02.519 interaction so you can imagine if a user
+00:09:04.959 clicks or Scrolls or Types on the
+00:09:07.240 keyboard after that first H1 that's the
+00:09:09.760 final LCP candidate so you might see
+00:09:12.480 different metrics depending on how the
+00:09:14.640 users
+00:09:16.519 behave there's also some types of
+00:09:18.560 content that does not count as the LCP
+00:09:20.920 the first being background images like
+00:09:22.680 full screen background
+00:09:24.519 images so these are things that the user
+00:09:26.720 would tend to consider more like uh
+00:09:28.880 decorative than content so it doesn't
+00:09:31.640 count the second thing is invisible
+00:09:33.959 content if this is kind of is
+00:09:36.000 straightforward if the user can't see it
+00:09:37.560 it doesn't count as content but there's
+00:09:39.560 a gotcha here that sometimes content
+00:09:41.600 fades in and what LCP is looking at is
+00:09:44.519 the initial opacity of that content so
+00:09:47.920 even if it fades up from zero the fact
+00:09:49.760 that it was initially zero makes it not
+00:09:52.040 an LCP
+00:09:53.240 candidate and the third thing is
+00:09:55.399 placeholders like image placeholders the
+00:09:57.760 gray boxes that you see as image are
+00:09:59.680 loading this is great for layout
+00:10:01.839 stability but again this is not content
+00:10:04.360 it does not count as the
+00:10:07.480 LCP it's also a bit complicated because
+00:10:10.240 the biggest piece of content for you
+00:10:12.200 might be totally different for someone
+00:10:14.120 else so the most dramatic example of
+00:10:16.560 this is somebody on a very wide desktop
+00:10:18.600 screen and somebody on a very narrow
+00:10:20.120 Mobile screen they're going to get
+00:10:21.760 different types of LCP contents maybe on
+00:10:24.440 a large desktop screen wide images that
+00:10:27.880 are in landscape mode count as the
+00:10:29.440 biggest content but as you shrink that
+00:10:31.279 screen size smaller and smaller now it's
+00:10:33.760 responsive and it takes up a relatively
+00:10:36.560 smaller proportion of the screen but at
+00:10:38.720 the same time maybe you have paragraphs
+00:10:40.279 of text or a heading now it starts to
+00:10:42.360 wrap onto more lines so now the area of
+00:10:45.399 that content is larger than the image
+00:10:47.760 making it the LCP candidate for that
+00:10:51.320 page also web applications are being
+00:10:53.720 built in ways that the standardization
+00:10:55.760 groups had never anticipated so on a
+00:10:58.360 traditional website
+00:10:59.760 each navigation requires a new HTML
+00:11:02.160 resource to render the next page and
+00:11:04.920 then each page view starts from scratch
+00:11:07.440 it resets the per performance timeline
+00:11:09.519 and then you get new LCP
+00:11:11.800 elements however single page
+00:11:14.480 applications or
+00:11:16.079 SAS they're all about reusing existing
+00:11:18.959 contents on the page updating only what
+00:11:22.320 has changed so as you navigate to a new
+00:11:25.160 page instead of discarding that old page
+00:11:27.839 and getting entirely new HTM
+00:11:29.920 you keep the skeleton of the page around
+00:11:32.560 and dynamically swap in those new
+00:11:35.480 contents but the problem is that the
+00:11:37.920 performance timeline is going to keep
+00:11:40.200 ticking the LCP element already happened
+00:11:43.360 earlier in that session you do not get a
+00:11:45.600 new
+00:11:46.480 value so as a consequence of that
+00:11:49.320 there's only one LCP value for the
+00:11:51.360 entire session on that LCP
+00:11:54.279 site and the Chrome team is aware of
+00:11:56.839 this uh it's a pretty big blind spot in
+00:11:59.279 core web vitals especially considering
+00:12:01.440 how popular Spas have become uh we are
+00:12:04.639 experimenting with a couple of origin
+00:12:05.920 trials to fix this uh but the important
+00:12:08.120 thing to remember for now is that Spas
+00:12:10.000 are measured differently in core web
+00:12:13.279 vitals so if you've ever used the
+00:12:16.399 performance panel in Chrome Dev tools
+00:12:17.880 you've seen something like this if
+00:12:19.760 you're not familiar with it this is the
+00:12:21.440 trace View and we're looking at the
+00:12:23.279 network track showing you the order and
+00:12:25.440 the timing of resource loading in what's
+00:12:27.639 known as a waterfall diagram
+00:12:29.880 and using this view you can more easily
+00:12:32.279 see how resources can actually depend on
+00:12:34.720 each other but I'm going to provide a
+00:12:36.880 simpler version of this just to go
+00:12:38.839 through a few examples for uh different
+00:12:41.040 LCP
+00:12:42.360 Concepts in these diagrams each resource
+00:12:44.959 is colorcoded where you have blue for
+00:12:47.440 HTML purple for CSS green for images
+00:12:51.079 like the LCP image orange for JavaScript
+00:12:54.480 and red for
+00:12:57.000 fonts so using this diagram let's look
+00:12:59.440 at a hypothetical LCP and see why it
+00:13:01.680 might be
+00:13:02.720 slow the best way to do that is to break
+00:13:05.519 it up into phases and there are four
+00:13:08.600 phases for LCP they never overlap and
+00:13:12.040 between them they account for every
+00:13:14.360 single mill second of the LCP
+00:13:17.079 time each phase is also defined so that
+00:13:20.320 if one of them is the slowest that gives
+00:13:23.000 you a clue as to what the problem might
+00:13:24.839 be and also what the potential fixes for
+00:13:27.199 that could be and the first phase is
+00:13:29.800 time to first bite or
+00:13:31.600 ttfb some people might think of this as
+00:13:34.120 the backend time or the server think
+00:13:36.839 time ttfb also accounts for all of the
+00:13:39.600 time just to get to the server so this
+00:13:41.600 is all the networking stuff that happens
+00:13:43.720 along the way like redirects resolving
+00:13:46.720 DNS negotiating TCP or
+00:13:50.120 SSL and you could if you needed also
+00:13:52.440 break the ttfb time down into these
+00:13:55.360 subphases to get a better look
+00:13:59.360 so that brings us to the number one most
+00:14:01.240 effective way to improve core web vitals
+00:14:03.600 and that is to aim for instant
+00:14:05.839 navigations because the absolute best
+00:14:08.199 way to improve ttfb and LCP as a whole
+00:14:11.959 is to be completely 100% independent
+00:14:14.720 from Network
+00:14:16.040 requests so there are two ways to
+00:14:18.160 achieve instant navigations Restorations
+00:14:21.120 and
+00:14:22.160 speculations you can think of them like
+00:14:24.279 optimizing based on where a user has
+00:14:26.480 already been and where they're about to
+00:14:28.880 go
+00:14:30.480 a restoration takes a page that has
+00:14:32.680 already been loaded and already been
+00:14:34.120 rendered and it serves it back to the
+00:14:36.079 user upon request in its already
+00:14:38.320 rendered state from
+00:14:40.199 cache and a speculation takes a page
+00:14:42.800 that we think a user is about to
+00:14:44.639 navigate to and it prefetches and pre-
+00:14:47.360 renders that in the
+00:14:49.399 background history Restorations are made
+00:14:51.800 possible by the browser's back forward
+00:14:53.639 cache or BF cache you can think of it
+00:14:56.399 like taking a snapshot of the page as
+00:14:58.079 soon as the user navigates away storing
+00:15:00.600 it locally in memory for later and if
+00:15:03.079 the user eventually clicks back or
+00:15:04.880 forward to return to that page the
+00:15:07.160 browser can simply paint the same pixels
+00:15:09.279 back onto the screen exactly where the
+00:15:10.759 user left
+00:15:12.759 them so this is kind of a huge deal
+00:15:15.199 because one in five navigations on
+00:15:17.199 mobile are back forward and we know that
+00:15:19.759 mobile experiences are much worse than
+00:15:21.759 desktop so this is a great opportunity
+00:15:23.839 to flip some slow experiences to instant
+00:15:27.360 ones and the second trick to instant
+00:15:29.839 navigations is to speculatively
+00:15:31.440 pre-render the next page that a user is
+00:15:33.480 about to visit and this is made possible
+00:15:35.880 with the speculation rules API it's
+00:15:38.279 available now in chromium based
+00:15:41.120 browsers a speculation rule is an
+00:15:43.399 instruction to the browser that says
+00:15:46.240 which links to pre-render and when you
+00:15:49.199 do need to be kind of strategic about
+00:15:50.759 this though because there are
+00:15:51.759 limitations to how many pre- renders you
+00:15:53.440 can have at any given time so the best
+00:15:55.959 way that you can uh make sure that you
+00:15:58.600 pre render the most likely page or user
+00:16:00.880 is about to visit is to look at your
+00:16:02.800 analytics take that one link and uh
+00:16:06.000 eagerly pre-render it on the
+00:16:09.000 page something else to watch out for
+00:16:12.040 that causes slow ttfb is redirects the
+00:16:15.120 problem with redirects is that each one
+00:16:17.360 of them is an extra unnecessary hop
+00:16:20.240 before arriving at the final
+00:16:23.319 content a user might be redirected from
+00:16:25.759 HTTP to
+00:16:27.120 https or example to
+00:16:30.160 www.example.com or if the content has
+00:16:33.040 moved they go from SL old to
+00:16:35.360 slne even external link shorteners like
+00:16:38.639 bitly and Twitter's t.co they actually
+00:16:41.600 work by introducing redirects so they
+00:16:44.079 slow the page
+00:16:45.959 down the way to mitigate this is to
+00:16:48.199 ensure that the content the links point
+00:16:50.160 actually directly to that final URL that
+00:16:52.160 the user is going to visit whenever
+00:16:53.519 possible it's not always
+00:16:55.839 possible but the best way to find out if
+00:16:58.040 your site has a problem with redirects
+00:17:00.160 is to measure it and I'll get back to
+00:17:02.120 measuring in a little bit
+00:17:03.679 later for now though our second most
+00:17:06.400 effective way to improve core web vitals
+00:17:09.199 is to use a
+00:17:10.439 CDN CDN are content delivery networks
+00:17:13.400 which means that they have a fleet of
+00:17:15.039 edge servers all around the world and by
+00:17:17.520 moving resources physically closer to
+00:17:19.679 your users requests can be handled much
+00:17:21.799 more
+00:17:22.520 quickly CDN also make it easier to
+00:17:25.400 enable other performance features at
+00:17:27.280 scale like caching compression
+00:17:29.520 and also the latest versions of the
+00:17:31.039 networking protocols like HTTP and
+00:17:33.480 TLS and one CDN in particular Cloud
+00:17:36.200 flare actually just introduced a service
+00:17:38.480 last month called speed brain and that
+00:17:41.160 adds speculative pre-rendering to all
+00:17:43.840 sites on their free plan so by using a
+00:17:46.200 CDN you can attack performance from lots
+00:17:47.880 of different
+00:17:49.600 angles the second LCP phase is the time
+00:17:52.480 from ttfb to the start of the Quest for
+00:17:55.000 the LCB resource which is called the
+00:17:56.840 resource load delay
+00:17:59.960 this phase only applies to image or
+00:18:02.720 video-based LCP elements um text based
+00:18:05.400 LCP elements aren't associated with
+00:18:07.360 external resources so in those cases
+00:18:09.720 this phase is set to
+00:18:12.760 zero the third most effective way to
+00:18:15.520 improve core web vitals actually has two
+00:18:17.480 parts the first one is about
+00:18:21.400 discoverability remember from the case
+00:18:23.360 study with Sunday citizen where the LCP
+00:18:25.919 Source was hidden away in uh CSS 5 as a
+00:18:29.080 background image well that has a couple
+00:18:31.679 of really negative effects on
+00:18:35.200 performance so for one thing the browser
+00:18:37.640 has no idea that the image even exists
+00:18:40.440 until it loads and parses the stylesheet
+00:18:42.520 so there's no way for it to preload the
+00:18:44.760 image you could declaratively preload
+00:18:48.080 that image manually using something like
+00:18:49.960 a link
+00:18:51.200 tag but even if you do that you'll run
+00:18:53.679 into the second problem which is that
+00:18:55.720 the stylesheet is still the bottleneck
+00:18:58.240 the browser has nowhere to put that
+00:19:00.360 image even if it's already loaded until
+00:19:02.280 the CSS tells it to make it the
+00:19:04.080 background image for some element on the
+00:19:07.000 page also for what it's worth client
+00:19:09.559 side rendering on the initial page load
+00:19:11.720 basically has the same issues except
+00:19:13.720 it's JavaScript as the intermediary
+00:19:15.679 instead of CSS but the solution in both
+00:19:18.840 of these problems is exactly what
+00:19:21.320 Shopify and Sunday citizen did just
+00:19:23.559 moving it out of the CSS and into the
+00:19:26.000 HTML using a basic image tag it really
+00:19:28.880 is that
+00:19:30.799 simple another performance issue related
+00:19:33.000 to discoverability is lazy loading the
+00:19:36.000 loading equals lazy attribute is LCP
+00:19:39.200 poison do not use it it is bad it
+00:19:43.360 prevents the browser from eagerly
+00:19:45.000 loading the image as early as it could
+00:19:47.559 because it first needs to make sure that
+00:19:49.000 the image will appear within the
+00:19:50.400 viewport and that's not always a quick
+00:19:53.520 process maybe the only thing worse than
+00:19:55.799 loading equals lazy is the data source
+00:19:58.240 attribute because that's an indicator of
+00:20:00.000 a custom solution built in JavaScript
+00:20:02.600 and custom Solutions are strictly slower
+00:20:04.880 than native ones and just to be clear
+00:20:07.760 lazy loading is good you should use it
+00:20:10.720 but only for Content that's below the
+00:20:12.679 fold only for Content that's not
+00:20:14.960 critical the LCP element is by
+00:20:17.440 definition critical so it should never
+00:20:19.240 be lazy
+00:20:20.960 loaded all right so I said this was a
+00:20:22.919 two-parter and part two is about
+00:20:26.159 prioritization even if the image is
+00:20:28.200 discoverable in the HTML it still might
+00:20:30.039 not load as early as it could if there
+00:20:32.200 are lots of other higher priority
+00:20:34.159 resources on the page Chrome assigns
+00:20:37.120 images a default priority of
+00:20:39.320 low and for the first five images it
+00:20:42.280 bumps it up to medium but if you have
+00:20:44.799 critical render blocking static content
+00:20:47.400 like CSS JavaScript fonts those have
+00:20:50.360 high priority so you could actually be
+00:20:52.440 competing with those resources for
+00:20:54.960 Network the fetch priority equals High
+00:20:57.559 attribute hints to the browser to raise
+00:20:59.559 the default priority up to high for
+00:21:01.320 these images so it can start loading
+00:21:03.159 much
+00:21:05.240 sooner all right now we're on LCP phase
+00:21:08.000 number three resource load duration this
+00:21:10.559 one is also only applicable to LCP
+00:21:12.720 external resources like images and
+00:21:14.880 videos it measures how long the resource
+00:21:17.520 takes to load from start to
+00:21:20.279 finish and because LCP is measuring the
+00:21:23.120 time for an image to appear it wouldn't
+00:21:25.440 be unreasonable to think that the
+00:21:26.760 image's download time is is usually the
+00:21:29.679 bottleneck and so when talking about LCP
+00:21:32.039 optimization it's easy to jump straight
+00:21:34.000 into the things that make the image load
+00:21:36.320 more
+00:21:37.559 quickly and we'll get to those things in
+00:21:40.320 a second but I did want to take this
+00:21:42.000 opportunity to share some of the
+00:21:43.520 important data that my team has just
+00:21:45.000 published recently on the most common
+00:21:47.080 LCP
+00:21:49.279 bottlenecks in August my colleague
+00:21:51.480 Brendan Kenny published a blog post
+00:21:53.640 titled common misconceptions about how
+00:21:55.840 to optimize
+00:21:57.360 LCP the URL is in the corner of the
+00:21:59.760 slide I also have a QR code at the
+00:22:01.720 end so I think this chart sums it up
+00:22:04.120 pretty well let me walk you through it
+00:22:06.760 uh for every website in the Chrome user
+00:22:08.559 experience report we looked at their uh
+00:22:10.840 it's not yet public we looked at their
+00:22:12.880 data on the four LCP
+00:22:14.600 phases we aggregated these phase
+00:22:17.000 distributions by taking their 75th
+00:22:19.679 percentile and then aggregated those
+00:22:21.880 stats over all 19 or so million websites
+00:22:24.480 in the data set by taking the median
+00:22:27.320 value of each of those so so it it's a
+00:22:29.480 distribution of distributions it's kind
+00:22:31.559 of mindbending I know uh we did that
+00:22:33.840 three times for websites having origin
+00:22:36.120 level LCP performance of good needs
+00:22:38.200 Improvement and
+00:22:40.039 poor so you can look at this chart and
+00:22:42.240 see which phases sites tend to struggle
+00:22:44.320 with the most depending on their LCP
+00:22:47.679 performance and
+00:22:49.600 interestingly you'll find that resource
+00:22:51.720 load duration which is represented by
+00:22:54.000 the green bar here is always the fastest
+00:22:57.080 phase it does gets slower as LCP gets
+00:23:00.320 worse but it's still far from the
+00:23:03.360 bottleneck this data is not saying that
+00:23:05.799 you never need to worry about image
+00:23:07.760 optimization but maybe what we can take
+00:23:09.880 away from this is that images already
+00:23:12.279 tend to be optimized well enough that
+00:23:15.200 there are other higher priority things
+00:23:17.360 that you should be focusing on to
+00:23:18.720 improve your
+00:23:20.200 LCP the phases that actually seem to be
+00:23:23.000 most worrisome at least to me are ttfb
+00:23:25.679 in blue and resource load delay in red
+00:23:29.520 and that's why all three of the most
+00:23:31.840 effective ways to improve LCP so far
+00:23:33.960 have been attributed to those phases
+00:23:36.480 that's where websites have the most to
+00:23:39.120 gain all right so let's say you're one
+00:23:41.240 of the few sites that does have terrible
+00:23:43.159 resource load duration how do you fix it
+00:23:45.480 I think you all have heard these answers
+00:23:47.080 a hundred times before so we'll just
+00:23:48.559 Breeze right through this so you should
+00:23:50.559 try using a modern image format like
+00:23:52.279 webp or avif to reduce that file size
+00:23:55.600 it's going to speed up the download time
+00:23:57.000 as a result and and webp tends to be
+00:23:59.440 about 30% smaller than comparable jpeg
+00:24:02.640 or PNG
+00:24:03.919 images you can also reduce the file size
+00:24:06.440 by decreasing the image quality by a lot
+00:24:08.960 you don't need to save everything at
+00:24:10.559 100% quality when the human eye can't
+00:24:12.679 even tell the difference between that
+00:24:14.120 and
+00:24:15.080 80% you can also scale the images down
+00:24:17.840 to avoid wasting bites on pixels that
+00:24:19.880 never get rendered to the
+00:24:22.600 user so even if the image itself is
+00:24:25.039 small there are still some things that
+00:24:26.279 you can do to shorten the time it takes
+00:24:28.200 to go to the server and back the best
+00:24:30.600 way to do that is to set a long cache
+00:24:33.960 Lifetime on your images assuming that
+00:24:36.039 they rarely change so then on repeat
+00:24:38.640 visits users users can just reuse what
+00:24:40.520 they've already had in
+00:24:41.919 cach and that eliminates that Network
+00:24:44.360 request entirely the other thing that
+00:24:46.600 you can do to avoid extra connection
+00:24:48.279 setup costs is hosting the image on the
+00:24:51.000 same domain as your HTML resource the
+00:24:54.600 same things that slow down ttfb can also
+00:24:57.080 slow down this image request you won't
+00:25:00.360 need to pay those costs if you use the
+00:25:02.320 connections that are already
+00:25:05.120 open now we're at the fourth and final
+00:25:07.640 LCP phase which is element render delay
+00:25:10.799 when there's an LCP resource the render
+00:25:13.000 delay is measured from the time that the
+00:25:14.640 resource is done loading to the time
+00:25:16.600 that the resource is finally displayed
+00:25:18.080 to the user and when the element is
+00:25:21.440 text the render delay starts directly
+00:25:23.880 from the ttfb
+00:25:25.679 time so as a quick recap of what I've
+00:25:28.120 already already mentioned before
+00:25:29.600 attempts to minimize the load delay
+00:25:31.559 phase might end up Shifting the problem
+00:25:34.240 to the render delay phase with
+00:25:36.679 pre-loading things like CSS background
+00:25:38.960 images client side rendering or lazy
+00:25:41.159 loading can continue to delay that LCP
+00:25:44.520 time in the form of render delay no
+00:25:46.760 matter how early you've pre-loaded that
+00:25:50.960 image so this is one of the few
+00:25:53.039 text-based LCP specific things to know
+00:25:56.279 and it has to do with web fonts
+00:25:58.840 fonts are external resources web fonts
+00:26:00.960 specifically so they show up in the
+00:26:02.279 waterfall diagram but they're not
+00:26:04.200 considered to be an LCP resource so the
+00:26:06.640 render delay and uh loading duration
+00:26:09.039 phases do not actually
+00:26:10.600 apply the reason why web fonts matter to
+00:26:13.399 LCP has to do with the fact that LCP
+00:26:15.880 candidates change over
+00:26:18.080 time so let's say that your initial LCP
+00:26:21.399 is an H1 element and then your super
+00:26:24.559 cool custom web font loads a few seconds
+00:26:27.200 later
+00:26:29.000 if that web font changes the geometry of
+00:26:31.520 the text and bumps the size up just a
+00:26:33.559 little bit that is going to be the new
+00:26:36.320 LCP candidate several seconds later so
+00:26:38.679 it could hurt your
+00:26:41.080 performance the best fix for this is to
+00:26:43.600 ensure that the system font that's
+00:26:45.200 initially shown has a similar size to
+00:26:47.960 the custom web font and you can do that
+00:26:50.240 with the size adjust CSS
+00:26:53.120 property there are also ways to speed up
+00:26:55.559 your web font so that it doesn't impact
+00:26:57.559 the LCP time as much so fonts should be
+00:27:00.600 cached for a long time a lot of these
+00:27:02.200 things are the same things that you can
+00:27:03.320 do for images cach them for a long time
+00:27:05.960 use better compression use modern image
+00:27:08.000 format or font formats like Waf 2 it's
+00:27:10.679 an industry standard and it's supported
+00:27:12.240 by all modern
+00:27:13.720 browsers you should also ideally self
+00:27:16.960 host your fonts eliminate that extra
+00:27:18.919 connection setup
+00:27:20.640 cost there are services like Google
+00:27:23.240 fonts and they do offer some Advanced uh
+00:27:26.120 font optimization strategies like
+00:27:27.679 subsetting
+00:27:28.679 you can say only load the glyphs in this
+00:27:31.200 font that are applicable to the
+00:27:32.919 characters that I display on this page
+00:27:34.480 like Latin or whatever you could also
+00:27:36.840 subset a font to specific characters if
+00:27:40.120 your heading says hello world you can
+00:27:42.279 only load those letters h e l
+00:27:45.159 l so finally the silent killer of LCP
+00:27:49.440 performance is slow JavaScript execution
+00:27:52.760 and we don't usually think of this as a
+00:27:54.200 loading performance issue but it
+00:27:56.240 definitely could be and I'm not talking
+00:27:58.360 about client side rendering either
+00:28:00.440 anything that blocks the main thread for
+00:28:02.360 an extended period of time delays the
+00:28:05.039 next opportunity to paint and if the LCB
+00:28:08.679 image is downloaded and ready to go all
+00:28:10.960 of this time will be attributed to its
+00:28:12.600 render
+00:28:13.720 DeLay So the solution to this is to
+00:28:16.120 break up your long tasks but that's
+00:28:18.760 exactly what I'm about to talk about in
+00:28:19.960 the next few slides for inpp so let's
+00:28:21.960 get right into it this is core vital
+00:28:24.960 number two interaction to next paint inp
+00:28:28.120 performs really well on desktop 97% of
+00:28:31.000 sites have good inp 76% of sites have
+00:28:35.559 good inp on mobile which is a little
+00:28:37.720 deceivingly High because uh if you look
+00:28:39.799 at only the top 1,000 most popular
+00:28:41.799 websites this number drops down to 63
+00:28:44.399 now so there is definitely still a lot
+00:28:46.679 of room for improvement with inp despite
+00:28:48.720 the
+00:28:50.320 gains this is what a real interaction
+00:28:52.919 looks like in Chrome Dev tools the top
+00:28:55.320 is the interaction track and that shows
+00:28:57.399 that the user clicked on something
+00:28:59.360 probably uh creating pointer events and
+00:29:02.200 below that is all of the main thread
+00:29:03.880 activity during the interaction with
+00:29:05.799 each entry colorcoded and labeled
+00:29:08.039 according to the type of work that it
+00:29:09.240 did so again let's simplify this down
+00:29:12.480 the top part is the timing of the
+00:29:13.880 interaction using box and whiskers
+00:29:16.360 representing the three inp phases and
+00:29:19.080 the bottom part represents the main
+00:29:20.360 thread activity JS execution in Orange
+00:29:23.200 layout work in purple rendering and
+00:29:25.440 painting in
+00:29:26.720 green all right so using this diagram
+00:29:29.240 let's jump into the inp phases the left
+00:29:32.919 whisker represents the input delay phase
+00:29:35.679 this is what I uh first input delay used
+00:29:37.799 to measure that's measured from the
+00:29:39.880 moment that the user starts their
+00:29:41.559 interaction until the processing for
+00:29:44.480 that event can
+00:29:48.840 start the central box represents the
+00:29:51.480 processing duration this includes all of
+00:29:53.519 the time spent handling one or more of
+00:29:55.760 the events associated with the
+00:29:57.039 interaction like a pointer up and a
+00:29:59.200 click event of a tap interaction the
+00:30:02.559 right whisker represents the
+00:30:03.760 presentation delay this is everything
+00:30:05.240 that happens after the events have been
+00:30:07.080 processed until that frame is painted to
+00:30:08.919 the
+00:30:10.200 screen so the number four most effective
+00:30:12.679 way to improve core web vitals affects
+00:30:15.360 the input delay phase but it could also
+00:30:17.360 be just as impactful to the next phase
+00:30:19.440 as well and this is to avoid unnecessary
+00:30:23.159 JavaScript you can spend ages shaving
+00:30:26.440 milliseconds off of your runtime
+00:30:28.000 performance but it would be so much
+00:30:29.840 easier if you just throw that code
+00:30:32.399 away remember from the project feather
+00:30:34.840 story about The Tipping Point it came
+00:30:37.919 when Chris was able to replace the flash
+00:30:40.399 player with the native HTML 5 video
+00:30:43.240 player and thankfully we don't have to
+00:30:45.320 worry about Flash plugins anymore but we
+00:30:47.799 do have a ton of redundant JavaScript on
+00:30:50.399 our websites for things like libraries
+00:30:52.880 and polyfills and just for example CSS
+00:30:56.080 has gotten so incredibly powerful in
+00:30:58.159 recent years that things like animations
+00:31:00.720 could be done entirely
+00:31:02.720 scriptless you don't need to throw
+00:31:04.720 everything away either uh even if you
+00:31:06.519 just split your JavaScript bundles into
+00:31:08.360 things that you need to use now or use
+00:31:10.320 later then you can skip a lot of the
+00:31:12.440 time spent parsing and compiling
+00:31:14.159 unnecessary
+00:31:16.440 scripts number five is yielding to break
+00:31:19.320 up long tasks and this is listed under
+00:31:21.519 the processing phase but also it could
+00:31:23.600 be uh used to improve the input delay
+00:31:26.080 phase as well so so whenever JavaScript
+00:31:28.799 is taking a long time to do its work
+00:31:31.240 it's an opportunity to pause give the
+00:31:34.360 browser a chance to paint a frame and
+00:31:36.519 then go back and resume your work and
+00:31:38.799 this is a strategy known as
+00:31:40.880 yielding you do need to be a little bit
+00:31:43.159 judicious about when you yield ideally
+00:31:46.399 you should do all of the user visible
+00:31:47.880 work first and then ensure those changes
+00:31:51.279 are displayed to the user and for any
+00:31:53.519 follow-up work that's needed like uh
+00:31:55.440 lower priority background tasks maybe
+00:31:57.240 logging to analytics that stuff that can
+00:31:59.679 happen
+00:32:00.760 later if doing lots of little bits of
+00:32:04.240 work many times you could over
+00:32:07.960 yield maybe if you're iterating over a
+00:32:10.120 large array you don't want to have your
+00:32:11.440 yield statement in that array because
+00:32:14.120 there is a little bit of a overhead to
+00:32:16.200 seed control and then take it back and
+00:32:18.720 that could add up instead what you want
+00:32:21.480 to do is kind of keep track of how long
+00:32:24.159 you've been in the loop yield only if
+00:32:26.399 it's time to paint another frame so
+00:32:28.799 tasks should be kept to under 50
+00:32:30.639 milliseconds and if you're a speed freak
+00:32:32.960 and you need to keep you know a 60 frame
+00:32:35.200 rate 60 FPS frame rate then 16
+00:32:37.880 milliseconds is going to be your
+00:32:40.120 budget so if you're looking to yield
+00:32:42.639 there are a couple of apis in the
+00:32:44.519 scheduler API called yield and posttask
+00:32:46.840 they're available in chromium based
+00:32:48.760 browsers but for everybody else you can
+00:32:50.840 just use a simple set timeout and
+00:32:52.399 that'll usually do the
+00:32:55.159 trick during the presentation delay
+00:32:57.600 phase is the browser does all of the
+00:32:59.360 required style and layout work to get to
+00:33:01.600 the next frame ready to paint so number
+00:33:04.600 six is avoiding
+00:33:06.360 recurring or in avoid incurring large
+00:33:09.200 rendering
+00:33:10.880 updates however it's possible to incur
+00:33:13.360 expensive rendering work during the
+00:33:15.120 processing phase when it's forced by
+00:33:17.519 JavaScript code so you've probably heard
+00:33:20.080 this referred to as layout thrashing it
+00:33:22.120 happens when you modify a Dom element in
+00:33:24.080 one part of your code and then you try
+00:33:26.039 measuring it in a new part of your code
+00:33:29.559 this forces the browser to recalculate
+00:33:31.639 all of the styles that are necessary to
+00:33:33.320 measure that element and that takes
+00:33:36.559 time layout thrashing specifically
+00:33:39.000 refers to doing this lots and lots of
+00:33:41.080 times over lots of elements causing a
+00:33:43.000 chain of expensive rendering work that
+00:33:45.240 blocks the main thread so you can break
+00:33:47.840 that Chain by reorganizing your code so
+00:33:50.399 that your read operations happen before
+00:33:53.080 you modify the Dom and then any
+00:33:55.399 necessary style recalculation work can
+00:33:57.360 happen normally during that presentation
+00:34:00.919 phase routine rendering updates do
+00:34:03.519 normally occur during the presentation
+00:34:05.159 phase and there are also some things
+00:34:07.240 that you can do to minimize that time
+00:34:08.760 the first is to reduce the number of
+00:34:10.560 affected nodes that need to be repainted
+00:34:12.719 for example changing the class list on
+00:34:15.280 the body could invalidate the styles for
+00:34:18.560 all of the child elements on the
+00:34:21.159 page and that could be made even more
+00:34:23.320 expensive if you have expensive CSS
+00:34:25.280 selectors that take the browser a long
+00:34:27.000 time to figure out if a specific node is
+00:34:29.480 going to be affected by that
+00:34:31.719 change so to mitigate this you could
+00:34:34.719 simplify the selectors but the most
+00:34:36.800 effective thing is just to be to
+00:34:38.119 minimize the number of Dom elements on
+00:34:39.760 the page itself that leads to fewer
+00:34:42.159 elements to check and also faster style
+00:34:44.599 recalculation
+00:34:46.079 times another way to minimize rendering
+00:34:48.280 time is to lazily render contents that
+00:34:50.199 are off the screen using something
+00:34:52.040 called CSS
+00:34:53.520 containment the content visibility
+00:34:55.719 property just landed in Firefox earlier
+00:34:58.160 this year so now it is available across
+00:34:59.960 all modern browsers you can configure it
+00:35:02.800 to tell browsers to skip an elements
+00:35:04.720 layout style and paint work if it's not
+00:35:07.119 visible to the user and then when the
+00:35:09.040 element starts to come into view the
+00:35:10.440 browser can then resume its rendering
+00:35:12.359 work just in
+00:35:15.000 time all right the last metric is
+00:35:17.440 cumulative layout shift it's the best
+00:35:20.079 performing core web vital on the wild in
+00:35:22.200 the wild and also arguably the most
+00:35:25.079 straightforward to optimize it is kind
+00:35:27.920 of a strange performance metric in that
+00:35:29.920 it's not measured in terms of time it
+00:35:32.240 doesn't have any units at all and as a
+00:35:35.280 matter of fact we don't use it to uh we
+00:35:38.520 don't have any phases to break it down
+00:35:40.119 because it's unitless so for that reason
+00:35:41.960 we're just going to jump straight into
+00:35:43.119 the ways to optimize it with number
+00:35:45.560 seven reserving space for content by
+00:35:48.400 explicitly setting its
+00:35:50.680 Dimensions so for an image element you
+00:35:52.880 should know how big it's going to be and
+00:35:54.839 set its height and width accordingly
+00:35:57.160 otherwise if if uh the image has an
+00:35:59.200 initial height of zero pixels while the
+00:36:01.440 browser is waiting for it to load once
+00:36:03.599 that pops in that's going to shift the
+00:36:05.240 layout down causing a jarring user
+00:36:07.880 experience if you at least know what
+00:36:10.200 shape the content is going to be you can
+00:36:11.920 use the aspect ratio property in CSS and
+00:36:15.760 then you can dynamically size the
+00:36:17.440 content and in the worst case scenario
+00:36:19.680 if you have no idea what's about to
+00:36:21.040 happen you can at least reserve a little
+00:36:23.440 bit of space using the Min height or
+00:36:25.200 minwidth attributes
+00:36:27.800 there might still be a noticeable shift
+00:36:29.480 but at least it won't be as
+00:36:32.760 severe this one might come as a surprise
+00:36:35.359 but number eight is uh actually to take
+00:36:38.040 advantage of the BF cache which we've
+00:36:40.359 already talked about as an LCP
+00:36:42.160 optimization the reason why this is a
+00:36:44.200 game changer for CLS is because a
+00:36:46.480 significant amount of the layout shifts
+00:36:48.440 that happen actually occur during the
+00:36:50.839 initial page
+00:36:52.000 load so when you restore a page that's
+00:36:54.680 already been loaded and already been
+00:36:56.480 rendered any of those layout shifts will
+00:36:58.800 have already happened and so the new
+00:37:00.760 page view will appear much more
+00:37:03.319 stable but today the biggest blockers to
+00:37:06.359 BFC eligibility are uh listening to the
+00:37:09.640 unload event and also serving HTML
+00:37:12.200 Resources with the cache control no
+00:37:14.280 store
+00:37:16.520 header so finally number nine is to
+00:37:19.599 optimize CLS by avoiding layout inducing
+00:37:22.240 CSS properties in animations and
+00:37:25.079 transitions so for example if you want
+00:37:27.040 to slide a piece of content down you
+00:37:29.280 might be tempted to animate it's down
+00:37:31.880 property but even if the content is on
+00:37:34.200 its own layer changing the property
+00:37:36.119 actually triggers layout work the other
+00:37:39.119 directional properties like up left and
+00:37:41.839 right behave exactly the same way and
+00:37:44.079 the solution to this is use CSS
+00:37:46.000 properties that are animated by the
+00:37:47.720 compositor thread instead that means
+00:37:50.200 using things like transform translate
+00:37:52.640 why to move things and these types of
+00:37:54.800 animations do not incur any layout
+00:37:56.440 shifts
+00:37:59.599 all right we've covered the core web
+00:38:00.960 vitals themselves so I'd like to use
+00:38:02.720 whatever remaining time I have to talk
+00:38:04.240 about the data that goes behind
+00:38:06.160 it I think most of you are familiar with
+00:38:08.520 the Chrome user experience report or
+00:38:10.040 krux data set but I did want to
+00:38:12.000 highlight one really important
+00:38:14.800 distinction Crux Powers Chrome and
+00:38:17.800 search tools like page speit insights
+00:38:20.720 Dev tools search console it's Chrome's
+00:38:24.280 source of Truth for how fast or slow
+00:38:27.040 users are experiencing core web
+00:38:29.280 vitals it's an incredibly powerful data
+00:38:31.680 set but the kinds of questions that it's
+00:38:33.480 designed to answer are actually pretty
+00:38:36.160 simple like do 75% of the experiences
+00:38:39.960 meet the good threshold yes or no how
+00:38:43.000 about this metric or this form factor or
+00:38:45.319 this
+00:38:46.200 page it's not designed to answer the
+00:38:48.560 second most important question which is
+00:38:51.640 okay so why was it slow for that you
+00:38:54.640 need diagnostic tools
+00:38:57.560 Lighthouse is a diagnostic tool and it
+00:38:59.960 can point you in the right direction but
+00:39:01.760 it can't tell you why your users's
+00:39:04.160 experiences were slow it doesn't know
+00:39:06.640 how users access or behave on the page
+00:39:09.720 and it doesn't know what their LCP
+00:39:11.160 elements tend to
+00:39:12.560 be but these are all things that you can
+00:39:15.280 measure yourselves and the name for that
+00:39:17.560 is real user measurement or
+00:39:20.000 Rum this is something that each site
+00:39:22.280 will need to instrument themselves using
+00:39:24.359 a commercial rum
+00:39:26.160 product uh assuming they have core web
+00:39:28.640 vital support or some kind of homegrown
+00:39:32.480 solution but the data is worth its
+00:39:34.599 weight in gold because you can use it to
+00:39:37.079 understand why things are slow and how
+00:39:38.920 to reproduce them data is also really
+00:39:41.760 hard to argue with um you might
+00:39:43.720 recommend to a client that they should
+00:39:46.280 uh consider cleaning up some of their
+00:39:47.760 marketing tags uh the push back usually
+00:39:50.319 sounds something like but we need those
+00:39:53.119 well then you can come back to them with
+00:39:54.400 data to say uh such and such a tag
+00:39:56.880 typically adds 250 milliseconds to every
+00:39:59.599 click on the page and it's robbing you
+00:40:01.720 of a good inpp score well maybe they
+00:40:04.359 Chang their
+00:40:05.800 mind the other thing that's great about
+00:40:07.960 rum data is that you can measure the
+00:40:10.200 impact of your changes ideally with
+00:40:12.440 something like an AB test but even just
+00:40:14.200 watching the change over time is really
+00:40:16.520 really great uh krux data moves very
+00:40:19.319 slowly it's a 28 day aggregation but rum
+00:40:22.400 data on the other hand you can slice it
+00:40:24.160 any way you want uh and when you
+00:40:26.160 correlate that with other business
+00:40:27.319 business metrics in your analytics you
+00:40:29.680 can paint a really compelling picture
+00:40:32.160 about the impact that you're having and
+00:40:34.319 how valuable your work is just to give
+00:40:37.440 you idea of what's possible and this is
+00:40:39.480 using all free Google tools this is a
+00:40:41.920 dashboard that I built to diagnose inp
+00:40:44.280 issues on our web.dev
+00:40:48.079 website it uses the attribution build of
+00:40:51.000 the open source web vitals JS library to
+00:40:54.000 measure the user experiences and get
+00:40:55.800 diagnostic data about it
+00:40:58.000 I send that off to Google analytics
+00:41:00.119 using custom events I process all of
+00:41:02.880 that data on big query and I visualize
+00:41:05.200 it in looker
+00:41:06.599 studio so for example I can use this
+00:41:08.920 data to track inp performance across the
+00:41:11.440 entire site or groups of
+00:41:13.440 pages I plot it out over time or as a
+00:41:16.640 full distribution and I can drill down
+00:41:19.160 into the most popular and problematic
+00:41:22.920 areas in this case it looks like the
+00:41:25.319 learn pages are especially slow
+00:41:28.200 so I can explore the inp phases to see
+00:41:30.760 where the time is spent and what is
+00:41:32.440 causing it to be
+00:41:33.640 slow I know it's hard to draw any kind
+00:41:36.319 of conclusion from this at a glance but
+00:41:38.839 uh this data did help me understand that
+00:41:40.520 there was something other than script
+00:41:42.119 processing time that was slowing down
+00:41:44.359 interactions the input and presentation
+00:41:46.760 delay phases were much
+00:41:49.680 slower so I dug deeper into what users
+00:41:53.319 were interacting with and when I found
+00:41:56.240 that the most common interactions were
+00:41:58.400 kind of confusing users were just
+00:42:00.079 clicking on text uh that's not very
+00:42:03.119 interactive but something was still
+00:42:04.599 causing that to be
+00:42:06.400 slow so the dashboard gave me all of the
+00:42:09.000 information I needed to build a
+00:42:10.680 reproducible test case so I could figure
+00:42:13.359 it out locally in Dev tools so I loaded
+00:42:15.800 up the page I started to trace I clicked
+00:42:18.200 on the heading text and here's what I
+00:42:20.800 found and just like in the rum data
+00:42:22.960 there was a relatively quick processing
+00:42:24.720 duration with those long whiskers
+00:42:27.200 extending outward indicating a slow
+00:42:29.079 input delay and presentation delay
+00:42:31.200 phases there seemed to be a lot of
+00:42:33.319 expensive style recalculation work
+00:42:35.520 happening and Dev tools helped me trace
+00:42:37.680 it back to animating
+00:42:40.040 Spinners I hope this video
+00:42:42.960 loads yes so I thought that was really
+00:42:45.880 weird because I didn't see any Spinners
+00:42:47.400 on the page but sure enough they were
+00:42:49.760 still there animating
+00:42:51.720 away in fact I found 31 spinner
+00:42:55.359 components on the page all stuck in an
+00:42:58.200 infinite Loop and the problem was that
+00:43:00.640 despite being hidden hidden the
+00:43:02.800 animations were not
+00:43:07.200 paused pausing the animations was a
+00:43:09.640 simple enough fix so we pushed it live
+00:43:12.280 and we immediately saw a 25% Improvement
+00:43:15.040 to our mobile imp across the learn pages
+00:43:19.040 so we still have more work to do getting
+00:43:21.559 our inp closer to the green but we are
+00:43:23.720 making progress and it wouldn't be
+00:43:25.640 possible without rum data to to guide
+00:43:27.400 the
+00:43:29.160 way so while it's true that all of you
+00:43:31.760 in the SEO Community are focused on
+00:43:33.960 succeeding in
+00:43:35.160 search we're still very closely aligned
+00:43:37.960 with our goals with the web performance
+00:43:39.760 Community to improve core web
+00:43:42.680 vitals I hope I was able to show you
+00:43:45.040 that web
+00:43:47.280 performance I hope was able to show you
+00:43:49.480 web performance in a slightly different
+00:43:51.079 light uh and also how your work to
+00:43:53.720 improve core web vitals improves the
+00:43:55.920 speed of the web as a whole
+00:43:59.280 I also hope that you take these things
+00:44:00.599 that you've learned about core web vital
+00:44:02.000 metrics and the most effective ways to
+00:44:03.760 diagnose and optimize them and you do
+00:44:06.319 what you do best share it with the
+00:44:08.480 community and apply it in practice to
+00:44:11.520 help make an even faster web thank
+00:44:15.950 [Applause]
+00:44:25.559 you g i more time
+00:44:28.500 [Applause]

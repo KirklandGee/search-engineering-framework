@@ -1,0 +1,786 @@
+# tactiq.io free youtube transcript
+# How to incorporate machine learning into your SEO day-to-day - Lazarina Stoy
+# https://www.youtube.com/watch/i34nG_C4xL4
+
+00:00:11.870 [Applause]
+00:00:17.439 hello everyone I don't know if this is
+00:00:20.000 loud enough or not it's my second time
+00:00:22.480 using a mic like this so hopefully it
+00:00:24.400 will be loud if not just let me know
+00:00:28.320 okay so I have 100 140 slides so buckle
+00:00:32.040 up everyone I just wanted to include a
+00:00:35.559 ton of things and uh yeah but before
+00:00:38.840 that something extremely important I
+00:00:40.920 wanted to say this to everyone because I
+00:00:43.039 want you to look around and see how
+00:00:44.680 awesome you all are I'm extremely
+00:00:46.879 extremely excited to be on stage and to
+00:00:49.160 speak to people that I have been
+00:00:51.600 inspired by and I've been following and
+00:00:53.879 I have been learning from for so many
+00:00:56.039 years I'm not going to mention them all
+00:00:58.239 but literally I'm super happy to be here
+00:01:00.719 so thank you very much to the organizers
+00:01:02.399 for inviting me and thank you for
+00:01:04.000 listening to my lovely little talk so
+00:01:06.640 today we're going to talk about what you
+00:01:09.040 really really need uh to start machine
+00:01:12.240 learning today um and before I start a
+00:01:16.280 presentation I want to do something that
+00:01:17.840 I never do because I hate I hate
+00:01:20.079 audience
+00:01:21.159 participation but I decided you know
+00:01:24.040 what you know it's really cold in the
+00:01:26.000 room so we need to get moving or
+00:01:27.759 something that's what people say when
+00:01:29.280 they ask you to do to audience
+00:01:30.560 participation so I just want to know I
+00:01:34.040 know there's a ton of technical people
+00:01:35.840 in the room so I basically want to know
+00:01:37.720 the ones that are that consider
+00:01:39.880 themselves not so technical so if you I
+00:01:43.920 already have a hand up I love it so
+00:01:46.040 basically raise your hand like really
+00:01:47.439 slightly just let me know that you think
+00:01:50.040 that maybe I'm not as technical as the
+00:01:51.960 other people in the room and some of
+00:01:53.320 these presentations go a little bit over
+00:01:54.920 my head okay love it so this
+00:01:57.680 presentation is exactly for you so we'll
+00:02:00.200 what you need to get started and we'll
+00:02:02.079 also run through some tasks basically
+00:02:05.880 the task that you uh will get immediate
+00:02:08.959 value from um and we'll also run through
+00:02:12.959 what you actually need to grow as uh
+00:02:15.959 machine learning engineer I'm kidding as
+00:02:17.920 an SEO that uses machine learning
+00:02:20.680 because let's face it we're not machine
+00:02:22.599 learning Engineers we just want to do
+00:02:24.280 our job a little bit faster that's it
+00:02:27.000 and I do want to caveat you will have a
+00:02:30.280 hard time selling some of these models
+00:02:32.160 at this present time because everyone is
+00:02:34.599 hyped up on a geni train and but you
+00:02:38.120 will see hopefully by the end of this
+00:02:40.000 presentation that with some of the
+00:02:42.000 classical ml models you will get faster
+00:02:44.560 results it will be quicker it will be
+00:02:46.519 better it will be more precise so if you
+00:02:48.640 can actually make that case to your
+00:02:50.480 stakeholders then you can actually sell
+00:02:53.159 them these models and these tools and
+00:02:55.680 processes as opposed to using chat GPT
+00:02:58.319 in your firm which is what we all want
+00:02:59.840 to do so what you really need to start
+00:03:03.560 most of the people that are getting into
+00:03:06.280 machine learning are struggling with
+00:03:08.519 like limiting beliefs so maybe you
+00:03:10.599 started a project and you kind of failed
+00:03:13.239 or it took you way too long to execute
+00:03:16.840 like I don't know I I still people I
+00:03:19.280 still see people struggling with entity
+00:03:20.920 analysis and I get it I completely get
+00:03:23.239 it if you're a complete beginner you
+00:03:25.200 start a project you work on it it
+00:03:26.760 doesn't really work and then you use a
+00:03:28.560 tool and the results are not that great
+00:03:30.599 and you don't understand what's going on
+00:03:32.480 so that's one case the other case may be
+00:03:35.080 you're thinking that you're not
+00:03:36.439 technical enough that you this goes over
+00:03:38.879 your head that whatever the reason you
+00:03:41.760 know uh imposter syndrome right I'm not
+00:03:43.959 good enough to do this why should I be
+00:03:45.560 doing this why am I the person to isn't
+00:03:48.319 there some like more technical person to
+00:03:50.720 do this and so on so these are
+00:03:52.439 challenges that not only we struggle
+00:03:54.400 with as marketers trying to do something
+00:03:56.439 technical but also data scientists and
+00:03:58.480 machine learning engineers
+00:04:00.720 so what you really need is to know when
+00:04:04.120 to search for machine learning models
+00:04:06.599 when to how to actually implement it uh
+00:04:10.000 what model to use how to find the
+00:04:12.560 precise model that you need to use for
+00:04:14.720 the task and what you can achieve in a
+00:04:17.238 very short amount of time to actually
+00:04:20.320 get value out of the work that you're
+00:04:22.240 doing so let's start with the basics for
+00:04:25.240 every project that you are working on
+00:04:27.520 you need to think about three things the
+00:04:29.199 characteristics ICS of the tasks the
+00:04:31.240 data and the solution so in terms of
+00:04:33.560 task characteristics you can think of
+00:04:35.639 machine learning very very basic
+00:04:38.840 understanding you have supervised
+00:04:40.840 unsupervised so examples for supervised
+00:04:43.720 might be regression and classification
+00:04:46.280 for unsupervised it might be clustering
+00:04:48.360 or dimensionality reduction and I know
+00:04:51.039 this means nothing so let's simplify it
+00:04:53.039 a little bit you have labeled data
+00:04:55.840 that's what supervised means you have
+00:04:58.000 something to validate your results
+00:05:00.199 against for unsupervised you don't have
+00:05:02.840 a way to validate your results and what
+00:05:05.520 classification means is that you are
+00:05:08.240 trying to group Things based on
+00:05:10.280 characteristics labels that you already
+00:05:12.199 have just sorting things into buckets
+00:05:15.440 and um a regression means making
+00:05:17.639 predictions right different types of
+00:05:19.759 data here for um unclassified you can
+00:05:23.440 cluster things uh again same thing but
+00:05:26.080 without having uh those labels just
+00:05:28.639 grouping based on Comm characteristics
+00:05:30.280 or just reducing uh for dimensionality
+00:05:32.680 reduction reducing the complexity of
+00:05:34.479 data so this is a very very simplified
+00:05:36.919 view of the most common things that
+00:05:39.000 you'll be working on but I just want to
+00:05:41.039 highlight machine learning is a massive
+00:05:43.160 field okay you're not going to become
+00:05:45.039 experts in two days regardless of what
+00:05:47.039 LinkedIn post tells you that you can you
+00:05:49.039 can be I'm sorry you won't uh and this
+00:05:52.400 is like a very you know small part of it
+00:05:57.199 so generative AI is in there transform
+00:05:59.639 former models um but you also have like
+00:06:02.080 things like forecasting you also have
+00:06:04.280 things like NLP uh and it also like part
+00:06:07.960 of machine learning are the models that
+00:06:09.599 power uh things like Tesla for instance
+00:06:12.039 or things like SpaceX or whatever I I
+00:06:14.280 can't believe I mentioned two Elon Musk
+00:06:16.880 products I'm sorry for everyone I I I
+00:06:20.120 hate myself as well
+00:06:22.479 um so yeah the field is massive so bear
+00:06:27.000 with that you're doing something just to
+00:06:30.560 make your job easier not to actually
+00:06:32.400 become an expert in it so that's a good
+00:06:34.199 mindset to start and also whenever you
+00:06:36.759 are choosing uh the task you know what
+00:06:39.759 you're going to actually do also think
+00:06:41.919 about if you have the data to selft Trin
+00:06:44.560 a
+00:06:45.199 model not a lot of you do I just want to
+00:06:48.319 say it like not a lot of people can
+00:06:50.280 actually train a motel from scratch you
+00:06:51.720 need a lot of data to do that um or you
+00:06:54.520 can use a pre-trained model a model that
+00:06:56.560 has been trained by a company think
+00:06:58.639 things like profit for instance for
+00:07:00.800 forecasting it works well because it has
+00:07:02.479 a ton of data that it has been trained
+00:07:04.000 on if you're trying to train a
+00:07:05.720 prediction model from scratch it's going
+00:07:07.759 to take a ton of time or you can also
+00:07:10.440 fine-tune a model which means you take a
+00:07:12.639 pre-trained model you give it a small
+00:07:14.960 data set of new data to learn from and
+00:07:19.199 then it can work a little bit better
+00:07:21.720 just doing the task on other data that
+00:07:24.000 you have this works very well for Niche
+00:07:26.199 tasks so for instance if you're doing
+00:07:27.720 classification on Medical Art articles
+00:07:30.360 related to something very Niche I don't
+00:07:33.080 want to mention any diseases CU I'm in a
+00:07:34.919 very good mood today and also if you are
+00:07:38.199 going down the route of training do you
+00:07:40.199 have enough data to actually train test
+00:07:43.840 and validate your results these are
+00:07:45.879 questions that you need to ask so
+00:07:47.840 definitely the more harder route when it
+00:07:49.599 comes to um working with machine
+00:07:51.840 learning models so when it comes to data
+00:07:54.360 think is your data textual is it numeric
+00:07:57.680 is it image based is it time series so
+00:08:01.120 tons of questions but that's like the
+00:08:03.240 easy part to solve then it when it comes
+00:08:05.960 to Solutions I love this flowchart I'm
+00:08:08.240 very sorry I don't have attribution but
+00:08:09.840 I'm sure I have it somewhere on my
+00:08:11.400 website is the task Mission critical
+00:08:14.520 like does your job depend on the project
+00:08:17.159 that you're working on and if it does
+00:08:19.639 why would you want to incorporate AI
+00:08:21.360 into it like why would you want to rely
+00:08:24.280 on AI so what really is a pet peeve of
+00:08:27.960 mine is the people that tell you that
+00:08:30.240 you can actually replace your content
+00:08:32.599 strategy with uh chat GPT like why would
+00:08:35.679 you want that isn't your job like a
+00:08:37.599 Content strategist you know anyway if
+00:08:40.799 you need consistent results every time
+00:08:43.200 unsupervised machine learning is not the
+00:08:45.399 way to go Transformers and llms and
+00:08:48.360 generative AI is not the way to go deep
+00:08:51.000 learning is also not the way to go if
+00:08:53.080 you need your results to be easy to
+00:08:55.399 understand to relate to stakeholders
+00:08:57.040 again deep learning is not the way to go
+00:08:59.640 but if you can just outperform the
+00:09:02.720 current methods that you have so for
+00:09:05.040 instance if you have an intern writing
+00:09:07.399 image captions please don't please don't
+00:09:10.959 make them do that job but if you do for
+00:09:14.320 some reason in 20 24 don't don't raise
+00:09:17.079 your hand please because I will hate you
+00:09:19.680 but if you do there's better ways to do
+00:09:22.800 that and the output will be much better
+00:09:25.519 and that goes for metad descriptions and
+00:09:27.279 that goes for even things like title op
+00:09:29.560 iations for certain niches as well so
+00:09:32.079 always assess the usefulness of machine
+00:09:33.760 learning models depending on multiple
+00:09:35.279 factors how easy it is to deploy what's
+00:09:37.560 the bottom line what time are you going
+00:09:39.600 to be saving how easy it is to actually
+00:09:42.399 get started utilizing this technology do
+00:09:44.480 you need it to be scaled across an
+00:09:46.519 organization and so forth so how to find
+00:09:49.800 things when you have an idea you need to
+00:09:51.360 keep your queries specific to these
+00:09:53.360 three characteristics so if you're
+00:09:55.360 writing metad descriptions for instance
+00:09:57.079 analyze is your data textual yes it is
+00:10:00.000 is it Mission critical not really do you
+00:10:01.800 need an explanation on how you wrote
+00:10:03.720 those 10,000 met descriptions not really
+00:10:06.720 so you can go ahead for titles it's a
+00:10:09.200 little bit more complex for certain
+00:10:10.680 industries it might not be a good idea
+00:10:12.560 to autogenerate titles your money or
+00:10:15.880 life topics are a great example per
+00:10:18.279 image captioning it's a little bit more
+00:10:19.760 of a gray area still unfortunately so
+00:10:22.920 you can still automate some of these
+00:10:24.800 parts and you can mix and match
+00:10:26.079 different models to do that so let's go
+00:10:28.600 to the meat of the this um presentation
+00:10:31.399 what to actually do to drive immediate
+00:10:34.040 value out of machine learning so I'm
+00:10:36.560 going to go through I don't know how
+00:10:38.519 many I think there are 10 different
+00:10:40.079 projects that you can do so we'll start
+00:10:42.240 with text classification classification
+00:10:44.680 like we mentioned we have a list of
+00:10:46.959 categories list of labels we have
+00:10:49.760 content and we don't know where that
+00:10:51.639 content fits in so we have labeled data
+00:10:54.639 we have the content we want to put it
+00:10:56.440 into the these buckets
+00:10:59.600 easy right quick check-in who knows this
+00:11:03.399 is a supervised machine learning
+00:11:05.320 approach we are working with textual
+00:11:07.160 data and we do need to have some sort of
+00:11:11.079 prediction and the labels that we are
+00:11:13.720 taking are from an API that we will be
+00:11:16.040 using so Google natural language API we
+00:11:18.760 will be mentioning it a few times
+00:11:20.160 because it has several different models
+00:11:22.320 that work very good they have more than
+00:11:25.760 13,000 sorry 1300 categories I wish
+00:11:29.079 there 30,000 but no um and essentially
+00:11:32.480 the process that we're going to be
+00:11:33.600 working with it will take no longer than
+00:11:35.639 20 minutes even for the most uh
+00:11:37.639 technically uh challenge people in the
+00:11:39.760 room um we essentially create an API key
+00:11:42.760 we identify the content to scrape scrape
+00:11:45.120 the content with screaming frog or your
+00:11:46.880 crawler of choice even if I'm sure most
+00:11:49.320 of you have actually built a crawler so
+00:11:51.279 you do you enter the URLs and the
+00:11:54.200 content and then get the data it's good
+00:11:58.560 because you not only get some categories
+00:12:01.800 you have primary secondary tertiary um
+00:12:05.560 categories and even deeper levels for
+00:12:07.519 some of these but you also have a
+00:12:10.120 Precision score why is this good because
+00:12:12.800 you as the person completing this task
+00:12:15.839 can set a threshold to say everything
+00:12:18.440 below 70% is not a good classification
+00:12:21.760 that's not accurate enough and I'm not
+00:12:23.440 going to be using that so this is very
+00:12:26.320 good to actually justify why some of the
+00:12:29.240 these articles you might want to send
+00:12:30.760 for manual review to be reclassified or
+00:12:33.600 you might want to classify them yourself
+00:12:36.560 and Implement something like automl uh
+00:12:39.320 which is um fine-tuning algorithm like
+00:12:42.000 we mentioned at the start uh to actually
+00:12:44.199 improve the prediction accuracies for
+00:12:46.839 these articles there's a plug and play
+00:12:49.079 template in looker Studio on ML for SEO
+00:12:52.199 and you will be able to actually
+00:12:53.519 interactively see which of those
+00:12:55.680 categories when you click on them um
+00:12:58.240 what category they're made up made out
+00:13:00.760 of so here if you actually look at the
+00:13:02.959 primary categories you will see things
+00:13:04.639 like news or arts and entertainment or
+00:13:08.760 um there things like health and politics
+00:13:12.079 and things like that so what are those
+00:13:13.800 these are really good like primary
+00:13:15.519 categories and then uh which I mean
+00:13:18.320 categories on your site right and then
+00:13:20.360 you have secondary and tertiary that you
+00:13:22.160 can use for tagging systems if you don't
+00:13:24.120 really have a good tagging system in
+00:13:25.839 place so even if you just Implement that
+00:13:28.240 or tweak them a little little bit you
+00:13:29.920 will have improved your internal linking
+00:13:32.199 for the content on your website
+00:13:34.240 immediately right so again with the
+00:13:37.680 template you can do a little bit more so
+00:13:39.760 some of the people in the room are
+00:13:41.399 probably thinking I've seen some someone
+00:13:44.120 on LinkedIn do this for two minutes not
+00:13:46.519 10 or 20 why shouldn't I do this a chat
+00:13:49.839 GPT because it can also give me some
+00:13:52.079 classifications
+00:13:57.639 right basically
+00:13:59.639 well it's it's not trained for this task
+00:14:02.360 so tat DPT is a general purpose model
+00:14:04.720 it's trained on a lot of text um and it
+00:14:08.519 gives you unpredictable results so every
+00:14:11.199 time you run it it will give you
+00:14:13.079 different categories and it will not
+00:14:15.360 give you any Precision score you can ask
+00:14:17.880 of course you can ask it will give you
+00:14:20.240 some numbers but that's not really a
+00:14:22.600 Precision score is it so this is why if
+00:14:25.600 you need tasks with Precision which you
+00:14:28.240 do because you're professional technical
+00:14:30.519 SEO you lack numbers you do need to use
+00:14:33.839 a tailored specified model that has been
+00:14:36.519 trained for this task specifically and
+00:14:38.839 this is why in this particular instance
+00:14:41.079 Google Cloud's API wins let's talk about
+00:14:44.440 clustering very very similar in nature
+00:14:46.880 but here we don't have the labels we
+00:14:49.279 only have the content we want to see
+00:14:51.800 what are the similar topics that the
+00:14:54.279 content tackles so that we can actually
+00:14:56.839 group the content together this is very
+00:14:59.040 very good if you see on this list of
+00:15:01.959 1300 categories That You Don't See
+00:15:04.759 categories that match your um s content
+00:15:08.480 so it essentially gives you the main
+00:15:10.959 topics but most importantly it also
+00:15:13.560 gives you how these topics interconnect
+00:15:17.120 within separate pages what this means is
+00:15:20.240 every topic is tackled by different
+00:15:22.560 pages simultaneously because there are
+00:15:24.759 subtopics mentioned in the content
+00:15:27.480 because as we humans right we don't only
+00:15:30.000 write on one thing we mention different
+00:15:32.079 entities and different semantically
+00:15:33.920 related Concepts and so on so that's
+00:15:36.240 what this topic modeling algorithm
+00:15:38.319 actually does there is a video no coding
+00:15:42.279 needed just 20 minutes of your time or
+00:15:45.160 whatever just to implement LDA no code
+00:15:49.279 topical modeling on your website what it
+00:15:51.800 gives you is all of the different topics
+00:15:53.759 on your site how they connect to one
+00:15:56.160 another how how similar they are how
+00:15:58.519 close linked they are to one another but
+00:16:01.440 most importantly you Al it also gives
+00:16:03.920 you for individual Pages the different
+00:16:06.959 topics that are mentioned within those
+00:16:09.120 pages so if you're following my drift
+00:16:11.839 this is a very very good way to improve
+00:16:14.000 your internal linking systems on your
+00:16:16.120 site very easily but you can also use
+00:16:19.120 something that's a lot more complex in
+00:16:21.120 terms of the model because LDA is quite
+00:16:23.600 basic it came out like 20 years ago so
+00:16:26.319 bird topic is an alternative that is a
+00:16:29.040 more recent and it has been created by a
+00:16:31.399 marketer that actually turned an ml
+00:16:33.959 Engineers that could be you in like a
+00:16:35.639 couple of years or something I don't
+00:16:37.160 know so it gives you the opportunity to
+00:16:40.120 actually build your own custom model
+00:16:42.680 using different choices of um
+00:16:45.959 architecture um at each of the steps
+00:16:48.880 that need to be
+00:16:50.279 performed this works very well if you're
+00:16:53.319 a really big nerd and a techie you're
+00:16:56.000 doing topic modeling all the time for
+00:16:58.360 different companies Industries websites
+00:17:00.360 and so forth and you want to test out
+00:17:02.519 different configurations to see what
+00:17:04.640 works best and it follows the same
+00:17:07.480 principle it embeds the documents it
+00:17:09.799 semantically groups them together and it
+00:17:11.880 extracts the topic models so how you
+00:17:14.199 would structure that in a project we
+00:17:15.880 already talked about classification get
+00:17:18.199 those class classes these are your
+00:17:20.319 primary categories you also have a very
+00:17:23.439 overall naming or group for your content
+00:17:28.160 but you can also get topic models and
+00:17:30.559 subtopics and then you can also extract
+00:17:32.880 entities and Link articles together
+00:17:35.000 based on these three things so you can
+00:17:37.160 link pages that mention the same
+00:17:39.799 subtopic you can also link based on the
+00:17:43.000 same or semantically related entities
+00:17:45.720 and you can also uh improve your
+00:17:49.080 categorization and tagging system on
+00:17:50.960 your website this shouldn't take you
+00:17:52.880 more than an hour so quick quins here
+00:17:55.919 let's talk about keyword clustering so
+00:17:58.600 again again dimensionality reduction
+00:18:00.799 here we are essentially taking a keyword
+00:18:03.559 and we're only selecting one word or two
+00:18:05.760 words from it depending on your
+00:18:07.720 configuration to say these are the most
+00:18:10.159 important terms in this
+00:18:13.200 keyword this is not entity analysis but
+00:18:15.840 I don't need to explain that to you but
+00:18:17.640 still these are the most semantically
+00:18:19.679 important terms so how it works again
+00:18:23.559 tokenizes uh extract embeddings and then
+00:18:26.640 it gives you uh the most important word
+00:18:29.440 so in simple terms from every sentence
+00:18:32.679 from every keyword you have one word
+00:18:35.159 that is you know the most vital one
+00:18:37.440 that's how every keyword clustering tool
+00:18:40.080 um Works more or less there's a great
+00:18:43.159 video for beginners just to understand
+00:18:45.559 um how it works but essentially you can
+00:18:48.480 identify one word you can also choose to
+00:18:51.799 identify a Bagram which is a link of two
+00:18:55.159 words and they don't need to very
+00:18:57.919 crucially they don't need to be
+00:18:59.679 following one another in the keyword
+00:19:01.760 that you provide which is very
+00:19:04.080 important um because otherwise it won't
+00:19:06.280 be as accurate right and you can also
+00:19:09.080 give a full content piece to actually
+00:19:11.679 identify the main terms from the content
+00:19:14.760 that you have and actually see if you're
+00:19:16.440 over stuffing with the keywords that you
+00:19:18.440 have but you don't want to do this you
+00:19:20.080 just want to give it a Google sheet
+00:19:22.320 spreadsheet and you just wanted to give
+00:19:24.880 away the keyword categories and the
+00:19:27.480 Clusters and all of that stuff
+00:19:29.320 you can do that so Google collab is
+00:19:31.919 linked in the slides you'll get the
+00:19:33.360 slides later you give it the keywords it
+00:19:35.760 gives you a list of the primary term and
+00:19:38.679 it also gives you the Byram awesome
+00:19:42.159 right let's talk about entities I'm not
+00:19:44.919 going to tell you what the difference
+00:19:46.080 between keywords and entities is you can
+00:19:48.240 ask me later if you want but I'm sure
+00:19:49.880 you already know it but why it is
+00:19:52.280 important to actually not think just
+00:19:54.400 about topics but also think about the
+00:19:56.559 entities that make up the topic well
+00:19:59.320 because that's what all of the search
+00:20:00.760 engines are doing that's what people are
+00:20:02.960 doing whenever you are thinking about a
+00:20:04.720 certain topic you're also thinking about
+00:20:06.799 all of the things that need to happen
+00:20:09.400 related to that topic if you're
+00:20:10.840 traveling to a conference you're
+00:20:12.600 thinking about your travel how are you
+00:20:14.760 going to get there are you going to use
+00:20:16.559 an Uber which is a company and are you
+00:20:19.120 going to sit next to your friend some
+00:20:22.039 Tories that is a person you know all of
+00:20:25.000 these types of things that's how you're
+00:20:26.480 thinking about uh everything so again
+00:20:30.400 process to identify entities shouldn't
+00:20:32.200 take you more than 20 minutes you run a
+00:20:34.480 script same like before same API same
+00:20:37.600 API key you already have the key and you
+00:20:40.760 get the entity data in seconds what is
+00:20:43.320 awesome about this is you get not only
+00:20:45.720 the identified entity from the content
+00:20:49.320 but you also get what type of entity it
+00:20:51.240 is how prominent it is how important is
+00:20:54.559 it for the text that you have analyzed
+00:20:57.799 how many times it has been mentioned and
+00:21:00.000 also what are the different types of
+00:21:03.440 wordings that are being used whenever
+00:21:05.679 this entity is mentioned so for instance
+00:21:08.000 for an entity like um Barack Obama he
+00:21:11.039 could be mentioned like Barack Mr Obama
+00:21:14.559 former president of the United States
+00:21:17.039 best person in the world or whatever I'm
+00:21:18.919 sure some people uh regard him as such
+00:21:21.919 so essentially you do have all of this
+00:21:24.320 and you also have a link to like a
+00:21:26.360 Wikipedia page or something that
+00:21:29.039 uh could show you whether this is a very
+00:21:31.720 prominent entity just in your data set
+00:21:34.000 if it doesn't have a Wikipedia page or
+00:21:36.880 if it's a very prominent entity in the
+00:21:38.600 world overall if that makes sense what
+00:21:41.520 possible data points can you use this in
+00:21:43.640 SEO basically everything you can analyze
+00:21:46.559 your content analyze your competitor's
+00:21:48.720 content you can scrape YouTube videos
+00:21:50.799 and analyze the entities that are being
+00:21:53.080 discussed over there you can also do the
+00:21:55.559 same for Reddit any social mentions you
+00:21:58.240 can analyze your customer feedback that
+00:22:00.400 you're collecting and it's just sitting
+00:22:03.120 collecting dust for nobody to analyze uh
+00:22:07.000 and you can also do internal link text
+00:22:09.279 ters and all of these cool stuff does it
+00:22:11.880 matter how you do
+00:22:13.400 it yeah of course it does don't use chat
+00:22:16.960 GPT for this I promise I will get to a
+00:22:19.080 section with good use cases for chat GPT
+00:22:21.320 it's coming um but use a tailored model
+00:22:24.640 use a model that has been custom trained
+00:22:26.640 for this job again here why does an API
+00:22:29.600 like Google Cloud's API win or even the
+00:22:32.159 ones that Asia or AWS have because they
+00:22:36.200 are trained for this job they're they
+00:22:38.559 give you a ton of data that is precise
+00:22:41.120 they give you data that you can actually
+00:22:42.679 further analyze um and they don't
+00:22:44.919 hallucinate they don't give you entities
+00:22:46.760 that are not actually entities you know
+00:22:48.799 and these are the type of entities that
+00:22:50.240 they use in their Knowledge Graph as
+00:22:51.760 well so why wouldn't you use the models
+00:22:53.679 that they use doesn't make any sense
+00:22:57.120 cool so let's talk about fuzzy matching
+00:22:59.440 then that's similarity between two
+00:23:01.799 strings I have a 30 minute video on it
+00:23:04.120 so I'm not going to bore you with the
+00:23:05.320 details you can uh talk to Patrick
+00:23:08.840 wherever he is he was here a second ago
+00:23:11.120 but he no longer is um essentially how
+00:23:14.480 to use that for redirect mapping check
+00:23:16.760 the similarity between URLs he has a
+00:23:18.840 great script for that you can also use
+00:23:21.159 the same to actually analiz competitor
+00:23:23.960 titles and metad descriptions from Sur
+00:23:26.799 analysis but you can also use that to
+00:23:29.720 actually detect whether you should have
+00:23:32.480 a structured data type on your website
+00:23:35.760 this is a cool project a lot of the
+00:23:37.159 companies are not automating this but it
+00:23:39.120 is a cool project just to kind of test
+00:23:40.720 your skills so from a blog post for
+00:23:42.960 instance if you see question marks in
+00:23:46.039 your headings and headings that are
+00:23:48.480 titled the way that FAQs would be titled
+00:23:51.960 then you can run the sale paste the out
+00:23:54.720 the output the script is going to
+00:23:56.720 tokenize everything and it's going going
+00:23:58.640 to give you structured data in an FAQ
+00:24:02.279 format right easy for more complex
+00:24:05.120 websites you can use something like uto
+00:24:07.720 ml um and massive shout out to Hamlet
+00:24:12.240 Batista may he rest in peace CU he was
+00:24:14.440 one of the biggest inspiration in my
+00:24:17.320 career and this is an article from him
+00:24:19.640 for like five years ago or four years
+00:24:22.039 ago so he was like way ahead of everyone
+00:24:24.919 so yeah massive shout out okay content
+00:24:29.240 moderation same API by the way we're
+00:24:32.399 still working with the same API that's
+00:24:34.600 the third mention but there's two more
+00:24:36.559 use cases which I'm not going to mention
+00:24:38.200 in this
+00:24:39.120 presentation what the content moderation
+00:24:41.919 model does is it automatically analyzes
+00:24:46.200 text for inappropriate or undesirable
+00:24:49.399 content it wants to show you how to
+00:24:53.039 maintain a clean and professional data
+00:24:55.760 set without manually reviewing each end
+00:24:58.919 and when I read that I was like hm
+00:25:02.039 that's cool is that not like detecting
+00:25:05.200 whether the content is your M or your
+00:25:06.880 life CU that sounds awfully similar to
+00:25:09.480 what Lily Ray has described that it
+00:25:12.760 means right topics that affect your
+00:25:15.200 happiness health Financial stability or
+00:25:17.440 safety so if you look at the categories
+00:25:19.880 that this API that is owned by
+00:25:23.000 Google does it's actually those four
+00:25:26.520 categories right you have things like is
+00:25:29.320 it a health related topic is it religion
+00:25:32.600 does it um talk about guns or like
+00:25:35.399 Public Safety and things like that so
+00:25:38.960 you if you have um again scraped content
+00:25:42.640 run it through the API it actually
+00:25:45.840 analyzes whether your content falls into
+00:25:48.480 any of these categories so if you see
+00:25:50.760 red here well you're actually talking
+00:25:53.600 about something that's your money or
+00:25:55.080 your life and should you be I don't know
+00:25:57.600 it depends on your website but if you
+00:25:59.559 see your rankings tanking and you have
+00:26:02.640 no explanation give it a go maybe you'll
+00:26:05.440 find some little Snippets that your
+00:26:07.880 content writers are putting in their
+00:26:09.520 personal opinions on your company blog
+00:26:11.880 and you're actually going to see that
+00:26:14.000 you know they shouldn't be you know uh
+00:26:16.799 so I scraped Reddit actually to show you
+00:26:18.679 how it works and of course there's a SEO
+00:26:21.520 Reddit sorry which is even better so
+00:26:24.320 there's a ton of different opinions
+00:26:26.039 there there's some post that are fine
+00:26:28.000 some post are not fine so basically
+00:26:31.039 that's how it works yeah not going to
+00:26:33.600 spend too much time on this and the
+00:26:35.360 possible data points here are your
+00:26:37.159 content your competitor's content
+00:26:39.279 YouTube video transcripts again uh
+00:26:41.840 social media mentions comments on your
+00:26:44.080 website um Community post that you are
+00:26:46.679 managing like forums and things like
+00:26:48.440 that just to make sure that everything
+00:26:49.720 is running
+00:26:50.799 correctly okay exciting stuff we don't
+00:26:54.360 want to be working on blogs anymore I
+00:26:56.440 see a ton of Consultants
+00:26:59.120 transitioning slowly from SEO to
+00:27:01.159 marketing and talking more about the
+00:27:03.520 YouTube landscape Tik Tok and all of the
+00:27:05.720 other stuff so if you have a Tik Tok um
+00:27:09.760 you know presence but you don't have a
+00:27:11.399 Blog you can transcribe it there's a ton
+00:27:13.880 of tools that you can use again the
+00:27:16.120 bigger tools work better but there are
+00:27:18.919 still no code approaches that you can
+00:27:20.720 incorporate in your day-to-day but the
+00:27:22.919 bigger tools are still better with the
+00:27:25.919 exception again of open apis with
+00:27:28.799 which only works if your video is under
+00:27:30.880 5 minutes long uh and if it is not in a
+00:27:34.200 small language so if it is in English it
+00:27:36.080 will work caveat I'm not saying spam
+00:27:40.000 your blog with auto transcribed content
+00:27:44.279 and I'm not saying scrape your
+00:27:46.000 competitor YouTube videos transcribe and
+00:27:48.840 get traffic to the Moon bro I'm not
+00:27:51.120 saying that what I am saying is that you
+00:27:54.000 can Bridge the gaps between different
+00:27:55.919 teams if you're working in an Enterprise
+00:27:57.600 organization and if they are creating
+00:27:59.880 really good webinar style interviews
+00:28:03.279 content you can actually turn that into
+00:28:05.919 videos for instance our lectures right
+00:28:07.960 now are recorded the conference
+00:28:09.880 organizers can come to the lectures and
+00:28:12.399 they can ask us would you like us to
+00:28:14.240 create a blog post they can transcribe
+00:28:16.080 that easy peasy traffic to the website
+00:28:18.559 right that's what I am saying make your
+00:28:20.880 content work harder distribute better
+00:28:23.840 and use transcription for competitor
+00:28:26.559 analysis as well if you are trying to
+00:28:28.440 enter um YouTube as a niche mix and
+00:28:31.399 match with different approaches so for
+00:28:33.360 instance you can scrip audio transcribe
+00:28:36.360 you can classify the content categorize
+00:28:39.320 create subtopics extract entities and
+00:28:41.840 all of these cool stuff again like we
+00:28:44.000 discussed incorporate that into your
+00:28:46.000 strategy and boom you're not only
+00:28:48.080 thinking about blog content you're
+00:28:49.559 thinking about the YouTube landscape as
+00:28:51.440 well you can do the same in the other
+00:28:53.480 formats so text audio this is even more
+00:28:57.360 complex in terms of understanding how
+00:29:00.120 not to spam the web with trash um but
+00:29:04.320 still programmatic approaches they exist
+00:29:07.039 Google Cloud works really good I'm not
+00:29:10.640 saying fill YouTube with trash please
+00:29:13.840 don't we already have enough of it but
+00:29:16.840 what I am saying is certain content
+00:29:18.760 formats don't really require a rich
+00:29:21.519 video format to accompany them and
+00:29:24.880 that's tutorials that's documentation
+00:29:27.760 that's interview styles that only exist
+00:29:30.559 in uh blog format and uh you can also
+00:29:34.559 add automation like person to camera
+00:29:37.039 videos without actually having to record
+00:29:41.080 fullblown like hundreds of thousands of
+00:29:43.600 tutorials by creating digital avatars
+00:29:46.399 that work quite well for Content that
+00:29:48.559 doesn't really need to be as personal
+00:29:51.279 you so text to text transformation okay
+00:29:53.679 I told you we're going to talk about
+00:29:55.279 open Ai and good use cases so here any
+00:29:58.919 kind of llm can work for transcribe
+00:30:02.200 sorry for transforming your blog content
+00:30:04.120 to social media posts so that works
+00:30:07.080 quite well there's uh awesome gpts from
+00:30:09.799 Caitlyn Hathaway any llm is going to do
+00:30:12.440 a good job here if you want to transform
+00:30:15.360 your blog post to newsletter editions to
+00:30:17.720 social media posts transform PDFs into
+00:30:20.840 actionable guides and so forth amazing
+00:30:23.679 stuff and while we're on the topic of
+00:30:25.600 llms doing a good job if you have
+00:30:28.039 structur data so for instance if you
+00:30:31.200 have like um database of statistics for
+00:30:35.399 MBA players like what Ellas did you can
+00:30:38.360 create a prompt for an llm and actually
+00:30:41.640 create content based on the structured
+00:30:43.960 data but you can also do the same for uh
+00:30:47.600 user reviews to build a summary of what
+00:30:50.320 people think overall for your product
+00:30:52.559 you can also do the same for product
+00:30:54.880 databases to build individual product
+00:30:57.159 descriptions if if you combine
+00:30:58.480 structured data you reduce the
+00:31:00.519 opportunity for the llm to hallucinate
+00:31:03.080 and you're actually working with data
+00:31:04.600 that is real life right another good use
+00:31:07.760 case is to write titles using fuzzy
+00:31:11.159 matching as well you take your queries
+00:31:13.639 from search console you scrape uh the
+00:31:16.840 titles and the headings and all of the
+00:31:19.320 other stuff you essentially combine uh
+00:31:22.240 the queries with the titles and you
+00:31:24.960 generate new titles using open AI that
+00:31:28.000 contain partially some of these queries
+00:31:30.360 to make them more user
+00:31:32.480 friendly okay we're done a ton a ton a
+00:31:35.960 ton of ideas hopefully you implement at
+00:31:38.039 least some of them but what you really
+00:31:39.880 need to grow in this field in my opinion
+00:31:42.200 because this is a very introductory
+00:31:44.399 level talk um you need the right mindset
+00:31:48.120 you need a community of people that are
+00:31:50.200 learning and failing and achieving
+00:31:52.279 things right alongside you and you also
+00:31:55.760 need resources that are beginner
+00:31:57.440 friendly intermediate Advanced so that's
+00:31:59.919 what I'm trying to build at ml for SEO
+00:32:02.399 we have a ton of free resources we have
+00:32:04.480 a newsletter we have a slack Community
+00:32:07.000 with over 400 people in it which I'm
+00:32:09.519 still surprised by um but so many people
+00:32:13.080 learning machine learning for SEO we
+00:32:15.480 also have free templates everything that
+00:32:17.440 has been talked about in this
+00:32:18.639 presentation is there
+00:32:20.519 there there already and also blog posts
+00:32:24.559 and all of the other cool stuff there
+00:32:26.440 will also be an academy that will launch
+00:32:28.320 later this year uh and you can always
+00:32:32.279 always contact me and you know talk to
+00:32:35.120 me about the projects that you're
+00:32:36.320 working on I would love to help you out
+00:32:38.840 and see what people are doing with this
+00:32:41.120 technology if it's not chip so thank you
+00:32:44.600 so much for listening

@@ -1,0 +1,604 @@
+# tactiq.io free youtube transcript
+# Getting Technical SEO Work Done at Fortune 100 Companies - Kevin Indig
+# https://www.youtube.com/watch/r7zMuSSNqEE
+
+00:00:11.050 [Applause]
+00:00:15.480 all
+00:00:16.279 right it's awesome great to see you all
+00:00:19.880 um for me this is a little bit personal
+00:00:22.359 because in
+00:00:23.640 2018 uh I spoke at a conference called
+00:00:26.720 Tech SEO boost uh put up by Paul ch and
+00:00:30.199 the team uh and that said a lot of
+00:00:32.200 things in motion for me for my career
+00:00:34.079 and personally uh and I'll never forget
+00:00:36.840 how um Russ Jones uh rest in peace uh he
+00:00:42.239 he he has a very very provocative
+00:00:44.600 respectful and nice question at the end
+00:00:46.280 of my talk and it just set in motion so
+00:00:47.879 many new thoughts and Concepts and so
+00:00:50.640 there's a lot to learn here uh and again
+00:00:53.320 I I look back six years ago uh and now
+00:00:56.199 I'm here so this is somewhat personal
+00:00:57.960 for me um that being said welcome to the
+00:01:00.640 SEO ship show not to be confused with
+00:01:02.519 the SEO show that's going on lots
+00:01:04.199 of places but the SEO ship show as in
+00:01:06.560 getting things
+00:01:08.000 shipped and I want to start with a very
+00:01:11.960 quick
+00:01:13.759 meditation I want you all to close your
+00:01:15.720 eyes also the people streaming from
+00:01:19.840 YouTube and I want you to imagine the
+00:01:22.520 company that you work for or your
+00:01:25.600 client I want you to imagine that you
+00:01:27.920 get all of your recommendations sh
+00:01:29.920 shipped so everything you suggest
+00:01:31.640 everything recommend actually gets done
+00:01:35.439 and you learn from that and you beat
+00:01:37.280 your competitors and you come up with
+00:01:39.520 even better
+00:01:41.000 recommendations you're having
+00:01:43.159 impact and eventually you're getting
+00:01:46.600 promoted now I want you to close your
+00:01:48.600 eyes because that's usually not reality
+00:01:50.799 that's not what actually happens most of
+00:01:53.280 our stuff does not get
+00:01:55.600 shipped actually by show of hands raise
+00:01:57.759 your hands if more than half of your
+00:02:01.759 recommendations get out the
+00:02:04.640 door all right I I'll I'll just say
+00:02:07.039 that's 5 to 10% lucky you uh I asked the
+00:02:11.000 same thing to my uh Twitter followers
+00:02:13.400 and here um the picture is somewhat
+00:02:16.400 similar so actually less than 50% of
+00:02:20.400 recommendations get shipped half of the
+00:02:22.599 time so what that means is for 50% of
+00:02:24.519 people they only they ship 50% of less
+00:02:27.160 or less of what they actually recommend
+00:02:29.040 that's a lot of wasted work uh and
+00:02:31.680 that's a bit that's a big problem
+00:02:33.879 because if you think about it the best
+00:02:36.280 technical SEO trick or hack does not
+00:02:39.200 matter if it doesn't get implemented
+00:02:40.959 it's just vanity right so no shipping
+00:02:44.560 means no impact no impact means no
+00:02:47.319 purpose no purpose means no
+00:02:49.640 job it sounds very harsh but it's true
+00:02:52.800 at the end of the day we need to get
+00:02:54.440 things out of the door and that's my
+00:02:56.159 goal with this presentation is to help
+00:02:58.360 you ship recommendations instead of
+00:03:00.360 seeing them die in the
+00:03:05.799 backlog there's also number one question
+00:03:07.840 that I get from um the people that I
+00:03:09.920 engage with whether it's at conferences
+00:03:11.959 or uh newsletter subscribers um they all
+00:03:14.799 want to understand okay how do I get
+00:03:16.200 executive Buy in to get my stuff out of
+00:03:19.040 the door um Mike mentioned I had the
+00:03:21.879 privilege to to work for some incredible
+00:03:24.319 companies um and I'm not saying that
+00:03:26.080 toag maybe a little bit toag because I
+00:03:28.640 crave your approval um but the point is
+00:03:31.920 I'm not the most technical person here
+00:03:33.680 in the room by far there's a lot that
+00:03:35.599 I'm jealous of when it comes to Mike for
+00:03:37.439 example um I'm not the the best data
+00:03:40.280 person here in the room but one thing
+00:03:42.319 that had allowed me to progress in my
+00:03:44.879 career is that I get done I get
+00:03:47.120  out of the door and it's a skill
+00:03:49.480 set that I think is absolutely crucial
+00:03:51.480 and complimentary to your technical
+00:03:55.840 skills and so that's why today I want to
+00:03:57.799 share three contrasts with you
+00:04:00.239 that I have so to say learned over the
+00:04:03.280 last 12 13 14 years and the first one is
+00:04:06.720 the contrast between St Story versus
+00:04:09.040 database pitching it is um goal versus
+00:04:13.040 work and it is shallo versus deep
+00:04:16.680 recommendations so to jump in um story
+00:04:19.560 based pitching so everybody wants to be
+00:04:23.360 data driven we all like to say that
+00:04:25.560 we're data driven about
+00:04:27.320 ourselves however that's not always how
+00:04:29.840 goes it reminds me um on my time at
+00:04:32.080 Shopify so when I when I joined Shopify
+00:04:34.039 in
+00:04:34.680 2020 um and we had a world class team we
+00:04:38.440 had world class tooling and for me it
+00:04:40.560 was kind of a a dream come true because
+00:04:43.000 For the First time ever did I work with
+00:04:45.039 SC data scientists and engineers and and
+00:04:47.440 and lots of smart people and we're able
+00:04:49.600 to project the impact of our
+00:04:51.919 recommendations maybe down to the single
+00:04:54.080 digit I was like wow it's amazing we can
+00:04:56.320 we can like really wow everyone with
+00:04:59.440 this with this refined kind of system
+00:05:01.880 that helps us understand the impact of
+00:05:03.919 our
+00:05:04.919 recommendations and what actually
+00:05:06.479 happened was not just crickets when I
+00:05:08.800 presented that to leadership but I
+00:05:10.360 actually got a lot of push back we got
+00:05:12.160 stuck in these conversations about the
+00:05:14.240 math and the methodology and how did we
+00:05:16.199 actually get to this number and why is
+00:05:17.680 it so precise and once we took a step
+00:05:20.960 back and actually like actually not
+00:05:23.800 rounded to the single digit but kept the
+00:05:26.000 projections a bit more high level but
+00:05:27.600 tied them to the mission and to the
+00:05:29.880 situation of the company all of a sudden
+00:05:32.520 things started flowing and things
+00:05:33.919 started moving so you can be too
+00:05:36.240 specific when it comes to data and the
+00:05:38.560 reality is that that's not always what
+00:05:40.160 works because the common assumption here
+00:05:42.160 is that Executives you know you can just
+00:05:44.560 they just need to see the right data or
+00:05:46.400 the right math formula and then they'll
+00:05:48.000 say yes to whatever you suggest the
+00:05:50.560 reality though is that we're much more
+00:05:52.800 driven by emotions and stories than we
+00:05:55.520 like to
+00:05:56.639 acknowledge as a matter of fact 95% % of
+00:06:00.639 all cognition occurs in the subconscious
+00:06:03.800 mind and what that means is that we make
+00:06:06.319 most decisions based on feelings whether
+00:06:09.160 we like to admit it or not so the White
+00:06:11.440 story is important um at the same time
+00:06:14.000 there's some data suggesting that almost
+00:06:16.120 half of Executives um rely much more on
+00:06:19.240 Instinct than facts and figures when
+00:06:21.479 running their business right which means
+00:06:23.360 that people are biased and if if their
+00:06:26.440 bias doesn't match the data you present
+00:06:28.479 it's really hard to convince
+00:06:30.520 people Okay Kevin so how do you get this
+00:06:33.199 right I want to give you three tips for
+00:06:35.479 getting bu in that is more story based
+00:06:37.800 and the first one is to actually tie
+00:06:40.000 your recommendation to the company
+00:06:42.000 situation a lot of people miss this
+00:06:43.759 right A lot of people will go out and
+00:06:45.280 they run they start screaming frog or
+00:06:47.199 some sort of crawler jet octopus they
+00:06:49.400 look at the data right they see some
+00:06:50.840 things that don't look right and they
+00:06:51.919 present it upwards but they completely
+00:06:53.680 miss the overall
+00:06:55.919 context and so the context can be for
+00:06:58.039 example an acceleration so are going
+00:07:00.160 really well um and and you just need to
+00:07:03.560 accelerate that Trend and of course
+00:07:05.879 there's the other reverse situation as
+00:07:07.800 well where oh this looks great uh this
+00:07:10.199 is basically time on the uh x-axis um
+00:07:13.759 but there's the other situation as well
+00:07:15.039 where you we need to turn things around
+00:07:17.360 right and that means you need a very
+00:07:19.479 different mindset with your
+00:07:21.120 recommendations and so there is a
+00:07:22.840 framework called Stars it's an
+00:07:25.520 acronym that describes the five
+00:07:27.759 different situations that we can find
+00:07:29.680 ourselves in um and that we can use to
+00:07:32.960 to make suggestions recommendations
+00:07:34.520 accordingly by the way I'll share the
+00:07:35.840 slides feel free take pictures just want
+00:07:38.639 to let you know if you cannot see this
+00:07:39.960 well uh you'll get the slides you get
+00:07:41.720 the recordings
+00:07:42.840 Etc um so five situations uh one is
+00:07:45.800 startup right so you get something new
+00:07:47.400 off the ground then there's the
+00:07:49.159 turnaround where you need to maybe save
+00:07:51.560 the business um there's accelerating
+00:07:54.240 growth which I showed earlier right
+00:07:55.599 things are going really well you just
+00:07:56.879 need to keep that that momentum going
+00:07:59.919 there's a situation of realignment where
+00:08:02.479 um you know things had been going but
+00:08:04.159 maybe are falling off you need to
+00:08:05.400 re-energize the team uh and then they're
+00:08:07.960 sustaining success where essentially
+00:08:09.639 don't f it up that's kind of the the
+00:08:11.440 situation that you're in but just
+00:08:13.240 knowing that allows you to speak to
+00:08:15.199 leadership in a very very different
+00:08:17.199 context and maybe prioritize different
+00:08:19.879 recommendations right if you're in a uh
+00:08:22.639 sustained success situation for example
+00:08:24.599 maybe you want to try some more daring
+00:08:26.520 things some more long-term projects
+00:08:28.400 whereas if you're in a Turner situation
+00:08:30.159 you tell leadership that this might not
+00:08:31.720 see uh Roi within you know before a year
+00:08:35.519 that's not going to land very
+00:08:37.399 well number two there are three things
+00:08:39.880 that leaders really care about and that
+00:08:41.519 is money market and exposure so
+00:08:44.440 essentially things like Revenue profit
+00:08:47.440 uh market share and risk and so any
+00:08:51.480 recommendation that you give needs to
+00:08:53.000 letter up to one of these three things
+00:08:55.920 that people care about but it's not just
+00:08:58.480 about the the gains here it's also about
+00:09:01.200 the stakes so a big mistake that I see
+00:09:04.000 that I made early on in my career was
+00:09:06.279 that it didn't focus on what's at risk
+00:09:08.800 here if we don't do these things I only
+00:09:10.720 focused on hey what can we get when we
+00:09:12.519 do these things but reality is that
+00:09:15.079 people care much more about minimizing
+00:09:17.440 risk than maximizing
+00:09:19.720 upside and so the the winning formula
+00:09:21.880 here is not just your point of view or
+00:09:23.720 the recommendation but also combining
+00:09:25.360 that with whatever is at risk if that
+00:09:27.920 doesn't happen
+00:09:30.600 number three um you want to make it
+00:09:32.760 personal so at Shopify I learned this
+00:09:35.200 this what was new to me at the time
+00:09:37.079 thing called back channeling where
+00:09:38.720 essentially you you have before you give
+00:09:40.680 a big presentation you actually meet
+00:09:42.920 with the leaders the decision makers
+00:09:45.120 one-onone and maybe you share some of
+00:09:47.320 the things you already want to present
+00:09:48.839 you get some of their feedback so
+00:09:50.640 they're not seeing it for the first time
+00:09:52.160 when it's in front of a big group and
+00:09:53.959 you can learn about some of their
+00:09:55.560 hesitations maybe some of their counter
+00:09:57.800 or pro- arguments you can maybe even
+00:10:00.200 persuade them you can learn about their
+00:10:01.640 optim their individual goals so what are
+00:10:03.640 they optimizing for what is their
+00:10:06.079 perspective right especially fruitful
+00:10:08.320 when it comes to engineering teams or
+00:10:09.920 design teams with you might which you
+00:10:12.040 might need to implement stuff and number
+00:10:14.200 three is the wording so this is very
+00:10:16.200 subtle but if you actually use the
+00:10:18.640 wording that from from from leaders or
+00:10:21.000 from decision makers that can really
+00:10:24.120 help you make them feel like they
+00:10:26.360 contributed so I I met with people as I
+00:10:30.040 I listen to how they call certain things
+00:10:32.440 and then I use that exact wording in my
+00:10:34.279 presentations so they saw themselves in
+00:10:36.720 that presentation and in that plan okay
+00:10:39.560 that's number one number two starting
+00:10:41.399 with the goal way too often we get very
+00:10:43.279 wrapped up and very excited about
+00:10:44.760 technical details uh and leaders are
+00:10:48.079 usually very overwhelmed by this so I
+00:10:50.279 was like that actually early on in my
+00:10:51.760 career uh I I I was proud of the length
+00:10:54.920 of my uh audits I turned around every
+00:10:58.040 diff tag I got super deep Long catalog
+00:11:00.800 of things that companies could do and
+00:11:02.600 that served me really well when I was a
+00:11:04.200 consultant on the agency side and then I
+00:11:06.800 went in house and I realized uh okay
+00:11:09.000 none of my stuff gets really executed
+00:11:10.959 right you get like a lot of Applause
+00:11:12.720 when you present these long cataloges
+00:11:14.279 but then nobody cares afterwards and
+00:11:16.320 only when I started to to call out what
+00:11:18.519 are the three things that we need to get
+00:11:20.200 done right now toning it down to just
+00:11:22.120 three things I actually saw some
+00:11:24.839 momentum and
+00:11:27.040 traction so the common assumption here
+00:11:28.920 is that Executives and decision makers
+00:11:30.440 they want to scrutinize everything they
+00:11:31.800 want to see all the details of your plan
+00:11:34.399 and the reality is that mostly
+00:11:36.880 leaderships care about the goal are we
+00:11:38.959 going to hit our goals and how are we
+00:11:40.800 going to get
+00:11:42.600 there and that's also supported by the
+00:11:44.760 data so 85% of leaders suffer from
+00:11:48.760 decision fatigue 85% so pretty much
+00:11:51.760 everyone and 72 admit that the sheer
+00:11:55.360 volume of data and lack of trust in data
+00:11:59.240 makes them so overwhelmed that they
+00:12:00.399 rather not make a decision at
+00:12:02.560 all so by actually having these bloated
+00:12:05.240 audits you increase your chance that
+00:12:07.600 nothing gets done or leaders are so
+00:12:09.600 overwhelmed that they don't know where
+00:12:10.639 to
+00:12:12.079 start so how do you start with the goal
+00:12:15.279 one of my favorite practices is from uh
+00:12:17.639 Amazon where they where they start by
+00:12:19.720 working backwards it's also a great book
+00:12:21.480 that I can strongly recommend um and a
+00:12:24.000 way to work backwards is to start with a
+00:12:26.199 press release so you don't need to
+00:12:28.120 actually write a full press release for
+00:12:29.720 yourself but whenever you have a catalog
+00:12:31.560 of recommendations you want to ask
+00:12:33.560 yourself okay first of all you want to
+00:12:35.320 grab attention right starting a
+00:12:37.360 presentation to leadership with a strong
+00:12:38.720 punch line always works really well you
+00:12:40.839 need to back it up with with data too
+00:12:42.560 right but grab the attention leaders are
+00:12:44.279 chronically overwhelmed and underst
+00:12:45.639 starved on attention um you want to
+00:12:48.760 clearly defin the problems that you
+00:12:50.920 solve for the customers of the business
+00:12:53.720 right that's a completely different
+00:12:55.160 approach than starting with technical
+00:12:57.639 errors in report right so start with the
+00:12:59.920 customers start with the Northstar of
+00:13:01.800 the business you want to describe the
+00:13:03.639 benefits of what you're trying to do to
+00:13:05.560 the customers and then at the end you
+00:13:08.199 want to get into some of the more
+00:13:09.600 technical weeds and some of the
+00:13:12.160 questions you also want to speak to how
+00:13:14.480 Executives think um I had the privilege
+00:13:17.480 of of having VP and director positions
+00:13:20.000 before and um I I can I can confirm that
+00:13:24.120 you don't have enough brain capacity and
+00:13:26.360 time to think through everything right
+00:13:28.240 so the the common Logic the common
+00:13:30.880 structure as an executive is to start
+00:13:32.959 with okay is this going to help with our
+00:13:34.399 goal or what is the goal of this
+00:13:36.519 recommendation what is the effort needed
+00:13:38.760 for us to get there what are the timings
+00:13:41.440 so can we get this done in a week in a
+00:13:43.000 day or in a year and then who is
+00:13:45.360 responsible for that and by structuring
+00:13:48.480 your presentations whether it's a slide
+00:13:51.240 deck whether it's written or ver whether
+00:13:53.199 it's on the on the verbal Track by
+00:13:55.560 structuring them in that logic you help
+00:13:58.560 executive think along what you're
+00:14:00.199 actually trying to get
+00:14:02.399 to and then the last one is um to to
+00:14:05.680 ditch the details right as I mentioned
+00:14:07.199 earlier people are chronically
+00:14:08.839 overwhelmed by too many details and you
+00:14:11.000 actually want to avoid some common red
+00:14:13.040 flags in communication I see this all
+00:14:14.759 the time uh I'm sitting in a lot of
+00:14:16.800 leadership meetings these days and I see
+00:14:18.800 more Junior people present the
+00:14:19.959 leadership and they make these mistakes
+00:14:21.560 a lot of time so they they first of all
+00:14:23.279 they they mention too many details that
+00:14:25.000 don't matter at all right it's a lot of
+00:14:26.759 fluff um they make big claims that are
+00:14:30.600 very hard to support and the problem is
+00:14:34.480 when somebody digs in and realizes that
+00:14:36.959 the claim that that there's nothing that
+00:14:38.680 these claims stand on that cost you a
+00:14:40.680 lot of trust that can be that can be
+00:14:42.680 devastating for your career same for
+00:14:44.920 clients by the way uh and then they they
+00:14:47.680 doubt their themselves too much right
+00:14:49.600 they they make recommendations or claims
+00:14:51.360 that they don't present confidently that
+00:14:53.800 also erods trust with leadership and on
+00:14:56.519 the other hand as I mentioned earlier
+00:14:58.639 you can can strengthen your pitches by
+00:15:01.320 focusing on Revenue market share and
+00:15:03.320 exposure um you can you can focus on the
+00:15:06.320 wins here and you can be very clear
+00:15:08.360 about the problems and solutions right
+00:15:10.399 at the end of the day the best pitch or
+00:15:12.040 the best communication with leadership
+00:15:14.120 is when at the end of the pitch
+00:15:16.360 leadership just has to say yes or no
+00:15:18.320 right if you say hey this is the problem
+00:15:20.199 here are the three options that we're
+00:15:21.399 facing this is why where we're picking
+00:15:23.279 this option do you agree yes or no
+00:15:25.440 that's usually the best way to go about
+00:15:27.959 it that brings me to number three most
+00:15:30.519 of our recommendations are way too
+00:15:32.720 shallow so had this moment recently um
+00:15:36.199 at a at a big client uh you're you're
+00:15:38.440 all using their products you all know
+00:15:39.839 the company um and there was an issue
+00:15:42.959 where search console reported over
+00:15:45.959 50,000 Pages where Google chose a
+00:15:48.920 different canonical than the user or
+00:15:51.839 than than the site
+00:15:53.680 indicated and an agency that this
+00:15:56.279 company works with um this was their I
+00:15:59.440 have to read this off this was their uh
+00:16:01.079 the recommendation fix incorrect usage
+00:16:03.800 of directives and create a plan to
+00:16:05.920 improve International indexation so if
+00:16:08.399 you get that as an engineering team you
+00:16:10.440 don't know what to do with that right
+00:16:12.160 like that means you now need to go and
+00:16:14.240 do Discovery yourself which means
+00:16:16.800 understanding what the problem is why
+00:16:18.240 it's a problem how to potentially fix it
+00:16:20.880 make sure you have the right fix how to
+00:16:22.440 qway it like you just waste so much time
+00:16:25.240 you're going to reject this as a good
+00:16:26.480 engineering team you're going to say
+00:16:27.800 this is we have no no idea what to do
+00:16:29.680 here uh and and we don't even know what
+00:16:31.759 what we're uh how to how to solve this
+00:16:34.079 and so the problem was caused by English
+00:16:37.360 content in international markets right
+00:16:39.360 so you go to to the blog of this company
+00:16:40.880 or to the landing pages and some of that
+00:16:42.720 content was simply in English so Google
+00:16:44.319 mistrusted the self- referencing
+00:16:45.839 canonical and just said no the canonical
+00:16:47.759 should go to the US
+00:16:49.680 site that is that is kind of the
+00:16:51.959 underlying issue here and so by going to
+00:16:54.279 the team and saying look we got to fix
+00:16:56.160 the way that we display localized
+00:16:58.000 content in international markets you
+00:16:59.959 actually help them uncover what to do
+00:17:01.880 and this is an example of shallow versus
+00:17:03.560 deep recommendations so again the the
+00:17:06.599 the common misconception here is that
+00:17:08.240 teams that we work with engineering
+00:17:10.480 design content data whatever they just
+00:17:13.039 know what we want they'll figure out
+00:17:15.199 what we want if we show them the problem
+00:17:17.400 but the reality is that if we miss
+00:17:19.640 Clarity we increase the chance
+00:17:21.679 significantly that our work will not get
+00:17:24.559 done so 85 86% of Executives actually
+00:17:28.000 identify poor communication is one of
+00:17:30.880 the biggest reasons for why projects
+00:17:33.320 fail that's a lot and I think it's a
+00:17:36.080 good push that we can all be a bit
+00:17:38.520 clearer in the recommendations and the
+00:17:40.640 asks of the teams that we work with
+00:17:42.559 because at the end of the day SEO is a
+00:17:45.080 recommendation discipline right most of
+00:17:46.799 the stuff that we do is give
+00:17:48.240 recommendations to other teams now that
+00:17:50.400 might change with AI but that's a
+00:17:51.840 different topic so how do you do things
+00:17:54.400 clear or make things clear well first of
+00:17:56.919 all um it's about the root causes of
+00:17:59.039 things right we often get stuck at the
+00:18:00.799 second layer which is the symptom right
+00:18:03.200 what do we see as an error report
+00:18:04.960 somewhere what do our tools tell us or
+00:18:07.880 what looks wrong when we look at it that
+00:18:10.679 often reflects in an outcome but the
+00:18:13.159 root cause is was really really
+00:18:15.039 important here so um you might not see
+00:18:17.880 this well on the slides but an outcome
+00:18:19.799 could be that our ranks or organic
+00:18:21.799 traffic dropped okay that's a problem um
+00:18:24.640 the symptom could be that there are four
+00:18:26.640 or four errors from the pages that lost
+00:18:28.600 r but that's not the root cause the root
+00:18:31.080 cause is why are these four fours
+00:18:33.120 occurring and it could be something like
+00:18:34.720 a database crash or some problem with
+00:18:37.080 the CMS or some misconfiguration or
+00:18:39.120 something else but that's the layer that
+00:18:41.320 we actually need to focus on when we
+00:18:43.480 package the work for our
+00:18:47.039 partners talking about packaging so
+00:18:49.080 there's a couple things you can do right
+00:18:50.240 and wrong when it comes to packaging um
+00:18:53.039 a lot of times again I see audits where
+00:18:54.840 the problem is being described but
+00:18:57.120 there's not enough context for why this
+00:18:59.440 actually is a problem um again a lot of
+00:19:02.840 seos assume that teams know what they
+00:19:04.760 want but in many cases there are
+00:19:06.960 multiple ways to solve a problem that
+00:19:08.840 SEO describ so you want to you want to
+00:19:10.640 be specific about the task you want to
+00:19:12.840 split it ideally into subtasks most
+00:19:15.840 problems are um or for most problems you
+00:19:19.280 need to actually fix several things than
+00:19:20.640 just one uh you don't want to be vague
+00:19:22.760 you want to be as specific as you can
+00:19:24.799 and don't make the mistake of just I've
+00:19:26.320 see this all the time don't just send
+00:19:27.960 spreadsheets to engineering teams and be
+00:19:29.559 like hey here's a list of all the four
+00:19:30.880 fours like that's that's lazy that's not
+00:19:34.080 good um you also want to describe the
+00:19:37.080 ideal outcome and this is also something
+00:19:38.919 that I learned painfully in my career
+00:19:41.159 but when you talk to these teams when
+00:19:42.559 you talk to leaders um and they ask you
+00:19:45.200 why is this a problem like what's we
+00:19:47.559 often get stuck in these oh well Google
+00:19:49.400 said but uh here here's what we what we
+00:19:51.919 listen to Google but generally you
+00:19:53.039 should not listen to Google and you get
+00:19:54.840 like stuck in these these weird Loops
+00:19:57.120 where you counter argue yourself and so
+00:19:59.440 three questions that I constantly keep
+00:20:01.240 top of mind when I give recommendations
+00:20:03.799 is what is the number that I'm trying to
+00:20:06.120 move and it's not always organic traffic
+00:20:08.240 or ranks right what are the what is the
+00:20:10.280 way to measure whether we're successful
+00:20:13.760 where should that number ideally be
+00:20:15.440 what's the ideal value for that number
+00:20:17.760 and why should it be there and that's a
+00:20:19.760 hard question to answer in lots of cases
+00:20:21.559 but if you get that logic sound again
+00:20:24.520 people will Implement more of this stuff
+00:20:26.320 that you suggest so this could be the
+00:20:28.360 number that you're trying to move could
+00:20:29.880 be four or four errors in search console
+00:20:32.840 right now where should that number be
+00:20:35.080 should it be zero is zero realistic
+00:20:37.559 probably not because stuff keeps coming
+00:20:39.880 up so let's set a threshold of no more
+00:20:43.039 than 50 and you can even argue why 50
+00:20:45.320 why not 25 why not 100 right um and so
+00:20:49.440 by by thinking about these questions you
+00:20:52.400 start to get more clarity for yourself
+00:20:54.400 but you also provide a lot more clarity
+00:20:56.039 for the teams you partner with and now
+00:20:57.799 we could for example say say hey
+00:20:58.960 engineering team why don't we have a
+00:21:00.559 joint goal of keeping this number at
+00:21:03.000 that level together and then you don't
+00:21:05.080 constantly have to chase you actually
+00:21:07.039 get people to co-create with you and
+00:21:09.840 collaborate with you so wrapping all
+00:21:12.960 that up um you build you need a story
+00:21:16.600 right for most of your stuff you need a
+00:21:18.039 story um that typically relates back to
+00:21:20.679 customers target audience not startup of
+00:21:23.080 the business but spin your story around
+00:21:24.960 something that leadership cares about um
+00:21:27.559 you want to speak exact quote unquote
+00:21:30.200 right so when you pitch to leaders to
+00:21:31.720 customers to decision makers you want to
+00:21:33.840 use not just their wording but also
+00:21:35.919 present in the way that they think not
+00:21:38.200 Bottoms Up don't start with the work
+00:21:39.919 don't start with the details and you
+00:21:41.799 want to make it easy for teams that
+00:21:43.960 collaborate with you to implement the
+00:21:46.159 work instead of having to do Discovery
+00:21:49.120 themselves again at the end of the day
+00:21:51.039 the best hack or or finding is nothing
+00:21:54.320 without
+00:21:55.720 implementation uh but it really goes
+00:21:57.480 back to audits sorry it goes away from
+00:21:59.600 audits it it goes back to things like
+00:22:02.360 better stories pitches and packaging and
+00:22:05.240 the cool thing is that once you have
+00:22:06.400 momentum and shipping right you can
+00:22:08.520 build on that if you get things out of
+00:22:10.400 the door you gain more trust um you get
+00:22:13.080 more stuff done you learn faster and
+00:22:15.799 leaders are willing to do more daring
+00:22:18.240 projects with you I share insights like
+00:22:21.240 that every week uh in in the uh my
+00:22:23.880 newsletter called the growth memo Adam
+00:22:26.000 Gans who's another brilliant Tech SEO
+00:22:27.679 call it the best news newsletter on SEO
+00:22:29.240 growth with insid case studies and so um
+00:22:32.679 it's it's a free Weekly Newsletter
+00:22:51.600 growth-curve all the impact you can make
+00:22:53.840 and the things that you can learn and so
+00:22:55.880 I want to send you off with a question
+00:22:57.760 here which is if you could build
+00:22:59.440 anything what would you
+00:23:01.520 build and now you hopefully know how to
+00:23:04.640 get there thank you very much

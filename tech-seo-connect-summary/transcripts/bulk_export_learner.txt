@@ -1,0 +1,862 @@
+# tactiq.io free youtube transcript
+# AI + Me: how we built a GSC Bulk Export data pipeline - Noah Learner
+# https://www.youtube.com/watch/77smtS14x3M
+
+00:00:11.559 thank
+00:00:13.080 you who's ready for a
+00:00:16.320 journey most of my decks are kind of
+00:00:18.720 Journey decks I take you along for the
+00:00:20.840 ride uh we're going to explore uh what I
+00:00:24.039 learned building a tool right so the
+00:00:26.240 bulk data export is something that I got
+00:00:28.920 super stoked on a year and a half ago
+00:00:31.279 because I was part of the small team
+00:00:32.960 that developed that tool with Google um
+00:00:36.559 they they got a lot of insight from a
+00:00:39.000 small group of seos to help them develop
+00:00:41.120 the tool I hadn't really worked with it
+00:00:43.000 a lot and I've always had it in the back
+00:00:45.480 of my mind as something that I wanted to
+00:00:47.079 explore and work with more deeply and I
+00:00:49.680 also had built a product called Branch
+00:00:51.879 Explorer which uses Google search
+00:00:54.160 console data coming out of the API and
+00:00:57.559 it had some limitations because it was
+00:00:59.320 only working with at the Web search type
+00:01:01.559 and it was only Gathering 50,000 rows of
+00:01:04.159 data per day and I always wanted to take
+00:01:06.680 Branch Explorer and marry it together
+00:01:09.439 with with this this Pipeline and so what
+00:01:12.799 I wanted to
+00:01:14.360 do why
+00:01:19.840 is I know I gave him the right
+00:01:23.240 file uh that's the best thing that's
+00:01:26.320 ever happened uh
+00:01:30.159 so uh what I wanted to do was to marry
+00:01:32.600 the two together and I wanted to build a
+00:01:35.479 really badass tool that LE see the thing
+00:01:37.960 that's cool about the bulk data export
+00:01:40.000 pipeline is that Google handles all the
+00:01:41.759 engineering for you they push all the
+00:01:44.200 data for you up into the cloud and that
+00:01:47.399 makes it super easy from an engineering
+00:01:49.960 perspective and I wanted to utilize that
+00:01:53.280 data and push it into Branch Explorer
+00:01:56.159 which is a custom view of data and what
+00:01:59.159 y'all are going to get out of this is
+00:02:01.039 actually your own free Branch Explorer
+00:02:04.000 tool and your own data pipelines that
+00:02:07.159 you can use yourselves to look at search
+00:02:09.479 console data at scale super badass right
+00:02:13.599 and I love kangaroos that's not my slide
+00:02:19.840 uh someone asked
+00:02:24.040 me why it's hard I can't believe this
+00:02:26.720 I'm being broadcast to YouTube uh uh so
+00:02:29.640 I just want to say hi to Joy Hawkins
+00:02:31.800 who's probably watching this right now
+00:02:33.239 and I'm hoping that Marie Haynes is also
+00:02:36.120 watching this because she gets a wicked
+00:02:37.680 call out and I also want to take an
+00:02:39.800 opportunity here to have you guys take
+00:02:42.239 some notes this next piece is not part
+00:02:44.319 of my deck but I want you to write down
+00:02:47.360 these three words as the most important
+00:02:49.720 thing you're going to learn at this
+00:02:51.080 conference
+00:02:52.599 make me
+00:02:55.640 smarter I want all of us to embrace
+00:02:58.720 those three words of as we make our way
+00:03:00.959 throughout the world there have been
+00:03:02.920 plenty times today and yesterday where
+00:03:05.239 I've been completely blown away by what
+00:03:08.640 I'm seeing on stage and I felt less
+00:03:12.480 than not as smart as not as experienced
+00:03:16.959 as has anyone felt that
+00:03:18.760 way we're all on a journey together
+00:03:21.840 right and this is my knowledge right and
+00:03:26.680 when I watched Kristen tinsky talk today
+00:03:30.200 I was feeling like oh my
+00:03:33.720 God like her knowledge is so much bigger
+00:03:37.000 than mine but the thing is that for all
+00:03:39.680 of us all of our sets of knowledge are
+00:03:42.239 tangential and overlapping so like just
+00:03:44.840 keep in mind as you're making a way and
+00:03:47.040 as you're on your journey learning all
+00:03:48.640 of this stuff like if your boss sent you
+00:03:51.360 here to learn Tech SEO in a conference
+00:03:55.480 right like it's really hard to learn all
+00:03:58.560 this stuff and you just have to commit
+00:04:01.079 yourself to the journey of
+00:04:03.000 learning while they figure it out can I
+00:04:05.159 ask you a couple questions please do so
+00:04:08.079 you also have a SEO Community which I
+00:04:10.079 forgot to mention yeah how would you
+00:04:12.640 recommend people getting involved in
+00:04:14.519 that okay so the tech excuse me the seoc
+00:04:18.680 community.com
+00:04:20.320 right it's if you go to that website
+00:04:23.360 you'll see that there's a page called
+00:04:25.639 apply and you apply with your name email
+00:04:29.039 and your link D profile that helps us
+00:04:31.400 vet that you're a real human being which
+00:04:33.560 is kind of important there are about
+00:04:35.520 3,200 other marketers a lot of folks who
+00:04:38.800 are here are members and moderators
+00:04:41.639 Mike's a moderator of our testing
+00:04:43.600 Channel Kristen's a moderator of our AI
+00:04:47.639 uh AI for SEO Channel and I think it's
+00:04:50.520 an amazing Place uh I took a huge amount
+00:04:54.160 of um inspiration for what AR did with
+00:04:57.240 women and Tech SEO and I just thought
+00:05:00.919 that um when Twitter fell apart I really
+00:05:03.560 wanted to not have to look for my
+00:05:06.160 friends right like I didn't want to do
+00:05:08.120 Mastadon I didn't want to do blue sky I
+00:05:10.320 didn't know where to look and slack just
+00:05:12.560 felt like the smartest way to go Okay
+00:05:15.479 and like I said you've done so many
+00:05:18.000 videos with agency automats and so on
+00:05:21.039 and there's people in here when we talk
+00:05:22.520 about automation it's like it's cool but
+00:05:25.000 they don't know where to start and I
+00:05:26.000 know you're going to talk about that to
+00:05:27.080 some degree here yeah but if you're
+00:05:28.720 someone coming into this for the first
+00:05:31.319 time yeah where would you recommend that
+00:05:33.199 they start uh appscript Google Sheets
+00:05:36.240 functions to appscript to
+00:05:39.080 JavaScript or you could take an
+00:05:40.919 alternate path which goes appscript to
+00:05:43.199 python uh python is a much easier
+00:05:46.120 language to learn the JavaScript who's
+00:05:48.440 afraid of learning python anyone does it
+00:05:50.960 sound hard does it sound like only smart
+00:05:54.120 people do it it is literally the easiest
+00:05:57.000 programming language to learn period
+00:05:59.680 like the things that are hard about it
+00:06:01.360 are like managing
+00:06:03.919 indentations like how many spaces do I
+00:06:06.680 put right and then also getting packages
+00:06:09.599 to work together yeah of course of
+00:06:11.360 course but from my perspective anyone
+00:06:14.400 can code now because of large language
+00:06:16.240 models right you as long as you can
+00:06:18.160 describe what you want it's going to
+00:06:21.240 give you some okay code and if it breaks
+00:06:25.000 then you just put the error in and then
+00:06:26.639 it fixes it yeah except for like and I'm
+00:06:31.520 going to get into that in the deck but
+00:06:33.080 like I basically built I built a data
+00:06:36.440 Pipeline and I only used AI to build it
+00:06:39.840 and I wanted to know if it was possible
+00:06:41.440 to build software applications just
+00:06:43.360 using do you guys want my
+00:06:46.039 laptop we got it okay um I don't believe
+00:06:50.199 you I think they Del I think they
+00:06:51.840 deleted my deck I think they by accident
+00:06:54.199 deleted it um but
+00:06:59.800 yeah like what I found was that when I
+00:07:01.319 built something that was creating
+00:07:03.720 JavaScript it was throwing natural
+00:07:05.840 language into the code so instead of
+00:07:08.160 like doing end end to equal a and b it
+00:07:13.280 would say a and then the word and and B
+00:07:17.160 and I was just feeling and I threw that
+00:07:19.400 into itself to fix it and it couldn't
+00:07:22.039 figure out the error that was that was
+00:07:25.400 um chat that was that was claw no that
+00:07:28.360 was uh chat GPT
+00:07:32.080 4.0 so people think that Claude Sonet is
+00:07:37.000 like the best one for writing code I
+00:07:39.440 enjoy it a lot and I use it with cursor
+00:07:42.080 and I use it with another tool called
+00:07:43.759 ader Aid D
+00:07:46.479 eer we're going to talk about that as we
+00:07:50.560 go um this is the first time I've ever
+00:07:54.000 had a deck completely disappear it's
+00:07:56.759 there it's the combination of
+00:08:01.000 Adobe PDFs and Google Slides huh window
+00:08:06.039 and windows also oh Windows yeah yeah
+00:08:09.360 have we solved the problem though all
+00:08:11.800 right
+00:08:13.120 cool I could
+00:08:15.020 [Laughter]
+00:08:20.080 tell how you doing no I'm good I'm
+00:08:22.960 having fun yeah you know I actually like
+00:08:25.680 when things go wrong cuz it's like you
+00:08:27.199 get the opportunity to see what you can
+00:08:28.759 do in the moment
+00:08:30.039 so I think we're good now though so I'm
+00:08:31.919 I'm going to try this again everybody
+00:08:33.039 make some noise for noer
+00:08:36.080 y' this is
+00:08:39.080 amazing okay so we're going to go in on
+00:08:41.599 a journey I'm going to share all kinds
+00:08:43.519 of stuff that I learned building a
+00:08:46.200 really cool tool that you guys will get
+00:08:47.880 access to for free I'm going to share a
+00:08:49.600 ton of Lessons Learned I'm also going to
+00:08:52.519 share a couple custom gpts that I built
+00:08:55.800 for you keep in mind all of the slides
+00:08:59.079 are available to you so you're going to
+00:09:00.959 have them all after so you don't have to
+00:09:02.839 like race cuz I have a whole bunch of QR
+00:09:05.320 codes that are flashing up on screen but
+00:09:08.279 you can scan them you know when you get
+00:09:09.959 back to back wherever you're going okay
+00:09:12.720 so what's the mashup we're building
+00:09:15.040 something with the GSC bulk export and
+00:09:17.800 we're building something with Explorer
+00:09:20.800 Explorer is a looker Studio based
+00:09:23.399 product that we built that allows you to
+00:09:25.279 look at search console data at scale
+00:09:27.360 it's got all kinds of Time series visual
+00:09:29.600 ations tables it'll allow you to see
+00:09:32.320 stuff that you haven't seen before and
+00:09:35.519 we only Built it with this mashup using
+00:09:38.279 AI who knows Dave
+00:09:40.399 sodano I saw him speak at Tech SEO boost
+00:09:44.279 in
+00:09:45.160 2019 and uh he blew me away and he blew
+00:09:48.360 me away because he was like the guy on
+00:09:52.480 stage talking about JavaScript and I
+00:09:55.040 think he even dropped the words
+00:09:57.279 python in his deck which I thought was
+00:10:00.160 amazing and he's been a hero of mine a
+00:10:02.200 mentor collaborator for a super long
+00:10:04.640 time so when I got the opportunity to
+00:10:07.800 speak here we had a call together and I
+00:10:09.600 said hey Dave I'm thinking about
+00:10:10.880 building this thing what do you think
+00:10:13.600 and he said oh dude it's awesome it's
+00:10:15.560 amazing you should totally do it
+00:10:16.760 everybody's going to eat it up it's
+00:10:17.800 going to be so cool and then he said
+00:10:19.959 this within six months this was two
+00:10:22.720 months ago I promise you anyone can
+00:10:25.279 build anything with an llm um let's see
+00:10:28.480 if he's right
+00:10:30.079 and when he said that I thought he was
+00:10:31.720 totally crazy because if you think about
+00:10:33.480 the technology adoption curve it looks a
+00:10:35.600 lot like
+00:10:36.880 this I feel like this is Kristen people
+00:10:40.760 like Kristen this is me this is a whole
+00:10:43.800 bunch of us in the room this is
+00:10:47.600 generalist folk doing marketing these
+00:10:50.600 are consumers these are our parents
+00:10:54.040 right okay and so when Dave said anyone
+00:10:57.279 could build anything I thought he was
+00:10:59.000 saying that this person could build
+00:11:01.519 something within 6 months and that's why
+00:11:03.160 I thought he was so super crazy okay and
+00:11:07.720 what do we know about the bulk export
+00:11:09.680 what is it well it's basically three
+00:11:11.200 things there's three tables that get
+00:11:13.440 pushed up into big query the first one's
+00:11:15.160 called the export log second one is the
+00:11:17.399 URL impression table third one is the
+00:11:20.399 site level data sight level data is
+00:11:22.720 where it's just aggregating all the me
+00:11:24.600 metrics for you at the query level the
+00:11:27.279 URL impression table is aggregating
+00:11:29.399 everything at the combination of query
+00:11:32.360 and page and it's giving you all kinds
+00:11:34.839 of other stuff too which we'll get into
+00:11:37.160 um these are the kinds of fields that
+00:11:38.880 are available inside the bulk export
+00:11:41.760 again you're going to get access to this
+00:11:43.120 in the slide this is coming straight out
+00:11:44.800 of big query if you haven't seen this
+00:11:47.360 before it's pretty cool specifically
+00:11:50.720 that field is anonymized
+00:11:54.440 query everybody's always super pissed
+00:11:57.000 about what gets sampled right this gives
+00:11:59.680 you the visibility to be able to see
+00:12:02.440 which pages are getting anonymized
+00:12:04.959 queries when I looked at our own data
+00:12:07.560 what I saw was that all of the content
+00:12:09.800 that we were building about how to use
+00:12:11.880 Google uh user interfaces how to use
+00:12:14.600 Google products those pages had
+00:12:18.399 ridiculous quantities of anonymized
+00:12:20.720 queries it was almost like Google didn't
+00:12:23.279 want us to know how to compete with them
+00:12:25.639 in the serers was how I was thinking
+00:12:27.880 about it but also look at all these
+00:12:29.360 Boolean Fields we've got is it a top
+00:12:31.519 stories is it a Blue Link is it a job
+00:12:33.560 listing job de details is it an action
+00:12:37.839 is it an events listing is it is it an
+00:12:40.320 amp is it video is it organic shopping
+00:12:44.120 who does e-commerce who would like to
+00:12:46.720 have that level of visibility about
+00:12:48.399 their data right so these are the kinds
+00:12:50.519 of things that are available to you when
+00:12:52.760 you start working with the bulk export
+00:12:55.160 um you've probably heard that it's
+00:12:56.800 expensive right tons of data it's really
+00:12:59.560 expensive we'll get into that um as
+00:13:02.959 getting ready for the build of this I
+00:13:04.880 didn't work with the site impression
+00:13:06.600 table at all I just didn't have enough
+00:13:09.199 time to do it um we've already talked
+00:13:12.680 about all of the volume of data but this
+00:13:15.399 is why there's so much you get data for
+00:13:18.480 all countries so all your data is
+00:13:20.519 segregated by country it's segregated by
+00:13:23.480 all of the devices it's segregated by
+00:13:26.079 all of the search types it's segregated
+00:13:28.600 by all the search appearances which were
+00:13:31.240 those Boolean fields that I shared in
+00:13:33.000 the last slide um it's also giving you
+00:13:35.639 information about Anonymous queries and
+00:13:38.079 there's no row limits let's say you're
+00:13:41.760 CNN.com or your Reddit uh you have it's
+00:13:46.519 no longer 50,000 rows per day it's as
+00:13:49.120 much as you want the fire hose is wide
+00:13:51.120 open so for Enterprise sites it's super
+00:13:53.920 super interesting what about a small
+00:13:56.279 site is it interesting then too
+00:13:59.240 yes and we'll get into that okay so all
+00:14:02.519 search types so we get discover Google
+00:14:04.440 news we get news we get image type we
+00:14:06.920 get video we get web super dope and I
+00:14:10.680 was also super stoked to build this
+00:14:12.720 because I felt like there just weren't
+00:14:14.399 any tools that I was aware of that's why
+00:14:16.800 I have the bracket around the many piece
+00:14:19.040 there just weren't a lot of tools for
+00:14:20.839 specifically looking at data that was
+00:14:23.079 coming out of the bulk export and um
+00:14:26.680 with Explorer these are the types of
+00:14:29.199 things that we do on top of the data
+00:14:31.759 coming out of search console to make it
+00:14:33.800 a lot easier to work with so we have
+00:14:36.360 like your position with the bulk export
+00:14:40.040 they're giving you position as a sum
+00:14:42.680 they're not giving it to you as an
+00:14:44.000 average position which is super annoying
+00:14:46.360 you have to do the math yourself to
+00:14:47.800 calculate you know the sum of position
+00:14:50.240 by the number of Impressions to get to
+00:14:51.839 an average position um so we do that
+00:14:54.800 math for you uh click-through rate full
+00:14:58.160 path which is is giving you almost like
+00:15:00.880 the Google analytics view of your url um
+00:15:04.160 we're also breaking it up into
+00:15:06.040 subdirectory so we're giving you
+00:15:07.440 insights as uh subdirectory level one 2
+00:15:11.360 3 4 so if you have a site that has a
+00:15:13.519 whole bunch of structure you're going to
+00:15:15.279 really dig it um we're also giving you
+00:15:18.360 all kinds of information around funnel
+00:15:20.680 stages and the thing that I think you're
+00:15:22.880 going to really dig is you can set the
+00:15:24.920 Search terms in the tool that we give
+00:15:27.519 you that align with your different
+00:15:29.600 funnel stages which is super
+00:15:32.120 badass uh let's see so you can see brand
+00:15:34.959 versus non-brand funnel stage you can
+00:15:37.160 see if a URL um happens to be something
+00:15:40.240 that has UTM parameters that align with
+00:15:42.800 GBP stuff which is super useful and you
+00:15:46.800 can build URL segments has anyone ever
+00:15:49.720 used
+00:15:50.800 Bodify so in Bodify you've got a pretty
+00:15:53.519 cool way of doing segmentation of your
+00:15:56.199 else using whatever pattern you want I'm
+00:15:59.040 not positive but I think they do it with
+00:16:01.079 a case statement and what that means is
+00:16:03.519 that a page can be a or it can be B but
+00:16:07.399 it can't be
+00:16:08.759 both boom we can do we can have Pages be
+00:16:12.480 both so a page could be a Nike page
+00:16:15.199 because it has Nike in the URL and it
+00:16:17.519 could be a product detail page because
+00:16:19.480 it has product in the string and it
+00:16:22.160 could be a specific collection because
+00:16:24.839 it has shoes in it right so you can have
+00:16:28.199 one page be all kinds of different
+00:16:30.160 segments which is pretty rad the other
+00:16:33.600 thing that allows you to do is to see
+00:16:35.240 directories pages and queries that are
+00:16:37.720 driving change on our website I'm not
+00:16:41.319 telling you how cool this is because
+00:16:43.720 there's so much data it's not about the
+00:16:46.800 volume of data it's about having a tool
+00:16:49.959 that can help you get efficiently from
+00:16:52.399 the hyack down to the needle and that's
+00:16:55.519 why I've always been super jacked about
+00:16:58.199 Explorer because I felt like it was the
+00:17:00.319 best tool that I'd seen that enabled me
+00:17:02.279 to do it and because the data is all in
+00:17:04.480 big query if you've ever used looker
+00:17:06.199 studio and if you use native connectors
+00:17:08.799 and you're like this sucks it's super
+00:17:11.319 slow especially if you have to blend
+00:17:12.919 data together you're going to love using
+00:17:14.919 it because of how fast it is okay so I'm
+00:17:17.760 going to build something with AI what
+00:17:19.439 could possibly go wrong right has anyone
+00:17:22.280 ever struggled with chat GPT okay so
+00:17:25.720 here's my approach to building tools
+00:17:28.199 I've learned a lot talking to a lot of
+00:17:30.600 folks in the room about how to do stuff
+00:17:33.360 I generally focus on this sweet spot in
+00:17:35.960 the VIN diagram I'm looking for stuff
+00:17:38.080 that's fast to build easy to code and
+00:17:41.799 super cheap to own hopefully free so I
+00:17:45.080 build on the Google Cloud infrastructure
+00:17:47.720 generally um I always focus on
+00:17:50.760 painkillers not vitamins any aspiring
+00:17:54.440 product people in the room and you've
+00:17:58.039 ever thought to yourself like hey it'd
+00:17:59.480 be really cool if I could show blah blah
+00:18:01.799 blah that's a vitamin A painkiller is
+00:18:05.240 how do I save 100 hours for my agency
+00:18:07.720 this month right like that's the stuff
+00:18:09.840 that I always focus on they also help us
+00:18:12.559 as an agency smooth out capacity
+00:18:14.559 challenges as we grow in scale this
+00:18:17.960 helps us kind of deal with those
+00:18:20.000 capacity changes um last year we had a
+00:18:22.960 whole bunch of folks that went out on
+00:18:24.600 paternity and maternity to leave we
+00:18:26.840 found that all the automations that we
+00:18:28.400 put in Place helped us deal with that
+00:18:30.320 really really well they also help us be
+00:18:33.480 really really sticky with our clients
+00:18:36.280 when we can solve problems for our
+00:18:38.080 clients in ways that other people can't
+00:18:40.679 we've got a huge leg up and I don't know
+00:18:42.960 if you've heard about Sterling sky but
+00:18:44.799 we're in the local space and we're
+00:18:46.840 generally known as kind of the Premier
+00:18:48.679 local agency in North America uh this is
+00:18:52.320 the stack that I use I started with
+00:18:54.480 Google app script I was talking with
+00:18:56.360 whoops I was talking with Mike about
+00:18:58.240 that
+00:18:59.360 how do you go backwards it's not going
+00:19:01.799 backwards okay um I started with Google
+00:19:05.120 app script and then from there I
+00:19:08.200 actually had an agency automator with
+00:19:11.000 Dave sodano where he taught me how to do
+00:19:12.840 Cloud functions and I thought it was the
+00:19:14.240 coolest thing because Cloud functions
+00:19:16.640 allow you to have a million invocations
+00:19:19.960 for free per month I was like holy
+00:19:22.440 that's such a big number like I can do
+00:19:25.159 so many cool things with that and I work
+00:19:27.039 with apis I also use use um fir store
+00:19:30.919 specifically to manage State and that's
+00:19:33.919 like storing client variables storing
+00:19:36.600 information that I need to read and
+00:19:38.200 write a lot and I also use big query
+00:19:41.760 like crazy and looker studio for
+00:19:44.360 visualization to me if you're trying to
+00:19:46.919 figure out what your Tech stack should
+00:19:48.960 look like I think this is a great place
+00:19:51.360 to start you could totally you could
+00:19:54.000 totally um get rid of firestore and use
+00:19:57.120 postgress um as another database tech
+00:20:00.000 there but I think this is a great great
+00:20:01.880 way to think about things when I used to
+00:20:03.760 build I built exclusively in vs code for
+00:20:06.720 two to four years and when co-pilot came
+00:20:10.480 out I was super super jacked when you're
+00:20:13.240 thinking about Automation and you're
+00:20:15.000 thinking about AI in coding co-pilot is
+00:20:18.760 the best way to dip your toes in and the
+00:20:21.080 reason why is that when you're working
+00:20:22.720 with co-pilot it's basically like you'll
+00:20:25.760 start typing and it'll finish the line
+00:20:27.919 of code for it you hit Tab and you just
+00:20:30.520 move on and so it's not like chat GPT
+00:20:33.280 where you're like saying hey build me a
+00:20:34.720 whole function that does X and it spits
+00:20:36.960 out 400 lines of code and you have no
+00:20:39.039 idea what's broken this gives you like a
+00:20:41.320 very limited way to get started um I
+00:20:44.080 loved it I loved it I loved it I loved
+00:20:46.840 it um and then I went to Canada and I
+00:20:51.360 met Marie Haynes in person I don't know
+00:20:53.640 if you've ever spent any time with her
+00:20:55.240 but I had one of the most compelling
+00:20:57.760 come to Jesus talks I've ever had with
+00:21:00.080 any human ever where she told me I was
+00:21:02.640 doing everything wrong and all I needed
+00:21:05.080 to do in life was learn more about Ai
+00:21:07.200 and use it and I was like you Marie
+00:21:10.480 and I went home all angry and I made
+00:21:14.679 some changes uh I started to use chat
+00:21:17.200 GPT at that point this was in October of
+00:21:19.840 last year and I started learning about
+00:21:22.240 all the things that have to do with this
+00:21:24.840 stuff okay tokens a token is a chunk of
+00:21:29.760 words or images or text it's really
+00:21:32.600 small it's like four characters um in
+00:21:36.120 English each token is like 3/4 of a word
+00:21:39.279 right context window you're going to
+00:21:41.360 hear this all the time a context window
+00:21:44.360 is this is basically a measurement of
+00:21:46.200 the size of information that can go in
+00:21:48.880 and out of a large language model and as
+00:21:52.120 these technologies have improved context
+00:21:54.960 Windows have become larger so when you
+00:21:57.720 build things that super important
+00:21:59.559 because it goes from hey I can build you
+00:22:01.480 a line of code like co-pilot to hey you
+00:22:04.520 can have your entire code
+00:22:06.720 repository inside that context window so
+00:22:09.559 the llm knows everything about what
+00:22:12.320 you've built and what you're trying to
+00:22:14.039 build and with open AI chat GPT what
+00:22:18.120 what we found was that the context
+00:22:19.799 window was 8,000 tokens sounds like a
+00:22:22.880 lot right it's like 500 words or 500 no
+00:22:27.440 no no no it's it's 6,000 Words which is
+00:22:31.240 a lot so I built a whole bunch of custom
+00:22:34.440 gpts the first one that I built is
+00:22:36.720 probably the most useful if you like to
+00:22:39.000 code and you want something super useful
+00:22:42.120 and you work in the Google Cloud stack I
+00:22:45.039 strongly recommend if you want a GPT to
+00:22:47.760 use this one is the I love stackbot
+00:22:51.360 I use this almost every day in my work
+00:22:53.720 now um it allowed me to go from single
+00:22:56.640 line to building complete functions um
+00:22:59.960 and I thought it was super cool so I
+00:23:01.360 kept going and I built um a WordPress
+00:23:04.440 custom GPT I didn't know anything about
+00:23:06.919 building anything in WordPress believe
+00:23:08.559 it or not and this tool allowed me to
+00:23:11.679 build short codes it allowed me to build
+00:23:14.200 plugins it it helped me build all kinds
+00:23:17.120 of stuff I even built this plugin called
+00:23:20.200 the custom taxonomy grid block has
+00:23:23.720 anyone ever built something with
+00:23:25.240 categories and you hate the standard
+00:23:27.200 layout and it's awful this thing in two
+00:23:29.880 days I figured out how to build one I
+00:23:32.400 built an appscript GPT which is awesome
+00:23:35.520 because I love appscript if you're and
+00:23:37.640 anyone who's wanting to learn like I
+00:23:39.679 said earlier like appscript is the
+00:23:42.080 easiest thing to learn other than python
+00:23:44.760 it's super well documented it integrates
+00:23:47.559 with all kinds of Google tools including
+00:23:50.360 Google Sheets if you're trying to figure
+00:23:52.000 out the first step to building cool
+00:23:54.640 useful stuff for the agency the
+00:23:57.039 superpower do would be appscript plus
+00:24:00.279 Google
+00:24:01.880 Sheets okay then I learned about Claud
+00:24:04.640 Sonet 3.5 which is super cool super
+00:24:07.840 powerful huge context window 25 times
+00:24:11.120 larger than chat GPT I was like oh my
+00:24:13.799 God I'm in uh I pay for the Pro Plan
+00:24:16.320 it's 20 bucks a month strongly recommend
+00:24:18.200 you do it um I got super excited about
+00:24:21.200 it because it has this feature called
+00:24:23.120 artifacts and projects which I heard as
+00:24:26.559 custom you know doing the same kind of
+00:24:28.679 thing as a custom
+00:24:30.279 GPT
+00:24:31.880 um I don't know I'm not super into it I
+00:24:35.399 mean this was my take on it the way it
+00:24:37.440 works is you have to manually upload
+00:24:39.240 your files into into the tool and I just
+00:24:42.640 felt like that whole process was super
+00:24:45.720 annoying super slow and I just felt like
+00:24:48.360 it was a total pain in the
+00:24:50.039 ass and the reason why I didn't really
+00:24:52.799 dig it is it stopped me from doing the
+00:24:54.960 work it stopped me from doing iterations
+00:24:57.399 and speed of iteration is really really
+00:25:00.600 really the key for me anyway um I've
+00:25:03.679 learned so much from everybody else here
+00:25:05.679 and they all work differently but this
+00:25:07.240 was as I was learning to work with the
+00:25:08.919 tools this was one of my big takeaways
+00:25:12.240 I'd heard of this tool called cursor
+00:25:13.919 from a guy named Eric Woo and I jumped
+00:25:16.799 in with both feet it's super easy if you
+00:25:18.960 use vs code to move over to cursor you
+00:25:21.760 basically just export your settings out
+00:25:23.880 of vs code and import them into cursor
+00:25:26.840 it takes 2 minutes what's cool about it
+00:25:29.159 is it's basically vs code but it has AI
+00:25:33.039 built right into the tool there's a free
+00:25:35.760 plan and a Pro Plan free limits how many
+00:25:38.799 different AI queries you can do per day
+00:25:41.159 the Pro Plan is 20 bucks a month totally
+00:25:44.279 sign me up all day long for that I think
+00:25:46.279 it's just the coolest thing because it's
+00:25:49.640 using Claud Sonet as its built-in model
+00:25:52.399 it's got this huge context window so it
+00:25:54.880 knows a ton about your code I'm going to
+00:25:57.799 share some takeaways from doing this
+00:25:59.760 whole build you're like Hey where's the
+00:26:01.640 tool where's the tool we'll get to that
+00:26:03.399 at the end but I just wanted to share
+00:26:05.279 some of the lessons that I've learned um
+00:26:08.480 and I again like when I watched Christen
+00:26:10.880 talk like I was feeling impostor
+00:26:13.600 syndrome in a huge way but I think these
+00:26:15.960 are good best practices to get started I
+00:26:19.399 think with when you're working with AI
+00:26:21.640 and you're working with llms you're
+00:26:23.200 trying to code and build stuff do not
+00:26:26.600 say hey I want to build this thing thing
+00:26:28.520 and do
+00:26:29.760 this describe what you're trying to do
+00:26:33.080 in the broadest terms possible describe
+00:26:35.440 what your end goals are and then get the
+00:26:37.840 llm to reframe back to you what you're
+00:26:40.840 trying to accomplish what you're going
+00:26:42.720 to find is that when it summarizes that
+00:26:45.320 goal it's either going to know it's
+00:26:46.960 going to say something that aligns with
+00:26:48.799 how you think or it's going to be wrong
+00:26:51.080 and if it's wrong you're going to iter
+00:26:54.880 iteratively communicate with it back and
+00:26:57.200 forth until you get the goal right and
+00:27:00.279 then what you're going to find is that
+00:27:01.960 it's the time to then ask it to produce
+00:27:04.559 an
+00:27:05.399 architecture of the thing that you're
+00:27:07.399 trying to build and again it iteratively
+00:27:10.120 talk with it to get make sure that you
+00:27:12.159 have that all done and then what you're
+00:27:14.600 going to do is ask the model to build
+00:27:16.760 what's called pseudo code which to me is
+00:27:19.279 just like it talking about the code and
+00:27:22.720 describing it to you and if you know
+00:27:24.760 what you're looking at and
+00:27:26.880 you and you then sort of look at the
+00:27:30.200 code you'll know if they're on the right
+00:27:32.720 track or not I have not done all of the
+00:27:36.520 cycles of frustration yet we haven't
+00:27:39.120 gotten there um we're still trying to
+00:27:41.640 get it to get the context right and
+00:27:44.200 understand what it's trying to produce
+00:27:46.559 if you get the pseudo code right you
+00:27:48.399 then ask it to actually
+00:27:50.679 code and then you've basically gotten
+00:27:54.440 about 70% of the way there and the last
+00:27:57.240 30% 20% 10% is the most frustrating part
+00:28:01.399 of the
+00:28:02.360 experience when I was building the tool
+00:28:04.880 that you guys are going to get I was
+00:28:06.480 trying to get it to create a data
+00:28:09.039 pipeline using only
+00:28:11.159 SQL and the reason I was trying to do
+00:28:13.760 that was that I had a pretty complex
+00:28:15.399 architecture beforehand I had Cloud
+00:28:17.640 functions and task cues and all kinds of
+00:28:21.360 infrastructure to support well Google
+00:28:23.840 was already pushing all the data for me
+00:28:26.039 up into the cloud and I was like why
+00:28:28.559 can't I just do this with SQL what I
+00:28:30.720 found was that that last 20 to 30% was
+00:28:33.200 brutal it was like 20 hours of going
+00:28:36.240 back and forth and back and forth okay
+00:28:39.159 other Lessons Learned doing the build
+00:28:41.559 with the bulk export the epoch version
+00:28:45.000 field uh table the epoch version field
+00:28:48.200 in the export log is really really
+00:28:51.320 really interesting I'd never really
+00:28:53.320 thought about this before but the epoch
+00:28:55.640 version basically tells you what what
+00:28:58.559 version of the data is up in the table
+00:29:01.880 so let's say Google puts data up in the
+00:29:04.000 table on day one and then they're like
+00:29:06.919 oh we have data quality issues and
+00:29:09.480 they have to fix it and put it back up
+00:29:11.600 as Epoch version number one that's
+00:29:14.480 really important that told me oh my God
+00:29:17.600 I need that that my data is not
+00:29:20.640 immutable when you hear about an API you
+00:29:23.200 might hear it described as mutable which
+00:29:25.279 means the data changes that's like
+00:29:27.519 Facebook data or ads conversion data
+00:29:30.880 this told me that I had to pay attention
+00:29:32.720 to that which I thought was really
+00:29:35.039 interesting um bulk export data costs
+00:29:38.840 let's get into this because this is
+00:29:40.559 super super
+00:29:42.840 interesting when you go to the tools web
+00:29:45.960 page there's going to be a calculator at
+00:29:47.919 the bottom of the page that's going to
+00:29:49.320 help you think through this basically
+00:29:51.399 what you're going to do is look at the
+00:29:52.799 data that's in your table and then
+00:29:55.200 divide it by the number of partitions
+00:29:57.919 that that basically tells you how many
+00:29:59.919 megabytes or gigabytes of data are going
+00:30:02.720 up into big query every single day and
+00:30:05.960 that's going to help you calculate how
+00:30:08.000 much the budget is and yeah I did use AI
+00:30:10.840 to build that tool on the web page too
+00:30:13.200 which was pretty cool um here's a major
+00:30:16.480 downside of the bulk export there is no
+00:30:19.159 back fill it's just like uh GA data also
+00:30:23.200 what you're going to find is that Dave
+00:30:25.240 was
+00:30:26.559 wrong Dave was WR it's not something
+00:30:30.039 that I perceive anyway that in 4 months
+00:30:32.200 is going to be something that all of us
+00:30:34.279 can just go build stuff like I I build
+00:30:37.240 things for a living that's my job I'm
+00:30:39.679 like the director of innovation for
+00:30:41.279 Sterling sky and I found that it was
+00:30:44.240 hard I found that it was really
+00:30:45.840 frustrating and I found that almost that
+00:30:48.600 co-pilot way of working was an easier
+00:30:52.159 way
+00:30:53.760 intellectually um to work I could get
+00:30:56.240 stuff done probably fast
+00:30:58.600 and understanding the wide world of
+00:31:00.880 possibilities that's I think the sweet
+00:31:03.120 spot for AI but like getting it done
+00:31:06.120 efficiently it was just such a
+00:31:08.000 frustrating build um and when I talk
+00:31:11.279 about early adopters really it's like a
+00:31:13.960 tolerance for pain and I feel like you
+00:31:16.320 had to have just an enormous tolerance
+00:31:19.039 for pain to kind of work with it that
+00:31:21.120 was that was my piece and you and you
+00:31:23.000 really have to be um ready to deal with
+00:31:27.559 risk
+00:31:29.799 okay also um just to give you all kinds
+00:31:33.799 of other insights like models create all
+00:31:35.880 kinds of trash outputs like that was
+00:31:38.000 that was a key piece I wanted to build
+00:31:39.880 my deck with AI too after I'd already
+00:31:41.519 built the tool I was like hey let's
+00:31:42.919 let's just build all my
+00:31:44.880 slides I think this would be super fun
+00:31:47.399 if you want to see how a AI goes wrong
+00:31:49.559 by the way if you want to see how to
+00:31:50.559 build slides with it but this this is
+00:31:53.360 the input like hey I want to build a
+00:31:55.240 16x9 slide because that's what Google
+00:31:57.919 slides are right and I want it to look
+00:32:01.279 um I want it to have like a cool
+00:32:03.360 geometric pattern blah blah blah this is
+00:32:06.679 what it came out
+00:32:11.559 with I just wanted a freaking slide that
+00:32:14.600 said building software is hard
+00:32:17.799 right 10 iterations
+00:32:24.440 later and then it and then it throws an
+00:32:26.799 error at me it's it's like you're
+00:32:28.519 generating images too quickly to ensure
+00:32:31.000 the best you know the best experience
+00:32:33.080 for everyone we have to rate limit you
+00:32:34.600 it's like ah like this doesn't
+00:32:37.559 work um we're going back and forth and
+00:32:40.320 back and forth after more things it's
+00:32:42.399 like
+00:32:43.240 understood here here's the goal it told
+00:32:46.320 me what I wanted it's like the goal is
+00:32:48.919 to ensure a clean edgo Edge geometric
+00:32:51.399 background with only text centered on
+00:32:53.240 the slide and no additional objects or
+00:32:55.159 distractions
+00:32:59.240 it just could not get it and then it
+00:33:02.399 throws this at this stage I recommend
+00:33:04.480 using a graphic design tool I can but
+00:33:07.080 fig M
+00:33:09.639 PowerPoint super this was as close as I
+00:33:13.000 could
+00:33:13.960 get and this was an hour in and I kept
+00:33:18.200 saying please make it lighter please
+00:33:20.080 make it lighter please make it lighter
+00:33:21.960 and every step along the way it would
+00:33:23.799 get darker and darker and darker it was
+00:33:26.399 like h so yeah models lie you know I
+00:33:31.360 would say things like hey I want you to
+00:33:34.399 using cursor I would say hey I want you
+00:33:36.880 to put the code in my repository file
+00:33:39.799 tree and it would say I said hey can you
+00:33:42.480 put it there and it's like certainly
+00:33:43.919 I'll create a new file called blah blah
+00:33:45.720 blah and I'll put it in this directory
+00:33:47.600 and here's the content of the file and
+00:33:50.480 I'm like where's the code I kept
+00:33:52.360 refreshing my repo and it and there was
+00:33:54.440 no code there was no file and I'm like
+00:33:56.960 do I not have the write permissions like
+00:33:58.919 only vs code has permissions on my files
+00:34:02.000 15 minutes later um it responds with as
+00:34:05.200 an AI language model I don't have direct
+00:34:07.919 access to your code codebase or file
+00:34:10.440 system I was like well then why' you
+00:34:12.520 tell me that you built the
+00:34:14.639 file so that's a major downside of
+00:34:17.079 building with cursor by the way if you
+00:34:19.639 want to have the tool output code
+00:34:22.918 directly for you and make code edits for
+00:34:25.918 you cursor is not quite quite the way to
+00:34:28.280 go and we'll get to another tool but
+00:34:30.320 anyway this was my
+00:34:31.918 feeling um AER a i d r Eric Woo again
+00:34:36.800 came to the rescue told me all about AER
+00:34:39.320 it's a python tool it uses whatever llm
+00:34:43.359 you want to use it'll create all your
+00:34:46.639 code for you it'll create all the files
+00:34:49.560 for you it'll edit files it'll delete
+00:34:51.960 files anytime you ask it to do anything
+00:34:54.839 it'll make a git commit for you on your
+00:34:58.119 behalf if you don't like it you can roll
+00:35:00.800 the code back with just a simple slash
+00:35:03.040 command you just slash undo and it undos
+00:35:06.599 the commit for you and you can try and
+00:35:09.119 try again which is really really good uh
+00:35:12.880 I saw this trolling around Reddit a
+00:35:15.599 little bit after I'd already built my
+00:35:17.320 deck which is great um there's five
+00:35:20.000 levels of different um this is a great
+00:35:23.160 slide for you to do exploration too to
+00:35:25.119 figure out more tools because you
+00:35:26.480 probably haven't heard of
+00:35:28.440 like a lot of folks hadn't heard of Aer
+00:35:30.599 and so they probably hadn't heard of any
+00:35:32.079 of the competitors either right but
+00:35:34.599 basically you're going to go from
+00:35:35.960 co-pilot cursor and then you're going to
+00:35:38.320 use AER and then there's a whole bunch
+00:35:40.280 of Aer um tools that are and stuff
+00:35:45.119 that's like way way more um enterpris so
+00:35:50.480 they they tend to lose a lot of context
+00:35:53.480 and they lose broken code uh Mike asked
+00:35:56.640 me about hey you can just fix the error
+00:35:59.359 right I could not get my head wrapped
+00:36:02.400 around why it was throwing natural
+00:36:04.520 language into code I just couldn't
+00:36:06.599 figure that out and it um it happens all
+00:36:09.319 the time and that one piece is why I'm
+00:36:12.160 not afraid of it taking all of our jobs
+00:36:16.200 because if it can't produce valid code
+00:36:21.000 and it after 12 iterations like people
+00:36:25.319 are not going to adopt the technology
+00:36:27.040 that's broken like it's just not quite
+00:36:29.640 good enough okay so the tool that I
+00:36:32.680 built it's going to have a pretty cool
+00:36:34.839 sign up page you're not signing up
+00:36:37.000 you're not giving me information but
+00:36:38.440 it'll walk you through the whole setup
+00:36:40.240 page AI built the whole thing which is
+00:36:43.079 pretty rad it built the the neat pricing
+00:36:45.720 table down below this is the link if you
+00:36:49.079 do want to for some reason grab that QR
+00:36:51.680 code right now you can set up your own
+00:36:54.319 data pipeline which is Super Rad it'll
+00:36:57.319 take about 20 to 30
+00:36:59.160 minutes this is me I've Loved hanging
+00:37:02.079 out with you guys today I hope I brought
+00:37:04.200 enough energy post lunch for everybody
+00:37:06.640 thanks a lot
+00:37:10.000 y'all thank you

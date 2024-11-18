@@ -1,0 +1,859 @@
+# tactiq.io free youtube transcript
+# Microsoft Bing - SEO for the AI era - Fabrice Canel
+# https://www.youtube.com/watch/E_eEviYAF3c
+
+00:00:09.280 thank you
+00:00:11.559 Mike hello everybody can you hear me we
+00:00:15.320 are
+00:00:21.400 good
+00:00:23.320 hello thank you Mike uh thank you
+00:00:26.279 everybody Welcome second day of this
+00:00:29.199 wonderful conference
+00:00:30.519 so I will tell you about uh Microsoft
+00:00:33.440 Bing and really what you have to think
+00:00:35.840 about the new area SEO for the AI area
+00:00:40.879 let's get started uh we'll cover AI we
+00:00:44.239 cover bigma master tool we'll tell you a
+00:00:46.399 lot about an next no in this technical
+00:00:48.520 SEO conference and some goodies for me
+00:00:51.760 more from
+00:00:52.879 beinging um my mission had been is
+00:00:55.760 really to create the world best index uh
+00:00:58.559 to satisfy all user so I download your
+00:01:02.559 site each and every day and if a content
+00:01:04.879 is missing from being sear results my
+00:01:07.680 that's my fault bad for me please do not
+00:01:10.040 contact me uh and really this is all
+00:01:13.400 about uh discovering the best content on
+00:01:15.799 the internet selecting it downloading it
+00:01:18.479 processing it and maybe saving it and
+00:01:20.680 annexing it so um but it's far more than
+00:01:25.960 that mean that it's not only the Blue
+00:01:28.200 Links it's also everything about AI
+00:01:30.720 everything about calot or uh AI
+00:01:34.720 experience this is also about the uh
+00:01:38.720 image search video search this is also
+00:01:42.280 about advertising where we validate
+00:01:44.320 content this is about news uh this is
+00:01:47.159 about everything you gave me everything
+00:01:49.960 we download is processed by my
+00:01:52.280 team um and we can go to news we can go
+00:01:57.360 to advertising yes when you do an ad
+00:01:59.880 advertising at beinging and Microsoft
+00:02:02.200 advertising it's verified by my team in
+00:02:04.320 term of quality but being is way bigger
+00:02:07.640 than people think it's we are also
+00:02:09.959 powering DDO we are powering yaho H skoa
+00:02:14.680 but we are also providing search and
+00:02:17.360 some AI things to meta open Ai and
+00:02:21.480 swisco and many many others cannot list
+00:02:24.800 them whole so when you see being in your
+00:02:28.760 log that's great but when you think
+00:02:31.280 about it there is far more uh engine
+00:02:35.800 that you may not be counting as being so
+00:02:38.720 being is way bigger than you think even
+00:02:41.560 bigger there says in Windows billions of
+00:02:44.800 user we are all over Windows obviously
+00:02:48.200 and here you can find Bing results if
+00:02:50.840 you just search from the start bar you
+00:02:52.840 can find Bing everywhere and this
+00:02:55.400 unfortunately won't be counted as a
+00:02:57.680 traffic to your sites because there is
+00:03:00.239 no referer windows but it's still being
+00:03:04.280 powering this experience so we are
+00:03:06.400 somehow in lot of places surfacing not
+00:03:09.799 only at Bing but also elsewhere think
+00:03:12.120 about that when you think
+00:03:14.599 SEO next is the past of AI Innovation is
+00:03:19.000 really exponential that's crazy I cannot
+00:03:21.959 catch up with everything that is
+00:03:23.799 happening at in AI a lot is happening
+00:03:26.680 each and every day and even more each
+00:03:28.920 and every hour now this is really really
+00:03:31.720 speeding up not only what's happened in
+00:03:34.159 the past uh but even more these days all
+00:03:38.519 this innovation in AI trigger that okay
+00:03:42.799 rele search engine come up with AI
+00:03:45.640 augmented solution such as in 2023 being
+00:03:49.920 augmented with this shat no name calot
+00:03:53.959 to really offer customer the ability to
+00:03:57.040 go deeper to search better to find
+00:04:00.079 content that they maybe were not able to
+00:04:02.280 find until this day over search engine
+00:04:05.599 as Google follow and now we have ai that
+00:04:08.680 is surfacing everywhere not only as
+00:04:11.360 generated AI as caption as shat all of
+00:04:17.279 uh experiences search experiences you
+00:04:20.040 can find this uh content surfacing and
+00:04:23.520 this experiences surfacing so truly
+00:04:26.320 amazing keep we keep innovating we keep
+00:04:29.960 iterating on this
+00:04:33.160 experiences so in 2023 this is really
+00:04:37.000 the the time when we we enable really
+00:04:41.560 some some crazy Innovative experiences
+00:04:43.919 to the user you are all part of Techo
+00:04:47.000 you are all Savvy Tech you know what we
+00:04:49.919 are talking about but think about it
+00:04:51.880 millions of user that were really so far
+00:04:55.000 experiencing only 10 Blue Links okay
+00:04:57.919 they got a shot experience what's that
+00:05:00.639 they got really experiences that were uh
+00:05:03.360 really new and Innovative for them so
+00:05:05.800 this is where search engine not only are
+00:05:07.759 displaying things but they are also uh
+00:05:10.199 learning from user and as we learn from
+00:05:12.360 user we are optimizing this experiences
+00:05:14.400 to obviously satisfy the user and so TW
+00:05:17.600 we saw this kind of learning curve and
+00:05:20.520 really people were saying okay what is
+00:05:22.400 that I'm lost maybe I will click back I
+00:05:24.160 will go back to sech results and as we
+00:05:26.120 discover that it was very useful this
+00:05:28.440 kind of set experience we saw even more
+00:05:31.440 traffic coming to the shat as we we
+00:05:33.880 improving also the quality the layout
+00:05:35.800 the display This was um they were
+00:05:38.400 maximizing um results on this
+00:05:41.120 experiences and so 2024 is we saw that
+00:05:44.919 people were sticking to it we're really
+00:05:46.840 loving it and continue to use
+00:05:51.120 that so there is really two two kind of
+00:05:54.600 searches and two kind of EX what people
+00:05:57.759 are doing in Search and let's say copot
+00:06:00.680 and AI shat
+00:06:03.319 experiences so think about it this is if
+00:06:06.479 you search for YouTube you go to
+00:06:08.840 youtube.com you really need to you
+00:06:11.240 really don't need to have an experience
+00:06:13.520 that is uh chat experience augmented AI
+00:06:17.360 augmented this is what we call
+00:06:19.240 navigational queries you query for
+00:06:21.479 something you get what you want you
+00:06:23.880 click the link you are gone you are
+00:06:26.000 happy you are satisfied by this query
+00:06:28.479 it's kind of what SE is doing this is we
+00:06:31.039 try to Max minimize the number of uh the
+00:06:34.160 time from the query to the click to the
+00:06:36.680 good quality site if we can satisfy the
+00:06:39.240 query in one click perfect we are really
+00:06:41.560 happy uh about this kind of experience
+00:06:44.800 then there is uh kind of copal lot where
+00:06:48.120 often the user does not really know what
+00:06:50.400 he or she is looking for and will kind
+00:06:52.919 of potentially iterate and this is where
+00:06:55.720 we can really engage a discussion
+00:06:57.680 conversation with a user to be able to
+00:07:00.440 find the best content and also to to
+00:07:03.280 Really Le this kind of complex query
+00:07:06.199 that search may not be able to answer so
+00:07:09.080 you can do such crazy very very long
+00:07:12.080 query in calot and we will provide
+00:07:14.080 content that is satisfying this query
+00:07:16.199 leveraging the best of AI Tech we have
+00:07:18.680 to release yourface content and links to
+00:07:21.520 your sites enabling you uh to get
+00:07:24.080 traffic from suchar experience so search
+00:07:27.919 I know exactly what I want want and
+00:07:30.840 copal lot story AI story where I S I
+00:07:33.400 know what I want and maybe I will
+00:07:34.800 iterate or the engine the AI engine will
+00:07:37.280 be smart enough to really provide on the
+00:07:39.759 first results this ideal
+00:07:43.479 content so next is really Su is not
+00:07:48.520 dead this say we keep telling that for
+00:07:51.240 years it's really evolving and it's
+00:07:54.440 evolving in a direction that is some
+00:07:57.360 very interesting this is where there is
+00:07:59.039 a diversification there is more uh
+00:08:02.840 solution out there to provide
+00:08:05.360 fundamentally traffic qualified traffic
+00:08:07.800 to your sites so this is not only uh
+00:08:11.440 search as usual this is AI this is
+00:08:14.680 various solution being copal lot thiss
+00:08:17.080 is perplexity thiss is open AI this is
+00:08:19.400 all this AI solution thiss is maybe Tik
+00:08:21.759 Tok and others that are providing
+00:08:24.159 traffic to your sites so something to
+00:08:27.280 really consider there is more player
+00:08:29.919 more players that are driving additional
+00:08:32.599 traffic to your site sometime it's they
+00:08:35.240 are draining a little bit from search
+00:08:36.760 engine if not a more lot more they says
+00:08:39.679 also that there is overall driving more
+00:08:42.399 traffic overall to sides so something to
+00:08:46.120 consider optimizing for one player is
+00:08:48.720 maybe not what you should focus on
+00:08:50.959 moving
+00:08:52.040 forward um we are on the east coast and
+00:08:54.800 I want to say I want to allight someone
+00:08:57.399 on the east coast in Philadelphia we're
+00:08:58.880 speaking about Phil
+00:09:00.200 yesterday and um will has some good
+00:09:04.200 insights about what's happening in the
+00:09:05.720 industry this day there is over players
+00:09:08.399 that are also detecting that mean they
+00:09:12.480 detect that there is clicks from search
+00:09:16.079 and there is clicks from AI solution and
+00:09:19.839 what he really care about is really
+00:09:23.440 about getting not clicks getting
+00:09:26.519 conversion getting dollar value from
+00:09:30.120 search and from Ai and what he observed
+00:09:34.079 he really went deep I was speaking to
+00:09:36.360 him two days ago and he really went deep
+00:09:38.399 in data and showing me that AI is
+00:09:42.839 generating absolutely Stellar clicks
+00:09:46.160 absolutely mean when I say Stellar this
+00:09:48.600 is things that are converting to
+00:09:50.360 registration to an event to registration
+00:09:53.360 to a newsletter to people buying things
+00:09:57.000 click is often exploration
+00:09:59.839 is a click okay link number one click
+00:10:03.320 link number two go back iterate often
+00:10:06.880 what people as we are observing is that
+00:10:09.240 and this is one of them I've got many
+00:10:11.399 example where people are observing more
+00:10:13.399 quality clicks from AI
+00:10:17.920 solution so I did this graph it's not
+00:10:22.120 the best graph but fundamentally look at
+00:10:24.440 2D motion look at clicks of I see suu
+00:10:28.600 and it's very thing to do this says okay
+00:10:30.920 you go to your meetings to say hey look
+00:10:33.279 the clicks is moving up it's good
+00:10:36.040 personally I I think you should not care
+00:10:38.959 so much about clicks you should look
+00:10:41.560 really at conversion rate about the
+00:10:43.240 dollar value that really there clicks
+00:10:45.800 are adding and so you can see really
+00:10:48.360 there's two Dimension one is about oh
+00:10:50.680 you may have a lot of clicks on search
+00:10:52.920 but maybe you may not have enough
+00:10:54.959 conversion you may not have people that
+00:10:56.839 are buying something on your shopping s
+00:10:58.959 and so on so really look at two this two
+00:11:02.279 Dimension because if you go to the CMO
+00:11:05.639 CEO to tell I've got lot of clicks and
+00:11:09.040 you go back next day to say no no I've
+00:11:11.000 got a dollar coming from this clicks
+00:11:14.480 this is better for your career to save
+00:11:16.399 the second one than the first one so
+00:11:19.120 think about that ideally try to plot
+00:11:21.399 that come back to the industry telling a
+00:11:23.760 that's fact we may have less clicks from
+00:11:27.000 AI but we have far better clicks from a
+00:11:29.440 I than from search we obviously still
+00:11:32.440 want to have great search results it's
+00:11:34.920 not about diminishing the value of
+00:11:36.760 search but there is also a real value of
+00:11:40.279 AI so next is I want to briefly
+00:11:43.800 introduce you being generated search and
+00:11:46.399 tell you more about it because what we
+00:11:48.800 saw is that there is search and AI but
+00:11:51.560 maybe maybe there is a way to do the
+00:11:53.519 best of both world uh to again trigger
+00:11:57.200 uh very good links and clicks to your s
+00:11:59.519 sites so if you search ad beinging today
+00:12:02.839 for what is a spaghetti western movie
+00:12:05.360 think you will see a very long and
+00:12:08.680 complex
+00:12:10.200 experience very long search result page
+00:12:13.079 with lot of information in it such as
+00:12:16.360 movies about this Western PTI J J and
+00:12:21.120 many more so the experience is really
+00:12:23.440 about fundamentally this is we know that
+00:12:26.920 there is not one good results for this
+00:12:28.760 query
+00:12:29.800 there is a set of things that people are
+00:12:31.880 looking at when they search for that so
+00:12:34.920 we can really explore and provide
+00:12:37.399 information directly on the search
+00:12:39.440 result page with a long list of
+00:12:41.839 categories and answers that may satisfy
+00:12:44.320 the user it's kind of a magazine thing
+00:12:47.040 it's kind of a lot of information
+00:12:48.760 provided to the user but we perceived
+00:12:52.040 from the data analytic we have that it's
+00:12:55.120 really the best results we can provide
+00:12:56.959 to the user understanding we understand
+00:12:59.959 the user the history what user are Weare
+00:13:02.240 doing and providing the best user
+00:13:04.720 friendly experience to the user it's
+00:13:07.240 kind of thinking already what the user
+00:13:09.440 will click next and based on what they
+00:13:11.440 have done in the past providing again
+00:13:13.279 this best experience to the user it's
+00:13:14.959 kind of mixing AI where the layout and
+00:13:18.399 the placement of all this answer is
+00:13:20.320 really uh based on uh what we believe
+00:13:23.399 should be it's never the same you will
+00:13:26.000 see different experiences for the
+00:13:27.800 generated search
+00:13:29.720 um this is using the llm using a lot of
+00:13:33.079 tech to again provide the best answer uh
+00:13:35.760 to the
+00:13:37.040 user you can try generated search by
+00:13:40.120 just querying for being generated search
+00:13:43.639 and you will see a carousel with lot of
+00:13:45.880 links to try it out so encouraging you
+00:13:49.320 to play with it this is kind of a future
+00:13:51.360 of search this is where AI is really
+00:13:53.560 coming in the search results to really
+00:13:55.959 kind of potentially change the 10 Blue
+00:13:57.880 Links to provide a generated AI
+00:14:00.680 experience that is not only the
+00:14:02.639 placement of information is completely
+00:14:04.480 based on AI the links themselves may be
+00:14:07.079 caption generated AI generated lot of AI
+00:14:10.040 in play for such
+00:14:13.000 Pages um and you can test that also you
+00:14:15.839 can also observe that sometime we you
+00:14:18.320 may display the Deep search button so
+00:14:21.320 the Deep search is something that is
+00:14:23.920 absolutely some more fascinating this SV
+00:14:27.360 this is this is not fast this is not one
+00:14:30.480 millisec to get the results why because
+00:14:33.560 we will do deep search we will go deep
+00:14:36.120 in the stock we will run llm models we
+00:14:38.480 will do a lot of things to often
+00:14:40.959 generate this kind of experience on the
+00:14:42.759 fly to really try to satisfy this this
+00:14:46.560 query this to surface uh really quality
+00:14:50.360 content it it crazy expensive in term of
+00:14:54.839 CPU AI logic to really go deep in the
+00:14:58.639 stock to to really retrieve uh this
+00:15:00.560 content and try to satisfy the query so
+00:15:04.279 I let you play with this we think it's
+00:15:07.040 the some also the future of search and
+00:15:09.120 obviously as we are optimizing Tech this
+00:15:12.000 is to bring this technology in the
+00:15:14.600 search page in the default page as
+00:15:17.360 needed to again satisfy this query where
+00:15:20.480 the default may be not satisfactory or
+00:15:22.480 we believe we should uh iterate more to
+00:15:24.680 display relevant
+00:15:26.480 results next is I want to tell you about
+00:15:29.519 uh being we master tool a little bit
+00:15:31.440 about what we release uh what we are
+00:15:33.920 releasing this week so being we master
+00:15:36.959 tool is fundamentally a tool to free
+00:15:39.199 tool to help you to get more user to
+00:15:41.519 your sites to to tell you what's wrong
+00:15:44.240 on your sites or give you abilities to
+00:15:46.959 to understand what we want you to do to
+00:15:49.240 get more user so the SE is often very
+00:15:54.040 difficult this is why you are here uh if
+00:15:57.040 it was easy yes but this was easy and
+00:15:59.880 you don't need to be there and you won't
+00:16:01.680 have a job so no you are here why
+00:16:03.560 because there is Su and it's difficult
+00:16:06.639 it's difficult because there is a lot of
+00:16:08.440 data a ton of data you have data that
+00:16:11.800 often you are looking at Google SCE
+00:16:13.519 console sometime being we master tool
+00:16:15.920 you have logs we spoke about logs
+00:16:17.759 yesterday in passing logs there is a ton
+00:16:19.600 of data everywhere
+00:16:21.360 available and next is that there is a
+00:16:23.920 lot of tools look at all the tools
+00:16:26.079 yesterday which tool I need to use and
+00:16:28.519 here we have
+00:16:29.680 uh we believe that we can help you and
+00:16:33.040 uh so this is Major announcement this is
+00:16:35.920 the this is a case stud this is uh maybe
+00:16:39.279 someday this will happen in your life
+00:16:41.639 and the traffic is going down bad and
+00:16:45.759 your manager is telling you hey what's
+00:16:47.560 happening uh I really don't know and
+00:16:50.959 then your uh CEO CFO will call you to
+00:16:54.399 say hey what can I do please come up
+00:16:56.759 with a meeting with a plan and you may
+00:16:59.120 not know so you are panicking so this is
+00:17:02.160 where we can we believe we can help with
+00:17:05.039 our AI technology a little bit and if
+00:17:07.919 not more by offering you an assistant an
+00:17:11.599 assistant that will do everything for
+00:17:13.439 you including providing you solution to
+00:17:17.199 this problem so what you should do in
+00:17:19.799 the following weeks and following month
+00:17:22.400 is go to BW master tool and here we will
+00:17:27.000 you will see something new on Bing
+00:17:28.919 master tool this is you will see this
+00:17:31.960 icon that is the copot icon and we bring
+00:17:35.000 copot within Bing master tool we bring
+00:17:38.600 AI technology with him being web master
+00:17:40.720 tool if you click this link you will get
+00:17:43.000 access to Insight support additional
+00:17:46.799 information to help
+00:17:48.440 you uh to do more with your sites so uh
+00:17:53.679 we are not seeing uh today have a
+00:17:55.720 limited uh preview of copal lot in Big M
+00:17:58.840 master tool we've started to fly it and
+00:18:01.240 some of you will get access to that and
+00:18:03.919 we will extend as we go over the
+00:18:05.760 following weeks so this is personalized
+00:18:09.640 insights based on your data it's not
+00:18:12.960 just a shat B basical things it's really
+00:18:16.200 based on your data to really deeply
+00:18:18.360 understand your data and to display the
+00:18:20.799 answers and what you should do based on
+00:18:22.600 your data it's also a shat experience on
+00:18:25.280 the support content but also you can
+00:18:27.799 provide task if if you want to submit a
+00:18:29.880 sitemaps for instance you can submit a
+00:18:32.280 Sit Maps directly through this
+00:18:34.480 experience so here I will uh I was
+00:18:38.440 playing myself and I recorded the tool
+00:18:40.919 where you can see really this
+00:18:43.360 Intelligence on the data it will look at
+00:18:46.559 the data and provide based on Trends
+00:18:49.400 based on statistical information we have
+00:18:52.120 what was the peak traffic comparing
+00:18:54.480 year-over-year
+00:18:55.919 comparing uh weekends comparing holiday
+00:18:59.240 all the information that we have about
+00:19:01.200 what's happening in the world plus the
+00:19:03.120 information on the sites and we will
+00:19:05.120 provide information back to you about
+00:19:07.600 what's happening it's just an example of
+00:19:11.039 uh query for uh a site and um as we
+00:19:16.360 iterate we can continue quering and
+00:19:20.080 finding more uh support content and
+00:19:24.600 additional data that we can uh surface
+00:19:27.240 for your sites I will I can demo it to
+00:19:30.240 you later on I will continue advancing
+00:19:32.880 in the PPT because I want to reserve
+00:19:36.000 time uh for question so this is this is
+00:19:39.919 an assistant wonderful assistant that
+00:19:41.679 can help you to answer your question uh
+00:19:44.400 you have a bonus if you register that if
+00:19:48.320 you register your email here I give you
+00:19:52.159 um few seconds to take a photo uh you
+00:19:55.760 will be the first one to really access
+00:19:57.880 the beta version of this thing so
+00:20:01.200 encourages you to signing and then you
+00:20:03.840 will get access over the following
+00:20:06.919 weeks we do believe it's
+00:20:09.360 useful this is just another tool but
+00:20:12.000 it's a free tool so please pay attention
+00:20:15.080 to that additionally we just release top
+00:20:19.440 accommodation for your sites top
+00:20:22.240 accommodation this is my way to not be
+00:20:24.799 contacted by
+00:20:26.200 email if I look at your sites B my goal
+00:20:29.360 is to provide the best accommodation uh
+00:20:32.000 for you to tell you what's wrong on your
+00:20:34.760 SES this is this experience if you go to
+00:20:38.799 big master tool and you see that please
+00:20:41.039 act this mean that this is not this is
+00:20:44.720 not advertising this is this the values
+00:20:48.679 we are observing you are below the bar
+00:20:52.440 so you need to improve your whatever you
+00:20:55.080 do
+00:20:56.760 to um to be above a bar to avoid this
+00:21:01.480 answers this recommendation to trigger
+00:21:04.919 so pay attention to this this ISS if I
+00:21:09.000 speak to your CFO coo CMO C I will tell
+00:21:13.279 you the same and you don't want me to do
+00:21:15.760 this to tell the same so pay attention
+00:21:18.279 to this uh we will continue optimizing
+00:21:21.919 it we are welcoming feedback if you see
+00:21:23.640 something wrong this is also the fact
+00:21:26.200 sometime we may be doing
+00:21:29.240 we may have issues with your site we may
+00:21:31.880 not be able to process the JavaScript
+00:21:33.559 and this may trigger and so this is
+00:21:35.799 where also you can spot issue no I'm
+00:21:37.400 doing the right things but you don't so
+00:21:39.520 we are then welcoming useful feedback to
+00:21:42.480 help us fixing your site so please pay
+00:21:44.960 attention to
+00:21:46.360 this it's all magical this is looking at
+00:21:49.480 all categories of bigw Master Tool uh
+00:21:53.080 again please pay attention and this is
+00:21:55.720 not only providing just basic
+00:21:58.240 information as we saw this is also
+00:22:00.760 providing additional text and URLs so
+00:22:04.320 you can look oh yeah this URL is missing
+00:22:06.159 a n one you should better have a n one
+00:22:08.880 on your content it's really helping uh
+00:22:11.120 like meta description and title um to
+00:22:14.039 retrieve uh good quality content AI is
+00:22:17.640 not
+00:22:18.640 magical we cannot generate uh good AI
+00:22:22.760 caption if there is really little
+00:22:24.919 content on your pages so please generate
+00:22:27.799 good quality title description and
+00:22:30.720 primary content of a page uh you need to
+00:22:33.000 focus on
+00:22:35.000 that next is we just extended uh search
+00:22:39.000 performance data from 6 month to 16
+00:22:41.880 month uh we got lot of thank you on the
+00:22:45.760 recently because it's really helping you
+00:22:47.760 to to see this kind of year-over-year
+00:22:50.000 traffic you can compare um You can
+00:22:54.159 compare um Cyber Monday to Cyber Monday
+00:22:58.080 last year so uh pay attention to this uh
+00:23:02.480 want to share that we are surfacing
+00:23:04.799 clicks and impression not only from
+00:23:06.720 search but also from search n AI
+00:23:09.279 solution as copilot within this uh
+00:23:12.720 search performance
+00:23:15.080 report so yes we listened to uh feedback
+00:23:19.039 people were complaining and so we have
+00:23:20.720 exended if you are not happy please
+00:23:22.760 contact us and we will consider your
+00:23:26.000 feedback next as we are in Tech Cas I
+00:23:28.960 will spend a little bit time on andex
+00:23:32.520 no why andex no why this is so critical
+00:23:36.120 for um not only for being but of over
+00:23:40.919 search engine so what's happening with
+00:23:43.760 search engine is that we are dumb I will
+00:23:48.200 be clear in calling you see Google
+00:23:51.520 speaking about calling and optimizing
+00:23:53.720 HTTP download and whatever the fact is
+00:23:58.080 that we really don't know what's
+00:24:00.679 happening on website at scale we may
+00:24:03.720 know what's happening on some head URL
+00:24:07.080 homepages and think like this if you
+00:24:09.480 have a sites with billions of URL of
+00:24:11.760 Amazon sorry I simply don't know if as a
+00:24:15.320 certain gen if a t product a really
+00:24:19.200 small product has been updated price has
+00:24:21.200 been updated so what we do is we send
+00:24:24.240 simply send the Coler to see if we are
+00:24:27.840 lucky
+00:24:28.880 if something has changed or not or if
+00:24:31.399 there is a new URL a new outlink helping
+00:24:33.960 us to discover the
+00:24:35.960 content that's dumb they says then you
+00:24:40.240 are
+00:24:41.000 surfacing problems as C
+00:24:44.240 quter okay what's stupid so the view the
+00:24:49.840 view what we want to do is really move
+00:24:52.120 to a model where uh search engine will
+00:24:55.360 be augmented via an API
+00:24:58.880 to tell us what
+00:25:01.360 change and so this is as easy as you
+00:25:04.159 submit an
+00:25:05.480 URL and I trust you I come with a
+00:25:09.600 color and thank you I download the
+00:25:13.399 content Bingo the latest content is
+00:25:16.039 reflected in the search
+00:25:18.200 engine no more quala no more craziness I
+00:25:21.799 can allocate lot of processing capacity
+00:25:26.559 JavaScript processings and so on on to
+00:25:28.760 this URL that has just been downloaded
+00:25:30.799 because you are telling me that the
+00:25:32.240 content has changed great thank you I
+00:25:35.120 can benefit from that here is a
+00:25:37.559 two-minute video to tell you more about
+00:25:39.320 an next in the ever evolving digital
+00:25:41.559 landscape leaning Brands like Yahoo eBay
+00:25:44.440 USA Today Cloud flare and more have
+00:25:47.520 recognized the importance of embracing
+00:25:49.919 index now to enhance their online
+00:25:52.000 presence this is more than a trend it's
+00:25:54.880 a GameChanger without index Now search
+00:25:57.840 engines crawl websites at their own pace
+00:26:00.279 not when site owners publish new content
+00:26:03.000 these unpredictable crawlers can miss
+00:26:04.760 newly published content for hours or
+00:26:07.159 even days this means Searchers are
+00:26:09.440 unable to benefit from your latest
+00:26:11.760 product listings press releases or other
+00:26:14.440 important content and without the
+00:26:15.919 ability to control when and what content
+00:26:18.640 is indexed search results captions can
+00:26:21.320 appear outdated and lower your site's
+00:26:23.240 rankings by sending customers to wrong
+00:26:25.640 or broken links this leads to mismatched
+00:26:28.039 cont content and frustrated Searchers
+00:26:30.640 who miss out on your website's latest
+00:26:32.960 offerings but with just one simple ping
+00:26:35.640 index now shares your website's new
+00:26:38.080 updated and deleted content across all
+00:26:40.480 participating search engines as soon as
+00:26:42.640 they happen give me Searchers access to
+00:26:45.039 your most relevant and current
+00:26:46.880 information at the time of search and by
+00:26:49.360 updating your content to match evolving
+00:26:51.480 user needs you not only contribute to
+00:26:53.720 enhanced user satisfaction but also
+00:26:56.360 higher click-through rates longer
+00:26:58.360 on-site engagement improved s Authority
+00:27:01.000 and ultimately higher search engine
+00:27:03.039 rankings index now guides crawlers when
+00:27:06.120 and what to crawl significantly
+00:27:08.360 decreasing advertising cost by improving
+00:27:10.640 your organic rankings while also
+00:27:12.720 reducing crawl cost having better online
+00:27:15.440 visibility isn't just about having a
+00:27:17.399 website it's about your latest content
+00:27:20.000 being found as a free protocol index now
+00:27:22.960 seamlessly integrates into most content
+00:27:25.039 Management Systems in fact many content
+00:27:27.640 management systems and Cloud delivery
+00:27:29.600 networks already support index Now by
+00:27:31.760 default requiring little to no effort on
+00:27:34.880 your part to learn how you can adopt
+00:27:36.720 index now simply visit
+00:27:38.799 bing.com index
+00:27:41.000 now so I will tell you more so you as
+00:27:45.640 display on the video you can go to
+00:27:48.120 bing.com endex no and um get um links
+00:27:54.120 information about how to convince your
+00:27:55.840 boss uh to adopt an next no
+00:27:58.720 and implementation can be first your
+00:28:01.480 sites may be an no enable already if you
+00:28:03.640 are using a good content management
+00:28:05.200 system more are coming or you have
+00:28:08.399 plugins for uh the top content
+00:28:10.559 measurement system so it can take you
+00:28:12.039 five minutes to adopt if you are your
+00:28:14.279 own stock with the index no protocol is
+00:28:18.640 easy uh we see having a set of interns
+00:28:22.320 last summer that did implementation for
+00:28:24.519 a lot of top sites so we were very happy
+00:28:27.600 to see that
+00:28:28.679 but uh we offer you insights within big
+00:28:32.440 master tool to help you to tell you if
+00:28:34.559 you do a good job at uh publishing
+00:28:37.159 content in term of added updated and
+00:28:39.559 deleted
+00:28:42.679 URL I want to speak a little bit about
+00:28:45.519 the slides
+00:28:47.640 um I do believe that theu Community is
+00:28:51.399 not paying attention enough to deleted
+00:28:56.720 urls
+00:28:58.240 and updated
+00:29:00.360 URLs so this is for anex or if you plan
+00:29:05.279 adopting anex no in the future please
+00:29:07.640 also pay attention today about what's
+00:29:10.279 happening so the community is all about
+00:29:13.760 yeah I've got my content IND next y win
+00:29:17.120 no it's not a win it's just the start of
+00:29:20.000 a
+00:29:21.120 journey it's also the fact that you need
+00:29:23.840 to think that things are changing all
+00:29:25.880 the time on the Internet you may have
+00:29:27.240 Oncor text coming to your URLs you may
+00:29:29.720 have lot of information on the web
+00:29:31.840 linking to your content but certainly
+00:29:33.919 need to be aware that hey there is
+00:29:36.080 additional things that is happening for
+00:29:37.640 this URL please we need to reprocess
+00:29:39.919 this URL we need maybe to get it
+00:29:41.919 reindexed second is that yourl may be
+00:29:44.720 gone from your site because you remove a
+00:29:47.159 product let's imagine that the customer
+00:29:49.399 click the link going to this page it's
+00:29:52.679 really bad from a search engine
+00:29:54.000 standpoint why because the customer
+00:29:55.720 obviously won't long won't stay there it
+00:29:58.120 will click back short DW time we call
+00:30:01.679 that DW time of getting to the content
+00:30:04.159 is bad for search engine this is a bad
+00:30:06.200 signal we think your site is not
+00:30:09.080 relevant so the fact that the content is
+00:30:11.960 deleted if we don't drain this content
+00:30:15.240 from search engine is bad so it's not
+00:30:18.200 only about adding the content once it's
+00:30:19.960 also about deleting removing the bad
+00:30:23.559 content next
+00:30:25.760 update think about this beautiful video
+00:30:28.320 you just publish on YouTube about your
+00:30:30.519 products great obviously if you get it
+00:30:33.720 Index right away and you should this URL
+00:30:36.720 will have maybe one view cont because
+00:30:39.840 you've tested that this URL R fine and
+00:30:42.279 yeah one view cont we don't want to link
+00:30:45.360 to video having one view cont we prefer
+00:30:47.840 to link to video having 1 million view
+00:30:50.120 cont so as you get traffic if you don't
+00:30:53.840 reflect in search engine that this video
+00:30:56.000 has many view cont
+00:30:58.720 then search engine will continue to
+00:31:00.440 think that this video has one view count
+00:31:03.320 bad so it's not only about I want to
+00:31:06.799 share another example
+00:31:08.639 price okay you went live with a
+00:31:11.880 $255 thing but now you have a promotion
+00:31:14.840 at
+00:31:16.200 $99 if certain gen are not aware that
+00:31:19.600 this is
+00:31:20.600 $99 they may prefer the oversight that
+00:31:23.679 as the price as
+00:31:25.840 $99 because yeah we want to SA is by
+00:31:28.240 your customer and we prefer linking to
+00:31:30.440 customer to something having $99 but
+00:31:32.760 something having
+00:31:34.240 $255 and I can go
+00:31:36.600 forever so having the latest content
+00:31:40.240 index in search engine from this
+00:31:42.440 technical suo audience truly
+00:31:45.600 matter and then the question become okay
+00:31:48.799 when I've got to send the Fe the
+00:31:50.639 notification to the search
+00:31:52.399 engine think this is an Amazon
+00:31:55.519 page wow lot of information on the page
+00:31:59.519 price reviews comments if sent us
+00:32:04.080 notification for each and every change
+00:32:06.399 on Amazon we will be bombarded with
+00:32:08.840 billions of URL every day because yes
+00:32:11.440 people are viewing sending comments
+00:32:13.880 reviewing things so you need to think
+00:32:16.399 about a strategy SEO strategy to know
+00:32:19.559 when to notify the search engine clearly
+00:32:22.720 I did URL right away deleted URL right
+00:32:26.639 away and then the tricky question is
+00:32:29.120 really about when do you want to notify
+00:32:31.519 for the update and so I did a blog post
+00:32:34.840 to provide some view it's really think
+00:32:38.919 about that as generic then you need to
+00:32:41.120 adopt that for your sites to know when
+00:32:43.880 to notify search engine being Andover
+00:32:47.760 the benefit of anx no is that with anx
+00:32:50.480 no you will notify all search engine
+00:32:52.519 having adopting an xn I do believe this
+00:32:55.519 is something that is very important from
+00:32:57.360 a ranking
+00:32:58.440 to satisfy customer in search engine and
+00:33:00.919 so pay attention to
+00:33:04.320 this and next no is really getting uh
+00:33:08.639 adoption um we are very pleased at
+00:33:11.639 Microsoft to see that and over search
+00:33:13.440 engine are observing the same we do
+00:33:17.320 believe that there is a path toward uh
+00:33:20.320 nearly all search engine including the
+00:33:22.840 very big one adopting an xn so we
+00:33:26.279 receive already 3.5 billion URL uh 18%
+00:33:30.240 of results click new URL click being are
+00:33:34.639 next why because if you have a News
+00:33:38.559 website if we there is an earthquake you
+00:33:41.480 better have to be first in the sear Eng
+00:33:45.159 if you are behind you don't get the
+00:33:46.760 benefit of clicks you don't get the
+00:33:49.120 benefit of being linked because people
+00:33:51.159 don't know you they says you are you are
+00:33:53.200 P two you are P
+00:33:55.000 three so being first toly
+00:33:58.440 especially for news
+00:34:00.960 websites um so we are very pleased to
+00:34:04.600 announce uh that archive.org
+00:34:08.199 uh adopt andex no as a search engine
+00:34:11.879 andex no is for big players but also
+00:34:14.280 archive.org that is a very big player in
+00:34:17.399 scale uh and so we get this code from
+00:34:21.119 Mark um is pleased to get the benefit of
+00:34:25.359 anexo to help them uh getting the latest
+00:34:28.800 content on the internet we are pleased
+00:34:31.560 to collaborate with them to provide
+00:34:34.119 information to them about what change on
+00:34:36.159 the internet in term of added updated
+00:34:38.440 and deleted content to help them doing a
+00:34:41.199 better job at archiving the
+00:34:43.800 internet so so far there is um being
+00:34:49.560 your next snam never
+00:34:52.639 as I've got my
+00:34:55.000 t-shirt thank you Patrick
+00:34:58.880 to ad to adopt an x no but there is uh
+00:35:02.440 one more we will see two to three more
+00:35:06.359 over the following
+00:35:09.240 quarter but adopt an next no and
+00:35:13.880 um we cross figure and we cannot say
+00:35:16.560 more but in
+00:35:17.880 2024 2025 it should be uh yeah some very
+00:35:23.000 big one that will be hopefully adopting
+00:35:25.880 because clearly we are a fresher
+00:35:28.680 uh than many search many other large
+00:35:31.960 search engine on lot of content already
+00:35:35.680 so this is open to all uh search engine
+00:35:38.920 and xno and so we encourage you to
+00:35:41.680 really adopt to benefit in all this
+00:35:43.680 search engine and all the search search
+00:35:46.760 engine power by beinging today and so
+00:35:49.760 please pay
+00:35:52.359 attention uh Max are you in the room
+00:35:58.640 okay kast is adopting an next
+00:36:01.319 no thank you Max thank you kast more
+00:36:06.400 coming I just want to highlight conas
+00:36:09.160 because Max and conas is in the room
+00:36:12.760 should be but there is a lot of the
+00:36:15.440 industry that is adopting an X now today
+00:36:18.520 so again if you are news pay attention
+00:36:20.440 because they will win versus you so
+00:36:22.359 please adopt an x no
+00:36:24.760 to more announcement we want really the
+00:36:28.359 backbone of the internet as good no
+00:36:30.960 adopting an XO so this says um if the
+00:36:35.160 CMS as good thank you good for adopting
+00:36:37.720 next adop an next then you um this is
+00:36:41.319 builtin and thank you we you support
+00:36:44.680 that last more
+00:36:48.920 foring much more
+00:36:51.520 foring so uh did you pay attention to
+00:36:54.760 this page I want to share something good
+00:36:57.800 this is this is my points at being my B
+00:37:01.359 reward points at being and just by this
+00:37:04.760 is I've got 7K
+00:37:07.440 700k being reward point and just by
+00:37:11.079 doing this uh you win money 700k go
+00:37:16.920 $700 I just using Bing I accumulated
+00:37:19.960 $700 over the last three years and a
+00:37:22.960 half and so that's pretty good and this
+00:37:26.720 big reward thing things that we do can
+00:37:28.720 you can spend your money to to buy
+00:37:31.720 things as Amazon and elsewhere uh but
+00:37:34.720 also you can give to charity and this is
+00:37:38.359 I encourage you to give to charity uh to
+00:37:40.839 help charity here and there uh to
+00:37:45.760 strive and so uh we encourage you to use
+00:37:50.599 this and especially because you can win
+00:37:52.599 $1
+00:37:53.680 million wait what are we doing no no you
+00:37:57.040 can WI win $1
+00:37:58.640 million and if you click this link you
+00:38:03.200 can have one free
+00:38:06.000 entry you don't even to have to spend to
+00:38:09.359 your money to win $1
+00:38:11.640 million so the key takeaway of this
+00:38:14.480 presentation is really to win in the a
+00:38:18.000 area please adopt an next now don't
+00:38:20.560 forget s maps and let modify date very
+00:38:23.440 useful it's all about trying AI content
+00:38:27.920 generation is ship you can iterate fast
+00:38:31.000 change your sites if you take control of
+00:38:33.400 color you can you can do ABY testing
+00:38:37.400 think about that people are telling me I
+00:38:39.720 did AB testing and this is the result I
+00:38:42.480 don't see benefit hey yeah sure we
+00:38:44.480 didn't even call your content or do you
+00:38:46.280 want that we do a testing if you don't
+00:38:48.680 take control of caller to do this AB
+00:38:50.520 testing thing focus on satisfying your
+00:38:53.800 customer I spoke about conversion versus
+00:38:56.560 clicks p con to this and benefit from AI
+00:39:01.440 but with a human human brain AI itself
+00:39:07.160 beware and follow search engine
+00:39:09.160 guidelines very
+00:39:11.560 important again take control of your
+00:39:14.160 game with real
+00:39:16.359 timeing and last this is about this
+00:39:19.000 update delete
+00:39:21.200 thing I a website is not just about
+00:39:25.520 getting the content index is about
+00:39:27.440 really reflecting the each and every
+00:39:29.520 latest content change in the search
+00:39:31.800 engine pay attention to
+00:39:35.880 this so use B web master tool use
+00:39:39.240 Microsoft Clarity verus free offering
+00:39:41.160 for web for web Masters you will get a
+00:39:44.960 far better uh understanding of your
+00:39:48.359 sites um I really encourage you
+00:39:51.359 encouraging you to use
+00:39:53.200 both remember that you can win $1
+00:39:55.599 million if someone win $1 million in
+00:39:58.280 this audience I will be super pleased I
+00:40:00.520 don't take any
+00:40:02.040 percentage uh thank you it was a
+00:40:05.720 presentation
+00:40:08.270 [Applause]

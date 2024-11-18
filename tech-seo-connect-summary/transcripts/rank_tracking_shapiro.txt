@@ -1,0 +1,542 @@
+# tactiq.io free youtube transcript
+# Rolling Your Own Rank Tracking Solution - Paul Shapiro
+# https://www.youtube.com/watch/hqJtuk6ktcA
+
+00:00:03.560 [Applause]
+00:00:08.599 cool thanks everyone uh yes so rolling
+00:00:11.960 your own rake tracking
+00:00:14.360 solution uh I'll just skip this uh you
+00:00:17.680 guys heard about me already um cool so
+00:00:22.240 what is the problem with most rank
+00:00:24.000 tracking Solutions today you run into
+00:00:27.000 the issue that pretty much you're you're
+00:00:30.519 locked into this this big platform with
+00:00:33.360 its own data um doesn't allow for a lot
+00:00:36.520 of customizability you need a you need a
+00:00:38.960 new feature um and you're sort of like
+00:00:41.920 locked into that you need to go to a
+00:00:43.879 different vendor if you need a different
+00:00:45.079 feature or you get them to create it
+00:00:47.600 which is unlikely um all the data exists
+00:00:50.800 in silos for the most part you
+00:00:54.039 are um you're getting ring tracking data
+00:00:57.440 you may like export it or dump that to a
+00:00:59.120 SQL database is and like maybe you want
+00:01:01.960 to do an analysis you're you're
+00:01:03.359 exporting it doing the analysis there
+00:01:05.840 it's not fully baked into the platform
+00:01:07.720 unless the the platform made it uh that
+00:01:10.560 that analysis ready available for you so
+00:01:14.080 there's some clear advantages to running
+00:01:16.840 your own rank tracking software like
+00:01:19.400 Ranken Berry so you get full data
+00:01:22.560 control um everything sits within one
+00:01:25.560 platform you all your data that you're
+00:01:27.640 going to use for analysis all the rank
+00:01:29.600 tracking data anything else that you're
+00:01:31.119 pulling in that you want to mix with
+00:01:32.360 that data it's all available all in one
+00:01:35.640 for you to use end to end um if some a
+00:01:39.920 feature doesn't exist you want that
+00:01:41.240 feature it's uh you can make it yourself
+00:01:44.399 um again you don't have to switch to a
+00:01:46.560 different data provider or a different
+00:01:48.200 rank tracking software you can go ahead
+00:01:50.759 and just add on that functionality if
+00:01:52.759 you need
+00:01:54.119 it um lastly Rank and Barry is an
+00:01:57.719 open-source project which means uh
+00:02:00.719 Beyond this being a oneman show um if
+00:02:03.520 you want to contribute and help others
+00:02:05.159 you're surely able to do
+00:02:08.360 that so to get started it's a like I
+00:02:11.239 said it's an open source project it's
+00:02:12.800 available on a GitHub repo feel free to
+00:02:15.879 clone that repo and run it yourself or
+00:02:19.040 contribute to it um whatever you want
+00:02:21.640 it's up to
+00:02:23.040 you um I'll just put this front first is
+00:02:27.080 uh right now it's running off of a rank
+00:02:31.080 tracking API called space serp which has
+00:02:33.360 this lifetime deal on appsumo it's
+00:02:36.560 started as the API first before I
+00:02:38.319 decided to build a rank tracker that's
+00:02:40.080 that's the Genesis of this I got a
+00:02:41.720 really good deal on a rank tracking API
+00:02:43.599 and I built software around it um but if
+00:02:46.200 you want to actually try the project you
+00:02:47.840 will need access to space serp first
+00:02:52.200 it's like 60 bucks for life it's not
+00:02:54.840 bad um cool so talking about the the
+00:02:59.040 architecture of rank and
+00:03:02.159 Berry oh before I do this um let me just
+00:03:05.959 say uh I had this really ambitious road
+00:03:08.640 map for Ranken Barry like I wanted to
+00:03:10.200 have all these features done before this
+00:03:12.560 conference and I didn't get to it uh so
+00:03:15.120 so what did I do I tried using some AI
+00:03:18.080 software I used cursor to try to build
+00:03:20.080 out
+00:03:20.799 features total nightmare um like it it
+00:03:25.720 made some features and it introduced
+00:03:27.920 tenfold the amount of bugs and I spent
+00:03:30.879 like two weeks trying to rectify the
+00:03:32.840 bugs before I decided to just revert and
+00:03:35.319 code most of it myself so you became a
+00:03:38.040 10x program yeah 10 10x minus I don't
+00:03:42.720 know it was it was it was miserable but
+00:03:44.680 the one advantage it did have is it
+00:03:46.239 helped me generate these these
+00:03:47.560 architecture uh graphs uh so there's
+00:03:49.959 there's some purposes for for the AI
+00:03:52.239 software today um so how does how does
+00:03:55.840 Rank and Barry work so the the back end
+00:03:58.760 is written in Python
+00:04:00.519 uh using fast apis the the library uh
+00:04:04.079 the front end is uh vuejs
+00:04:06.480 view3 uh fast stand
+00:04:08.840 facilitates um reading and writing from
+00:04:12.239 you know three apis right now that being
+00:04:14.840 the rank tracking uh API that I
+00:04:17.160 mentioned space serp um grep Works grep
+00:04:20.238 words for search volume uh in Google
+00:04:23.160 search console API for some other data
+00:04:26.720 magic um and everything is dumped to a
+00:04:29.400 SQL database uh SQL light in this case
+00:04:33.400 um why use Python for rank tracking when
+00:04:36.479 it's not the fastest or uh necessarily
+00:04:40.160 the best uh because python has emerged
+00:04:42.560 as the language for data work it's
+00:04:45.840 primarily what machine learning
+00:04:47.320 Engineers use it's what data scientists
+00:04:49.280 use nowadays um except for like a small
+00:04:52.520 like offset of PE offshot of people that
+00:04:54.320 are still using like r or something like
+00:04:55.960 that or um baked into like a Java
+00:04:58.960 framework but data science pretty much R
+00:05:01.720 uh R some premium with python um which
+00:05:05.440 means that Rank and Barry is really well
+00:05:08.240 set up for the future data analysis work
+00:05:11.560 that you're ultimately going to want to
+00:05:12.960 do with this platform like I don't know
+00:05:15.520 anyone who does rank tracking and just
+00:05:17.560 like looks at the data and that's it
+00:05:19.919 like either you might report on it to
+00:05:21.759 some Executives but like you want
+00:05:23.120 ultimately want to do something with
+00:05:24.520 that data do just some sort of analysis
+00:05:26.600 and having python sort of like baked
+00:05:28.680 into that pipeline already is is a real
+00:05:32.000 advantage in my
+00:05:34.360 opinion okay so let's talk about fast
+00:05:38.080 API uh fast API again is is the library
+00:05:41.039 that powers the bulk of the back end um
+00:05:44.080 was the first time I had ever used Fast
+00:05:46.639 API so it was a it was a good experience
+00:05:49.160 I'd used things like flask and and
+00:05:50.919 Django in the past um and fast API
+00:05:53.919 really sort of builds itself more of as
+00:05:55.880 like for writing apis but it makes a
+00:05:58.080 really great backend uh for for various
+00:06:00.319 reasons um one
+00:06:03.120 it runs everything as as an endpoint
+00:06:06.560 which is really cool for for
+00:06:08.599 modularity um becomes the center for it
+00:06:12.440 um it manages things asynchronously so
+00:06:15.680 if you're using an asynchronous front
+00:06:17.479 end framework like a react or a view you
+00:06:19.880 might as well have your backend run
+00:06:22.240 asynchronously um and it's just a really
+00:06:25.280 fun coding experience honestly I I
+00:06:28.000 really like how you define like end
+00:06:29.639 points and the functions that serve
+00:06:31.080 under each of those end points um SQL
+00:06:34.440 light uh for local storage honestly this
+00:06:37.319 is not the best solution um it's really
+00:06:40.639 great for when I was doing development
+00:06:42.520 work and running everything locally but
+00:06:44.400 ultimately Rank and Barry is going to
+00:06:46.280 need to move past that to something like
+00:06:48.919 postgress uh when we want to handle like
+00:06:50.800 multi-user work so that's that's
+00:06:53.280 something to be
+00:06:55.440 upgraded um mentioned this already so
+00:06:57.879 external apis that it's pulling in from
+00:06:59.759 is that space serp API for rank tracking
+00:07:01.639 data um Google search console which is
+00:07:04.080 pulling in stuff like clicks and
+00:07:05.680 Impressions and click through it GP
+00:07:07.680 wordss for search volume and just as uh
+00:07:11.240 fast API is serving up the endpoints
+00:07:14.199 it's helping facilitate the the
+00:07:15.919 ingestion of data as
+00:07:20.440 well
+00:07:26.440 so um I'll just mention this quickly one
+00:07:29.680 of the really nice advantages and this
+00:07:31.680 isn't sort of built in yet is with fast
+00:07:33.720 API is that it automatically generates
+00:07:36.160 API documents um so if you build your
+00:07:38.720 application around fast API if you go to
+00:07:41.000 the API endpoint and just append slash
+00:07:43.479 docs to it it will uh it will generate
+00:07:47.560 robust API documentation so all you have
+00:07:50.120 to do once this is like a in multi-user
+00:07:52.360 mode is do some like API key management
+00:07:55.159 and you've you've given your clients or
+00:07:57.280 the people that are working with you a
+00:07:58.960 fully functional API built on top of
+00:08:01.280 your rank tracking
+00:08:05.039 platform um okay let's let's talk about
+00:08:07.840 front end for a bit I mentioned this um
+00:08:11.120 vuejs is a a modern front-end JavaScript
+00:08:14.960 framework much like a react I've been a
+00:08:18.000 big fan of Vue for for a while now I
+00:08:20.720 think it's starting to gain more
+00:08:23.000 traction nowadays um but that remains to
+00:08:27.520 be seen uh so just in terms of the the
+00:08:31.080 the construction we have VJs which runs
+00:08:34.440 with vew router that handles the routing
+00:08:36.200 so the different URLs that it creates um
+00:08:39.120 and of course with most modern
+00:08:40.640 JavaScript Frameworks those different
+00:08:42.399 routes are making use of various uh
+00:08:46.680 components um that can be used sort of
+00:08:48.800 for to modular create Pages um and
+00:08:51.760 that's all communicating via the pus
+00:08:55.720 store uh which I'll get back to uh and
+00:08:59.480 the various API services and eventually
+00:09:01.360 back to fast API for the back
+00:09:05.079 end
+00:09:07.240 um instead of trying for me to sell you
+00:09:10.600 on view uh well let me I'm going to let
+00:09:12.760 view sell you on view
+00:09:15.720 um play Under the Hood view has a
+00:09:19.240 refined reactivity system combined with
+00:09:21.920 declarative rendering this means Vue
+00:09:23.959 does a lot of the heavy lifting for you
+00:09:26.279 because Vue is a progressive framework
+00:09:28.480 you can start with the Cor library and
+00:09:30.399 add on the pieces you need from its
+00:09:32.320 interconnected ecosystem featuring its
+00:09:34.560 own router State Management Solutions
+00:09:37.079 testing utilities a CLI and more Vue is
+00:09:40.480 designed to parallel with other popular
+00:09:42.079 Technologies like typescript giving you
+00:09:44.360 and your team the flexibility to use
+00:09:46.200 view how it best fits your workflow its
+00:09:48.600 fine-tune design prevents your
+00:09:50.200 components from over rendering keeping
+00:09:52.120 your app performant as it skills instead
+00:09:54.560 of having to manually optimize your code
+00:09:56.959 view takes your codee and intelligently
+00:09:59.040 op optimizes it for you as it compiles
+00:10:01.880 so you'll render fast and stay fast VI
+00:10:04.680 gives you back the freedom to focus on
+00:10:06.200 getting creative and staying productive
+00:10:08.320 enjoying the development process Again
+00:10:10.519 by choosing view you're investing in a
+00:10:12.240 technology that is invested in You by
+00:10:14.920 choosing Rank and bearing you're
+00:10:16.079 investing in technology that's invested
+00:10:17.800 in you um so one of the things I really
+00:10:20.360 like about Vue is it's like a
+00:10:21.560 progressive framework so you can start
+00:10:23.640 very very small um you can literally
+00:10:26.240 like embed a line of uh JavaScript from
+00:10:30.320 like a CDN and make a very very small
+00:10:32.440 application without dealing with like
+00:10:34.519 the terminal at all or you can scale
+00:10:36.639 that up and build a very large
+00:10:38.040 application like Rank and Berry and pull
+00:10:39.800 in like different uh more advanced
+00:10:42.120 components to to view um so learning
+00:10:45.040 curve wise it's it's really
+00:10:48.519 phenomenal um I feel like no one talks
+00:10:51.680 about these little things when they they
+00:10:53.480 give presentations so I might be fun to
+00:10:55.959 touch on things like v um so V is sort
+00:11:00.040 of the the this alternative to like a a
+00:11:02.639 web pack or something like that um and
+00:11:05.399 it it handles uh the bundling of all the
+00:11:10.160 JavaScript um so you get really like
+00:11:12.160 efficient code running um but it
+00:11:14.839 actually skips the bundling when you're
+00:11:16.959 in development mode so you can do
+00:11:19.279 development work a little bit faster um
+00:11:22.480 also has something called hot module
+00:11:24.519 replacement or HMR uh so if you make
+00:11:27.000 like a small changement to that code it
+00:11:28.880 just loads that code instead of the
+00:11:30.800 entire script again speed um and when
+00:11:34.760 it's time to put the the JavaScript into
+00:11:36.720 production it bundles it just as like a
+00:11:39.760 web pack
+00:11:42.519 would um and modern at least in view3
+00:11:46.839 Pia is the
+00:11:49.079 go-to uh State Management for Java for
+00:11:52.399 view um so you can sort of think about
+00:11:54.760 this as like a centralized way of like
+00:11:57.279 handling a lot of like the more complex
+00:11:59.519 JavaScript code um instead of each like
+00:12:02.560 component handling
+00:12:04.079 individual like functions uh Pia will
+00:12:07.040 handle that for
+00:12:08.839 you so when a application starts to get
+00:12:12.360 more complex you you'll probably want to
+00:12:13.680 introduce something like Pia and that's
+00:12:15.040 what rank and Barry did um and it plays
+00:12:17.720 very well with v which we just talked
+00:12:21.279 about okay so enough about how it
+00:12:24.040 functions let's talk about the actual
+00:12:25.480 functionality of rank and Barry
+00:12:27.320 itself um this is sort of like the main
+00:12:30.079 view of rank and Barry if you're
+00:12:31.760 thinking about running it yourself you
+00:12:33.320 have this this rank table it shows you
+00:12:35.959 the date for which the data was pulled
+00:12:37.720 in the keyword the the project or domain
+00:12:41.240 the rank that pulled got pulled in from
+00:12:43.959 space serp um an estimated business
+00:12:47.120 impact which I'll come back to search
+00:12:48.760 volume rank change since you pulled in
+00:12:50.920 the data GSC data so on and so
+00:12:56.800 forth we have scheduling and On Demand
+00:12:59.880 fetches so you can choose uh whenever
+00:13:02.720 you want to just like fetch new ranking
+00:13:04.279 data from space serp or you can schedule
+00:13:06.800 it to you know pull hourly or daily or
+00:13:09.480 monthly however you much you want um and
+00:13:12.120 that's
+00:13:14.040 handled oh I'll come back um has a tag
+00:13:17.000 management system so you can look at a
+00:13:19.279 subset of your data whether that's
+00:13:21.040 across multiple projects or within a
+00:13:23.480 single project um um and it provides
+00:13:27.519 summary data by those domain SL project
+00:13:30.760 or tag um and it also generates a really
+00:13:34.279 neat share of voice data across the
+00:13:37.959 Ser so what does that look like uh so
+00:13:40.920 this is the scheduling functionality you
+00:13:43.120 select the
+00:13:44.240 frequency the the project that it's
+00:13:46.120 applicable to and the tag and you you
+00:13:48.320 just schedule it um and I should say
+00:13:50.759 that's all handled synchronously um so
+00:13:53.199 it's not blocking the main application
+00:13:54.720 so you can continue to like browse the
+00:13:56.199 data without you know getting Frozen um
+00:13:59.560 and unable to use
+00:14:01.320 it how you apply
+00:14:03.880 tags this is the the summary data uh for
+00:14:07.440 a particular tag for a different rate
+00:14:09.560 different various date
+00:14:11.279 range um and this is the the share of
+00:14:14.000 voice view you can see there's a there's
+00:14:17.560 a Time series data where you can see the
+00:14:19.680 top 10 results and then uh a little dut
+00:14:22.240 chart below that so you can see how the
+00:14:24.000 distribution looks and below that
+00:14:25.639 there's actually a table uh with the
+00:14:27.639 different percentages
+00:14:31.440 Google search console um so it's going
+00:14:35.000 to ingest Google search console for the
+00:14:37.800 keywords that you're ranking for that
+00:14:39.680 you're pulling in rank data for which
+00:14:41.880 actually enables things like a business
+00:14:44.839 impact analysis so it's all fun and good
+00:14:47.440 rank goes up that that sounds good uh
+00:14:50.160 rank goes down that sounds bad um but
+00:14:52.440 what is that actually mean in terms of
+00:14:54.720 like Revenue in terms of like business
+00:14:56.880 value uh I want to know what that is is
+00:14:59.680 uh so the business impact analysis helps
+00:15:02.240 you calculate that um so it it gives it
+00:15:05.160 calculates an Aver the the clickthrough
+00:15:07.199 rate for each position using Google
+00:15:09.160 search console data so you know what
+00:15:11.000 your actual click-through rate curve is
+00:15:13.040 um for your website um and you can give
+00:15:16.279 it like an average conversion rate um
+00:15:19.399 and conversion rate value so it will
+00:15:21.560 actually calculate if my website went
+00:15:23.680 down a certain amount like what is the
+00:15:26.040 actual impact on Revenue
+00:15:29.319 um time series use um pulling in top 100
+00:15:34.519 results for all the keywords um which
+00:15:37.440 isn't totally useful right now but will
+00:15:39.880 become more useful as we add more
+00:15:41.639 features so it's a little bit forward
+00:15:44.880 thinking so here's here's an example of
+00:15:47.399 the estimated impact um you can see
+00:15:49.759 that's like the two three the fifth
+00:15:52.279 column with the the dollar amount so
+00:15:55.079 here we have the rank change went up 23
+00:15:57.920 positions so that added
+00:16:00.240 $245 of revenue for my
+00:16:06.120 website and that's how you just simply
+00:16:08.519 you're going to authenticate with Google
+00:16:09.959 search console it will start ingesting
+00:16:11.800 it you'll dictate um the conversion
+00:16:15.199 rates and whatnot in in the
+00:16:17.240 configuration and it'll start producing
+00:16:19.160 that
+00:16:20.199 data um this is the time series data so
+00:16:22.720 you can see what things look like over
+00:16:24.360 time also super important is uh when you
+00:16:27.959 do these sort of time ser series charts
+00:16:29.480 to make sure if there are gaps in your
+00:16:31.240 data to not like continue the line you
+00:16:33.800 want to actually see those gaps so it's
+00:16:35.399 not misleading so it does that pretty
+00:16:38.279 well top 100 results um and it you can't
+00:16:42.199 see it on the screen but it pulls in
+00:16:43.560 like stuff like the The Meta
+00:16:44.959 descriptions that are shown in the ser
+00:16:46.399 and
+00:16:48.480 whatnot okay so let's take a break uh
+00:16:51.959 for a second and talk about some
+00:16:53.480 challenges and limitations of rank and
+00:16:56.920 Berry today so we've talked about this a
+00:16:59.959 few times but it's relying on this API
+00:17:02.199 called space serp right now space serp
+00:17:05.079 is really really cheap um but it's
+00:17:08.559 certainly not the best rank tracking API
+00:17:11.679 out there um has no features like what
+00:17:15.400 are the featured Snippets or AI
+00:17:17.039 overviews or general serp features it's
+00:17:19.559 really not ingesting any of that data um
+00:17:23.400 and it's a it's a single API provider
+00:17:25.520 there right now the ring and Berry is
+00:17:27.079 only set up to use space serp and we
+00:17:28.600 hope to change that in the future so
+00:17:30.360 people have uh have different
+00:17:33.240 options so yeah we'll introduce other
+00:17:36.440 API providers um used to use Sur API
+00:17:40.640 over at Shopify it's great and you know
+00:17:43.360 i' I've heard a lot of people ask about
+00:17:44.880 serper and and value Ser which has like
+00:17:47.320 pay as you go pricing and people really
+00:17:49.600 like that um so that's that's definitely
+00:17:51.960 on the road
+00:17:53.960 map um and we talked about SQL light
+00:17:57.960 being a limitation
+00:17:59.600 um so SQL light produces a flat file in
+00:18:03.360 your directory it's not the most secure
+00:18:06.400 it's not really set up for multiple
+00:18:08.720 users um well um so we're going to want
+00:18:12.880 to move off of of SQL light eventually
+00:18:15.480 into something like
+00:18:17.720 postgress um right now like I said there
+00:18:20.840 was a bunch of features I wanted to get
+00:18:22.200 to um but as like a solo Creator who has
+00:18:25.840 another job like that didn't happen so
+00:18:28.559 the open source architecture is is
+00:18:30.960 really important like you know people
+00:18:32.799 contributing to it can can definitely
+00:18:34.880 make it
+00:18:36.240 better um and another limitation depends
+00:18:40.559 on how you look at it is um there
+00:18:43.280 there's no Google data studio built into
+00:18:45.080 this so any sort of like chart custom
+00:18:47.600 Customs is a is a manual
+00:18:53.200 effort all right talk about open source
+00:18:55.880 and scaling
+00:18:59.080 so yeah it's it's just me um every bug I
+00:19:03.559 squash is uh you know like another week
+00:19:06.520 um so open source really helps uh submit
+00:19:10.000 bug reports and feature requests into
+00:19:12.000 the GitHub repo that'll really help
+00:19:14.240 hecka you know create your own branch
+00:19:16.919 and do a polar Quest um and hopefully
+00:19:20.240 we'll create a self-sustaining
+00:19:24.559 Community
+00:19:26.400 um I feel like people don't talk about
+00:19:28.760 about licensing when they talk about
+00:19:30.799 open source enough um that's that's a
+00:19:34.080 really important part of Open Source um
+00:19:37.760 so I went with ag GPL 3 um which they
+00:19:41.760 consider a strong copyleft license um
+00:19:45.080 basically what this says is you you can
+00:19:46.640 it's an open source project you can
+00:19:48.039 customize it use it however you want you
+00:19:49.880 can run a commercial product off of it
+00:19:52.559 but by law you have to link back to the
+00:19:54.320 source
+00:19:55.400 code so that helps reinforce that if
+00:20:00.240 that it is an open source project that
+00:20:02.200 the development is dependent on others
+00:20:04.360 so even if you're you're people are
+00:20:06.679 paying for it um off of an instance that
+00:20:08.960 they ran themselves like you should be
+00:20:12.080 contributing back to the
+00:20:19.559 project um now I'm going to talk through
+00:20:21.720 all the features that I expected to have
+00:20:23.200 done that I didn't have done in time um
+00:20:25.880 and I I blame AI for that um it it under
+00:20:29.159 promised over promised um algorithm
+00:20:34.000 update overlays so you have click data
+00:20:37.000 from Google search console you have
+00:20:38.559 ranking data um why not layer in if
+00:20:42.039 there was a Google update um Google has
+00:20:45.799 ad Json endpoint that has all the
+00:20:49.159 algorithm updates listed out when they
+00:20:51.520 started when they ended so you should be
+00:20:53.480 able to Overlay that data and see you
+00:20:55.480 know is your ranking decline due to an
+00:20:57.799 algorithm update or are you just really
+00:20:59.679 bad at
+00:21:03.440 SEO um and the same thing anomaly
+00:21:07.000 detection um we you can do something
+00:21:10.760 very simple with like a zcore um if
+00:21:12.840 something falls out of like the zcore
+00:21:14.240 bound like you know maybe that's due to
+00:21:17.880 like an algorithm update because like
+00:21:19.279 Google's changing things and things are
+00:21:20.960 like going up and down a whole bunch and
+00:21:23.760 um or maybe it's just very like
+00:21:26.080 intermittent rank change and like it's
+00:21:28.000 going to correct itself the next day so
+00:21:29.840 knowing whether that something is an
+00:21:31.440 anomaly or like the status quo is really
+00:21:34.520 really helpful we already have the data
+00:21:36.919 on this so we might as well implement
+00:21:39.480 it um forecasting so you can you we can
+00:21:43.360 since we're using python it's very easy
+00:21:44.840 to integrate something like Facebook
+00:21:46.320 profit which
+00:21:47.640 facilitates um you know time series
+00:21:50.279 forecasting and projections very easily
+00:21:53.360 um so you can have an idea of based on
+00:21:56.240 your historic data did will my data
+00:21:58.200 continue to go up or down and by what
+00:22:02.720 magnitude um keyword clustering so we we
+00:22:05.600 talked about the importance for future
+00:22:08.039 work of having the full 100 results
+00:22:10.600 ingested into Rank and Berry um and
+00:22:13.919 that's because it's really really good
+00:22:16.080 way to handle keyword clustering um
+00:22:18.880 there's a bunch of different methods
+00:22:20.080 that look of at basically the crossover
+00:22:22.279 of URLs between keywords um look at the
+00:22:25.919 URLs where you like actually injust the
+00:22:27.559 keywords and look at the the Thematic
+00:22:29.600 contents of that um and sort of assess
+00:22:32.600 how keywords should be grouped together
+00:22:34.720 by topic rather than um individual
+00:22:38.279 keywords and that also enables really
+00:22:41.039 fantastic
+00:22:43.400 analysis um we talked about this going
+00:22:46.320 to have to move to
+00:22:48.480 postgress um we're also going to need
+00:22:52.559 authentication right now this is running
+00:22:54.200 locally and there's absolutely no sense
+00:22:55.600 of users or authentication this is not
+00:22:57.840 set up for a commercial application
+00:23:00.039 currently that's that's got to change
+00:23:01.720 sooner rather than
+00:23:05.240 later and that's it that's that's uh
+00:23:07.840 that's Frankenberry um you know I would
+00:23:10.320 love for you to try it out and
+00:23:12.240 contribute to it feel free to you know
+00:23:14.480 clone the root repo and uh give it a try
+00:23:18.000 thank you

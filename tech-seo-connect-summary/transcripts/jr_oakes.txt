@@ -1,0 +1,516 @@
+# tactiq.io free youtube transcript
+# NPath: Leveraging LLMs to Extract Insights from GA4 Event Data - JR Oakes
+# https://www.youtube.com/watch/uJmxMnchoZI
+
+00:00:00.160 [Applause]
+00:00:00.960 is Paul Shapiro
+00:00:02.679 here can you stand
+00:00:06.480 upap clap for Paul Shapiro because Paul
+00:00:10.880 put on Tech SEO boost several years ago
+00:00:14.519 and it was the best conference I've ever
+00:00:16.079 been to in my life and you felt like you
+00:00:18.400 were walking into a warm family and we
+00:00:21.720 tried to do some honor to that here so I
+00:00:24.119 really appreciate the initial idea for
+00:00:26.840 these types of conferences and all you
+00:00:28.760 do for the community Paul
+00:00:30.100 [Applause]
+00:00:36.320 um so 2024 has been like a really weird
+00:00:39.039 year uh I feel like I'm like technically
+00:00:42.000 an SEO now even though I'm used to be a
+00:00:44.480 technical SEO um we uh have been uh
+00:00:49.600 looking at a lot of interesting things
+00:00:51.120 that have been going on in uh obviously
+00:00:53.760 with llms and Ai and I think everybody
+00:00:56.480 else has um Google released the paper
+00:01:00.480 I think around the time that was
+00:01:03.000 um uh uh the Google IO conference where
+00:01:07.119 they talk about this idea of like
+00:01:09.640 unlimited context Windows right like a
+00:01:12.680 million two million tokens that you can
+00:01:14.439 fit in these models and um uh the models
+00:01:18.360 can can attend to everything and they
+00:01:20.400 actually hide like these like PIN
+00:01:22.720 numbers in the context Windows to see
+00:01:24.960 how well they retrieve the stuff it's
+00:01:26.560 like really fascinating but just the
+00:01:28.640 idea that you can fit like 13 books I
+00:01:31.079 think Mike talked about like just
+00:01:32.960 putting a Bible in there and you know it
+00:01:35.520 can read and understand and and
+00:01:37.320 transform and you know they summarize
+00:01:39.399 like
+00:01:40.560 500,000 uh uh books of like 500,000
+00:01:43.799 words and to test these models out just
+00:01:47.119 fascinating um does everybody have like
+00:01:50.840 are are everybody here like tracking
+00:01:52.840 their uh this stuff in GA right uh is it
+00:01:57.079 really interesting to see it from uh to
+00:02:00.200 site and like which sites really like
+00:02:02.159 are actually getting some uh of the AI
+00:02:05.439 traffic and which aren't uh obviously
+00:02:07.399 Google's still
+00:02:08.959 dominating um obviously everybody's seen
+00:02:12.319 the Gartner report where it's likeo is
+00:02:14.560 going to be like 50% in a few years and
+00:02:17.319 think I don't know maybe it is but we've
+00:02:19.599 been thinking about the things that kind
+00:02:22.239 of go into producing visibility for
+00:02:26.840 clients and not necessarily more of the
+00:02:29.519 like practical pieces but like real
+00:02:32.360 experience we see the Reddit craze right
+00:02:34.400 from the last few years and engagement
+00:02:37.160 and trust and expertise a lot of those
+00:02:39.440 go to like the eat stuff with Google if
+00:02:41.280 you like that but um just thinking about
+00:02:44.560 the real world as will Reynolds
+00:02:46.920 used to say that you can do that
+00:02:49.080 actually drives uh visibility and
+00:02:51.720 reverberates your brand online I think
+00:02:54.400 is super interesting
+00:02:57.080 um this is one piece recently that I
+00:03:00.200 thought was really interesting that
+00:03:02.560 language models are like just really
+00:03:04.200 bougie and like to use the word delve
+00:03:06.720 let's delve into this topic a little bit
+00:03:08.959 more uh and I think more interesting is
+00:03:12.680 that he shows this like jump in like the
+00:03:15.599 last two years of like PubMed articles
+00:03:18.319 or Publications so you have people doing
+00:03:21.239 these Pub PubMed Publications running it
+00:03:23.920 through chat gbt right you can look at
+00:03:26.760 the word distributions it's it's it's
+00:03:29.000 fascinating
+00:03:31.040 um and then I'm going like really fast
+00:03:34.519 here because we need like stuff to catch
+00:03:36.280 up on
+00:03:38.519 uh thanks Alita I really appreciate
+00:03:42.760 it uh so uh Patrick and I were we
+00:03:46.400 talking uh Patrick stocks a few weeks
+00:03:49.080 ago and like I'm not very I'm not very
+00:03:51.840 bullish on like brand and rank tracking
+00:03:54.720 with AI I think there's problems there
+00:03:57.640 but I did do a couple of searches where
+00:04:00.319 we asked models like every model from uh
+00:04:03.720 chat gbt like the top 10 best SEO
+00:04:07.120 agencies do y'all agree with
+00:04:09.000 this maybe maybody I don't know anybody
+00:04:12.079 hear from any of those web effects and
+00:04:14.879 night visibility Thrive straight North
+00:04:20.000 but I think it's interesting like how
+00:04:22.800 consistent they are except for that one
+00:04:25.120 thing that just kind of went off maybe
+00:04:27.520 that here's another one best AI writing
+00:04:30.440 tools it's just I was just struck with
+00:04:32.759 how consistent that was over the last
+00:04:34.960 couple of years in a bunch of different
+00:04:36.240 models which maybe it speaks to the
+00:04:39.080 similarity and the Corpus of training
+00:04:41.960 data that they're using but um I was
+00:04:45.400 wrong uh but I still think I have some
+00:04:48.759 points because I think what we're seeing
+00:04:51.120 with language models is that there's a
+00:04:52.840 lot beginning to be a lot more in
+00:04:55.080 between us on the actual model right
+00:04:57.280 like you have temperature controls does
+00:04:59.759 anybody know what a random seat is any
+00:05:01.800 geeky like that uh it's a thing that you
+00:05:07.160 a number that you can provide so that
+00:05:09.360 there's some determinism in the
+00:05:11.039 randomness of of of uh of computers uh
+00:05:17.199 and you can change a random seed and you
+00:05:18.759 get a different result on each model
+00:05:20.520 right um You have rag you have memory
+00:05:23.120 now um and obviously anybody that's
+00:05:26.400 looked really deeply into keywords know
+00:05:29.080 that people really weird when they like
+00:05:31.520 search for so uh I don't know I
+00:05:34.880 think there's a lot of weirdness
+00:05:36.919 there uh I'm just as a plug for an open
+00:05:39.520 source project that I think is like
+00:05:41.240 really cool called Liber chat um we've
+00:05:44.240 had a struggle at our agency because
+00:05:48.120 everybody like wants to use like open Ai
+00:05:50.880 and cloud and some of these tools and
+00:05:53.440 like we don't want them to put like
+00:05:55.039 client data in there right so this is a
+00:05:58.560 really cool platform because it kind of
+00:06:00.479 gives you that ux but you can put in API
+00:06:04.080 keys and to a lot of the best models you
+00:06:07.560 can give your entire team like the best
+00:06:09.080 models right of every platform there's a
+00:06:11.599 lot of other cool features to it but you
+00:06:13.759 can also do it in a way that you know
+00:06:15.720 it's not like premium versions and you
+00:06:18.240 know data is going and training future
+00:06:20.520 models so I would check that out it's
+00:06:23.599 it's pretty pretty cool we're just uh
+00:06:26.639 implemented
+00:06:28.000 it um so I said I'm not technically a
+00:06:32.280 SEO anymore I'm still SEO but I look at
+00:06:34.880 like a lot of trends that are going on
+00:06:38.479 um uh a few things that like really
+00:06:41.440 interesting to me is is anybody looking
+00:06:43.960 at CLE AI space at
+00:06:47.800 all uh Amazon and Microsoft are doing
+00:06:50.479 some like really cool with call AI
+00:06:53.360 where they can run like thousands and
+00:06:55.319 thousands of ab tests in Cloud using
+00:06:57.599 these causal models and figure out
+00:07:00.599 whether the blue button is better than
+00:07:02.400 the red button on some of these and it's
+00:07:04.240 all just probablistic models that
+00:07:07.000 they're running and it's uh they're
+00:07:09.479 putting a ton of effort into it it's a
+00:07:11.479 there's a library called
+00:07:13.240 doy uh that uh you can you can play
+00:07:16.440 around with they have a really cool
+00:07:17.599 e-commerce example for looking at um
+00:07:20.599 like root calls analysis um really geeky
+00:07:23.280 and cool um obviously generative AI is
+00:07:26.039 at the top and like the other piece for
+00:07:27.919 me is I think personalization which I
+00:07:30.039 think generative Ai and personalization
+00:07:32.919 and causal all this stuff is going to
+00:07:35.080 mean like in the next few years we have
+00:07:36.800 like the most incredible experiences
+00:07:39.560 online right all the data that we can
+00:07:41.960 use about users
+00:07:44.120 and um and uh kind of assimilate that
+00:07:48.120 with language models I think it's just
+00:07:49.400 incredibly
+00:07:50.479 cool
+00:07:52.039 um I guess with that
+00:07:54.560 said looking at like LinkedIn which is
+00:07:57.120 my only social platform now feel like
+00:07:59.560 people are talking about a lot of the
+00:08:01.599 problems with AI and obviously
+00:08:03.680 Everybody's scared of the future of AI
+00:08:05.479 with Gartner predictions and whatnot or
+00:08:09.800 um they're just like just spamming like
+00:08:14.039 AI content right like one of the
+00:08:16.599 oldest NP libraries that does like word
+00:08:19.720 distributions across the internet like
+00:08:22.159 gave that up in the last year they're
+00:08:24.560 not updating it because all the
+00:08:26.240 distributions of of terms and term
+00:08:28.319 frequencies across the internet is is
+00:08:29.800 garbage now because you saw the delve
+00:08:31.960 argument right and then like I think
+00:08:34.640 about my daughter's grandchildren
+00:08:37.120 looking up baby peacock and they're
+00:08:38.760 going to see this online right it's
+00:08:40.799 just it's garbage like right what does a
+00:08:42.839 real peacock even look like
+00:08:44.959 anymore um but this has to come to a
+00:08:47.640 head at some point
+00:08:49.480 right um anyway everybody's obviously
+00:08:53.480 chasing Ai and it's
+00:08:56.440 cool um I think uh
+00:09:01.200 this uh kind of was one piece that maybe
+00:09:04.640 planted the seed for like a open source
+00:09:06.959 project that we worked on that I'm going
+00:09:09.000 to show it I promise I'll get to the
+00:09:13.640 purpose of this this talk uh but I read
+00:09:17.920 this paper where Microsoft was talking
+00:09:20.519 about like how good language models are
+00:09:23.000 at at creating like rational arguments
+00:09:27.040 causal arguments and um with uh call AI
+00:09:32.360 and doy one of the features there is
+00:09:35.279 like creating these kind of directed
+00:09:37.959 graphs of like the things that feed into
+00:09:41.399 outcomes right and then the model can
+00:09:43.760 take that and kind of uh take away
+00:09:47.040 certain of the priors right and see what
+00:09:50.079 happens and add it back and can do some
+00:09:52.760 probabilities with that but just the
+00:09:55.079 fact that language models are able they
+00:09:56.880 have that kind of ground truth or
+00:09:58.279 they're having that ground Truth where
+00:09:59.880 you can say
+00:10:01.320 hey uh we have X outcome right and it
+00:10:04.600 can kind of backtrack and say well maybe
+00:10:06.519 this and this and this and this and kind
+00:10:08.160 of provide some of those priors I think
+00:10:09.800 is super super
+00:10:12.440 interesting um so getting I guess more
+00:10:14.920 into the the purpose here uh I work for
+00:10:19.120 uh locomotive uh some of our team
+00:10:21.640 members are here I really appreciate you
+00:10:23.440 guys coming out and supporting this
+00:10:27.839 weird conference uh uh but uh we've been
+00:10:31.920 building a lot this year um we have a
+00:10:35.480 tool we built called empath that I think
+00:10:37.399 is the coolest thing ever because it
+00:10:39.120 takes it takes all of your events from
+00:10:41.600 analytics and just transforms it into
+00:10:43.800 sequences and there are like genetic
+00:10:46.360 algorithms that you can use or or read
+00:10:48.720 about online where it's just sequence
+00:10:50.800 analysis right like what are the
+00:10:52.480 sequences from this to this to this and
+00:10:54.320 what do they mean from a genetic
+00:10:55.519 perspective well some of that you can
+00:10:57.360 apply over to uh event data right it's
+00:11:00.240 just a sequence of events right and you
+00:11:02.279 can do different sequence analysis on
+00:11:03.959 that and learn different things about
+00:11:05.959 path
+00:11:06.920 cohorts uh of users and preferences of
+00:11:09.519 users and next page analysis and like
+00:11:11.639 where people are
+00:11:12.800 going uh we also built a tool that takes
+00:11:15.480 you can just like write in your products
+00:11:17.519 and services and a bunch of ICP
+00:11:20.560 information and it just goes out and
+00:11:22.399 generates like 10 million keywords and
+00:11:24.519 then qualifies them back down and labels
+00:11:26.519 them that's the I think that's the
+00:11:28.160 coolest thing we've worked on this year
+00:11:29.760 right
+00:11:32.440 Savannah uh We've uh we're not doing
+00:11:35.600 keywords anymore uh I hate keywords like
+00:11:39.040 we just take all the keywords and then
+00:11:40.720 translate them back to topics so we're
+00:11:42.600 looking at 300 topics rather than
+00:11:44.399 300,000 keywords keywords
+00:11:47.480 suck uh and
+00:11:51.560 then um we're also working on anomaly
+00:11:54.839 detection I know Alita was posting some
+00:11:57.639 cool about uh for for casting and
+00:12:00.320 that's right aligned with anomaly
+00:12:02.040 detection but where can we find the like
+00:12:04.680 the Neato and the Hast there and
+00:12:07.040 millions of URLs and learnings there I
+00:12:09.120 think that's super
+00:12:10.399 interesting but in preparing for this
+00:12:12.680 and I will say that again I think Paul
+00:12:15.320 gave me I saw him he's going to have the
+00:12:17.760 coolest damn presentation and I like
+00:12:19.839 really cannot believe what he is
+00:12:22.600 building or built but I was like damn it
+00:12:24.600 if Paul's building something I want to
+00:12:26.120 build something
+00:12:27.320 too uh so
+00:12:30.120 so the thing that I thought about is
+00:12:32.920 really smart but like can we just like
+00:12:36.519 pull a bunch of on a URL and throw
+00:12:38.800 it into a big bucket right and then do
+00:12:41.440 that every month or every week and then
+00:12:43.440 have a a language model do all it kind
+00:12:45.720 of crazy stuff with CLE right and
+00:12:48.800 compare those two and give us some data
+00:12:51.959 right or give us some uh hey here's what
+00:12:54.519 happened which I think is cool I was
+00:12:58.199 thinking about this little robot that
+00:12:59.760 lives in the cloud and like takes care
+00:13:01.639 of all my page babies every month
+00:13:05.000 uh just kind of Zen right uh but
+00:13:09.480 obviously we need to put some pieces
+00:13:11.000 together because websites are
+00:13:12.920 big uh can we fit all the data and can
+00:13:17.320 and have Dependable output well uh like
+00:13:21.079 I love CLA Cloud's my like go-to but
+00:13:23.440 like Gemini is getting there and Gemini
+00:13:26.079 has some like really cool stuff from a
+00:13:27.560 data perspective that makes it really
+00:13:28.880 helpy helpful uh number one 2 million
+00:13:32.079 tokens and kind of a good usage of that
+00:13:34.920 context history is really
+00:13:36.760 helpful um plus you can specify your
+00:13:39.320 mind type output and your structured
+00:13:41.800 Json schema here's what I want my schema
+00:13:43.959 to be which is like infinitely helpful
+00:13:45.839 when you're trying to do deterministic
+00:13:48.240 work uh at scale uh yeah that's really
+00:13:53.279 important uh and then when I was putting
+00:13:56.600 this together I kind of thought about
+00:13:57.959 this like Tech Deck that we now get into
+00:13:59.880 as seos is we're creating things um you
+00:14:03.600 know I don't know if anybody here is how
+00:14:06.440 many python developers we are but you
+00:14:10.120 load a new application in and then some
+00:14:13.040 Library like from two years ago is
+00:14:16.440 outdated and now everything breaks right
+00:14:19.320 and it does the same thing happen with
+00:14:20.800 language models that we have to like pin
+00:14:22.440 it to 3.5 right uh which is interesting
+00:14:27.040 but uh the next thing is with URLs it's
+00:14:29.920 like can we afford this like right can I
+00:14:31.759 collect all the data on every URLs every
+00:14:33.600 month and then you know uh can we do it
+00:14:36.399 at that granularity and I think yes
+00:14:39.279 right probably not for New York Times
+00:14:42.279 but uh for most like thousand page
+00:14:45.639 websites I think we could like look at
+00:14:48.320 the before and after URLs for like 20 30
+00:14:52.040 bucks for using uh a language model
+00:14:55.040 which is kind of
+00:14:56.320 cool uh what if it's not perfect I
+00:14:59.480 probably get hate for this but uh I mean
+00:15:02.240 models will definitely get better right
+00:15:05.240 like let's start playing with some of
+00:15:06.480 this stuff now uh but obviously they
+00:15:09.360 have like mixture of experts and um
+00:15:12.440 they're they're getting infinitely
+00:15:14.199 better on this wide range of tasks and I
+00:15:17.120 think some things that are still lagging
+00:15:20.000 but definitely going in the right
+00:15:22.600 direction I would say uh and then I also
+00:15:25.279 think they're getting more accurate
+00:15:26.639 right we're seeing less hallucinations
+00:15:28.519 if I wondered if we like went back and
+00:15:30.560 just forced ourselves for a day to go
+00:15:32.000 back and start using like Chad gpt3
+00:15:34.120 again if we'd be like oh has
+00:15:37.120 changed right we're sitting there was a
+00:15:39.160 comedian one time that was talking about
+00:15:40.880 like like people getting mad at their
+00:15:42.839 cell phone and he's like I don't
+00:15:44.160 remember you remember who that is he's
+00:15:45.480 like it's communicating huh who was it
+00:15:48.199 yeah Louis C he's like it's
+00:15:49.360 communicating with like space right and
+00:15:53.440 I'm like this the same thing it's like
+00:15:55.319 language models are just insanely
+00:15:57.199 incredible if you think about it right
+00:15:59.160 and you're sitting there arguing with
+00:16:01.279 it uh but and another thing is we're
+00:16:04.639 going to open source it so if you can
+00:16:06.639 change your if you don't like it
+00:16:08.160 adjust the prompts do whatever you want
+00:16:09.519 to tweak it it's fun uh and then this
+00:16:12.680 was the last thing I kind of needed to
+00:16:14.160 get over but like we do math and like uh
+00:16:18.360 uh and SEO and you know change and you
+00:16:22.199 know can they do that and no they're
+00:16:24.759 terrible uh and they don't know that
+00:16:27.600 going from 7 to 9 is not a great thing
+00:16:29.560 from a ranking perspective and the uh
+00:16:33.240 just really bad uh but I did figure out
+00:16:36.440 that they're good at copy pasting right
+00:16:38.319 so they can do like CLE and then they
+00:16:40.480 can copy paste and then I can come back
+00:16:42.319 and because they structure the output
+00:16:44.240 really nicely I can go back and say okay
+00:16:46.560 here's the prior here's the current and
+00:16:48.319 then we can do those calculations for
+00:16:50.040 the
+00:16:51.040 model uh and then looking at what
+00:16:53.480 contexts we can
+00:16:55.680 provide pretty good amount um SCP SC the
+00:16:59.199 hell out of page feed insights Rick uh
+00:17:02.560 and search engine performance from
+00:17:04.880 search console content analysis probably
+00:17:07.400 do some Trends which would be really
+00:17:09.280 cool and hook it up to nozzle and hook
+00:17:12.319 it up to HRS and throw a bunch of stuff
+00:17:15.559 in there uh this is all the cool stuff
+00:17:17.799 from ga4 which I love the idea of like
+00:17:20.720 incorporating like next visits like what
+00:17:23.039 happened after people went to this page
+00:17:25.280 or how did they get to this page and you
+00:17:27.319 can like really think about like
+00:17:29.520 how to kind of massage the analysis that
+00:17:32.080 you want to throw in these buckets right
+00:17:33.720 to get the model to react to I think
+00:17:35.720 that's just cool so it's called sep this
+00:17:39.400 is like a toy model right uh uh and uh
+00:17:45.320 the idea is like an eye in the cloud
+00:17:47.200 watching my content uh oh I love like
+00:17:50.400 releasing like open- Source little
+00:17:52.360 stupid projects uh for people to geek
+00:17:54.640 around with so that's if you didn't know
+00:17:56.840 that's my thing uh and it's on GitHub
+00:18:00.360 you can pull it down you can play around
+00:18:01.720 with it I will say that you need a
+00:18:04.600 developer um so hopefully you know a
+00:18:07.360 developer friend that can help you hook
+00:18:09.360 it up uh and then I normally try not to
+00:18:13.200 have dependencies that you pay for but
+00:18:15.400 like scraping be is like my favorite
+00:18:18.000 little thing because it takes away the
+00:18:20.760 rendering I don't have to think about
+00:18:23.080 like the rendering process I can just
+00:18:24.600 give it to scraping B and they'll render
+00:18:26.360 it and send it back to me and scraping
+00:18:29.200 that one has this code has a really
+00:18:31.039 interesting thing because with scraping
+00:18:33.360 B we throw in mozilla's readability and
+00:18:37.200 mozilla's readability Library uh does a
+00:18:40.280 really good job of extracting like the
+00:18:41.840 really clean content from the page so
+00:18:43.559 there's also a solve there if you go
+00:18:45.240 through the code for some potential
+00:18:47.240 issues and then mael trap is just free
+00:18:49.400 so um but yeah those that's the things
+00:18:53.720 you have to set up also made like a
+00:18:55.720 really kind of easy structure here um
+00:18:58.840 tried to make it extensible so that you
+00:19:00.720 could add in easily different extractors
+00:19:02.919 for different
+00:19:04.280 things uh and then I think this is cool
+00:19:06.679 you have like a really easy setup so you
+00:19:09.159 get uh your data set up you get your GA
+00:19:12.200 set up you get your uh uh search console
+00:19:15.919 and then you can just like tell it
+00:19:17.280 here's what I want to see right and you
+00:19:18.960 can change this right um and then you
+00:19:22.520 get these like really cool emails every
+00:19:24.320 month right it goes in and essentially
+00:19:27.679 crawls all of the URL stores the data
+00:19:30.880 pauses till the next period sto uh
+00:19:33.799 crawls them again Compares them against
+00:19:36.080 the the past and then anything that's in
+00:19:40.240 passes some importantance thresholds
+00:19:41.960 it'll just email you and say hey this
+00:19:43.640 happened right which that's I think what
+00:19:47.559 I want right uh like here's a cool thing
+00:19:52.480 um we uh that it CAU this page it just
+00:19:56.480 went from uh what is that a 16% change
+00:20:01.320 like those are the things that I don't
+00:20:02.520 want to have to like sit there and dig
+00:20:04.080 if it can just kind of pull that out for
+00:20:05.679 me and say Hey you know you release this
+00:20:08.200 Rel uh change on this page and hey it
+00:20:10.360 actually did really good and I can fire
+00:20:11.919 that off and say hey the page we
+00:20:13.960 optimized last month is doing really
+00:20:15.679 good right and it'll kind of prompt for
+00:20:17.600 those uh this was cool because we ran
+00:20:20.799 this uh for a client that just did a
+00:20:24.080 major like Rebrand right and one of the
+00:20:26.480 things that it pointed out is like your
+00:20:28.200 next Pages after your homepage to
+00:20:30.320 contact us like went down significantly
+00:20:32.440 with that change right that's important
+00:20:34.440 right and it picked it out um because we
+00:20:37.720 thought about it and and and put that in
+00:20:40.240 there so that's it uh it's called SEO DP
+00:20:45.480 there's a link in the
+00:20:46.919 presentation uh and then I did this
+00:20:49.240 other thing and I don't know if y'all
+00:20:51.200 like this or not but I like when I'm
+00:20:53.200 coding in Python to have a a Jupiter
+00:20:57.120 notebook there cuz I'm like why framing
+00:20:59.120 code there and then I'm like well what
+00:21:02.720 if I just coded something that would
+00:21:04.280 just take everything in that repo and
+00:21:06.120 throw it to the two million context
+00:21:09.360 window of Google so when I'm asking for
+00:21:12.360 code changes it's looking at my entire
+00:21:15.240 code base right and it sees the
+00:21:17.080 dependencies it sees um my requirements
+00:21:20.440 file it sees all that stuff uh I didn't
+00:21:23.039 like cursor I know cursor does that but
+00:21:25.320 cursor is feels like a they took
+00:21:29.240 like VSS code and just duplicated it and
+00:21:32.120 tweaked some and I I don't know I
+00:21:34.799 it's it's huge right now yeah it is I'm
+00:21:37.159 just like I like VSS code I have it set
+00:21:39.240 up this does markdown it does like code
+00:21:43.080 changes here's what changed you can like
+00:21:45.039 tweak the font or the prompts anyway
+00:21:48.120 that's it thank you for listening to my
+00:21:51.159 geekery
+00:21:53.890 [Applause]

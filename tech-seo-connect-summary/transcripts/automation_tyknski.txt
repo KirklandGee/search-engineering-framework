@@ -1,0 +1,926 @@
+# tactiq.io free youtube transcript
+# Automating Marketing Tasks With AI - Kristin Tynski
+# https://www.youtube.com/watch/5YUiF7RYwHw
+
+00:00:28.960 e
+00:00:58.920 e
+00:01:28.920 e
+00:01:58.840 e
+00:02:28.840 e
+00:02:58.840 e e
+00:03:53.140 [Applause]
+00:04:00.200 okay thank you for having me Mike that
+00:04:02.319 was a great introduction maybe a little
+00:04:04.120 bit generous um so I'm going to be
+00:04:06.599 talking today about some specifics so
+00:04:10.280 over the last two or three years I've
+00:04:11.760 been I'd say obsessed with AI and its
+00:04:14.959 applications in content marketing SEO
+00:04:17.199 and PR so hopefully by the end of this
+00:04:19.639 presentation you guys come away with
+00:04:21.040 some actionable and hopefully really
+00:04:23.400 useful ideas about how you could apply
+00:04:26.040 generative AI to automate some or
+00:04:29.120 eventually all of your
+00:04:32.520 processes so Mike Mike already covered a
+00:04:35.080 lot of this but I'm the founder of
+00:04:36.520 fractal we do data journalism style
+00:04:39.680 campaigns
+00:04:41.400 um and we earn Links at scale through
+00:04:43.960 that sort of methodology so it's data
+00:04:45.960 journalism and then pitching High touch
+00:04:48.080 content to Major Publishers and over
+00:04:51.440 that time I've overseen maybe 5,000 plus
+00:04:54.520 content marketing campaigns that have
+00:04:56.440 all earned
+00:04:58.039 press and we leverage large language
+00:05:00.919 models extensively in many workflows
+00:05:04.479 um but always with the human in the loop
+00:05:07.240 and that's the most most important thing
+00:05:08.720 because these models obviously can
+00:05:10.080 confabulate and make things up and
+00:05:12.520 that's an essential point for anyone
+00:05:15.080 that's going to be doing this sort of
+00:05:17.039 automation um and then as I said I've
+00:05:19.479 been doing this sort of thing since 2018
+00:05:22.199 and talking about it as well so I did a
+00:05:24.319 Blog an AI generated blog in 2018 using
+00:05:28.080 one of the first performance large
+00:05:29.960 language models um from Allen AI to
+00:05:32.520 create a fake blog called this marketing
+00:05:35.160 blog does not exist and so I've been
+00:05:37.840 aware and I I think a lot of you have
+00:05:39.240 also been aware of the disruptive nature
+00:05:41.840 of large language models in generative
+00:05:43.560 Ai
+00:05:45.080 and now it's even more obvious than I
+00:05:48.240 think it was back in 2018 but it's
+00:05:51.199 coming and it's transforming everything
+00:05:53.440 and this industry is among the first
+00:05:55.400 that will be
+00:05:57.400 transformed so today I'm I'm going to
+00:06:00.120 talk about ai's role in marketing uh
+00:06:02.880 from a from pattern matching to
+00:06:04.400 reasoning so these models have grown and
+00:06:06.720 improved a lot over the last year two
+00:06:09.280 years um AI agents as autonomous team
+00:06:12.800 members a Content paradigm shift so
+00:06:15.759 evolving Beyond keywords to intent and
+00:06:18.680 context and then how do you effectively
+00:06:20.919 work with AI and navigate the balance
+00:06:23.840 between human and AI collaboration
+00:06:26.240 letting the AI do too much or not allow
+00:06:29.800 it to do
+00:06:30.759 enough and then some actionable
+00:06:32.840 automation strategies AI driven content
+00:06:35.400 and SEO real world examples and then
+00:06:38.639 some thoughts on the future of marketing
+00:06:39.880 and some things that I wanted to share
+00:06:41.080 that I think are relevant that are not
+00:06:43.360 super welln but are things that you
+00:06:46.120 maybe should
+00:06:47.039 hear so if we look at the growth of
+00:06:51.160 large language models and their adoption
+00:06:54.520 gpt3 had 100 million users in roughly
+00:06:58.360 two months which is the fastest growth
+00:07:00.319 of any product ever as far as I'm aware
+00:07:02.479 except for maybe threads beat it after
+00:07:04.319 that um so far actually this is a as of
+00:07:08.080 last year but generative AI has
+00:07:09.960 generated almost a trillion words so
+00:07:11.960 it's probably somewhere between one and
+00:07:13.440 two trillion words um I think it's about
+00:07:16.960 100 million a day that GPT that Sam mman
+00:07:20.560 said GPT was generating a day um and in
+00:07:24.280 one to two years I I think it's pretty
+00:07:26.120 clear the majority of content on the web
+00:07:27.599 will be AI generated I think the figure
+00:07:29.520 years already around like
+00:07:31.720 30% so if you're wondering these these
+00:07:33.879 videos were created with king. which is
+00:07:36.160 a new generative video model if you've
+00:07:38.400 not checked it out it's amazing it's
+00:07:42.160 nearly as good as Sora which has not
+00:07:44.000 been
+00:07:45.360 released so when it comes to getting
+00:07:48.919 ahead the way that I like to think about
+00:07:51.120 this is that the future is really about
+00:07:53.039 the commoditization of content and so
+00:07:55.879 the question you should always be asking
+00:07:57.000 yourself when you're working with large
+00:07:58.039 language models is am I creating
+00:08:00.319 something that other people could have
+00:08:01.560 created just as easily with a prompt in
+00:08:03.280 response from GPT and if that's the case
+00:08:05.520 then you're not doing
+00:08:07.159 enough so is this the other way I like
+00:08:10.440 to think about it is am I creating
+00:08:11.879 something that's actually Information
+00:08:14.199 Gain so it's presenting something
+00:08:15.560 entirely new or relevant or is it just
+00:08:18.120 recapitulation of existing information
+00:08:20.720 summarizing and so on the first is what
+00:08:23.840 you
+00:08:24.800 want and then the big question in my
+00:08:27.440 mind is what is the endgame of
+00:08:28.639 generative AI and marketing in general
+00:08:31.520 and in my opinion I think it's near zero
+00:08:34.039 cost content creation and maybe that's
+00:08:36.120 not for five or 10 years but it is
+00:08:43.200 coming so let's look back maybe five
+00:08:46.800 years limited poor quality expert
+00:08:50.360 development by humans almost nobody was
+00:08:52.640 using generative AI it had very narrow
+00:08:54.959 applications things like this marketing
+00:08:56.680 blog does not exist the the Articles
+00:08:58.839 were really kind of crappy um two years
+00:09:01.640 ago basic automation large language
+00:09:04.040 models getting better could do some
+00:09:06.120 basic things but still required human
+00:09:08.440 oversight um The Challenge there was
+00:09:10.600 integration and that's a lot of what I'm
+00:09:12.000 going to be talking about here um the
+00:09:14.839 the impact of the first one was
+00:09:16.320 obviously minimal the second Niche
+00:09:19.480 efficiencies um and then a year ago or
+00:09:23.120 so we started seeing multitask agents
+00:09:25.279 which are large language models put into
+00:09:27.600 Frameworks that allow them to do more
+00:09:29.399 than just prompt in response um with
+00:09:33.040 that you can do things like pipeline
+00:09:34.480 management scaling and process
+00:09:36.120 Automation and then today where we're
+00:09:38.360 entering sort of a new age of AI with
+00:09:40.600 models like uh 10 from from open AI that
+00:09:45.399 are actually incredible reasoners if you
+00:09:47.880 haven't played with that model yet I
+00:09:49.640 would um so they can now do complex
+00:09:53.040 reasoning the human role is really more
+00:09:55.120 about guidance and instruction or it's
+00:09:57.120 becoming more of that and then the key
+00:09:59.519 challenges are autonomy versus control
+00:10:01.079 so how much does the human participate
+00:10:03.079 how much does the AI participate how
+00:10:04.800 much ises the human managing that
+00:10:06.760 process and uh so the impact there is
+00:10:09.240 knowledge work shift so this is
+00:10:10.839 transformation across knowledge work
+00:10:13.320 Industries oops and then five years
+00:10:15.920 ahead and this is you know verging on
+00:10:18.480 speculation but autonomous AI teams
+00:10:21.800 strategic Direction provided by the
+00:10:23.680 human um the challenges are governance
+00:10:26.480 and adaptation and Industry disruption
+00:10:30.320 so maybe that sounds a little hyperbolic
+00:10:32.360 or crazy but here are some of the
+00:10:35.920 reasons why I think that's true so these
+00:10:38.959 are the model progressions on different
+00:10:43.120 um Benchmark tests for different
+00:10:44.800 language models so GPT 4 and then o1 and
+00:10:49.399 then a human on the right here so the
+00:10:51.800 right is PhD science questions
+00:10:54.720 competition code and competition math
+00:10:57.399 and so like as you can see like these
+00:10:59.560 models are reaching parity with humans
+00:11:01.800 across almost every domain at this
+00:11:05.399 point and then this one too so if you
+00:11:08.560 guys have not read this is situational
+00:11:10.200 awareness by Leopold Ashen Brunner who's
+00:11:12.600 a an open AI employee he doesn't work
+00:11:15.040 there anymore I'm not exactly sure what
+00:11:16.440 happened but he decided to write this
+00:11:18.040 incredibly in-depth uh PDF that
+00:11:22.040 goes really into depth around exactly
+00:11:24.959 why he thinks that the scaling of AI is
+00:11:26.600 happening as it is and what he thinks is
+00:11:28.560 going to happen the next 5 10 years so
+00:11:30.360 this is projections essentially of the
+00:11:33.000 orders of magnitude changes from
+00:11:36.120 essentially 2018 where we had gpt2 was
+00:11:39.440 like a preschooler to
+00:11:42.200 2028 where perhaps we're going to have
+00:11:44.639 what I said in the last slide like
+00:11:45.959 automated researchers
+00:11:51.240 Engineers this should also scare you so
+00:11:53.600 this is another sort of metric of the
+00:11:55.320 orders of magnitude improvements that
+00:11:57.079 we've seen so Chad gbt
+00:12:00.360 few minutes numbers of tokens a couple
+00:12:02.880 hundred whatever your task is it can do
+00:12:05.120 that sort of thing uh now with 01 it's
+00:12:09.040 probably we're probably up to the second
+00:12:10.160 level so you can do you know thousands
+00:12:12.839 of tokens up to 200,000 tokens at a time
+00:12:15.360 that whatever task you're trying to do
+00:12:17.000 that you might be able to accomplish a
+00:12:18.440 half an hour of work with that we're
+00:12:21.600 quickly moving to a place where these
+00:12:23.240 llms from a single prompt and response
+00:12:25.519 could do the equivalent of multiple
+00:12:27.160 weeks or multiple months worth of work
+00:12:28.720 of one
+00:12:32.680 so this is uh the ROI timeline for
+00:12:34.720 generative AI use cases this is a survey
+00:12:36.959 that Google put out around generative Ai
+00:12:40.120 and it's it's just
+00:12:42.199 um sort of a snapshot of of the industry
+00:12:45.639 in terms of how people think this will
+00:12:48.279 be impacting them in the next few years
+00:12:50.320 and although I think there are people
+00:12:53.000 who are adopting it now you can see it's
+00:12:54.519 you know it's pretty small in the sales
+00:12:57.040 and marketing it's 33% seeing Roi now
+00:13:00.120 that will increase I think to 100% in
+00:13:01.800 the next 3 to 5
+00:13:07.160 years and then these are some of the
+00:13:09.000 ways that business plan to use
+00:13:11.560 generative AI to uh automate and
+00:13:14.720 operationalize their
+00:13:17.880 businesses so a big question for me is
+00:13:20.440 is dead internet Theory coming true and
+00:13:24.160 if it is what do we do about it so if
+00:13:26.000 you haven't heard of d Internet Theory
+00:13:27.320 it's basically the idea that with
+00:13:29.120 generative AI models and their
+00:13:30.519 capabilities of being able to create
+00:13:32.519 such volumes of content so quickly at
+00:13:34.560 scale that eventually they'll inundate
+00:13:37.800 and overwhelm human content to the
+00:13:39.440 extent that it's not really viable to be
+00:13:41.839 searched or used anymore so we're
+00:13:44.399 already seeing stuff like that happen
+00:13:46.120 with a Google image search for baby
+00:13:49.160 peacock and see all the red ones are
+00:13:51.519 generative AI images and if you actually
+00:13:54.759 analyze them versus a baby peacock you'd
+00:13:57.000 see there's a lot of mistakes
+00:13:59.959 and then bot traffic obviously is also
+00:14:01.839 increasing substantially this was last
+00:14:04.480 year um the reason for this is because
+00:14:06.920 generative models can be Bots right they
+00:14:09.600 can analyze information they can assume
+00:14:11.839 personalities they can converse with
+00:14:13.360 people and convince them that they're
+00:14:15.079 actual humans they can pass a Turing
+00:14:17.160 test essentially in text over you know
+00:14:19.680 relatively small
+00:14:26.120 periods so if if dead internet theory is
+00:14:29.360 true what does that mean for marketing
+00:14:33.320 an SEO so first of all decreased organic
+00:14:36.000 traffic I think a lot of you already see
+00:14:37.880 that in some some cases uh because large
+00:14:41.279 language models offer direct answers
+00:14:42.839 reducing clicks to sites so this is true
+00:14:45.519 of you know the changes that Google is
+00:14:47.199 making but it's also true of people just
+00:14:48.880 instead of doing a Google search they
+00:14:50.720 use chat GPT or another generative AI to
+00:14:53.519 answer a
+00:14:54.839 question uh selective clickthrough so I
+00:14:58.320 think what you're going to to get
+00:14:59.480 ultimately is is less traffic but the
+00:15:02.120 traffic that you do get from large
+00:15:03.320 language models will be um hyper
+00:15:06.560 relevant and very
+00:15:09.519 interested different verticals are
+00:15:11.279 obviously impacted differently those
+00:15:12.600 relying on things that generative AI is
+00:15:14.480 good at creating are going to be
+00:15:15.560 impacted
+00:15:16.959 first and then sadly even less data
+00:15:19.800 transparency for marketers these models
+00:15:22.519 are essentially black boxes and you can
+00:15:25.120 you can extract some data from them but
+00:15:26.600 not a
+00:15:27.959 lot and then indexes I in my opinion
+00:15:30.639 still matter and will matter into the
+00:15:32.920 into the future we're always going to
+00:15:34.240 need some organization of humans uh
+00:15:38.519 content and some way to filter it and
+00:15:40.639 search it but the large language models
+00:15:43.560 will be using those indexes
+00:15:46.360 instead and then um data driven
+00:15:49.240 standards so I think content backed by
+00:15:50.720 data becomes a norm because these large
+00:15:52.399 language models enable essentially data
+00:15:55.199 journalism much much more easily than
+00:15:57.199 was ever possible before so I think the
+00:15:59.240 standards of what information game
+00:16:01.319 content or content worth ranking is
+00:16:03.639 content that will be data driven and
+00:16:05.720 presenting entirely new
+00:16:08.639 information and then this is an across
+00:16:10.839 theboard
+00:16:12.720 thing uh I think ultimately because
+00:16:15.360 these large language models can assume
+00:16:17.240 personalities and become Bots and that
+00:16:19.240 can be scaled it's going to necessitate
+00:16:21.920 some level of verifiable identity um and
+00:16:25.360 perhaps the growth of closed Gardens
+00:16:26.800 over open I think anonymity or pseudo
+00:16:29.839 anonymity is probably not something that
+00:16:31.279 will
+00:16:32.199 be
+00:16:35.440 viable and as I said earlier is a
+00:16:37.600 perfectly efficient market the end state
+00:16:39.040 of air plus marketing I I think that's
+00:16:41.079 the goal of of this
+00:16:51.680 technology it's not going to the next
+00:16:55.160 one oh there we go okay um
+00:16:59.720 so this is this is how I like to think
+00:17:01.519 about working with LGE language models
+00:17:04.079 and I actually had GPT help me code this
+00:17:08.000 visualization and it's a visualization
+00:17:10.839 um essentially of navigating a latent
+00:17:12.679 space so GPT is a this huge
+00:17:16.359 model trillion parameters I think it
+00:17:20.000 exists all of its knowledge exists in
+00:17:22.079 this multi-dimensional space that you
+00:17:25.280 are navigating as you're asking it
+00:17:26.839 questions and it's answering those
+00:17:28.079 questions and as you accumulated
+00:17:29.760 conversation you're moving it through
+00:17:31.720 that latent space to a particular spot
+00:17:35.160 and some of those spots in that latent
+00:17:36.440 space are really amazing right they're
+00:17:38.840 perfectly Tor to your question or your
+00:17:40.400 need others are not they're irrelevant
+00:17:43.559 you you know you sense down the wrong
+00:17:44.960 path it's not a good result and that's
+00:17:46.960 why you see such variable quality of of
+00:17:51.440 outcomes from people who are using Ai
+00:17:53.840 and so yeah you can sort of think of it
+00:17:56.120 as this is a conversation each of those
+00:17:57.679 dots is a is a turn in the conversation
+00:18:00.919 and you're moving towards a specific
+00:18:02.360 location in the Laten
+00:18:05.080 space this is a game called infinite
+00:18:07.120 Pizza which I sort of thought was
+00:18:09.200 similar in its
+00:18:12.799 idea so just talking a little bit more
+00:18:15.880 about how you can think about and get
+00:18:18.039 more out of large language models um
+00:18:20.679 improved reasoning with agentic
+00:18:22.360 prompting so one thing that I've been
+00:18:25.600 doing a lot lately is is this sort of
+00:18:27.360 thing I say in iate two agents competing
+00:18:30.320 to find the real answer and poke holes
+00:18:32.080 in each other's answers until they agree
+00:18:34.400 which they are loath to do each agent
+00:18:36.520 has unique skills and perspectives and
+00:18:38.039 thinks about the problem from a
+00:18:39.120 different vantage point and then I give
+00:18:41.159 it personalities I so if I'm coding Alan
+00:18:43.600 Turing as a top- down agent and Donald
+00:18:45.640 nth is a bottom up agent so giving them
+00:18:47.880 personality names like this like you are
+00:18:49.760 injecting some additional context and
+00:18:52.120 the responses will be somewhat more
+00:18:54.200 tored to whatever the AI assumes these
+00:18:56.320 people would have said
+00:18:59.240 and then both agents I say have the
+00:19:03.080 ability to think counterfactually step
+00:19:05.440 by step thinking from first principles
+00:19:07.120 thinking laterally so giving it all of
+00:19:08.840 these tools to on how it should think
+00:19:11.159 and then having two agents that are
+00:19:12.559 competing against each other and
+00:19:13.799 checking each other and because because
+00:19:16.240 we have such large uh context Windows
+00:19:18.280 now this actually starts to work really
+00:19:19.960 well and what you'll get when you do
+00:19:22.600 this is uh much longer responses where
+00:19:25.280 you have one agent giving an answer the
+00:19:27.520 second agent
+00:19:29.240 evaluating or critiquing that answer and
+00:19:31.240 then going back and forth until they've
+00:19:32.720 essentially
+00:19:36.480 agreed so as I mentioned the 200,000
+00:19:39.840 token context window is something that
+00:19:41.480 you really need to be aware of when
+00:19:43.480 you're using these large language models
+00:19:45.799 and depending on what you're using it
+00:19:47.480 for I mean if you're using it just for
+00:19:48.640 writing then you might never get to
+00:19:50.320 200,000 tokens but if you're doing
+00:19:52.360 coding it can get pretty easy to get
+00:19:54.360 there um this is called needle and a
+00:19:57.320 haast stock and this is a visualization
+00:19:59.159 of a test that's done on on all large
+00:20:01.520 language models now and it's it's a
+00:20:03.400 recall test so it's
+00:20:06.360 examining out of how many tokens that
+00:20:08.440 are being generated how accurate are
+00:20:10.200 those tokens so this was for GPT 4 and I
+00:20:14.280 think 40 is much better than this and
+00:20:16.400 anthropic is better than this as well um
+00:20:20.000 but through like 75,000 characters
+00:20:22.360 you'll see this recall has essentially
+00:20:24.200 no errors once you get past that then
+00:20:26.760 you start to get issues and errors
+00:20:29.400 so keeping this in mind it's important
+00:20:31.600 for you to always manage your context so
+00:20:34.120 if you're having a conversation with an
+00:20:35.240 AI it's helping you with a problem if
+00:20:36.440 you get towards you know above depends
+00:20:39.520 on the model right but above 100,000
+00:20:42.000 tokens you should probably go back into
+00:20:44.440 your conversation delete irrelevant
+00:20:46.679 sections of it and then start back from
+00:20:51.720 there so the other part is
+00:20:54.679 uh critiquing your last answer in depth
+00:20:58.240 I almost every time I have it do this
+00:21:00.200 and a lot of times you'll notice it
+00:21:01.400 catches things provide counterfactuals
+00:21:04.280 and edge cases for programming this is
+00:21:06.159 incredibly useful I and then this one
+00:21:08.960 I've actually been doing recently use
+00:21:11.480 checklist extensively to plan so what
+00:21:14.039 I've noticed is it especially when
+00:21:15.840 you're working with larger context
+00:21:16.880 Windows it it can uh forget things so
+00:21:20.760 forcing it to use checklists forces it
+00:21:22.760 to remember everything because it's
+00:21:24.159 essentially writing down what it needs
+00:21:26.200 to do first and then then doing it
+00:21:30.440 and then broad to narrow so leveraging
+00:21:33.039 ai's information synthesis scale 200,000
+00:21:35.440 tokens um I think there are some other
+00:21:37.640 models that go up to a
+00:21:39.000 million this is where the value really
+00:21:41.080 is extracting and synthesizing huge
+00:21:43.600 amounts of
+00:21:47.000 information and then leveraging
+00:21:48.760 highdensity information context so with
+00:21:51.520 only 200,000 tokens you want the densest
+00:21:54.640 information possible so use shorthand
+00:21:58.120 use tables use whatever formats you can
+00:22:01.120 to to have the same amount of
+00:22:03.200 information in a smaller
+00:22:07.480 context so now I'm going to go into um
+00:22:11.679 specifics around Advanced pipelines that
+00:22:14.799 I've built and my brother Dan has built
+00:22:17.640 for internal use cases at fractal but a
+00:22:21.159 lot of these are going to be things that
+00:22:22.640 we share with the community as well and
+00:22:25.240 I'm also going to give you guys 25
+00:22:27.400 Google collab
+00:22:30.120 uh like Python scripts essentially that
+00:22:32.640 do a lot of the things I'm going to be
+00:22:33.760 describing here that you can play with
+00:22:35.120 yourself and update and change
+00:22:45.320 yourself so this is mentioned a little
+00:22:47.440 bit in the previous talk but I think
+00:22:49.760 it's important to think about one input
+00:22:51.960 many outputs so this was a script I
+00:22:54.480 wrote that takes a a YouTube url scrapes
+00:22:59.000 the YouTube url
+00:23:01.120 um uses whisper API from open AI to
+00:23:04.480 transcribe it and then turns it into a
+00:23:06.640 tweet thread a long form article and a
+00:23:09.799 summary of that
+00:23:16.520 article so another another project I
+00:23:19.120 worked on was creating long form content
+00:23:22.799 um from source of Truth information so
+00:23:25.640 this
+00:23:26.520 particular one the way that it works is
+00:23:28.720 it uh uses a Google Places API and it
+00:23:32.240 searches whatever location keyword so in
+00:23:34.440 this case itha New York it goes to the
+00:23:36.480 location API pulls as much information
+00:23:38.480 about that location as possible sends
+00:23:40.640 all that location information like the
+00:23:42.279 businesses and the events and you know
+00:23:45.960 the the hiking and whatever else and
+00:23:48.000 then GPT analyzes all that and um
+00:23:51.080 creates a long form piece of content
+00:23:52.360 from it and then I also added some
+00:23:54.679 additional features that extract
+00:23:56.840 relevant images and insert those those
+00:23:59.360 so you can imagine creating these more
+00:24:01.039 complex pipelines that do more and more
+00:24:02.840 advanced
+00:24:05.520 things so the most powerful thing in my
+00:24:08.039 mind
+00:24:09.600 is uh combining a source of Truth so
+00:24:13.080 like a search index being able to
+00:24:14.640 connect to your AI to search um and then
+00:24:18.600 having it iterate over and over
+00:24:21.600 again so this is a this is another
+00:24:24.399 example of long form article generation
+00:24:27.000 with semantic SEO understanding
+00:24:30.159 and see if
+00:24:39.919 it so the way that this works is it
+00:24:42.880 takes a keyword it uses Sur API or data
+00:24:47.039 for SEO or one of the other SEO data
+00:24:49.960 tools scrapes all of that
+00:24:52.360 information and then does clustering on
+00:24:55.720 it so pulls out entities clusters those
+00:24:59.159 entities using sentence Transformer and
+00:25:01.720 then does visualizations of those uh at
+00:25:04.279 the
+00:25:14.360 bottom so okay so this next one is uh
+00:25:18.159 another little mini web app automation
+00:25:21.679 that we wrote that starts with an
+00:25:23.000 initial list of keywords and then uses
+00:25:25.760 those keywords to generate uh 200 longt
+00:25:28.760 keyword suggestions and then uh it
+00:25:31.600 selects the suggestions with the highest
+00:25:33.039 search
+00:25:34.080 volumes and then finds related keywords
+00:25:36.720 to expand the list and so this sort of
+00:25:39.360 process you can as I was saying before
+00:25:41.919 huge amount of information in filtering
+00:25:43.960 it with the large language model
+00:25:46.120 yielding something very interesting so
+00:25:48.120 in this case it's uh longtail Hidden Gem
+00:25:51.360 keywords that have low cost per click
+00:25:53.559 High relevance according to the llm
+00:25:59.679 so keeping going with this combining
+00:26:02.120 sources of Truth apis large language
+00:26:04.760 models and iterative pipeline outputs so
+00:26:08.159 the script is uh something that you give
+00:26:11.240 it a URL it scrapes the
+00:26:13.720 URL and then takes all of that
+00:26:15.960 information about the URL and sends it
+00:26:17.399 to like five or six different on-site um
+00:26:21.640 SEO apis um apis around other data
+00:26:25.559 around the website like who is and DNS
+00:26:28.559 and other things it also takes
+00:26:30.960 screenshots of the entire page which
+00:26:32.399 you'll see at the bottom
+00:26:34.720 um and then uses gpt's new video or
+00:26:39.399 image analysis model uh 40 mini to
+00:26:44.480 understand the page and give it like
+00:26:46.159 uiux recommendations based on that so I
+00:26:50.440 mean this sort of thing took me like a
+00:26:51.960 day to write with gpt's help and it's
+00:26:56.880 essentially like one
+00:26:59.159 input a you know a decent SEO report
+00:27:04.480 output uh another really valuable thing
+00:27:06.679 that you can do is creating um retrieval
+00:27:10.080 augmented generation systems for either
+00:27:12.039 your internal teams or external projects
+00:27:15.679 so in this case we we took the Google
+00:27:17.720 leak and put it into a rag Pipeline and
+00:27:21.159 the way that this works is when you ask
+00:27:23.480 a
+00:27:24.399 question uh a search is done of the
+00:27:26.880 Corpus using embeddings and then the the
+00:27:31.240 closest embeddings the ones that are
+00:27:32.520 most related to your question are pulled
+00:27:33.880 out given to the large language model
+00:27:35.720 and the large language model answers the
+00:27:37.120 questions based on that source of Truth
+00:27:39.320 information so with this sort of thing
+00:27:41.440 you get much much less confabulation in
+00:27:44.360 fact very
+00:27:48.840 rare so you can also do multimedia type
+00:27:51.399 things so this is
+00:27:53.840 a this is an app that basically you give
+00:27:57.159 it a a search term it goes out and it
+00:27:59.799 scrapes Tik Tok using appify which is a
+00:28:02.799 great tool for scraping if you guys have
+00:28:04.880 like weird sites that are hard to scrape
+00:28:07.480 um so scrapes Tik Tok gets the
+00:28:09.640 transcripts using the whisper API um
+00:28:12.360 sends frame images to GPT 40 um image an
+00:28:17.960 image and video analysis provides output
+00:28:20.440 on exactly what's happening those videos
+00:28:22.840 and what the transcript says and then
+00:28:24.799 does some sort of analysis on it so in
+00:28:26.360 this case I said asso iological
+00:28:34.679 researcher so another another idea
+00:28:37.720 Reddit
+00:28:38.799 posts uh the hardest thing I think for
+00:28:41.480 succeeding on Reddit is finding the rate
+00:28:43.039 subreddits and then having the right
+00:28:45.080 title for that subreddit if you're not a
+00:28:47.200 member of that particular Community
+00:28:48.519 you're probably going to get it wrong
+00:28:50.159 but GPT knows about every single one of
+00:28:52.399 those communities so you can give it an
+00:28:54.320 article as an input and then it will go
+00:28:57.919 out use the uh Pro API which is Reddit
+00:29:01.399 scraping API um may or may not work
+00:29:04.720 anymore uh and pulls out all of the
+00:29:09.000 relevant information and then makes
+00:29:11.480 suggestions around which subreddits
+00:29:13.960 would be most appropriate and what the
+00:29:17.279 title should be for each of those
+00:29:22.480 subreddits
+00:29:26.799 oops so so another thing you can
+00:29:29.080 obviously do is
+00:29:31.039 uh in this case automatic frequently ask
+00:29:34.000 questions so the way that this works is
+00:29:37.200 you give it a keyword and then it goes
+00:29:38.519 out and it scrapes Google for um like
+00:29:42.080 the autor response stuff uh also asked a
+00:29:45.840 few other a few other keyword related
+00:29:48.120 keyword expansion things takes all of
+00:29:50.840 them um generates a ton of questions
+00:29:53.279 about all of those keywords and then
+00:29:55.760 answers those and then organizes it in a
+00:29:58.480 list so this iterative process of
+00:30:00.360 connecting to an external source of
+00:30:02.200 Truth having the AI model analyze it
+00:30:04.880 then do something else then do something
+00:30:06.200 else toward an
+00:30:10.679 output and then this is just one that I
+00:30:13.640 wanted to mention to you guys because I
+00:30:14.960 think it's very relevant to SEO what
+00:30:17.360 happens when the majority of people are
+00:30:18.720 using large language models for for
+00:30:20.840 getting their answers um you still need
+00:30:23.799 to know what your visibility is in those
+00:30:25.640 large language models and as I said in
+00:30:27.320 the beginning it's a complete Black Box
+00:30:30.240 so this is a way to sort of gain insight
+00:30:33.600 into it and what we did here was uh
+00:30:36.840 compiled the sources essentially the
+00:30:39.080 training data sources that were used for
+00:30:41.880 GPT and a few other models and so this
+00:30:45.080 allows you to search that it's not
+00:30:46.279 really an AI enable thing beyond that
+00:30:49.960 you know this is this is all AI related
+00:30:51.600 data um but it allows you to to
+00:30:55.399 essentially find those sorts of Interest
+00:31:05.039 insights so this is another project and
+00:31:07.399 this is a lot of these are go uh Google
+00:31:10.039 collabs that you guys will be able to
+00:31:11.320 use or play with on your own um this is
+00:31:15.200 essentially creating semantically
+00:31:16.440 complete site Maps so what this one does
+00:31:20.120 a um it does entity and relationship
+00:31:22.200 generation and then it takes Advanced
+00:31:24.600 metrics so it computes page Rank and
+00:31:26.880 centrality and community
+00:31:29.399 detection and then creates these
+00:31:34.279 essentially data maps of connections and
+00:31:38.039 edges between them so you can you can
+00:31:41.279 really very easily using large language
+00:31:43.880 models create knowledge graphs which can
+00:31:46.039 be used in lots of different
+00:31:53.120 ways so automatic cluster evaluations as
+00:31:55.880 well which I think was talked about a
+00:31:57.080 little bit in the last
+00:31:58.360 talk uh very useful for competitive
+00:32:00.679 analysis keyword research Trend and
+00:32:02.799 social media research and then data
+00:32:05.440 science um in this case the way that we
+00:32:07.840 did clustering was scrape collate Sur
+00:32:09.880 results keywords or content and then get
+00:32:12.360 the embeddings so open AI has embeddings
+00:32:15.200 they used to be really expensive um
+00:32:17.320 hugging face has all the free models
+00:32:19.399 that you can
+00:32:20.639 use they're pretty on par when you're
+00:32:23.120 doing embeddings at least at least as
+00:32:25.760 far as it has been made the last few
+00:32:27.320 months it might
+00:32:29.120 changed and then the amazing thing is
+00:32:31.000 you can do clustering with these there's
+00:32:32.279 lots of different clustering Al
+00:32:33.559 algorithms that you can use but the
+00:32:35.320 special thing is that you can then use
+00:32:36.600 the large language models to label the
+00:32:38.279 Clusters so before when you were doing
+00:32:40.159 any sort of clustering You' get clusters
+00:32:42.600 and the things in those clusters would
+00:32:44.200 be related to each other but you had to
+00:32:46.960 say what that cluster was about in this
+00:32:49.039 case you can use large language models
+00:32:50.480 to identify and label the Clusters which
+00:32:53.279 which can turn a project that would have
+00:32:55.039 taken hundreds of hours for a human into
+00:32:56.919 something that takes few
+00:33:00.559 minutes other things that you can do so
+00:33:02.919 iterative content creation where you're
+00:33:04.440 generating like say you're generating
+00:33:06.600 article ideas or keyword ideas start
+00:33:08.880 with doing something like creating a
+00:33:10.279 Persona and then generating ideas uh
+00:33:12.919 inferring the personas based on the
+00:33:14.159 keyword that serves metadata um their
+00:33:17.639 demographics their psychographics their
+00:33:19.120 affinities their purchase intents
+00:33:20.639 whatever else because these large
+00:33:22.320 language models have an understanding
+00:33:24.000 similar to humans because they have all
+00:33:25.679 of human knowledge in them or almost um
+00:33:29.760 they can do these sorts of things fill
+00:33:31.120 out these huge data sets that enhance
+00:33:34.320 your ability to do your your work as an
+00:33:37.760 SEO another one automatic Trend analysis
+00:33:43.159 um so this scrapes posts on Reddit by
+00:33:45.639 keyword sorts by top and then infers the
+00:33:48.639 primary topics in hierarchy as emotional
+00:33:50.480 activators entities whatever else you
+00:33:53.000 want that LM can
+00:33:56.480 do uh so this is an example really of of
+00:33:59.600 data journalism and why I think a lot of
+00:34:03.679 content is going to transition to this
+00:34:05.039 sort of thing I did this project in like
+00:34:07.360 maybe 3 hours and what I did is I
+00:34:10.239 compiled all of the Trump
+00:34:13.879 incidences there were over 300 of them
+00:34:16.800 but I did this using a large language
+00:34:18.239 model so like I could have gone coming
+00:34:20.359 through you know news stories and doing
+00:34:23.000 hundreds of searches to try and find
+00:34:24.520 every single one maybe there were a few
+00:34:26.320 places that had already tried to
+00:34:27.359 aggregate it but it would be very
+00:34:29.560 difficult to do to compile this amount
+00:34:31.520 of information at once but with a large
+00:34:33.719 language model you can do that so
+00:34:35.879 iteratively working with the the model
+00:34:37.520 to to find you know list all of the
+00:34:40.960 Trump incidences over the last whatever
+00:34:43.239 20 years and then take that and ask it
+00:34:46.000 to list more that are unique that
+00:34:47.918 weren't in the first list and keep doing
+00:34:49.918 that over and over again until you get a
+00:34:51.440 very large list and then you can
+00:34:53.639 programmatically do fact checking on it
+00:34:59.640 so this sort of thing applies to
+00:35:00.800 anything right like you could use a
+00:35:02.320 generative model to create a large data
+00:35:03.960 set that then can be visualized in an
+00:35:05.880 interesting way that becomes useful to
+00:35:08.560 people and these things were you know we
+00:35:11.079 had ideas like this at fractal a lot but
+00:35:13.480 we never really did them because they
+00:35:14.920 would take hundreds of hours to compile
+00:35:16.480 that
+00:35:19.200 information so it was previously too
+00:35:21.599 difficult for one human to grow alt
+00:35:24.119 together and it's a really entirely new
+00:35:26.680 Avenue for creating unique
+00:35:29.520 content uh web crawling with content
+00:35:32.000 analysis and anchor text
+00:35:33.839 recommendations um just another use case
+00:35:36.839 I'm going to go quickly through these
+00:35:37.760 because I want to get to theorder sort
+00:35:39.280 of wrapping up you could do
+00:35:40.680 understanding brand visibility um in an
+00:35:42.920 AI first search environment
+00:35:46.200 so this is again sort of like a llm SEO
+00:35:50.240 sort of sort of thing where um you take
+00:35:54.760 I took a keyword and then I iter ly
+00:35:58.040 search or sorry I use um I use an llm to
+00:36:01.640 create lots of different related
+00:36:02.880 keywords and then each of those related
+00:36:04.319 keywords I do searches in the llm and
+00:36:06.000 scrape the responses from the llm so for
+00:36:08.640 instance
+00:36:09.800 like asking content marketing or content
+00:36:13.960 marketing agencies GPT is going to give
+00:36:16.319 me a list of agencies right I could keep
+00:36:18.280 doing that over and over and over again
+00:36:19.960 in lots of different ways compile all
+00:36:21.880 that data and then aggregate it to
+00:36:23.800 understand which brands are mentioned
+00:36:25.040 the most
+00:36:27.960 and then some technical sea things you
+00:36:30.079 can give it raw HTML and get schema
+00:36:32.839 improvements and things like
+00:36:35.960 that in this video I'm going to be
+00:36:37.839 showing you canvas which is a new
+00:36:39.520 interface within chat GPT for both
+00:36:41.319 writing as well as coding project the
+00:36:43.760 way Canvas Works is it will open up a
+00:36:45.960 separate window and it will allow you to
+00:36:53.680 collab
+00:36:56.520 okay so things that I think should be on
+00:36:58.920 your radar um agentic Frameworks so all
+00:37:03.000 of these things that I've been talking
+00:37:04.079 about today are in some sense agentic
+00:37:05.720 Frameworks which are essentially using
+00:37:07.599 large language models sort of having
+00:37:09.880 them exist in pieces that work
+00:37:12.720 together uh there are lots of different
+00:37:14.960 agentic Frameworks emerging autogen crew
+00:37:17.319 AI are two that I've used um and found
+00:37:20.720 the most useful there are lots of others
+00:37:22.880 some of them are really like opaque and
+00:37:25.599 difficult to use uh the open ey realtime
+00:37:28.319 voice API um if you guys have seen the
+00:37:31.040 automatic podcast creator that they
+00:37:32.839 released which is amazing and one of
+00:37:36.200 those ways that you can extend written
+00:37:38.200 content or video content into another
+00:37:40.720 format um but this real-time voice API
+00:37:43.800 is essentially allowing you all of that
+00:37:45.960 functionality that you saw in that
+00:37:47.960 podcast generator but through an API so
+00:37:50.119 you can create your own experiences with
+00:37:51.760 it or your own content creation
+00:37:54.280 pipelines with it um and it also they've
+00:37:57.520 Alo partnered with uh Agora and another
+00:38:00.400 company that I forget the name of which
+00:38:02.359 are companies that help like um they
+00:38:05.839 have apis that help abstract a lot of
+00:38:07.680 the voice handling like the live voice
+00:38:09.760 data back and forth which makes it a lot
+00:38:11.800 easier than having to do that part
+00:38:13.839 yourself which is very
+00:38:16.000 difficult cling and text to video AIS
+00:38:19.040 apis like the first image in the
+00:38:21.079 beginning are coming along you know I
+00:38:24.240 think it's not that many years from now
+00:38:26.280 we'll have you know 15year olds making
+00:38:29.280 Blockbuster level movies with these
+00:38:30.839 sorts of text to video apis or
+00:38:34.760 AIS uh dead internet of image results is
+00:38:37.680 already happening obviously I talked
+00:38:39.040 about that earlier um improving tooling
+00:38:41.480 and userfriendly agentic tools something
+00:38:43.800 you need to be doing
+00:38:45.920 uh 01 the latest model from open AI it's
+00:38:49.960 I think it's important for you to to use
+00:38:52.079 it and understand how this technology is
+00:38:55.560 different because it's being optim
+00:38:57.440 optimized on its reasoning capabilities
+00:38:59.319 in a way that the previous models are
+00:39:02.760 not larger and larger context Windows
+00:39:06.079 the question here for me is what is the
+00:39:07.680 upper limit of this uh is it there are
+00:39:10.839 some papers now that show that it might
+00:39:12.280 be possible to have infinite context
+00:39:13.800 windows and when that's the case like
+00:39:16.599 maybe we don't need a search index
+00:39:20.040 anymore uh soono udio if you guys
+00:39:22.640 haven't played with these they create
+00:39:24.520 very high quality music from single
+00:39:27.079 prompt
+00:39:27.960 in any
+00:39:29.720 style and then open source AIS are
+00:39:32.119 catching up so Facebook has been leading
+00:39:34.640 the way in this uh their llama models
+00:39:37.680 but there are many others and people are
+00:39:39.319 expanding and iterating on
+00:39:42.079 those so they're worth trying because
+00:39:44.520 obviously they're they're free aside
+00:39:46.160 from the compute um and they are getting
+00:39:49.079 to the point where they're at like gp4
+00:39:53.000 level and then domain specific languages
+00:39:55.800 are I haven't gotten too much into this
+00:39:58.400 yet but I think they are part of the
+00:39:59.960 future of helping AIS to really reason
+00:40:05.800 well and then some AI breakthroughs that
+00:40:07.920 I wanted to mention on the next
+00:40:10.040 page yeah sorry um you guys you guys can
+00:40:14.880 click on these when I share the deck but
+00:40:18.599 yeah I mean so video generation that's
+00:40:21.319 the paper that like clling and these
+00:40:23.280 other video Generations are based on
+00:40:25.599 essentially music generation diffuse
+00:40:27.839 role is the is the paper and the the
+00:40:30.160 technology Dolly obviously Alpha fold um
+00:40:34.280 reinforcement learning for scalable
+00:40:36.280 multi-agents so this is this is things
+00:40:38.280 like GPT
+00:40:40.599 40 um liquid neural networks which are
+00:40:45.880 crazy and too complex to talk about here
+00:40:48.760 but they are a key for autonomous
+00:40:50.960 systems um new elements or additional
+00:40:54.560 elements to prompting so and using mixt
+00:40:57.400 of experts so having lots of different
+00:40:59.960 responses from AIS and and using them
+00:41:03.119 together to come to a better
+00:41:06.240 conclusion um multi-token
+00:41:08.680 prediction getting the AI to do more
+00:41:11.520 predictive uh inference with the same
+00:41:15.200 tokens
+00:41:16.839 um probabilistic relational models which
+00:41:19.520 I guess are important for finance and
+00:41:21.000 healthare I don't know too much about
+00:41:22.640 those
+00:41:25.520 uh uh binary Network which will enable
+00:41:28.880 or binary xn or net networks which um
+00:41:34.880 will enable mobile and Edge data so one
+00:41:37.440 of the big blockers to I think adoption
+00:41:39.079 of these AI Technologies is that the
+00:41:41.200 really performant ones exist behind apis
+00:41:43.400 so you can't build really great apps
+00:41:45.960 that allow you to interact with them
+00:41:47.520 with your phone in real time but once
+00:41:49.760 once we get to the point where we can
+00:41:51.200 have these large language models that
+00:41:52.599 are super performant that operate on the
+00:41:54.760 edge on your phones and other devices
+00:41:56.960 then
+00:41:58.119 uh I think we're going to start seeing a
+00:42:00.240 massive Improvement in
+00:42:02.680 adoption and then these are the
+00:42:05.240 25 automation scripts but on LinkedIn I
+00:42:07.880 release these I haven't been doing it
+00:42:09.200 recently because I've been working on a
+00:42:11.599 lot of these other things but if you
+00:42:13.240 want to play with these they're on my
+00:42:15.200 GitHub or you can click them
+00:42:17.410 [Music]
+00:42:25.119 here welcome our Ro
+00:42:27.920 overlords that says I welcome our robot
+00:42:31.559 overlords you know just in case

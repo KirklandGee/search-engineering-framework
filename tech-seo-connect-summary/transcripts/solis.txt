@@ -1,0 +1,717 @@
+# tactiq.io free youtube transcript
+# The State of Technical SEO in 2024 - Aleyda Solís
+# https://www.youtube.com/watch/jw3dpJbT0iE
+
+00:00:02.240 thank you thank you thank you very much
+00:00:06.399 that was very kind of Mike I have to say
+00:00:09.240 also something like still independent
+00:00:11.480 too not bought by anybody at this point
+00:00:13.920 like a few of a few of us left uh just
+00:00:18.119 kidding this this s it's sad you know
+00:00:20.920 when I want to come up with jokes and
+00:00:22.720 nobody laughes so no worries hopefully
+00:00:25.240 the last one hopefully the last one but
+00:00:26.800 yes I'm so very excited to be here um
+00:00:29.679 first time in uh rally um very very
+00:00:33.840 surprised and I love it I have mentioned
+00:00:35.960 to a couple of people that it's like the
+00:00:38.040 typical uh city that you see in U in us
+00:00:41.760 movies uh so it's like yeah this not New
+00:00:44.280 York or LA right this like typical H so
+00:00:47.280 very nice and very looking forward to
+00:00:49.239 share with you today and uh today I come
+00:00:52.000 to talk something that I believe that
+00:00:54.879 all of us can feel identified right like
+00:00:58.039 the challenges that we unfortunately L
+00:01:00.640 are going through in in SEO something
+00:01:04.239 that uh we literally need to fight with
+00:01:08.560 and struggle with and coincidentally I
+00:01:12.080 ran into an SEO friend who I started
+00:01:15.840 with in the SEO work back in 2007 and I
+00:01:19.119 feel very old now uh and uh literally
+00:01:22.960 since that time when I started doing SEO
+00:01:25.479 I don't think that I have never felt
+00:01:28.640 that the pace of changes was like this
+00:01:31.520 right all the uncertainty too around it
+00:01:34.200 like oh we have ai overviews because all
+00:01:36.840 of the sudden Google has realized that
+00:01:38.840 they need to keep up with llms and of
+00:01:40.720 course they need to integrate it in
+00:01:41.920 their current interface to keep making
+00:01:43.600 money with ads somehow and then sir GPT
+00:01:46.680 the Prototype is out there and just a
+00:01:48.520 few days ago they mentioned that they
+00:01:50.280 will start to integrate it it after
+00:01:52.759 testing it and then all of a sudden
+00:01:54.960 maybe that doesn't matter because gen Z
+00:01:57.079 and younger people are searching in Tik
+00:01:59.000 Tok and um unfortunately it doesn't seem
+00:02:01.719 that the reliability of the compan is an
+00:02:03.360 issue there but yes there's that so it
+00:02:05.439 has never been harder to sell a CO I as
+00:02:08.119 around to seo seo F subscribers a few
+00:02:10.840 months back on a survey that I did about
+00:02:13.080 SEO Consulting is has also never been
+00:02:15.720 harder to achieve SEO goals uh because
+00:02:19.200 of all of this uncertainty among the
+00:02:22.239 common issues that we know that we face
+00:02:24.640 on SEO day today but llms also has
+00:02:28.400 opened the doors to so much awesomeness
+00:02:31.840 right the Automation in our SEO work no
+00:02:36.160 I am not referring to this one sorry
+00:02:37.720 this was supposed to be a joke too um
+00:02:40.159 the content automation AI content junk
+00:02:44.200 was not necessarily like the purpose of
+00:02:47.040 uh the benefits of automation that we
+00:02:49.519 could all look for uh but I was um
+00:02:54.159 referring to the ones that I'm going to
+00:02:55.519 explain in a bit sadly this is what at
+00:02:57.959 the end of the day has make it harder
+00:02:59.360 and harder from a technical SEO
+00:03:01.200 standpoint for Google to start indexing
+00:03:03.239 more content especially new content
+00:03:05.200 right but on the other hand we have this
+00:03:07.799 awesomeness right um so many new people
+00:03:11.319 have started to automate stuff uh I see
+00:03:15.799 every week literally because I go and
+00:03:17.680 take a look at the latest tools the
+00:03:19.720 latest scripts Etc to include them in
+00:03:22.680 the tool section of SEO new scripts new
+00:03:25.799 tools new validators from people who
+00:03:28.519 were not coding like a year and a half
+00:03:30.879 ago and they started to do it thanks to
+00:03:34.000 chat GPT sh uh thanks to all of the
+00:03:36.799 Integrations that crawlers like for
+00:03:38.799 example screaming frog has and they can
+00:03:40.519 connect to apis and literally with CLA
+00:03:43.480 artifacts and chat GPT canvas there are
+00:03:45.599 no excuses right I have been playing
+00:03:47.239 around quite a few some forecasting some
+00:03:49.879 validations here um integrating with
+00:03:52.319 open AI um also apis making it easier to
+00:03:57.319 validate and assess a few of the things
+00:03:59.360 that were challeng more challenging
+00:04:01.239 before so we also have access to SEO
+00:04:03.799 solutions that solve some of the some
+00:04:06.480 top challenges in technical seos uh
+00:04:09.720 realistically right so at the end of the
+00:04:11.760 day we should be okay too even better
+00:04:14.040 not because of all of these waves of
+00:04:15.760 llms but tools that we used to have
+00:04:18.000 before have taken a new level so for
+00:04:20.238 example we have tools for implementing
+00:04:22.199 internal linking a scale structured data
+00:04:24.560 scale um even to develop knowledge raft
+00:04:27.960 directly from to our website just a few
+00:04:30.560 clicks away in links they do a great job
+00:04:33.080 at that we have CDN now that allow us to
+00:04:36.360 change HTTP headers uh to implement a
+00:04:40.000 lot of not only configurations to
+00:04:41.520 improve speed but a execute reil rides
+00:04:44.199 to implement a lot of stuff developing
+00:04:46.280 SEO AB testing at scale much more easily
+00:04:48.720 to real time SEO alerting tools to
+00:04:50.919 monitor any updates of key technical SEO
+00:04:53.560 configurations cloud-based crawlers with
+00:04:56.080 detail reports also featuring The Raw
+00:04:58.680 versus render gap of JavaScript client
+00:05:01.479 Side based JavaScript at scale um SEO
+00:05:04.720 platforms that allow us to check out
+00:05:06.240 changes not only for your own pages but
+00:05:08.080 also any side page hello amazing new
+00:05:11.600 feature or relatively new feature from
+00:05:13.400 ASF by the way uh
+00:05:15.800 so yeah all of a sudden I feel like well
+00:05:18.479 but this should be fine isn't it we have
+00:05:20.080 all of these new features so much
+00:05:21.680 awesomeness that we didn't used to have
+00:05:24.639 uh back in the day so I was like but is
+00:05:27.600 this the feeling from our industry from
+00:05:29.720 technical SEO standpoint right so I
+00:05:31.360 asked of course I had to ask I asked
+00:05:33.759 again I did this survey uh the technical
+00:05:37.560 SEO survey in order to see you if people
+00:05:41.240 was feeling the same um I got 280
+00:05:44.360 answers and um I want to share the
+00:05:47.280 results today for the first time I was
+00:05:49.160 actually publishing the survey that you
+00:05:51.560 can now see uh See it out there um not
+00:05:55.240 only link from the presentation which by
+00:05:57.680 the way I tweeted and share on in in
+00:05:59.720 LinkedIn and in TRS and everywhere
+00:06:01.800 already just before I got on stage and
+00:06:05.000 this is not a tactic for you to start
+00:06:06.680 following me there in case you haven't
+00:06:09.039 yet but if you want to go ahead and do
+00:06:10.880 it now you can do it and you will have
+00:06:12.400 all of the resources there directly but
+00:06:14.240 in any case the results are in and this
+00:06:16.919 is the first time that I I'm going to go
+00:06:18.960 through them and not only go through
+00:06:22.280 them but also share a little bit of like
+00:06:23.800 the let's say the the highlights and
+00:06:27.639 potential options that we have have to
+00:06:30.000 address the challenges that we are going
+00:06:32.199 to see that we are still suffer
+00:06:34.160 suffering from a technical IO standpoint
+00:06:36.080 right so um first the behavior that I
+00:06:38.639 identify most tech seos develop monthly
+00:06:41.120 followed by curly technical SEO audits
+00:06:43.759 which is great to see that we are
+00:06:46.479 currently checking the configuration of
+00:06:48.479 our websites and clients uh we tend to
+00:06:51.120 use a mix of cloud-based and desktop SEO
+00:06:54.240 crawlers and I believe that there's
+00:06:55.960 really a radical change the
+00:06:57.520 popularization I I remember when
+00:06:59.599 cloud-based SEO crawlers was something
+00:07:01.599 very very expensive and it seems that
+00:07:04.080 now most of us are pretty much using
+00:07:06.400 them because it's much more
+00:07:08.000 straightforward much more cost effective
+00:07:09.960 at the end of the day most of us are
+00:07:11.759 also using between two and three craw
+00:07:13.479 crawlers to validate uh SEO audits to do
+00:07:17.199 analysis to simulate the Goa to which is
+00:07:20.280 amazing that we don't over rely only on
+00:07:22.400 a single solution or a single tool and
+00:07:25.400 the most popular tool surprise surprise
+00:07:28.479 that we love to to use and I asked for
+00:07:31.120 maybe this was a little bit the wording
+00:07:32.800 right asked um for people to tell me
+00:07:35.560 like the top three tools that they were
+00:07:37.039 using or they love to use for technical
+00:07:38.800 SEO analysis and Audits and they mention
+00:07:41.360 Google search console too right screamy
+00:07:44.159 frog h s brush cybo Chrome de tools go
+00:07:47.919 PP insights and a big long tail of other
+00:07:52.440 SEO platforms that include some
+00:07:54.400 technical SEO related analysis and
+00:07:56.960 validation and crawlers and then the
+00:07:59.639 other hand also much more specialized
+00:08:01.960 let's say technical SEO configuration uh
+00:08:05.000 related tools that we troubleshoot or
+00:08:07.479 used to trible shoot like GT metrics for
+00:08:09.319 example for for Speed or web page test
+00:08:13.039 it was great to see it there too cool P
+00:08:15.360 page speed insights too uh so it's great
+00:08:18.240 to see that well we have all of this
+00:08:21.680 let's say availability of resources many
+00:08:24.520 more resources that we used to have
+00:08:26.280 before and great to see too that the
+00:08:29.000 majority of us uh leverage presch craws
+00:08:32.360 to automate the validations of site
+00:08:34.159 configurations we are already making the
+00:08:36.559 moves out of the cloudbased specialty
+00:08:38.320 functionality to do this and we also use
+00:08:41.640 Su alerting tools a lot of us to be
+00:08:44.440 notified when never something changes on
+00:08:47.399 the side any technical related
+00:08:49.040 configuration or structural content uh
+00:08:51.880 configuration is change we are notify
+00:08:54.320 the majority also validate the technical
+00:08:56.720 SE execution in a test envirment before
+00:08:59.800 it is released and unsurprisingly
+00:09:03.360 unsurprisingly unfortunately many of us
+00:09:05.399 wish to do it but we don't have the
+00:09:08.079 capacity to do so uh as well way too
+00:09:11.200 many of those responses also it really
+00:09:13.800 took my attention that yes more than 90%
+00:09:16.519 of the
+00:09:17.560 craws are um right now being released by
+00:09:22.720 executing
+00:09:24.320 JavaScript but only 23% of seos do this
+00:09:28.720 followed by % that only are able to do
+00:09:31.800 this between 40% and 60% of the time
+00:09:34.360 unfortunely I think that this has to do
+00:09:36.600 with the credit system that a few
+00:09:38.240 crawlers and also at the end of the day
+00:09:39.880 time resources constraints being blocked
+00:09:42.680 and uh the consumption when we are using
+00:09:44.920 desktop crawlers too that this might
+00:09:47.200 have so yeah there's that on the other
+00:09:49.519 hand a lot of us more than 90% of the
+00:09:52.279 crawls also are are being done by
+00:09:55.560 integrating with thirdparty SEO metric
+00:09:58.040 so to give cont context to the analysis
+00:10:00.399 to the audit we integrate with the
+00:10:01.760 Google search console Google analytics
+00:10:03.399 and so on and the last bit here although
+00:10:07.079 most only um let's say enable or are
+00:10:11.320 able to enable log file analysis when it
+00:10:14.680 is actually necessary
+00:10:17.000 unfortunately way too many say that they
+00:10:19.560 wish to have access to web web servers
+00:10:22.560 log file analysis but they don't it's
+00:10:25.000 still a struggle even with the
+00:10:26.560 popularization of CDN which pretty much
+00:10:28.560 is just an ACC access to the to the SEO
+00:10:31.360 with some limitations of course so we
+00:10:32.959 don't stuff
+00:10:34.880 up change the configurations of anything
+00:10:37.600 by yourself but unfortunately this is
+00:10:39.600 still a challenge anyway so this is
+00:10:41.639 pretty much the overview this is great
+00:10:43.920 right it seems that we're advancing that
+00:10:45.800 we have access to so many more tools
+00:10:47.519 more sophistication more opportunities
+00:10:49.600 more automation so we've clearly come a
+00:10:52.320 long way when aiting but what about the
+00:10:55.920 actual implementation of our
+00:10:57.920 recommendations because these were the
+00:10:59.399 money is this is where the actual impact
+00:11:01.680 is is how we are going to see results
+00:11:04.279 and Achieve goals at the end of the day
+00:11:06.360 and this was actually my expectation
+00:11:08.320 right with all of this l m no code H SEO
+00:11:12.519 API accesss it's like oh my God it's
+00:11:15.399 like yeah very sophisticated hopefully
+00:11:18.839 we're we're in the future already but
+00:11:22.040 but realistically sadly shockingly or
+00:11:24.839 not when I asked if we were already
+00:11:27.560 using Ai and llms to automate Tech SEO
+00:11:31.560 task this is see 30% say yes but most of
+00:11:37.360 those that say Yes um it was for
+00:11:39.920 technical SEO analysis or auditing not
+00:11:42.839 for implementation right like for
+00:11:44.519 implementation only 20% uh no for
+00:11:48.160 implementation it was 13% of the
+00:11:50.399 responses and realistically the most
+00:11:52.680 popular options were for analysis and
+00:11:54.680 auditing and then reporting but
+00:11:56.399 literally for for execution or
+00:11:58.160 implementation only 30 %. so this is the
+00:12:00.639 thing this where we usually tend to have
+00:12:02.440 more challenges at the end of the day
+00:12:03.880 but there are things that cannot be
+00:12:05.720 automated it seems uh fewer have
+00:12:08.360 developed their own tools too because I
+00:12:10.000 asked how you have you developed your
+00:12:11.360 own platforms your own tools your own
+00:12:13.519 solutions to eliminate or minimize these
+00:12:16.760 sort of challenges that we take uh tend
+00:12:18.800 to face and a lot of us have done it for
+00:12:21.199 again technical SEO analysis or
+00:12:23.040 reporting but most haven't we are not
+00:12:27.160 there yet and then when I ask we for
+00:12:30.120 which type of task implementation uh uh
+00:12:33.800 activities we are using uh some of the
+00:12:37.160 two party plugins or CDN H SEO type of
+00:12:41.000 of configuration Solutions um or adoms
+00:12:44.760 even for platforms or cmss most of us
+00:12:47.880 are using it for the all same all same
+00:12:50.120 like web speed optimization
+00:12:52.040 implementation of canonical TXS structur
+00:12:54.279 data JavaScript rendering more exm time
+00:12:57.079 UPS so this is good I mean but but they
+00:13:00.399 they are sort of like let's say the same
+00:13:02.560 sort of scenarios um or activities that
+00:13:05.639 we used to have challenges right and the
+00:13:08.360 some sort of configurations that we used
+00:13:10.600 to have plugins for in WordPress anyway
+00:13:13.320 10 years ago maybe I don't know if we'll
+00:13:15.880 have it in the next 10 years given all
+00:13:17.519 of the drama going on shockingly there's
+00:13:19.639 an industry with more drama than SEO it
+00:13:21.360 seems so I feel very actually we really
+00:13:23.880 happy about it that is not us at least
+00:13:26.040 anyway uh we also use jira and Slack to
+00:13:29.360 coordinate with product managers and
+00:13:31.959 developers which amazingly I I I never
+00:13:35.800 thought that I was going to get so many
+00:13:37.480 answers about jira this is great to see
+00:13:40.320 at the end of the day we need to use the
+00:13:41.720 tools that developers are using so we
+00:13:44.720 need to well really coordinate well with
+00:13:46.720 them integrate into their continuous
+00:13:48.680 workflow on one hand and then most of
+00:13:51.440 the technical SEO recommendations
+00:13:53.720 shockingly only take between four and
+00:13:56.440 six week to get executed my my
+00:14:00.519 Harel hello to these people who said
+00:14:04.040 that takes more than 16 weeks 10 10
+00:14:07.320 responses with that
+00:14:09.399 like I hear you I I see you I have been
+00:14:12.519 there bigger companies that that's what
+00:14:15.839 happens unfortunately but yes there's
+00:14:17.759 that and despite all of this most only
+00:14:20.040 see between 40% to 60% of their
+00:14:22.720 technical SEO recommendations
+00:14:23.920 implemented this is the actual challenge
+00:14:25.880 if you ask me right uh most of the
+00:14:28.440 responses here 29% of the responses were
+00:14:31.199 like I only see between 40% to 60% of my
+00:14:34.959 SE recommendations implemented and the
+00:14:37.519 next group uh answered that between 60
+00:14:40.279 and 80% which is great only 7% ofoc more
+00:14:44.480 than 90% of the SEO recommendations
+00:14:46.680 implemented I mean how do we expect to
+00:14:49.079 see results if we don't do the stuff
+00:14:51.279 that we recommend them to well to
+00:14:53.519 improve the and Achieve goals right so
+00:14:56.639 of course unsurprisingly when I ask
+00:14:59.160 about uh what is the level of difficulty
+00:15:02.279 that we are seeing to achieve SEO goals
+00:15:05.480 or the technical SEO goals that we look
+00:15:08.600 for with our recommendations uh if it is
+00:15:11.160 getting more difficult or not it's like
+00:15:13.040 most of the answers were well the same
+00:15:14.720 as before despite all of this resources
+00:15:17.560 or new resources or New Waves of of
+00:15:19.680 tools that we have unfortunately it's
+00:15:21.720 the same or harder things haven't
+00:15:24.120 improved sadly and when I ask the
+00:15:27.079 reasons for this
+00:15:29.639 I same all again resources constraints
+00:15:33.000 prioritization issues lack of
+00:15:35.040 understanding or buying from decision
+00:15:36.720 makers budget constraints uh some things
+00:15:40.680 never seem to change right internal
+00:15:42.720 communication or workflow challenges
+00:15:44.519 technical complexity so yes although
+00:15:48.160 automation seems to have been able to
+00:15:50.519 facilitate a few things in our
+00:15:52.079 day-to-day in our world flows the
+00:15:53.759 reality is that it cannot replace the
+00:15:55.920 need of stakeholder support and decision
+00:15:57.560 makers byy in which are very Human
+00:16:01.000 Solutions at the end of the day or very
+00:16:03.040 human decisions right we can see
+00:16:04.759 something similar when asking about the
+00:16:06.519 biggest Tech SEO challenges in current
+00:16:08.880 projects again development of resources
+00:16:10.639 constraints JavaScript rendering issues
+00:16:13.920 C bies performance optimization client
+00:16:16.440 communication buyin and again a mix of
+00:16:19.680 resources constraint buyin and then very
+00:16:21.839 specific technical um misconfigurations
+00:16:25.000 and challenges handling them because of
+00:16:27.399 uh whether Legacy system or or new
+00:16:29.240 JavaScript Frameworks or scenarios like
+00:16:31.920 migrations for in which this type of uh
+00:16:35.360 configurations are even more challenging
+00:16:37.519 so this was a little bit of my reaction
+00:16:40.680 when I went through this last bit of the
+00:16:44.240 results of the survey are wi in in 2024
+00:16:48.079 or in 2014 because again it seems that
+00:16:50.880 some things in technical SEO uh never
+00:16:53.279 changeed and I hope to have I wish to
+00:16:55.480 have Dr mad an ability to see the future
+00:16:57.720 and past at the same time and sadly no
+00:17:00.440 but yes it feels like yeah same old same
+00:17:02.839 old right it's like are we really in
+00:17:05.079 2024 here and despite all this technical
+00:17:07.760 SEO effort are still highly moderate
+00:17:09.799 moderately impactful to SEO goals
+00:17:12.119 there's still a point in our work so
+00:17:14.280 maybe it is not that bad we will still
+00:17:16.359 have a job for a while it seems and um
+00:17:19.079 most ofo projects also somehow still
+00:17:21.559 achieve results right even if
+00:17:24.119 recommendations are not implemented
+00:17:26.160 results are there we are get getting the
+00:17:29.559 money when it is expected in most cases
+00:17:32.520 right and here's the thing how is it
+00:17:35.320 possible if we're achieving goals
+00:17:38.120 results despite all of these challenges
+00:17:40.600 and given that despite all of this bus
+00:17:42.600 going around of new platforms new new
+00:17:45.320 paradigm of of search of of searching
+00:17:48.240 Etc organic search is still the biggest
+00:17:50.640 traffic Source still
+00:17:53.280 today it doesn't make sense that we
+00:17:55.320 don't get money we don't get the
+00:17:56.679 approval it make make it make sense it's
+00:17:59.919 not fine we clearly still need to better
+00:18:03.200 influence and communicate value need and
+00:18:05.200 impact of SEO to get that by we have a
+00:18:07.880 perception versus
+00:18:09.440 reality Challenge in a CEO we are like
+00:18:13.080 like I I'm always impressed how the PPC
+00:18:15.240 people are able to get all of those
+00:18:17.120 budgets even like throwing money they
+00:18:19.840 sometimes they don't even know where the
+00:18:21.159 clicks are coming from but somehow we
+00:18:23.159 still have these very human ISU issues
+00:18:25.120 and I understand how we all love to
+00:18:27.400 automate stuff but some things
+00:18:29.760 need very Human Solutions right and
+00:18:32.840 somehow when I ask and I ask look this
+00:18:34.919 is very interesting uh from the survey I
+00:18:37.679 asked about what are the features or or
+00:18:40.520 solutions that you wish that were
+00:18:42.200 developed in SEO for technical SEO that
+00:18:45.320 haven't been yet created so to the
+00:18:47.240 toolmakers here or those who are uh
+00:18:50.159 strong enough with your proms uh for uh
+00:18:53.320 your to get a little bit of some um
+00:18:56.559 artifacts with with cloud people say oh
+00:18:59.919 I wish to have ai integration and
+00:19:02.159 predictive analysis of recommendations I
+00:19:04.000 don't know how they want to keep their
+00:19:05.520 jobs but yes somehow this is something
+00:19:07.200 that we want to have enhanced reporting
+00:19:09.360 and visualization lock file and Crow
+00:19:11.280 budget analysis better JavaScript
+00:19:12.799 rendering diagnostic solutions that are
+00:19:15.799 able to facilitate our life a little bit
+00:19:17.559 more cob Bal on PP optimization so yes
+00:19:20.559 we are looking for all of this technical
+00:19:24.240 automation opportunities and additional
+00:19:26.320 Solutions beyond the ones that we
+00:19:27.720 already have but this wish L well
+00:19:30.960 doesn't
+00:19:32.320 necessarily tackle the actual challenge
+00:19:35.159 that we have that is this we think or we
+00:19:38.400 overthink that the SEO problems will be
+00:19:40.200 solved completely by automation when
+00:19:42.960 realistically we have a lot of
+00:19:44.360 automation already and this automation
+00:19:47.080 won't solve a lot of them because they
+00:19:49.600 are at the end of the day product
+00:19:51.840 problems business problems and problems
+00:19:55.200 that have to do with decision
+00:19:57.080 making human capacity to give us money
+00:20:00.679 and resources at the end of the day and
+00:20:02.440 at a very high level the SEO challenge
+00:20:04.360 is whether about brand or product right
+00:20:06.280 depending on the side size this is
+00:20:07.960 something that I really want to
+00:20:09.600 highlight uh and I have been
+00:20:11.320 highlighting lately and will be doing
+00:20:13.480 much more for bigger companies and sites
+00:20:15.760 the product execution alignment is the
+00:20:18.240 top SEO challenge right like craw budget
+00:20:20.799 issues for lar large companies or the
+00:20:23.039 back and forth with product and you ask
+00:20:25.760 oh we want to improve cor bital let's
+00:20:28.080 feature l content in the page yes you
+00:20:29.960 can also feature a bland page and have
+00:20:31.400 perfect go with vital but you won't sell
+00:20:33.440 more with that and we won't achieve
+00:20:35.640 actual better rankings and results at
+00:20:37.679 the end of the day and revenue right for
+00:20:39.640 small companies and sides it's about
+00:20:41.280 solving the brand popularity challenge
+00:20:43.480 that is the biggest issue and that is
+00:20:44.960 how somehow Google excuse themselves uh
+00:20:48.120 for to feature Reddit at the top in
+00:20:51.039 every single results and F please go and
+00:20:53.480 search for learn SEO a click on learning
+00:20:55.480 seo. instead of Reddit I think that most
+00:20:58.400 of us will do it anyway right it's like
+00:21:00.080 the other people that I need to do some
+00:21:02.720 request that anyway in terms of su areas
+00:21:05.679 then the bigger the side the more
+00:21:06.880 important the product Tech Challenge is
+00:21:09.240 that is just real right at the beginning
+00:21:11.640 we need to focus on backlinks content
+00:21:14.720 brand stuff in order to grow it so love
+00:21:16.960 it or hate it is a product problem we
+00:21:20.320 cannot succeed in on a Sil we cannot
+00:21:23.440 succeed by ourselves right we need to
+00:21:25.679 rely on other areas deis show makers on
+00:21:28.760 stakeholders ability uh to give us
+00:21:31.320 resources to approve stuff and the goal
+00:21:33.480 is to achieve alignment with all of
+00:21:36.360 these areas within the product triangle
+00:21:38.360 realistically we are not here we
+00:21:40.480 shouldn't necessarily like rain bend the
+00:21:42.559 whe there's a there are there are a lot
+00:21:44.360 of resources and principles and
+00:21:45.760 framework that product people have
+00:21:47.760 created in order to solve this
+00:21:49.840 particular issue and we just need to be
+00:21:51.960 a little bit more aware about it so very
+00:21:54.240 very quickly because I am literally
+00:21:56.320 getting H very little time but yeah it's
+00:21:59.679 not true I still have 10 minutes I I I
+00:22:02.080 started later isn't it yes okay with a
+00:22:06.400 little bit more time no worries anyway
+00:22:08.279 it's true oh my God Mike you're
+00:22:10.240 deceiving me what the heck okay okay yes
+00:22:13.240 I still have 10 minutes I'm tracking I'm
+00:22:14.960 tracking as a good SEO anyway let's go
+00:22:18.159 so we don't need to reinvent the whe
+00:22:19.760 here we have a lot of resources that
+00:22:21.480 prodject manage management people have
+00:22:23.640 created even if they are not developers
+00:22:25.400 like there are so so many funny memos uh
+00:22:28.120 out there memes like making fun of them
+00:22:29.960 because what what does the uh developer
+00:22:33.640 who's not good at development end up
+00:22:35.679 doing like product managements like they
+00:22:37.440 can say a lot about that from technical
+00:22:39.640 seos too but anyway we need to become
+00:22:41.679 their friends don't repeat this to them
+00:22:43.279 anyway we can we can de we can let's say
+00:22:47.799 integrate ourself in their workflow and
+00:22:49.760 better understand what they are doing in
+00:22:52.120 their day today especially at bigger
+00:22:53.840 companies they have joint application
+00:22:56.320 developments sort of interviews and
+00:22:57.960 meetings and workshops in order to
+00:22:59.880 identify requirements that are
+00:23:01.679 functional non
+00:23:02.960 functional among these requirements
+00:23:05.360 besides usability and accessibility is
+00:23:08.120 findability what in whatever platform uh
+00:23:11.240 the the product is supposed to be
+00:23:12.960 showcase or or share right so agree on
+00:23:15.799 what and how you will recommend a report
+00:23:18.120 on based on what they actually care
+00:23:19.679 about why you hear the show makers or
+00:23:22.120 stakeholders stating in these sort of
+00:23:24.039 meetings and interviews is key is core
+00:23:26.440 and you should work with the product
+00:23:27.960 manager manager in order to get an
+00:23:29.679 information I created this little sheet
+00:23:31.760 version of the Su measurement report
+00:23:34.039 planner where I pretty much developed
+00:23:36.760 this different metrics and information
+00:23:39.480 that I like to collect from decision
+00:23:40.919 makers because I will personalize my
+00:23:42.919 recommendations my reports and whatever
+00:23:45.640 information I give them in order to
+00:23:48.000 request resources in order to speak
+00:23:49.799 their language and talk about the kpis
+00:23:52.159 and goals that they actually care about
+00:23:53.760 that are not necessarily SEO we can also
+00:23:56.080 create user stories for each SEO
+00:23:57.960 recommendation to easily articulate the
+00:24:00.120 benefit and the action at an strategic
+00:24:02.640 level I wish to see these sort of
+00:24:05.039 features more and more in SEO tools
+00:24:08.080 right create your user story because
+00:24:10.880 this allow us not only to answer some of
+00:24:13.960 the most common questions about our
+00:24:15.520 recommendations the what the who the why
+00:24:18.559 and but also it really facilitates at
+00:24:20.760 different levels very strategic level
+00:24:22.960 allow us to pretty much connect with the
+00:24:24.840 needs of the products and show why these
+00:24:27.279 recommendations are important but also
+00:24:28.679 to specify clearly the acceptant
+00:24:31.000 criteria to consider the the
+00:24:33.320 recommendations to be done I have had so
+00:24:35.600 many instances of developers telling me
+00:24:38.080 AR is already done it was not true it's
+00:24:40.880 a lie why are you wasting my
+00:24:43.360 time if there's clear clear criteria we
+00:24:46.799 that you should agreed on it's great
+00:24:48.679 that it's also great when you check and
+00:24:50.559 it's actually done on the dev
+00:24:52.559 environment but then it is released and
+00:24:54.159 somehow it's not right love it anyway
+00:24:57.000 this that stuff can still happen is why
+00:24:58.640 you need to check before and after but
+00:25:00.000 anyway this should be ideal uh the level
+00:25:03.360 of granularity of stories and tasks then
+00:25:05.840 also help coordination also help
+00:25:08.080 communication we can also use the dri
+00:25:10.520 model to specify and to assess which are
+00:25:13.279 the highest reach impact confidence and
+00:25:15.120 lower effort prioritization for our
+00:25:17.120 recommendations in a way that they are
+00:25:18.760 already working with and in a way that
+00:25:21.760 decision makers actually understand
+00:25:24.559 because this is a very common model with
+00:25:26.480 product manager at the end of the day
+00:25:27.919 and here where it comes like okay okay
+00:25:30.360 we will need to tie the visibility but
+00:25:33.679 also the cost Effectiveness and the
+00:25:35.720 impact that you will have in terms of
+00:25:37.360 traffic and revenue using current
+00:25:39.200 conversion rates Etc and this is where
+00:25:41.480 we need to actually get comfortable with
+00:25:43.480 forecast and amazingly we now have
+00:25:47.200 solutions that are very easy to use so
+00:25:49.279 for example I have I am a fan of the
+00:25:51.520 simple ml for Sheets add-on completely
+00:25:54.120 free relying uh and using both the ARA
+00:25:56.679 and ETS model which which are actually
+00:25:58.960 good models to forecast with it's
+00:26:01.120 completely free and you can use it with
+00:26:02.799 your Google search console data and you
+00:26:04.559 can add incremental values there quite
+00:26:06.840 easily is not rocket science it's
+00:26:09.679 something that any of us can use and is
+00:26:12.000 well accessible to all of us so you can
+00:26:14.440 also copy this template that I have
+00:26:16.520 created for my prioritization system
+00:26:18.480 using the D model for SEO
+00:26:20.399 recommendations and and specifications
+00:26:22.640 and then we can use for example
+00:26:24.120 something called the situation
+00:26:25.360 complication resolution framework that
+00:26:27.320 product manager l to U use whenever they
+00:26:30.679 are getting Buy in from decision makers
+00:26:33.520 and this will add the needed goals and B
+00:26:35.679 context to each one of the
+00:26:36.840 recommendations and help to secure
+00:26:39.039 report support because we provide
+00:26:41.480 context and the why and what we are
+00:26:44.279 going to achieve from each
+00:26:46.200 recommendation an action and of course
+00:26:48.200 for every recommendation I will highly
+00:26:50.159 highly recommend to use the MTO pyramid
+00:26:51.919 in order to add supporting arguments
+00:26:54.360 supporting facts to each one of the
+00:26:57.080 actions that we propose both again this
+00:26:58.919 is something that they are using on a
+00:27:00.799 day today if you ask your product
+00:27:02.039 manager so again these might be soft
+00:27:03.960 skills but these are the soft skills
+00:27:07.120 that are very well needed and the type
+00:27:09.559 of I would say features and
+00:27:12.679 functionalities that I wish that there
+00:27:15.200 was a layer of in our tools to
+00:27:17.679 facilitate and develop this sort of
+00:27:20.880 incentive isas let's say to develop this
+00:27:22.840 sort of activities more on our
+00:27:24.679 day-to-day because these are the ones
+00:27:26.120 that are going to guarantee or at least
+00:27:28.440 increment the the chances to get support
+00:27:31.279 from decision makers to actually
+00:27:33.039 implement the stuff that we're
+00:27:34.360 recommending and uh we will never
+00:27:36.760 realistically automate buying this is
+00:27:38.320 the thing we are looking always to
+00:27:40.200 automate stuff to improve the visibility
+00:27:43.720 of what we do but at the end of the day
+00:27:46.039 we cannot automate the human nature of
+00:27:48.559 business and the support that we need uh
+00:27:51.200 to our Channel at the end of the day
+00:27:52.760 especially the when we need a lot of
+00:27:55.679 executions that are technical related
+00:27:57.519 and we're just so many stakeholders and
+00:28:00.679 so many says right it's time to change
+00:28:03.200 the narrative to get our Tech SEO
+00:28:04.799 recommendations executed for Success
+00:28:06.720 that is my whole point this is hopefully
+00:28:08.640 also the point that you get from there
+00:28:10.080 hopefully the those decision makers not
+00:28:12.279 decision but also those who Implement
+00:28:14.799 stuff I see a lot of tool makers here
+00:28:16.799 they also integrate more and more this
+00:28:18.840 layer of information uh the aggregation
+00:28:21.799 we not only traffic but also Revenue
+00:28:24.960 conversions that will be nice in order
+00:28:26.720 to provide these additional features
+00:28:28.279 that we all needed in order to get our
+00:28:30.760 work done implemented our results in uh
+00:28:33.760 if you want more of these insights by
+00:28:35.399 the way and maybe you this is a little
+00:28:37.480 bit of my analysis right and my my take
+00:28:39.919 on them but maybe you have completely
+00:28:41.320 different takes because we are all like
+00:28:42.880 this in SEO it depends right and you
+00:28:44.880 have the results here in the SEO phot
+00:28:46.760 technical SEO survey that is already
+00:28:48.679 published I publish it today at 400 a.m.
+00:28:50.360 thank you very much you can go and take
+00:28:52.440 a look at it lots of results lots of
+00:28:54.960 insights lots of wishes from SEO of new
+00:28:57.799 tools new features new capacities in our
+00:29:00.279 day today and I hope that you have found
+00:29:02.720 this useful thank you very much
