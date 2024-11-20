@@ -102,6 +102,44 @@ class TranscriptPreprocessor:
             except Exception as e:
                 print(f"Error processing {file_path}: {str(e)}")
 
+    def calculate_total_duration(json_data):
+        total_seconds = 0
+        
+        # Loop through each talk
+        for talk in json_data['talks']:
+            # Get segments for the talk
+            segments = talk['content'].get('segments', [])
+            
+            if segments:
+                # Get the timestamp of the last segment
+                last_timestamp = segments[-1]['timestamp']
+                
+                # Convert timestamp (HH:MM:SS.mmm) to seconds
+                try:
+                    parts = last_timestamp.split(':')
+                    hours = int(parts[0])
+                    minutes = int(parts[1])
+                    seconds = float(parts[2])
+                    
+                    total_seconds += (hours * 3600) + (minutes * 60) + seconds
+                except (IndexError, ValueError):
+                    print(f"Warning: Could not parse timestamp {last_timestamp}")
+                    continue
+        
+        # Convert total seconds to hours, minutes, seconds
+        hours = int(total_seconds // 3600)
+        minutes = int((total_seconds % 3600) // 60)
+        seconds = int(total_seconds % 60)
+        
+        return {
+            'total_seconds': total_seconds,
+            'formatted_time': f"{hours:02d}:{minutes:02d}:{seconds:02d}",
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        }
+    
+        
     def save_json(self, output_file):
         """Save processed talks to JSON file."""
         output = {
@@ -118,6 +156,11 @@ class TranscriptPreprocessor:
 
 # Usage example
 if __name__ == "__main__":
-    processor = TranscriptPreprocessor("tech-seo-connect-summary/transcripts")
-    processor.process_all_files()
-    processor.save_json("all_talks.json")
+    with open('tech-seo-connect-summary/all_talks.json', 'r') as f:
+        data = json.load(f)
+        
+    duration = TranscriptPreprocessor.calculate_total_duration(data)
+    print(f"Total conference duration: {duration['formatted_time']}")
+    print(f"Total hours: {duration['hours']}")
+    print(f"Total minutes: {duration['minutes']}")
+    print(f"Total seconds: {duration['seconds']}")

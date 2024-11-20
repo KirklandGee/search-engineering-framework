@@ -23,31 +23,45 @@ class ConferenceVisualizer:
         with open(json_path, 'r', encoding='utf-8') as f:
             self.data = json.load(f)
             
-        # Updated color map with more specific categories
+        # Expanded and more specific categories
         self.color_categories = {
             # AI and ML related terms
-            'ai': ['ai', 'model', 'language', 'recommendation'],
+            'ai': ['ai', 'model', 'language', 'machine', 'learning', 'gpt', 'bert', 'neural', 
+                   'recommendation', 'algorithm', 'automation', 'chatgpt', 'intelligence'
+                   'context windows', 'models'],
             
             # Search related terms
-            'search': ['search', 'query', 'google', 'result', 'engine'],
+            'search': ['search', 'query', 'google', 'result', 'engine', 'serp', 'ranking', 
+                      'crawl', 'index', 'keyword', 'intent', 'relevance', 'bing'],
             
             # Content related terms
-            'content': ['content', 'page', 'site', 'video', 'image'],
+            'content': ['content', 'page', 'site', 'video', 'image', 'blog', 'article', 
+                       'text', 'media', 'document', 'copy', 'write', 'title', 'description'],
             
-            # Technical terms
-            'technical': ['code', 'javascript', 'api', 'lcp', 'tools', 'url'],
+            # Technical SEO terms
+            'technical': ['code', 'javascript', 'api', 'lcp', 'tools', 'url', 'html', 'css', 
+                         'schema', 'markup', 'performance', 'speed', 'core', 'vitals', 'mobile',
+                         'responsive', 'canonical', 'redirect', 'server', 'cloud', 'core web','performance'],
             
             # Analytics and data terms
-            'data': ['data', 'analysis', 'experience', 'resource']
+            'data': ['data', 'analysis', 'analytics', 'metric', 'measure', 'track', 'report',
+                    'insight', 'conversion', 'traffic', 'engagement', 'performance', 'roi'
+                    'bulk export', ],
+            
+            # E-commerce terms
+            'tools': ['rank tracker', 'ahrefs', 'semrush', 'moz', 'seo', 'seo tools',
+                      'google analytics', 'google search console', 'google tag manager', 'google ads', 'google my business',
+                        'open source', 'space serp']
         }
         
-        # Color scheme
+        # Updated color scheme with more vibrant, distinct colors
         self.colors = {
-            'ai': '#FF6B6B',          # Coral red for AI
-            'search': '#4ECDC4',       # Teal for search
-            'content': '#45B7D1',      # Blue for content
-            'technical': '#96CEB4',    # Green for technical
-            'data': '#FFD93D'         # Yellow for data/analytics
+            'ai': '#FF4B4B',          # Bright red
+            'search': '#4A90E2',      # Bright blue
+            'content': '#50E3C2',     # Turquoise
+            'technical': '#F7B731',   # Golden yellow
+            'data': '#A569BD',        # Purple
+            'tools': '#26C281'    # Green
         }
 
         self.custom_stop_words = {
@@ -153,7 +167,7 @@ class ConferenceVisualizer:
             width=2000,
             height=1200,
             background_color='white',
-            max_words=50,
+            max_words=75,
             stopwords=self.custom_stop_words,
             color_func=self.get_color_func,
             collocations=True,
@@ -198,8 +212,8 @@ class ConferenceVisualizer:
         
         # Modern table styling
         table.auto_set_font_size(False)
-        table.set_fontsize(11)
-        table.scale(1.2, 1.8)
+        table.set_fontsize(14)
+        table.scale(1.4, 2.0)
         
         # Style cells
         for (row, col), cell in table.get_celld().items():
@@ -315,8 +329,8 @@ class ConferenceVisualizer:
         
         # Modern table styling
         table.auto_set_font_size(False)
-        table.set_fontsize(11)
-        table.scale(1.2, 1.8)
+        table.set_fontsize(14)
+        table.scale(1.4, 2.0)
         
         # Style cells
         for (row, col), cell in table.get_celld().items():
@@ -358,21 +372,15 @@ class ConferenceVisualizer:
         plt.close()
 
     def get_color_func_bigrams(self, word, **kwargs):
-        """Modified color function for bigrams."""
-        # You might want to modify this to categorize bigrams
+        """Modified color function for bigrams using the same categories as self.color_categories."""
         word = word.lower()
         
-        # Example categorization for bigrams
-        if 'search' in word or 'google' in word:
-            return '#4ECDC4'  # Teal for search-related
-        elif 'ai' in word or 'machine learning' in word:
-            return '#FF6B6B'  # Red for AI-related
-        elif 'content' in word or 'page' in word:
-            return '#45B7D1'  # Blue for content-related
-        elif any(tech in word for tech in ['api', 'code', 'technical']):
-            return '#96CEB4'  # Green for technical
+        # Use the same categories and colors as defined in __init__
+        for category, terms in self.color_categories.items():
+            if any(term in word for term in terms):
+                return self.colors[category]
         
-        return '#666666'  # Default gray
+        return '#666666'  # Default gray for uncategorized terms
         
 
     def print_top_terms(self, n=30):
@@ -499,11 +507,7 @@ class ConferenceVisualizer:
 
 # Usage
 if __name__ == "__main__":
-    # visualizer = ConferenceVisualizer('tech-seo-connect-summary/all_talks.json')
-    # visualizer.create_wordcloud()
-    # visualizer.create_bigram_cloud()
-    # visualizer.print_top_terms()  # Optional: to verify terms
-
-    # Create a graph from the data
-    topic_network_visualizer = ConferenceVisualizer('tech-seo-connect-summary/all_talks.json')
-    topic_network_visualizer.create_topic_network()
+    visualizer = ConferenceVisualizer('tech-seo-connect-summary/all_talks.json')
+    visualizer.create_wordcloud()
+    visualizer.create_bigram_cloud()
+    visualizer.print_top_terms()  # Optional: to verify terms
